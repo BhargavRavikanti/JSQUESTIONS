@@ -372,6 +372,15 @@
 // ======================================
 // 006 - Strings Quiz
 // ======================================
+/*
+// 1) const age = "5" + "4";
+// 2) const age1 = "5" - "4";
+// 3) const age2 = "5" * "4";
+// 4) const age3 = "5" / "4";
+// 5) const age4 = "5" / "4";
+// 6) // let userInput = "  TODD@gmail.com"; remove white spaces and return to console.
+// 7) // let park = "Yellowstone"; check stone index starts from
+*/
 
 // 1) const age = "5" + "4";
 // const age = "5" + "4";
@@ -393,14 +402,321 @@
 // const age4 = "5" % "4";
 // console.log(age4);
 
+// 6) // let userInput = "  TODD@gmail.com"; remove white spaces and return to console.
+// let userInput = "  TODD@gmail.com";
+// console.log(userInput);
+// let removeWhiteSpaces = userInput.trim();
+// console.log(removeWhiteSpaces);
+
+// 7) // let park = "Yellowstone"; check stone index starts from
+// let park = "Yellowstone";
+// let check = park.indexOf("stone");
+// console.log(check);
+
 // ======================================
 // 007 - String Escape Characters
 // ======================================
 
+/*
+// 1) let escape = "HELLO\nGOODBYE"; see output
+// 2) let escape1 = "HELLO\nGOODBYE\nbharu"; see output
+// 3) let escape2 = "HELLO\nGOODBYE\nbharu\n time is money"; see output
+*/
+
+// // 1) let escape = "HELLO\nGOODBYE"; see output
+// let escape = "HELLO\nGOODBYE";
+// console.log(escape);
+
+// // 2) let escape1 = "HELLO\nGOODBYE\nbharu"; see output
+// let escape1 = "HELLO\nGOODBYE\nbharu";
+// console.log(escape1);
+
+// // 3) let escape2 = "HELLO\nGOODBYE\nbharu\n time is money"; see output
+// let escape2 = "HELLO\nGOODBYE\nbharu\n     time is money";
+// console.log(escape2);
+
 // ======================================
 // 008 - String Template Literals
 // ======================================
+/*
+// 1) let literals = `I counted ${3+4+5}`; see output
+// 2) // let userName = "Ziggy31"; let combine = `welcome back, ${userName}`; console it.
+*/
+
+// 1) let literals = "I counted ${3+4+5}"; see output
+// let literals = `I counted ${3 + 4 + 5}`;
+// console.log(literals);
+
+// 2) // let userName = "Ziggy31"; let combine = `welcome back, ${userName}`; console it.
+// let userName = "Ziggy31";
+// let combine = `welcome back, ${userName}`;
+// console.log(combine);
 
 // ======================================
 // 009 - Null & Undefined
 // ======================================
+/*
+// 1) let loggedInUser = null; see output.
+// 2) const u = undefined; see output.
+// 3) let color; see output.
+*/
+
+// // 1) let loggedInUser = null; see output
+// let loggedInUser = null;
+// console.log(loggedInUser);
+
+// // 2) const u = undefined; see output
+// const u = undefined;
+// console.log(u);
+
+// // 3) let color;
+// let color;
+// console.log(color);
+
+// ======================================
+// 010 - The Math Object & Random Numbers
+// ======================================
+/*
+// 1) How to know how many math methods are in javascript?
+// 2) How to find out pi value is js?
+// 3) How to remove ,comes after from 3,657 and 7,8901234.
+// 4) How to remove decimals from 5.657.
+// 5) How to get nearest interger from 4.6,4.3,7.3,7.7.
+// 6) Let's generate a random number between 0 and 1
+// 7) Let's generate a random number between 0 and 10 (including 0 and 10 also).
+// 8) Let's generate a random number between 1 and 10 (not including 10)
+// 9) Let's generate a random number from 1 to 10 (including 10)
+// 10) Find square and cube of 7 using math methods.
+*/
+
+// // 1) How to know how many math methods are in js?
+// console.log(Math);
+
+// // 2) How to find out pi value is js?
+// console.log(Math.PI);
+
+// // 3) How to remove ,comes after from 3,657.
+// console.log(Math.floor(3, 657));
+// console.log(Math.floor(7, 8901234));
+
+// // 4) How to remove decimals from 5.657
+// console.log(Math.floor(3.567));
+
+// // 5) How to get nearest interger from 4.6, 4.3 ,7.3 ,7.7.
+// console.log(Math.round(4.6));
+// console.log(Math.round(4.3));
+// console.log(Math.round(7.3));
+// console.log(Math.round(7.7));
+
+// 6) Let's generate random numbers between 0 and 1
+// console.log(Math.random());
+
+// // 7) Let's generate a random number between 0 and 10 (including 0 and 10 also).
+// let random = Math.floor(Math.random() * 11);
+// console.log(random);
+
+// // 8) Let's generate random numbers between 1 and 10
+// let random1 = Math.floor(Math.random() * 9) + 1;
+// console.log(random1);
+
+// // 9) Let's generate a random number from 1 and 10 (including 10)
+// let rand = Math.floor(Math.random() * 10) + 1;
+// console.log(rand);
+
+// // 10) Find square and cube of 7 using math methods.
+// console.log(Math.pow(7, 2));
+// console.log(Math.pow(7, 3));
+
+// ======================================
+// 011 - TYPE OF
+// ======================================
+/*
+// 1) let random = 99; checks its type
+// 2) let random1 = true; checks its type
+// 3) let random2 = "mystery"; checks its type
+// 4) console.log(typeof mystery); see output
+// 5) let random4 = "99 ballons"; checks its type
+// 6) let random5 = undefined; checks its type
+// 7) let random6 = null; checks its type
+*/
+
+// // 1) let random = 99; checks its type
+// let random = 99;
+// console.log(typeof random);
+
+// // 2) let random1 = true; checks its type
+// let random1 = true;
+// console.log(typeof random1);
+
+// // 3) let random2 = "mystery"; checks its type
+// let random2 = "mystery";
+// console.log(typeof random2);
+
+// // 4) console.log(typeof mystery); see output
+// console.log(typeof mystery);
+
+// // 5) let random4 = "99 ballons"; checks its type
+// let random4 = "99 ballons";
+// console.log(typeof random4);
+
+// // 6) let random5 = undefined; checks its type
+// let random5 = undefined;
+// console.log(typeof random5);
+
+// // 7) let random6 = null; checks its type
+// let random6 = null;
+// console.log(typeof random6);
+
+// ======================================
+// 012 - parseInt & parseFloat
+// ======================================
+/*
+// 1) How to get string "24" as a number & "24.987" with removing decimals.
+// 2) How to get string "28dayslater" only 28 as a number.
+// 3) How to get string "98.769" as a number & "24.987" & 7.0 without removing decimals.
+// 4) // console.log(parseFloat("i ate 3 shramp")); try it.
+// 5) see output of
+// console.log(parseFloat("33.5"));
+// console.log(parseInt("$99")); // NaN
+// console.log(parseInt("99$"));
+// console.log(parseInt("99cents"));
+// console.log(parseInt("9976654665457cents"));
+// console.log(parseInt("   9976654665457cents"));
+// console.log(parseInt("   .9976654665457cents")); // NaN
+// console.log(parseInt(".9976654665457cents"));
+*/
+
+// // 1) How to get string "24" as a number.
+// console.log(parseInt("24"), typeof parseInt("24"));
+// console.log(parseInt("24.987"), typeof parseInt("24.987"));
+
+// // 2) How to get string "28dayslater" only 28 as a number.
+// console.log(parseInt("28dayslater"));
+// console.log(parseInt("05dayslater"));
+
+// // 3) How to get string "98.769" as a number & "24.987" with removing decimals.
+// console.log(parseFloat(98.769));
+// console.log(parseFloat(24.987));
+// console.log(parseFloat(7.0));
+
+// // 4) // console.log(parseFloat("i ate 3 shramp")); try it.
+// console.log(parseFloat("i ate 3 shramp"));
+
+// 5) see output of
+// console.log(parseFloat("33.5"));
+// console.log(parseInt("$99")); // NaN
+// console.log(parseInt("99$"));
+// console.log(parseInt("99cents"));
+// console.log(parseInt("9976654665457cents"));
+// console.log(parseInt("   9976654665457cents"));
+// console.log(parseInt("   .9976654665457cents")); // NaN
+// console.log(parseInt(".9976654665457cents"));
+
+////////////////////////////////
+// 04 - Controlling Program Logic and Flow
+////////////////////////////////
+
+// ======================================
+// 001 - Making Decisions in JS
+// ======================================
+// ======================================
+// 002 -
+// ======================================
+// ======================================
+// 003 -
+// ======================================
+// ======================================
+// 004 -
+// ======================================
+// ======================================
+// 005 -
+// ======================================
+// ======================================
+// 006 -
+// ======================================
+// ======================================
+// 007 -
+// ======================================
+// ======================================
+// 008 -
+// ======================================
+// ======================================
+// 009 -
+// ======================================
+// ======================================
+// 010 -
+// ======================================
+
+////////////////////////////////
+// 05 -
+////////////////////////////////
+
+// ======================================
+// 001 -
+// ======================================
+// ======================================
+// 002 -
+// ======================================
+// ======================================
+// 003 -
+// ======================================
+// ======================================
+// 004 -
+// ======================================
+// ======================================
+// 005 -
+// ======================================
+// ======================================
+// 006 -
+// ======================================
+// ======================================
+// 007 -
+// ======================================
+// ======================================
+// 008 -
+// ======================================
+// ======================================
+// 009 -
+// ======================================
+// ======================================
+// 010 -
+// ======================================
+
+////////////////////////////////
+// 06 -
+////////////////////////////////
+
+// ======================================
+// 001 -
+// ======================================
+// ======================================
+// 002 -
+// ======================================
+// ======================================
+// 003 -
+// ======================================
+// ======================================
+// 004 -
+// ======================================
+// ======================================
+// 005 -
+// ======================================
+// ======================================
+// 006 -
+// ======================================
+// ======================================
+// 007 -
+// ======================================
+// ======================================
+// 008 -
+// ======================================
+// ======================================
+// 009 -
+// ======================================
+// ======================================
+// 010 -
+// ======================================
+
+////////////////////////////////
+// 07 -
+////////////////////////////////
