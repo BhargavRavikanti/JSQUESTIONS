@@ -229,35 +229,208 @@
 // 001 - Making Decisions in JS
 // ======================================
 // ======================================
-// 002 -
+// 002 - Comparision Operators
+// ======================================
+
+// 1) check true or false
+// 10 greater than 1
+// 0.2 greater than 0.3
+// -10 less than 0
+// 50.5 less than 5
+// 0.5 less than or equal to 0.5
+// 0.4 less than or equal to 0.5
+// 99 greater than or equal to 4
+// 99 greater than or equal to 99
+// "a" less than "b"
+// "a" greater than "b"
+// "A" greater than "b"
+// "A" less than "b" see output
+
+// 2) check true or false
+// console.log(10 > 1);
+// console.log(0.2 > 0.3);
+// console.log(-10 < 0);
+// console.log(50.5 < 5);
+// console.log(0.5 <= 0.5);
+// console.log(0.4 <= 0.5);
+// console.log(99 >= 4); // Notice these all return a Boolean
+// console.log(99 >= 99);
+// console.log("a" < "b");
+// console.log("a" > "b");
+// console.log("A" > "b");
+// console.log("A" < "b");
+
+// console.log(-2 > 1);
+// console.log(10 < 999);
+// console.log(2 >= 2);
+// console.log(2 >= 5);
+// console.log(55.1 <= 55.5);
+// console.log("hello" >= "hello!");
+// console.log("hello" >= "hello");
+// console.log("hello" >= "hellos");
+// console.log("hello".length >= "hello!".length);
+// console.log("hello".length >= "hello!".length - 1);
+// console.log("hello".length >= "hello!".length - 2);
+
+// console.log("a" < "A"); // All lower case letters are greater than all uppercase letters (a-z > A-Z)
+// console.log("A" < "a");
+// console.log("B" < "a");
+
+// console.log("#" < "$"); // $ is greater than #
+
+// ======================================
+// 003 - Double Equals(==)
+// ======================================
+
+// 1) check what results it gives
+// console.log(5 == 5);
+// console.log("b" == "c");
+// console.log("b" == "b");
+// console.log(7 == "7"); // value same but not type // 7 is number "7" is string
+// console.log(0 == "");
+// console.log(true == false);
+// console.log(0 == false);
+// console.log(null == undefined);
+
+// console.log(4 == 4);
+// console.log("a" == "a");
+// console.log(false == false);
+// console.log(8 == "8");
+// console.log(0 == "s");
+// console.log(0 == ""); // empty can considered as 0 // value same but not type // 0 is number "" is string
+// console.log(1 == true);
+// console.log(0 == false);
+// console.log(1 == false);
+// console.log(0 == true);
+// console.log(null == undefined);
+
+// ======================================
+// 004 - Triple Equals (===)
+// ======================================
+
+// 1) check what results it gives
+// console.log(5 === 5);
+// console.log(5 == 5);
+// console.log("5" === 5);
+// console.log("5" == 5);
+
+// console.log(1 === 2);
+// console.log(2 === "2");
+// console.log(2 == "2");
+// console.log(false === 0);
+// console.log(false == 0);
+
+// Same applies for != and !==
+// console.log(10 != "10");
+// console.log(10 !== "10");
+
+// console.log(undefined == null);
+// console.log(undefined === null);
+
+// let isLoggedIn = false;
+// console.log(isLoggedIn == false);
+// isLoggedIn = 0;
+// console.log(isLoggedIn == false);
+// console.log(isLoggedIn === false);
+
+// console.log(1 != 2);
+// console.log(1 != "1");
+// console.log(1 !== "1");
+
+// ======================================
+// 005 - Running Code From a Script
 // ======================================
 // ======================================
-// 003 -
+// 006 - if Statements
+// ======================================
+
+// 1) let num = 3;
+// (1) check num = 4,
+// (2) check num = 5,
+// (3) check num = 3,
+// (4) check num < 3,
+// (5) check num > 3,
+// (6) check num >= 4,
+// (7) check num <= 3,
+// (8) check num % 2 = 0,
+// (9) check num % 2 != 0 true or false
+
+// ======================================
+// 007 - Else if
+// ======================================
+// 1) Example
+// 3 - superstar
+// 2 - meets expectations
+// 1 - needs improvement
+// (1) set variable let rating = 2;
+// check with rating === 3, rating === 2,rating === 1
+// (2) set variable let rating = 3;
+// check with rating === 3, rating === 2,rating === 1
+// (3) set variable let rating = 1;
+// check with rating === 3, rating === 2,rating === 1
+
+// 2) Example
+// 10 - I WILL BUY CHIPS
+// LESS THAN 10 - I WILL BUY CHOCKLATE
+// GREATHER THAN 10 - I WILL BUY STING
+// (1) set variable money = 10;
+// check with money === 10, money < 10, money > 10.
+// (2) set variable money = 5;
+// check with money === 10, money < 10, money > 10.
+// (3) set variable money = 20;
+// check with money === 10, money < 10, money > 10.
+
+// ======================================
+// 008 - else
+// ======================================
+
+// 1) Example
+// 3 - superstar
+// 2 - meets expectations
+// 1 - needs improvement
+// anything else - invalid rating
+// (1) set variable let rating = 2;
+// check with rating === 3,rating === 2,rating === 1
+// (2) set variable let rating = 3;
+// check with rating === 3,rating === 2,rating === 1
+// (3) set variable let rating = 1;
+// check with rating === 3,rating === 2,rating === 1
+// (4) set variable let rating = 100;
+// check with rating === 3,rating === 2,rating === 1
+
+// 2) set highScore = 1430; set userScore = 1200;
+// check with userScore greater than highscore you win less than highscore lose equal to highscore tie.
+// set userscore should be dynamic.
+
+// 3) write a dynamic program if your age is 18 or greater than 18 you can vote otherwise you can't vote.
+
+// ======================================
+// 009 - Nesting Conditionals
 // ======================================
 // ======================================
-// 004 -
+// 010 - Truthy & Falsy Values
 // ======================================
 // ======================================
-// 005 -
+// 011 - Logical AND (&&)
 // ======================================
 // ======================================
-// 006 -
+// 012 - Logical OR ( || )
 // ======================================
 // ======================================
-// 007 -
+// 013 - 013 NOT operator (!)
 // ======================================
 // ======================================
-// 008 -
+// 014 - Operator Precedence
 // ======================================
 // ======================================
-// 009 -
+// 015 - The Switch Statement
 // ======================================
 // ======================================
-// 010 -
+// 016 - Ternary Operator
 // ======================================
 
 ////////////////////////////////
-// 05 -
+// 05 - Capture Collections of Data with Arrays
 ////////////////////////////////
 
 // ======================================
