@@ -1056,6 +1056,12 @@
 // 011 - Logical AND (&&)
 // ======================================
 /*
+// check its outputs
+// console.log(true && true); 
+// console.log(true && false);  
+// console.log(false && false); 
+// console.log(false && true);
+
 // 1) set myName true set age true
 // check myName && age is true of not
 // case 1
@@ -1082,6 +1088,12 @@
 // password should be 8 or greater than 8 characters
 // password cannot contain spaces
 */
+
+// check its outputs
+// console.log(true && true);
+// console.log(true && false);
+// console.log(false && false);
+// console.log(false && true);
 
 // 1) set myName true set age true
 // check myName && age is true of not
@@ -1138,12 +1150,140 @@
 // ======================================
 // 012 - Logical OR ( || )
 // ======================================
+// check its outputs
+// console.log(true || true);
+// console.log(true || false);
+// console.log(false || true);
+// console.log(false || false);
+
+// 1) set myName true set age true
+// check myName || age is true of not
+// case 1
+// let myName = true;
+// let age = true;
+// case 2
+// let myName = true;
+// let age = false;
+// case 3
+// let myName = false;
+// let age = true;
+// case 4
+// let myName = false;
+// let age = false;
+
+// if (myName || age) {
+//   console.log("true");
+// } else {
+//   console.log("false");
+// }
+
+// 2) check true of false
+// console.log(1 !== 1 || 10 === 10);
+// console.log(10 / 2 === 5 || null);
+// console.log(Boolean(0));
+// console.log(Boolean(undefined));
+// console.log(Boolean(0) || Boolean(undefined));
+
+// 3) write a program to a person age should be 18 or greater than 18 then he can vote otherwise can't.
+// let age = prompt();
+// if (age >= 18) {
+//   console.log("can vote");
+// } else {
+//   console.log("can't vote");
+// }
+
+// 4)
+// let age = 78;
+// let age = 3;
+// let age = 30;
+// let age = 65;
+
+// if (age < 6 || age >= 65) {
+//   console.log("YOU GET IN FOR FREE");
+// } else {
+//   console.log("YOU MUST PAYYYYY!");
+// }
+
+// 5)
+// let color = "violet";
+// if (color === "pruple" || color === "lilac" || color === "violet") {
+//   console.log("GREAT CHOICE!");
+// }
+
+// 6) set color = "violet";
+// check with color = "purple" or color = "lilac" or color = "violet"
+// let color = "violet";
+// if (color === "purple" || color === "lilac" || color === "violet") {
+//   console.log("true");
+// } else {
+//   console.log("false");
+// }
+
 // ======================================
 // 013 - 013 NOT operator (!)
 // ======================================
+// 1) check true or false
+// console.log(true);
+// console.log(!true);
+// console.log(false);
+// console.log(!false);
+// console.log(!null);
+// console.log(!0);
+// console.log(!"");
+// console.log(Boolean(45));
+// console.log(!45);
+// console.log(!"bharu");
+
+// 2) check what output comes
+// let loggedInUser;
+// console.log(loggedInUser);
+// console.log(Boolean(loggedInUser));
+// console.log(Boolean(!loggedInUser));
+
+// 3) see outputs
+// let loggedInUser;
+// console.log(loggedInUser);
+// console.log(!loggedInUser);
+// if (!loggedInUser) {
+//   console.log("get out of here");
+// }
+
+// 4) see outputs
+// let flavor = "grape";
+// let flavor = "cherry";
+// let flavor = "watermelon";
+// console.log(Boolean(flavor));
+// console.log(!flavor);
+// console.log(Boolean(flavor !== "cherry"));
+// console.log(Boolean(!(flavor === "cherry")));
+
+// if (flavor !== "grape" && flavor !== "cherry") {
+//   console.log("WE DON'T HAVE THAT FLAVOR");
+// }
+
+// let flavor = "grape";
+// if (flavor === "grape" || flavor === "cherry") {
+//  console.log("WE ONLY HAVE GRAPE AND CHERRY");
+// }
+
+// // let flavor = "grape";
+// let flavor = "watermelon";
+// if (!(flavor === "grape" || flavor === "cherry")) {
+//   console.log("WE ONLY HAVE GRAPE AND CHERRY");
+// }
+
+// 5) see withouts
+// console.log(true);
+// console.log(!true);
+
 // ======================================
 // 014 - Operator Precedence
 // ======================================
+// 1) check true or false
+// let x = 7;
+// console.log(x === 7 || (x === 3 && x > 10));
+// console.log((x === 7 || x === 3) && x > 10);
+
 // ======================================
 // 015 - The Switch Statement
 // ======================================
@@ -1156,6 +1296,95 @@
 ////////////////////////////////
 
 // ======================================
+// 001 - Creating Arrays
+// ======================================
+/*
+// 1) How tocreate an empty array?
+// 2) create an array of strings.
+// 3) create an array of numbers.
+// 4) create an array of mixed data types.
+// 5) create an array using Array literal syntax
+// 6) create an array shoppingList and put some items and console it.
+// 7) create an array shoppingList using array literal syntax and put some items and console it.
+*/
+
+// 1) How tocreate an empty array?
+// let fruits = [];
+// console.log(fruits);
+
+// 2) create an array of strings.
+// let stringsArray = ["orange", "banana", "carrot", "watermelon"];
+// console.log(stringsArray);
+
+// 3) create an array of numbers.
+// let numsArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// console.log(numsArray);
+
+// 4) create an array of mixed data types.
+// let mixedDataTypes = [true, "banana", 5, "pine apple", 55, "67","NaN",null];
+// console.log(mixedDataTypes);
+
+// 5) create an array using Array literal syntax
+// let arrayLiteral = new Array();
+// arrayLiteral = [true, 30, 59, "boat", "sun", NaN, null, "67", 89];
+// console.log(arrayLiteral);
+
+// 6) create an array shoppingList and put some items and console it.
+// let shoppingList = ["bread", "peanut butter", "chips", "soaps"];
+// console.log(shoppingList);
+
+// 7) create an array shoppingList using array literal syntax and put some items and console it.
+// let shoppingList = new Array();
+// shoppingList = ["soap", "bread", "peanut butter", "chips", "milk"];
+// console.log(shoppingList);
+
+// ======================================
+// 002 - Array Indices
+// ======================================
+// ======================================
+// 003 - Modifying Arrays
+// ======================================
+// ======================================
+// 004 - Push and Pop
+// ======================================
+// ======================================
+// 005 - Shift and Unshift
+// ======================================
+// ======================================
+// 006 - Concat
+// ======================================
+// ======================================
+// 007 - Includes and IndexOf
+// ======================================
+// ======================================
+// 008 - Reverse and Join
+// ======================================
+// ======================================
+// 009 - Slice
+// ======================================
+// ======================================
+// 010 - Splice
+// ======================================
+// ======================================
+// 011 - Sorting(part 1)
+// ======================================
+
+// ======================================
+// 012 - Intro to Reference Types
+// ======================================
+
+// ======================================
+// 013 - Using Const with Arrays
+// ======================================
+// ======================================
+// 014 - Working with Nested Arrays
+// ======================================
+
+////////////////////////////////
+// 06 - Objects - The Core of Javascript
+////////////////////////////////
+
+// ======================================
 // 001 -
 // ======================================
 // ======================================
@@ -1187,7 +1416,7 @@
 // ======================================
 
 ////////////////////////////////
-// 06 -
+// 08 -
 ////////////////////////////////
 
 // ======================================
@@ -1222,5 +1451,71 @@
 // ======================================
 
 ////////////////////////////////
-// 07 -
+// 09 -
 ////////////////////////////////
+
+// ======================================
+// 001 -
+// ======================================
+// ======================================
+// 002 -
+// ======================================
+// ======================================
+// 003 -
+// ======================================
+// ======================================
+// 004 -
+// ======================================
+// ======================================
+// 005 -
+// ======================================
+// ======================================
+// 006 -
+// ======================================
+// ======================================
+// 007 -
+// ======================================
+// ======================================
+// 008 -
+// ======================================
+// ======================================
+// 009 -
+// ======================================
+// ======================================
+// 010 -
+// ======================================
+
+////////////////////////////////
+// 010 -
+////////////////////////////////
+
+// ======================================
+// 001 -
+// ======================================
+// ======================================
+// 002 -
+// ======================================
+// ======================================
+// 003 -
+// ======================================
+// ======================================
+// 004 -
+// ======================================
+// ======================================
+// 005 -
+// ======================================
+// ======================================
+// 006 -
+// ======================================
+// ======================================
+// 007 -
+// ======================================
+// ======================================
+// 008 -
+// ======================================
+// ======================================
+// 009 -
+// ======================================
+// ======================================
+// 010 -
+// ======================================
