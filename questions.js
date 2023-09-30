@@ -407,12 +407,61 @@
 // ======================================
 // 009 - Nesting Conditionals
 // ======================================
+
+// 1) password length should be greater or equal to 6 characters
+// cannot contain spaces
+
 // ======================================
 // 010 - Truthy & Falsy Values
 // ======================================
+
+// 1) check the values truthy or falsy
+// let mystery = 5;
+// let mystery = 999;
+// let mystery = 0;
+// let mystery = 0 / 0;
+// let mystery = "bhargav";
+// let mystery = " ";
+// let mystery = "";
+// let mystery = null;
+// let mystery = undefined;
+// let mystery = NaN;
+
+// let loggedInUser = "thomas123";
+// let loggedInUser = null;
+// let loggedInUser = "";
+// let loggedInUser = "thomas123";
+// let loggedInUser = "thomas123";
+
 // ======================================
 // 011 - Logical AND (&&)
 // ======================================
+// 1) set myName true set age true
+// check myName && age is true of not
+// case 1
+// let myName = true;
+// let age = true;
+// case 2
+// let myName = true;
+// let age = false;
+// case 3
+// let myName = false;
+// let age = true;
+// case 4
+// let myName = false;
+// let age = false;
+
+// 2) check true or false
+// console.log(1 <= 4 && "a" === "a");
+// console.log(9 > 10 && 9 >= 9);
+// console.log("abc".length === 3 && 1 + 1 === 4);
+// console.log(1 <= 2 && 5 === 5);
+// console.log(1 <= 2 && 5 === "5");
+
+// 3) write a pogram to enter password
+// password should be 8 or greater than 8 characters
+// password cannot contain spaces
+
 // ======================================
 // 012 - Logical OR ( || )
 // ======================================

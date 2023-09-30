@@ -971,7 +971,7 @@
 // }
 
 // 2) set highScore = 1430; set userScore = 1200;
-// check with userScore greater than equal to highScore
+// check with userScore greater than or  equal to highScore
 // case 1
 // let highScore = 1430;
 // let userScore = 1200;
@@ -1000,16 +1000,141 @@
 // }
 
 // 3) write a dynamic program if your age is 18 or greater than 18 you can vote otherwise you can't vote.
+// let voterAge = 18;
+// let yourAge = prompt();
+// if (yourAge >= voterAge) {
+//   console.log("you can vote");
+// } else {
+//   console.log("you can't vote");
+// }
 
 // ======================================
 // 009 - Nesting Conditionals
 // ======================================
+// 1) password length should be greater or equal to 6 characters
+// cannot contain spaces
+// if characters greater than 8 good password.
+// let password = prompt();
+// if (password.length >= 6) {
+//   if (password.indexOf(" ") === -1) {
+//     console.log("valid password");
+//   } else {
+//     console.log("password is long enough, but cannot contain spaces");
+//   }
+// } else {
+//   console.log("password must be longer");
+// }
+
 // ======================================
 // 010 - Truthy & Falsy Values
 // ======================================
+// 1) check the values truthy or falsy
+// let mystery = 5;
+// let mystery = 999;
+// let mystery = 0;
+// let mystery = 0 / 0;
+// let mystery = "bhargav";
+// let mystery = " ";
+// let mystery = "";
+// let mystery = null;
+// let mystery = undefined;
+// let mystery = NaN;
+
+// let loggedInUser = "thomas123";
+// let loggedInUser = null;
+// let loggedInUser = "";
+// let loggedInUser = "thomas123";
+// let loggedInUser = "thomas123";
+
+// if (mystery) {
+//   console.log("truthy");
+// } else {
+//   console.log("falsy");
+// }
+
 // ======================================
 // 011 - Logical AND (&&)
 // ======================================
+/*
+// 1) set myName true set age true
+// check myName && age is true of not
+// case 1
+// let myName = true;
+// let age = true;
+// case 2
+// let myName = true;
+// let age = false;
+// case 3
+// let myName = false;
+// let age = true;
+// case 4
+// let myName = false;
+// let age = false;
+
+// 2) check true or false
+// console.log(1 <= 4 && "a" === "a");
+// console.log(9 > 10 && 9 >= 9);
+// console.log("abc".length === 3 && 1 + 1 === 4);
+// console.log(1 <= 2 && 5 === 5);
+// console.log(1 <= 2 && 5 === "5");
+
+// 3) write a pogram to enter password
+// password should be 8 or greater than 8 characters
+// password cannot contain spaces
+*/
+
+// 1) set myName true set age true
+// check myName && age is true of not
+// case 1
+// let myName = true;
+// let age = true;
+// if (myName && age) {
+//   console.log("true");
+// } else {
+//   console.log("false");
+// }
+// case 2
+// let myName = true;
+// let age = false;
+// if (myName && age) {
+//   console.log("true");
+// } else {
+//   console.log("false");
+// }
+// case 3
+// let myName = false;
+// let age = true;
+// if (myName && age) {
+//   console.log("true");
+// } else {
+//   console.log("false");
+// }
+// case 4
+// let myName = false;
+// let age = false;
+// if (myName && age) {
+//   console.log("true");
+// } else {
+//   console.log("false");
+// }
+
+// 2) check true or false
+// console.log(1 <= 4 && "a" === "a");
+// console.log(9 > 10 && 9 >= 9);
+// console.log("abc".length === 3 && 1 + 1 === 4);
+// console.log(1 <= 2 && 5 === 5);
+// console.log(1 <= 2 && 5 === "5");
+
+// 3) write a pogram to enter password
+// password should be 8 or greater than 8 characters
+// password cannot contain spaces
+// let password = prompt();
+// if (password.length >= 8 && password.indexOf(" ") === -1) {
+//   console.log("valid password");
+// } else {
+//   console.log("invalid password");
+// }
+
 // ======================================
 // 012 - Logical OR ( || )
 // ======================================
