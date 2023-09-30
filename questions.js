@@ -646,6 +646,11 @@
 // ======================================
 // 002 - Array Indices
 // ======================================
+// // 1)
+// let colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+// // get blue violet indigo from colors and console.
+// // get indigo using two methods
+
 // ======================================
 // 003 - Modifying Arrays
 // ======================================

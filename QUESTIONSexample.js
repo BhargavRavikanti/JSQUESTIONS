@@ -1341,6 +1341,19 @@
 // ======================================
 // 002 - Array Indices
 // ======================================
+// // 1)
+// let colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+// // get blue violet indigo from colors and console.
+// let getColors = colors[4];
+// console.log(getColors);
+// getColors = colors[colors.length - 1];
+// console.log(getColors);
+// // get indigo using two methods
+// getColors = colors[colors.length - 2];
+// console.log(getColors);
+// getColors = colors[5];
+// console.log(getColors);
+
 // ======================================
 // 003 - Modifying Arrays
 // ======================================
