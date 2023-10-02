@@ -1779,6 +1779,49 @@
 // ======================================
 // 008 - Reverse and Join
 // ======================================
+
+// 1)
+// let letters = ["T", "C", "E", "P", "S", "E", "R"];
+// (1) reverse the array
+// console.log(letters.reverse());
+// console.log(letters);
+
+// (2) create string from array letters
+// console.log(letters.join());
+
+// (3) remove cama's from array letters and return as a string
+// console.log(letters.join(""));
+
+// (4) add & symbol between array elements from array letters and return as a string
+// console.log(letters.join("&"));
+
+// (5) add space between array elements and return as a string
+// console.log(letters.join(" "));
+// console.log(letters.reverse().join("."));
+
+// (6) does reverse method mutates an array?
+// yes it mutates an array
+// console.log(letters);
+
+// (7) output should be T & C & E & P & S & E & R
+// console.log(letters.join(" & "));
+
+// (8) output shoulb be T-C-E-P-S-E-R
+// console.log(letters.join("-"));
+
+// 2)
+// let animals = ["tiger", "lion", "cat", "dog", "elephant"];
+// // (1) create a string from array animals
+// console.log(animals.join());
+
+// 3)
+// let someThing = [12.3, 60, false, null, undefined];
+// // (1) convert this array into string.
+// console.log(someThing.join());
+// console.log(someThing.join(" "));
+// console.log(someThing.join(" # "));
+// console.log(someThing.join(" # -> "));
+
 // ======================================
 // 009 - Slice
 // ======================================

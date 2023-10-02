@@ -755,6 +755,28 @@
 // ======================================
 // 008 - Reverse and Join
 // ======================================
+// 1)
+// let letters = ["T", "C", "E", "P", "S", "E", "R"];
+// (1) reverse the array and console letters array
+// (2) create string from array letters
+// (3) remove cama's between array elements and return as a string
+// (4) add & symbol between array elements and return as a string
+// (5) add space between array elements and return as a string
+// (6) does reverse method mutates an array?
+// (7) output should be T & C & E & P & S & E & R
+// (8) output shoulb be T-C-E-P-S-E-R
+
+// 2)
+// let animals = ["tiger", "lion", "cat", "dog", "elephant"];
+// (1) create a string from array animals
+
+// 3)
+// let someThing = [12.3, 60, false];
+// (1) convert this array into string.
+// (2) 12.3 60 false output should be
+// (3) output should be 12.3 # 60 # false #  #
+// (4) output should be 12.3 # -> 60 # -> false # ->  # ->
+
 // ======================================
 // 009 - Slice
 // ======================================
