@@ -654,12 +654,45 @@
 // ======================================
 // 003 - Modifying Arrays
 // ======================================
+// 1) // let colors = ["rad", "orange", "green", "yellow", "pink", "blue"];
+// get length of the array
+// change index 0 to red
+// get last index number
+// get last indexed element
+// change index last to green
+// get pink index number
+// change or set pink to white
+// add two elements brown and black at last
+// check length of the array
+// add another two elements grey and saffron to last
+// check length of the array
+// add element marron to last
+
 // ======================================
 // 004 - Push and Pop
 // ======================================
+// 1) create an array animals and add tiger,lion,cat
+// add element dog at end of array
+// add three element elephant,rabbit,crocodile at end of array
+// remove last element
+// remove another last three elements
+// make it empty array
+// add tiger using push method
+// add cat and dog using set method at last
+
+// 2) create an empty array
+// add 2 elements tiger,lion
+// add 3 dog,cat,elephant
+// make it empty array
+// add 3 elements monkey,giraffee,cheetah
+
 // ======================================
 // 005 - Shift and Unshift
 // ======================================
+// 1) make an array animals tiger,lion
+// add elements at start crocodile
+// add another 2 elements at start dog,cat
+
 // ======================================
 // 006 - Concat
 // ======================================

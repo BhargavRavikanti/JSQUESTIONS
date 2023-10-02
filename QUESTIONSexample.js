@@ -1357,12 +1357,180 @@
 // ======================================
 // 003 - Modifying Arrays
 // ======================================
+// 1) // let colors = ["rad", "orange", "green", "yellow", "pink", "blue"];
+// get length of the array
+// change index 0 to red
+// get last index number
+// get last indexed element
+// change index last to green
+// get pink index number
+// change or set pink to white
+// add two elements brown and black at last
+// check length of the array
+// add another two elements grey and saffron to last
+// check length of the array
+// add element marron to last
+
+// let colors = ["rad", "orange", "green", "yellow", "pink", "blue"];
+// console.log(colors);
+
+// // get length of the array
+// console.log(colors.length);
+
+// // change index 0 to red
+// colors[0] = "red";
+// console.log(colors);
+// // getting last index number
+
+// console.log(colors.length - 1);
+
+// // get last indexed element
+// console.log(colors[colors.length - 1]);
+
+// // change last indexed element to sky blue
+// colors[colors.length - 1] = "sky blue";
+// console.log(colors);
+
+// // get pink index number
+// console.log(colors.length - 2);
+// console.log(colors[colors.length - 2]); // checking pink or not
+
+// // change pink to white
+// colors[colors.length - 2] = "white";
+// console.log(colors);
+
+// // add two elements brown and black at last
+// // step 1 get last indexed number
+// console.log(colors.length - 1);
+// // last step set next number to brown so on..
+// colors[6] = "brown";
+// console.log(colors);
+// colors[7] = "black";
+// console.log(colors);
+
+// // check length of the array
+// console.log(colors.length);
+
+// // add another two elements grey and saffron to last
+// console.log(colors.length - 1);
+// colors[8] = "grey";
+// console.log(colors);
+// colors[9] = "saffron";
+// console.log(colors);
+// console.log(colors.length);
+
+// // add element marron to last
+// console.log(colors.length);
+// colors[10] = "marron";
+// console.log(colors);
+
 // ======================================
 // 004 - Push and Pop
 // ======================================
+/*
+// 1) create an array animals and add tiger,lion,cat
+// add element dog at end of array
+// add three element elephant,rabbit,crocodile at end of array
+// remove last element
+// remove another last three elements
+// make it empty array
+// add tiger using push method
+// add cat and dog using set method at last
+
+// 2) create an empty array
+// add 2 elements tiger,lion
+// add 3 dog,cat,elephant
+// make it empty array
+// add 3 elements monkey,giraffee,cheetah
+*/
+
+// 1) create an array animals and add tiger,lion,cat
+// add element dog at end of array
+// add three element elephant,rabbit,crocodile at end of array
+// remove last element
+// remove another last three elements
+// make it empty array
+// add tiger using push method
+// add cat and dog using set method at last
+
+// const animals = ["tiger", "lion", "cat"];
+// console.log(animals);
+
+// // add element dog at end of array
+// animals.push("dog");
+// console.log(animals);
+
+// // add three element elephant,rabbit,crocodile at end of array
+// animals.push("elephant", "rabbit", "crocodile");
+// console.log(animals);
+
+// // remove last element
+// // step 1 check what is last element
+// console.log(animals[animals.length - 1]);
+// // step last
+// animals.pop();
+// console.log(animals);
+
+// // remove another last three elements
+// console.log(animals);
+// animals.pop();
+// animals.pop();
+// animals.pop();
+// console.log(animals);
+
+// // make it empty array
+// console.log(animals);
+// animals.pop();
+// animals.pop();
+// animals.pop();
+// console.log(animals);
+// animals.pop();
+// animals.pop();
+// console.log(animals);
+
+// // add tiger using push method
+// animals.push("tiger");
+// console.log(animals);
+
+// // add cat and dog using set method at last
+// animals[1] = "cat";
+// console.log(animals);
+// animals[2] = "dog";
+// console.log(animals);
+
+// // 2) create an empty array
+// const emptyArray = [];
+
+// // add 2 elements tiger,lion
+// emptyArray[0] = "tiger";
+// emptyArray[1] = "lion";
+// console.log(emptyArray);
+
+// // add 3 dog,cat,elephant
+// emptyArray[2] = "dog";
+// emptyArray[3] = "cat";
+// emptyArray[4] = "elephant";
+// console.log(emptyArray);
+
+// // make it empty array
+// emptyArray.pop();
+// emptyArray.pop();
+// emptyArray.pop();
+// emptyArray.pop();
+// emptyArray.pop();
+// console.log(emptyArray);
+
+// // add 3 elements monkey,giraffee,cheetah
+// emptyArray.push("monkey", "giraffee", "cheetah");
+// console.log(emptyArray);
+
 // ======================================
 // 005 - Shift and Unshift
 // ======================================
+// 1) make an array animals tiger,lion
+// add elements at start crocodile
+// add another 2 elements at start dog,cat
+
 // ======================================
 // 006 - Concat
 // ======================================
