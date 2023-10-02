@@ -717,6 +717,41 @@
 // ======================================
 // 007 - Includes and IndexOf
 // ======================================
+// 1)
+// let ingredients = [
+//   "water",
+//   "corn starch",
+//   "flour",
+//   "cheese",
+//   "brown sugar",
+//   "shrimp",
+//   "eel",
+//   "butter",
+// ];
+// (1) see fish is present in array or not
+// (2) see flour is present in array or not
+// (3) see eel is present in array or not
+// (4) see water is present in array or not also see water is after index 0 or not
+// (5) see shrimp is present in array or not also see  shrimp is after index 0 or not
+// (6) see shrimp is present in array or not also see  shrimp is after index 4 or not
+// (7) see shrimp is present in array or not also see  shrimp is after index 5 or not
+// (8) see shrimp is present in array or not also see  shrimp is after index 6 or not
+// (9) see shrimp is present in array or not also see  shrimp is after index 7 or not
+// (10) see flour is present array or not if present you can start eating otherwise no flour
+// (11) get index number of eel
+// (12) get what element index 6 has
+// (13) get index number of shrimp
+// (14) get what element index 5 has
+// (15) get index number of power
+// (16) get index number of thunder
+// (17) get index number of butter
+// (18) get index number of brown sugar
+// (19) get index number of brown
+// (20) get index number of brown sugar and enter index number as 2
+// (21) get index number of brown sugar and enter index number as 4
+// (22) get index number of brown sugar and enter index number as 5
+// (23) get index number of brown sugar and enter index number as 5
+
 // ======================================
 // 008 - Reverse and Join
 // ======================================

@@ -1652,6 +1652,130 @@
 // ======================================
 // 007 - Includes and IndexOf
 // ======================================
+/*
+// 1)
+// let ingredients = [
+//   "water",
+//   "corn starch",
+//   "flour",
+//   "cheese",
+//   "brown sugar",
+//   "shrimp",
+//   "eel",
+//   "butter",
+// ];
+// (1) see fish is present in array or not
+// (2) see flour is present in array or not
+// (3) see eel is present in array or not
+// (4) see water is present in array or not also see water is after index 0 or not
+// (5) see shrimp is present in array or not also see  shrimp is after index 0 or not
+// (6) see shrimp is present in array or not also see  shrimp is after index 4 or not
+// (7) see shrimp is present in array or not also see  shrimp is after index 5 or not
+// (8) see shrimp is present in array or not also see  shrimp is after index 6 or not
+// (9) see shrimp is present in array or not also see  shrimp is after index 7 or not
+// (10) see flour is present array or not if present you can start eating otherwise no flour
+// (11) get index number of eel
+// (12) get what element index 6 has
+// (13) get index number of shrimp
+// (14) get what element index 5 has
+// (15) get index number of power
+// (16) get index number of thunder
+// (17) get index number of butter
+// (18) get index number of brown sugar
+// (19) get index number of brown
+// (20) get index number of brown sugar and enter index number as 2
+// (21) get index number of brown sugar and enter index number as 4
+// (22) get index number of brown sugar and enter index number as 5
+// (23) get index number of brown sugar and enter index number as 5
+*/
+
+// 1)
+// let ingredients = [
+//   "water",
+//   "corn starch",
+//   "flour",
+//   "cheese",
+//   "brown sugar",
+//   "shrimp",
+//   "eel",
+//   "butter",
+// ];
+// (1) see fish is present in array or not
+// console.log(ingredients.includes("fish"));
+
+// (2) see flour is present in array or not
+// console.log(ingredients.includes("flour"));
+
+// (3) see eel is present in array or not
+// console.log(ingredients.includes("eel"));
+
+// (4) see water is present in array or not also see water is after index 0 or not
+// console.log(ingredients.includes("water", 0));
+// console.log(ingredients.includes("water", 1));
+// console.log(ingredients.includes("water", 5));
+
+// (5) see shrimp is present in array or not also see  shrimp is after index 0 or not
+// console.log(ingredients.includes("shrimp", 0));
+
+// (6) see shrimp is present in array or not also see  shrimp is after index 4 or not
+// console.log(ingredients.includes("shrimp", 4));
+
+// (7) see shrimp is present in array or not also see  shrimp is after index 5 or not
+// console.log(ingredients[5]);
+// console.log(ingredients.includes("shrimp", 5));
+
+// (8) see shrimp is present in array or not also see  shrimp is after index 6 or not
+// console.log(ingredients.includes("shrimp", 6));
+
+// (9) see shrimp is present in array or not also see  shrimp is after index 7 or not
+// console.log(ingredients.includes("shrimp", 7));
+
+// (10) see flour is present array or not if present you can start eating otherwise no flour
+// if (ingredients.includes("flour")) {
+//   console.log("you can start eating");
+// } else {
+//   console.log("no flour");
+// }
+
+// // (11) get index number of eel
+// console.log(ingredients.indexOf("eel"));
+
+// // (12) get what element index 6 has
+// console.log(ingredients[6]);
+
+// // (13) get index number of shrimp
+// console.log(ingredients.indexOf("shrimp"));
+
+// // (14) get what element index 5 has
+// console.log(ingredients[5]);
+
+// // (15) get index number of power
+// console.log(ingredients.indexOf("power"));
+
+// // (16) get index number of thunder
+// console.log(ingredients.indexOf("thunder"));
+
+// // (17) get index number of butter
+// console.log(ingredients.indexOf("butter", 8));
+
+// // (18) get index number of brown sugar
+// console.log(ingredients.indexOf("brown sugar"));
+
+// // (19) get index number of brown
+// console.log(ingredients.indexOf("brown"));
+
+// // (20) get index number of brown sugar and enter index number as 2
+// console.log(ingredients.indexOf("brown sugar", 2));
+
+// // (21) get index number of brown sugar and enter index number as 4
+// console.log(ingredients.indexOf("brown sugar", 4));
+
+// // (22) get index number of brown sugar and enter index number as 5
+// console.log(ingredients.indexOf("brown sugar", 5));
+
+// // (23) get index number of brown sugar and enter index number as 5
+// console.log(ingredients.indexOf("brown sugar", 6));
+
 // ======================================
 // 008 - Reverse and Join
 // ======================================
