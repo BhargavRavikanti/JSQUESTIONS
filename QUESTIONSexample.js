@@ -1341,6 +1341,13 @@
 // ======================================
 // 002 - Array Indices
 // ======================================
+/*
+// // 1)
+// let colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+// // get blue violet indigo from colors and console.
+// // get indigo using two methods
+*/
+
 // // 1)
 // let colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
 // // get blue violet indigo from colors and console.
@@ -1348,6 +1355,7 @@
 // console.log(getColors);
 // getColors = colors[colors.length - 1];
 // console.log(getColors);
+
 // // get indigo using two methods
 // getColors = colors[colors.length - 2];
 // console.log(getColors);
@@ -1357,6 +1365,7 @@
 // ======================================
 // 003 - Modifying Arrays
 // ======================================
+/*
 // 1) // let colors = ["rad", "orange", "green", "yellow", "pink", "blue"];
 // get length of the array
 // change index 0 to red
@@ -1370,6 +1379,7 @@
 // add another two elements grey and saffron to last
 // check length of the array
 // add element marron to last
+*/
 
 // let colors = ["rad", "orange", "green", "yellow", "pink", "blue"];
 // console.log(colors);
@@ -1527,13 +1537,118 @@
 // ======================================
 // 005 - Shift and Unshift
 // ======================================
-// 1) make an array animals tiger,lion
+/*
+// 1) make an empty array animals
+// add elements tiger,lion
 // add elements at start crocodile
 // add another 2 elements at start dog,cat
+// add another 4 elements zebra,rino,dinosar,deer
+// see the length of the array
+// delete start item
+// again delete start 2 items
+*/
+
+// // 1) make an empty array animals
+// const emptyArray = [];
+// console.log(emptyArray);
+
+// // add elements tiger,lion
+// emptyArray[0] = "tiger";
+// emptyArray[1] = "lion";
+// console.log(emptyArray);
+
+// // add elements at start crocodile
+// emptyArray.unshift("crocodile");
+// console.log(emptyArray);
+
+// // add another 2 elements at start dog,cat
+// emptyArray.unshift("dog", "cat");
+// console.log(emptyArray);
+
+// // add another 4 elements zebra,rino,dinosar,deer
+// emptyArray.unshift("zebra", "rino", "dinosar", "deer");
+// console.log(emptyArray);
+
+// // see the length of the array
+// console.log(emptyArray.length);
+
+// // delete start item
+// console.log(emptyArray);
+// console.log(emptyArray.length);
+// emptyArray.shift();
+// console.log(emptyArray);
+// console.log(emptyArray.length);
+
+// // again delete start 2 items
+// emptyArray.shift();
+// emptyArray.shift();
+// console.log(emptyArray);
+// console.log(emptyArray.length);
 
 // ======================================
 // 006 - Concat
 // ======================================
+/*
+// // 1)
+// let fruits = ["apple", "banana"];
+// let veggies = ["asparagus", "brussel sprouts"];
+// let meats = ["steak", "chicken breast"];
+
+// merge two arrays fruits and veggies.
+// is order matters when merging arrays?
+// merge same array see result.
+// merge same array another time see result
+// merge same array another 3 times see result.
+// create a variable allFood and merge fruits,veggies and meat into allFood.
+// do real fruits,veggies,meats values changes?
+*/
+
+// 1)
+// let fruits = ["apple", "banana"];
+// let veggies = ["asparagus", "brussel sprouts"];
+// let meats = ["steak", "chicken breast"];
+
+// // merge two arrays fruits and veggies
+// const fruitVeggies = fruits.concat(veggies);
+// console.log(fruitVeggies);
+// console.log(fruitVeggies.length);
+
+// // merge two arrays veggies and fruits
+// const veggieFruits = veggies.concat(fruits);
+// console.log(veggieFruits);
+// console.log(fruitVeggies.length);
+
+// is order matters when merging arrays
+// yes absolutely bcoz concat array comes last which means fruits elements comes last in the array
+// ex: const veggieFruits = veggies.concat(fruits); (4) ['asparagus', 'brussel sprouts', 'apple', 'banana']
+
+// // merge same array see result
+// let sameArray = fruits.concat(fruits);
+// console.log(sameArray);
+// console.log(sameArray.length);
+
+// // merge same array another time see result
+// sameArray = fruits.concat(fruits).concat(fruits);
+// console.log(sameArray);
+// console.log(sameArray.length);
+
+// // merge same array another three times see result
+// sameArray = sameArray.concat(fruits).concat(fruits).concat(fruits);
+// console.log(sameArray);
+// console.log(sameArray.length);
+
+// // create a variable allFood and merge fruits,veggies and meat into allFood.
+// const allFood = fruits.concat(veggies).concat(meats);
+// console.log(allFood);
+// console.log(allFood.length);
+
+// // create a variable allFood and merge fruits,veggies and meat into allFood.
+// // do real fruits,veggies,meats values changes?
+// // no it wiii not change
+// console.log(fruits);
+// console.log(veggies);
+// console.log(meats);
+
 // ======================================
 // 007 - Includes and IndexOf
 // ======================================

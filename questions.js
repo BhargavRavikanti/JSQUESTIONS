@@ -648,7 +648,7 @@
 // ======================================
 // // 1)
 // let colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
-// // get blue violet indigo from colors and console.
+// // get blue violet from colors and console.
 // // get indigo using two methods
 
 // ======================================
@@ -689,13 +689,31 @@
 // ======================================
 // 005 - Shift and Unshift
 // ======================================
-// 1) make an array animals tiger,lion
+// 1) make an empty array animals
+// add elements tiger,lion
 // add elements at start crocodile
 // add another 2 elements at start dog,cat
+// add another 4 elements zebra,rino,dinosar,deer
+// see the length of the array
+// delete start item
+// again delete start 2 items
 
 // ======================================
 // 006 - Concat
 // ======================================
+// // 1)
+// let fruits = ["apple", "banana"];
+// let veggies = ["asparagus", "brussel sprouts"];
+// let meats = ["steak", "chicken breast"];
+
+// merge two arrays fruits and veggies.
+// is order matters when merging arrays?
+// merge same array see result.
+// merge same array another time see result
+// merge same array another 3 times see result.
+// create a variable allFood and merge fruits,veggies and meat into allFood.
+// do real fruits,veggies,meats values changes?
+
 // ======================================
 // 007 - Includes and IndexOf
 // ======================================
