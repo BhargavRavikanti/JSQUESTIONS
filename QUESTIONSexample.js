@@ -2258,6 +2258,7 @@
 // ======================================
 // 005 - Nested Arrays & Objects
 // ======================================
+/*
 // 1)
 // const student = {
 //   firstName: "David",
@@ -2268,6 +2269,69 @@
 //     final: 88,
 //   },
 // };
+// (1) access final value
+// (2) access art
+// (3) access strengths
+// (4) access exams
+// (5) find the average of exams
+// (6) add property extra in exams and assign value 90
+
+// 2)
+// const shoppingCart = [
+//   {
+//     product: "Jenga Classic",
+//     price: 6.88,
+//     quantity: 1,
+//   },
+//   {
+//     product: "Echo Dot",
+//     price: 29.99,
+//     quantity: 3,
+//   },
+//   {
+//     product: "Fire Stick",
+//     price: 39.99,
+//     quantity: 2,
+//   },
+// ];
+// (1) access second element
+// (2) access product value of first element
+// (3) access price value of third element
+// (4) access quantity value of third element
+
+// 3)
+// const game = {
+//   player1: {
+//     username: "Blue",
+//     playingAs: "X",
+//   },
+//   player2: {
+//     username: "Muffins",
+//     playingAs: "O",
+//   },
+//   board: [
+//     ["O", null, "X"],
+//     ["X", "O", "X"],
+//     [null, "O", "X"],
+//   ],
+// };
+// (1) access playingAs from player1
+// (2) access player2 username
+// (3) access X from second element of board
+// (4) access null from third element of board
+*/
+
+// 1)
+// const student = {
+//   firstName: "David",
+//   lastName: "Jones",
+//   strengths: ["Music", "Art"],
+//   exams: {
+//     midterm: 92,
+//     final: 88,
+//   },
+// };
+
 // // (1) access final value
 // console.log(student.exams.final);
 
@@ -2289,6 +2353,66 @@
 // console.log(student.exams.extra);
 // console.log(student.exams);
 
+// 2)
+// const shoppingCart = [
+//   {
+//     product: "Jenga Classic",
+//     price: 6.88,
+//     quantity: 1,
+//   },
+//   {
+//     product: "Echo Dot",
+//     price: 29.99,
+//     quantity: 3,
+//   },
+//   {
+//     product: "Fire Stick",
+//     price: 39.99,
+//     quantity: 2,
+//   },
+// ];
+
+// // (1) access second element
+// console.log(shoppingCart[1]);
+
+// // (2) access product value of first element
+// console.log(shoppingCart[0].product);
+
+// // (3) access price value of third element
+// console.log(shoppingCart[2].price);
+
+// // (4) access quantity value of third element
+// console.log(shoppingCart[2].quantity);
+
+// 3)
+// const game = {
+//   player1: {
+//     username: "Blue",
+//     playingAs: "X",
+//   },
+//   player2: {
+//     username: "Muffins",
+//     playingAs: "O",
+//   },
+//   board: [
+//     ["O", null, "X"],
+//     ["X", "O", "X"],
+//     [null, "O", "X"],
+//   ],
+// };
+
+// // (1) access playingAs from player1
+// console.log(game.player1.playingAs);
+
+// // (2) access player2 username
+// console.log(game.player2.username);
+
+// // (3) access X from second element of board
+// console.log(game.board[1][2]);
+
+// // (4) access null from third element of board
+// console.log(game.board[2][0]);
+
 // ======================================
 // 006 - Objects and Reference Types
 // ======================================
@@ -2296,45 +2420,101 @@
 // 007 -Array_Object Equality
 // ======================================
 
+// 1)
+// let nums = [1, 2, 3];
+// let mystery = [1, 2, 3];
+// let moreNums = nums;
+// // (1) check nums and mystery with strict equality si true or false
+// console.log(nums === mystery);
+
+// // (2) check nums and moreNums with strict equality si true or false
+// console.log(nums === moreNums);
+
+// 2) check true or false
+// console.log({} === {});
+// console.log({ a: 1 } === { a: 1 });
+
+// 3)
+// let data1 = { a: 1 };
+// let data2 = data1;
+// console.log(data1 === data2);
+// // (1) add property name and set value bharu to data1 and console data1 & data2 and observe
+// data1.name = "bharu";
+// console.log(data1);
+// console.log(data2);
+// // (2) add property age and set value 28 to data1 and console data1 & data2 and observe
+// data2.age = 28;
+// console.log(data1);
+// console.log(data2);
+
 ////////////////////////////////
 // 07 - The World of Loops
 ////////////////////////////////
 
 // ======================================
-// 001 -
+// 001 - Intro to Loops
 // ======================================
 // ======================================
-// 002 -
+// 002 - For Loops
+// ======================================
+// 1) write for loop syntax and definition of for loop.
+
+// 2) print hello 10 times using for loop
+// for (let i = 1; i <= 10; i++) {
+//   console.log("hello", i);
+// }
+
+// 3) hello Counting by 3's:
+// for (let i = 1; i <= 10; i += 3) {
+//   console.log("hello", i);
+// }
+
+// 4) write 1 to 20 perfect squares
+// for (let i = 1; i <= 20; i++) {
+//   console.log(`${i} X ${i} = ${i * i}`);
+// }
+
+// 5) write 1 to 20 perfect squares in reverse order
+// for (let i = 20; i >= 0; i--) {
+//   console.log(`${i} X ${i} = ${i * i}`);
+// }
+
+// 6) write 1 to 30 perfect squares
+// for (let i = 0; i <= 30; i++) {
+//   console.log(`${i} X ${i} = ${i * i}`);
+// }
+
+// 7) write 1 to 30 perfect squares in reverse order
+
+// ======================================
+// 003 - Infinite Loops
 // ======================================
 // ======================================
-// 003 -
+// 004 - For Loops & Arrays
 // ======================================
 // ======================================
-// 004 -
+// 005 - Nested for Loops
 // ======================================
 // ======================================
-// 005 -
+// 006 - Intro to While Loop
 // ======================================
 // ======================================
-// 006 -
+// 007 - More While Loops
 // ======================================
 // ======================================
-// 007 -
+// 008 - Break Keyword
 // ======================================
 // ======================================
-// 008 -
+// 009 - For...Of Intro
 // ======================================
 // ======================================
-// 009 -
+// 010 - Comparing For and For...Of
 // ======================================
 // ======================================
-// 010 -
+// 011 - For...Of with Objects
 // ======================================
 // ======================================
-// 011 -
-// ======================================
-// ======================================
-// 012 -
+// 012 - For...In Loops
 // ======================================
 
 ////////////////////////////////
