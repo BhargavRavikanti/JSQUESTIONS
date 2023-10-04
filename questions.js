@@ -819,6 +819,26 @@
 // ======================================
 // 011 - Sorting(part 1)
 // ======================================
+// 1)
+// let people = ["Mrs. Robsinson", "Angie", "Jolene", "Maggie May", "Roxanne"];
+// (1) sort array and observe it
+
+// 2)
+// let names = [
+//   "angi",
+//   "agra",
+//   "aroma",
+//   "bat",
+//   "bskta",
+//   "batista",
+//   "cat",
+//   "zebra",
+// ];
+// (1) sort array and observe it
+
+// 3)
+// let nums = [34, 10, "bats", 19876, "art", 100000, 67, 99];
+// // (1) sort array and observe it
 
 // ======================================
 // 012 - Intro to Reference Types
@@ -831,6 +851,42 @@
 // ======================================
 // 014 - Working with Nested Arrays
 // ======================================
+// 1)
+// const animalPairs = [
+//   ["doe", "buck"],
+//   ["ewe", "ram"],
+//   ["peahen", "peacock"],
+// ];
+// (1) access third element
+// (2) access peahen
+// (2) access peacock
+// (3) access ram
+// (4) access first element
+// (5) access buck
+// (6) set dark instead of buck
+// (7) set pecock as parrot
+// (8) insert value hart in element one at ending
+// (9) insert values water,air,gas in element two  at ending
+
+// 2) Nested arrays
+// const board = [
+//   ["O", null, "X"],
+//   [null, "X", "O"],
+//   ["X", "O", null],
+// ];
+// (1) access null from third element
+// (2) access third element
+
+// 3)
+// const animalPairs1 = [
+//   ["doe", ["buck", "stag"]],
+//   ["ewe", "ram"],
+//   ["peahen", "peacock"],
+// ];
+// (1) To access 'ewe'
+// (2) To access 'buck'
+// (3) To access 'stag'
+// (4) insert element hart & sort at end in sub array
 
 ////////////////////////////////
 // 06 - Objects - The Core of Javascript

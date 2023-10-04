@@ -1943,6 +1943,32 @@
 // ======================================
 // 011 - Sorting(part 1)
 // ======================================
+// 1)
+// let people = ["Mrs. Robsinson", "Angie", "Jolene", "Maggie May", "Roxanne"];
+// console.log(people);
+// // (1) sort array and observe it
+// console.log(people.sort());
+
+// 2)
+// let names = [
+//   "angi",
+//   "agra",
+//   "aroma",
+//   "bat",
+//   "bskta",
+//   "batista",
+//   "cat",
+//   "zebra",
+// ];
+// console.log(names);
+// // (1) sort array and observe it
+// console.log(names.sort());
+
+// 3)
+// let nums = [34, 10, "bats", 19876, "art", 100000, 67, 99];
+// console.log(nums);
+// // // (1) sort array and observe it
+// console.log(nums.sort());
 
 // ======================================
 // 012 - Intro to Reference Types
@@ -1954,6 +1980,121 @@
 // ======================================
 // 014 - Working with Nested Arrays
 // ======================================
+/*
+// 1)
+// const animalPairs = [
+//   ["doe", "buck"],
+//   ["ewe", "ram"],
+//   ["peahen", "peacock"],
+// ];
+// (1) access third element
+// (2) access peahen
+// (2) access peacock
+// (3) access ram
+// (4) access first element
+// (5) access buck
+// (6) set dark instead of buck
+// (7) set pecock as parrot
+// (8) insert value hart in element one at ending
+// (9) insert values water,air,gas in element two  at ending
+
+// 2) Nested arrays
+// const board = [
+//   ["O", null, "X"],
+//   [null, "X", "O"],
+//   ["X", "O", null],
+// ];
+// (1) access null from third element
+// (2) access third element
+
+// 3)
+// const animalPairs1 = [
+//   ["doe", ["buck", "stag"]],
+//   ["ewe", "ram"],
+//   ["peahen", "peacock"],
+// ];
+// (1) To access 'ewe'
+// (2) To access 'buck'
+// (3) To access 'stag'
+// (4) insert element hart & sort at end in sub array
+*/
+
+// 1)
+// const animalPairs = [
+//   ["doe", "buck"],
+//   ["ewe", "ram"],
+//   ["peahen", "peacock"],
+// ];
+// console.log(animalPairs);
+
+// // (1) access third element
+// // console.log(animalPairs[2]);
+
+// // (2) access peahen
+// console.log(animalPairs[2][0]);
+
+// // (2) access peacock
+// console.log(animalPairs[2][1]);
+
+// // (3) access ram
+// console.log(animalPairs[1][1]);
+
+// // (4) access first element
+// console.log(animalPairs[0]);
+
+// // (5) access buck
+// console.log(animalPairs[0][1]);
+
+// // (6) set dark instead of buck
+// animalPairs[0][1] = "dark";
+// console.log(animalPairs[0][1]);
+// console.log(animalPairs);
+
+// // (7) set pecock as parrot
+// animalPairs[2][1] = "parrot";
+// console.log(animalPairs[2][1]);
+// console.log(animalPairs);
+
+// // (8) insert value hart in element one at ending
+// animalPairs[0].push("hart");
+// console.log(animalPairs[0]);
+
+// // (9) insert values water,air,gas in element two  at ending
+// animalPairs[1].push("water", "air", "gas");
+// console.log(animalPairs[1]);
+// console.log(animalPairs);
+
+// 2) Nested arrays
+// const board = [
+//   ["O", null, "X"],
+//   [null, "X", "O"],
+//   ["X", "O", null],
+// ];
+// // (1) access null from third element
+// console.log(board[2][2]);
+
+// // (2) access third element
+// console.log(board[2]);
+
+// // 3)
+// const animalPairs1 = [
+//   ["doe", ["buck", "stag"]],
+//   ["ewe", "ram"],
+//   ["peahen", "peacock"],
+// ];
+// // (1) To access 'ewe'
+// console.log(animalPairs1[1][0]);
+
+// // (2) To access 'buck'
+// console.log(animalPairs1[0][1][0]);
+
+// // (3) To access 'stag'
+// console.log(animalPairs1[0][1][1]);
+
+// // (4) insert element hart & sort at end in sub array
+// animalPairs1[0][1].push("hart", "sort");
+// console.log(animalPairs1[0][1]);
+// console.log(animalPairs1);
 
 ////////////////////////////////
 // 06 - Objects - The Core of Javascript
