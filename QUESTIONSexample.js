@@ -2475,7 +2475,7 @@
 // }
 
 // 5) write 1 to 20 perfect squares in reverse order
-// for (let i = 20; i >= 0; i--) {
+// for (let i = 20; i >= 1; i--) {
 //   console.log(`${i} X ${i} = ${i * i}`);
 // }
 
@@ -2485,6 +2485,36 @@
 // }
 
 // 7) write 1 to 30 perfect squares in reverse order
+// for (let i = 30; i >= 1; i--) {
+//   console.log(`${i} X ${i} = ${i * i}`);
+// }
+
+// 8) write 1 to 10 perfect cubes
+// for (let i = 0; i <= 10; i++) {
+//   console.log(`${i} X ${i} X ${i} = ${i * i * i}`);
+// }
+
+// 9) write 1 to 10 perfect cubes in reverse order
+// for (let i = 10; i >= 1; i--) {
+//   console.log(`${i} X ${i} X ${i} = ${i * i * i}`);
+// }
+
+// 10) write 1 to 20 perfect cubes
+// for (let i = 1; i <= 20; i++) {
+//   console.log(`${i} X ${i} X ${i} = ${i * i * i}`);
+// }
+
+// 11) write 1 to 20 perfect cubes in reverse order
+// for (let i = 20; i >= 1; i--) {
+//   console.log(`${i} X ${i} X ${i} = ${i * i * i}`);
+// }
+
+// 12) print hello world every multiples of 3 to 30
+// for (let i = 3; i <= 30; i += 3) {
+//   console.log("hello world", i);
+// }
+
+// 13) write 10 table up to 100
 
 // ======================================
 // 003 - Infinite Loops

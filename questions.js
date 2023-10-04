@@ -1065,6 +1065,8 @@
 // 9) write 1 to 10 perfect cubes in reverse order
 // 10) write 1 to 20 perfect cubes
 // 11) write 1 to 20 perfect cubes in reverse order
+// 12) print hello world every every multiples of 3 to 30
+// 13) write 10 table up to 100
 
 // ======================================
 // 003 - Infinite Loops
