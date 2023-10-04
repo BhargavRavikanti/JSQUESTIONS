@@ -768,7 +768,14 @@
 
 // 2)
 // let animals = ["tiger", "lion", "cat", "dog", "elephant"];
-// (1) create a string from array animals
+// (1) create string from array animals
+// output - tiger,lion,cat,dog,elephant
+// (2) remove cama's between array elements and return as a string
+// output - tigerlioncatdogelephant
+// (3) add & symbol between array elements and return as a string
+// output - tiger $ lion $ cat $ dog $ elephant
+// (4) add space between array elements and return as a string
+// output - tiger lion cat dog elephant
 
 // 3)
 // let someThing = [12.3, 60, false];
@@ -780,9 +787,35 @@
 // ======================================
 // 009 - Slice
 // ======================================
+// 1)
+// let animals = ["shark", "salmon", "whale", "bear", "lizard", "tortoise"];
+// (1) // output shoulb be (2) ['shark', 'salmon']
+// (2) // output should be (3) ['shark', 'salmon', 'whale']
+// (3) // output should be (2) ['whale', 'bear']
+// (4) // output should be (2) ['lizard', 'tortoise']
+// (5) // output should be (2) ['lizard', 'tortoise'] using single paramater
+// (6) // output should be (3) ['bear', 'lizard', 'tortoise'] using negative single paramater
+// (7) // output should be using negative paramaters (2) ['bear', 'lizard']
+// (8) // (6) ['shark', 'salmon', 'whale', 'bear', 'lizard', 'tortoise'] return as a copy array
+// (9) // console original array
+
 // ======================================
 // 010 - Splice
 // ======================================
+// 1)
+// let animals = ["shark", "salmon", "whale", "bear"];
+
+// (1) insert octopus at index 1 and check what it returns and console animals to check octopus is added or not
+// (2) delete 2 elements from index 3 and see what returns and console animals array
+// (3) insert two elements snake and frog from index 3 and check what it returns and console animals array check snake and frog added to animals array
+// (4) delete two elements and insert two elements SHARK! & OCTOPUS! from index 0 see what returns and console animals array to check animals array
+// (5) what are the things we can do using splice method
+// (6) what are the parameters splice can have
+// (7) does original array mutates using splice method?
+// (8) does original array mutates using splice method? if does give an example
+// (9) if we insert elements without delete items what returns using splice method write an example
+// (10) if we delete elements from an array using splice method what returns write an example
+
 // ======================================
 // 011 - Sorting(part 1)
 // ======================================

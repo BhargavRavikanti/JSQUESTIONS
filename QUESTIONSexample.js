@@ -1814,20 +1814,132 @@
 // // (1) create a string from array animals
 // console.log(animals.join());
 
+// // (2) remove cama's between array elements and return as a string
+// console.log(animals.join(""));
+
+// // (3) add & symbol between array elements and return as a string
+// console.log(animals.join(" $ "));
+
+// // (4) add space between array elements and return as a string
+// console.log(animals.join(" "));
+
 // 3)
 // let someThing = [12.3, 60, false, null, undefined];
 // // (1) convert this array into string.
 // console.log(someThing.join());
+
+// // (2) 12.3 60 false output should be
 // console.log(someThing.join(" "));
+
+// // (3) output should be 12.3 # 60 # false #  #
 // console.log(someThing.join(" # "));
+
+// // (4) output should be 12.3 # -> 60 # -> false # ->  # ->
 // console.log(someThing.join(" # -> "));
 
 // ======================================
 // 009 - Slice
 // ======================================
+/*
+// 1)
+// let animals = ["shark", "salmon", "whale", "bear", "lizard", "tortoise"];
+// (1) // output shoulb be (2) ['shark', 'salmon']
+// (2) // output should be (3) ['shark', 'salmon', 'whale']
+// (3) // output should be (2) ['whale', 'bear']
+// (4) // output should be (2) ['lizard', 'tortoise']
+// (5) // output should be (2) ['lizard', 'tortoise'] using single paramater
+// (6) // output should be (3) ['bear', 'lizard', 'tortoise'] using negative single paramater
+// (6) // output should be using negative paramaters (2) ['bear', 'lizard']
+// (7) // (6) ['shark', 'salmon', 'whale', 'bear', 'lizard', 'tortoise'] return as a copy array
+// (8) // console original array
+*/
+
+// 1)
+// let animals = ["shark", "salmon", "whale", "bear", "lizard", "tortoise"];
+// (1) // output shoulb be (2) ['shark', 'salmon']
+
+// (2) // output should be (3) ['shark', 'salmon', 'whale']
+
+// (3) // output should be (2) ['whale', 'bear']
+
+// (4) // output should be (2) ['lizard', 'tortoise']
+
+// (5) // output should be (2) ['lizard', 'tortoise'] using single paramater
+
+// (6) // output should be (3) ['bear', 'lizard', 'tortoise'] using negative single paramater
+
+// (7) // output should be using negative paramaters (2) ['bear', 'lizard']
+
+// (8) // (6) ['shark', 'salmon', 'whale', 'bear', 'lizard', 'tortoise'] return as a copy array
+
+// (9) // console original array
+
 // ======================================
 // 010 - Splice
 // ======================================
+/*
+// 1)
+// let animals = ["shark", "salmon", "whale", "bear"];
+
+// (1) insert octopus at index 1 and check what it returns and console animals to check octopus is added or not
+// (2) delete 2 elements from index 3 and see what returns and console animals array
+// (3) insert two elements snake and frog from index 3 and check what it returns and console animals array check snake and frog added to animals array
+// (4) delete two elements and insert two elements SHARK! & OCTOPUS! from index 0 see what returns and console animals array to check animals array
+// (5) what are the things we can do using splice method
+// (6) what are the parameters splice can have
+// (7) does original array mutates using splice method?
+// (8) does original array mutates using splice method? if does give an example
+// (9) if we insert elements without delete items what returns using splice method write an example
+// (10) if we delete elements from an array using splice method what returns write an example
+*/
+
+// let animals = ["shark", "salmon", "whale", "bear"];
+
+// (1) insert octopus at index 1 and console animals to check octopus is added or not
+// console.log(animals.splice(1, 0, "octopus"));
+// console.log(animals);
+
+// (2) delete 2 elements from index 3 and see what returns and console animals array
+// console.log(animals.splice(3, 2));
+// console.log(animals);
+
+// (3) insert two elements snake and frog from index 3 and check what it returns and console animals array check snake and frog added to animals array
+// console.log(animals.splice(3, 0, "snake", "frog"));
+// console.log(animals);
+
+// (4) delete two elements and insert two elements SHARK! & OCTOPUS! from index 0 see what returns and console animals array to check animals array
+// console.log(animals.splice(0, 2, "SHARK!", "OCTOPUS!"));
+// console.log(animals);
+
+// (5) what are the things we can do using splice method
+// INSERT elements,DELETE elements,REPLACE elements.
+
+// (6) what are the parameters splice can have
+//splice(startIdx, deleteCount, itemsToInsert);
+
+// (7) does original array mutates using splice method?
+// YES
+
+// (8) does original array mutates using splice method? if does give an example
+// const names = ["sai", "raju", "krish", "shane"];
+// console.log(names);
+// console.log(names.splice(0, 2));
+// console.log(names);
+
+// (9) if we insert elements without delete items what returns using splice method write an example
+// returns empty array
+// const nums = [1, 2, 3, 4, 5];
+// console.log(nums);
+// console.log(nums.splice(1, 0, "bake", "shake"));
+// console.log(nums);
+
+// (10) if we delete elements from an array using splice method what returns write an example
+// it returns deleted elements
+// const squares = [1, 4, 8, 16, 25];
+// console.log(squares);
+// console.log(squares.splice(0, 3));
+// console.log(squares);
+
 // ======================================
 // 011 - Sorting(part 1)
 // ======================================
