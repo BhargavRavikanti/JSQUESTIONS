@@ -2101,6 +2101,247 @@
 ////////////////////////////////
 
 // ======================================
+// 001 - Intro to Objects
+// ======================================
+// ======================================
+// 002 - Creating Object Literals
+// ======================================
+
+// 1) create an object
+// const fitBitData = {
+//   totalSteps: 308727,
+//   totalMiles: 211.7,
+//   avgCalorieBurn: 5755,
+//   workoutsThisWeek: "5 of 7",
+//   avgGoodSleep: "2:13",
+//   45: "forty five",
+// };
+// console.log(fitBitData);
+
+// // (1) access totalMiles
+// console.log(fitBitData.totalMiles);
+// // (2) access avgCalorieBurn
+// console.log(fitBitData.avgCalorieBurn);
+// console.log(fitBitData);
+// // (3) how to acces 45 value
+// we can access 45 key values by two methods
+// console.log(fitBitData["45"]);
+// console.log(fitBitData[45]);
+// console.log(fitBitData.45); // dot method will not work
+
+// 2) create an object using different data types
+// let comment = {
+//   username: "sillyGoose420",
+//   downVotes: 19,
+//   upVotes: 214,
+//   netScore: 195,
+//   commentText: "Tastes linke chicken lol",
+//   tags: ["#hilarious", "#funny", "#silly"],
+//   isGilded: false,
+// };
+// console.log(comment);
+
+// // (1) access username
+// console.log(comment.username);
+// // (2) access tags
+// console.log(comment.tags);
+// // (3) access #silly
+// console.log(comment.tags[2]);
+// // (4) access isGilded
+// console.log(comment.isGilded);
+
+// ======================================
+// 003 - Accessing Object Properties
+// ======================================
+/*
+// 1)
+// const palette = {
+//   red: "#eb4d4b",
+//   yellow: "#f9ca24",
+//   blue: "#30336b",
+// };
+// (1) access red value uisng dot notation
+// (2) access red value using square bracket notation
+// (3) access blue value using square bracket notaion
+//(4) assign blue key to variable mysteryColor and console palette of mysteryColor
+// (5) assign red key to variable anotherColor and console palette of anotherColor
+// (6) see it works or not
+// palette["bl" + "ue"]
+// (7) see it works or not
+// palette["ye" + "llow"]
+*/
+
+// 1)
+// const palette = {
+//   red: "#eb4d4b",
+//   yellow: "#f9ca24",
+//   blue: "#30336b",
+// };
+// console.log(palette);
+
+// (1) access red value uisng dot notation
+// console.log(palette.red);
+
+// (2) access red value using square bracket notation
+// console.log(palette["red"]);
+
+// (3) access blue value using square bracket notaion
+// console.log(palette["blue"]);
+// console.log(palette.blue);
+
+//(4) assign blue key to variable mysteryColor and check palette of mysteryColor
+// let mysteryColor = "blue";
+// console.log(palette[mysteryColor]);
+// console.log(palette);
+
+// (5) assign red key to variable anotherColor and check palette of anotherColor
+// let anotherColor = "red";
+// console.log(palette[anotherColor]);
+// console.log(palette);
+
+// (6) see it works or not
+// palette["bl" + "ue"]
+// console.log(palette["bl" + "ue"]);
+
+// (7) see it works or not
+// palette["ye" + "llow"]
+// console.log(palette["ye" + "llow"]);
+
+// ======================================
+// 004 - Adding and Updating Properties
+// ======================================
+/*
+// 1) create an empty userReviews object
+// (1) add property queenBee49 and set value as 4.0 and access
+// (2) add property queenBee70 and set value as 4.9 and access using dot and square backet methods
+// (3) add property mrSmith78 and set value as 3.5 and access using dot and square backet methods
+// (4) update existing property queenBee49 add 2 to existing value and also add 4 to exisiting value
+// (5) update existing property mrSmith78 add 1 to existing value and also add another 1 to exisiting value
+*/
+
+// 1) create an empty userReviews object
+// const userReviews = {};
+// console.log(userReviews);
+
+// (1) add property queenBee49 and set value as 4.0 and access
+// userReviews.queenBee49 = 4.0;
+// console.log(userReviews.queenBee49);
+// console.log(userReviews);
+
+// (2) add property queenBee70 and set value as 4.9 and access using dot and square backet methods
+// userReviews["queenBee70"] = 4.9;
+// console.log(userReviews.queenBee70);
+// // or
+// console.log(userReviews["queenBee70"]);
+// console.log(userReviews);
+
+// (3) add property mrSmith78 and set value as 3.5 and access using dot and square backet methods
+// userReviews.mrSmith78 = 3.5;
+// console.log(userReviews.mrSmith78);
+// console.log(userReviews["mrSmith78"]);
+// console.log(userReviews);
+
+// (4) update existing property queenBee49 add 2 to existing value and also add 4 to exisiting value
+// console.log(userReviews.queenBee49);
+// userReviews.queenBee49 += 2;
+// console.log(userReviews.queenBee49);
+// userReviews.queenBee49 += 4;
+// console.log(userReviews.queenBee49);
+
+// (5) update existing property mrSmith78 add 1 to existing value and also add another 1 to exisiting value
+// console.log(userReviews.mrSmith78);
+// userReviews.mrSmith78++;
+// console.log(userReviews.mrSmith78);
+// userReviews.mrSmith78++;
+// console.log(userReviews.mrSmith78);
+
+// ======================================
+// 005 - Nested Arrays & Objects
+// ======================================
+// 1)
+// const student = {
+//   firstName: "David",
+//   lastName: "Jones",
+//   strengths: ["Music", "Art"],
+//   exams: {
+//     midterm: 92,
+//     final: 88,
+//   },
+// };
+// // (1) access final value
+// console.log(student.exams.final);
+
+// // (2) access art
+// console.log(student.strengths[1]);
+
+// // (3) access strengths
+// console.log(student.strengths);
+
+// // (4) access exams
+// console.log(student.exams);
+
+// // (5) find the average of exams
+// const avg = (student.exams.midterm + student.exams.final) / 2;
+// console.log(avg);
+
+// // (6) add property extra in exams and assign value 90
+// student.exams.extra = 90;
+// console.log(student.exams.extra);
+// console.log(student.exams);
+
+// ======================================
+// 006 - Objects and Reference Types
+// ======================================
+// ======================================
+// 007 -Array_Object Equality
+// ======================================
+
+////////////////////////////////
+// 07 - The World of Loops
+////////////////////////////////
+
+// ======================================
+// 001 -
+// ======================================
+// ======================================
+// 002 -
+// ======================================
+// ======================================
+// 003 -
+// ======================================
+// ======================================
+// 004 -
+// ======================================
+// ======================================
+// 005 -
+// ======================================
+// ======================================
+// 006 -
+// ======================================
+// ======================================
+// 007 -
+// ======================================
+// ======================================
+// 008 -
+// ======================================
+// ======================================
+// 009 -
+// ======================================
+// ======================================
+// 010 -
+// ======================================
+// ======================================
+// 011 -
+// ======================================
+// ======================================
+// 012 -
+// ======================================
+
+////////////////////////////////
+// 08 - Writing Resusable Code with Functions
+////////////////////////////////
+
+// ======================================
 // 001 -
 // ======================================
 // ======================================
@@ -2132,7 +2373,39 @@
 // ======================================
 
 ////////////////////////////////
-// 08 -
+// 09 - An Advanced Look at Functions
+////////////////////////////////
+
+// ======================================
+// 001 -
+// ======================================
+// ======================================
+// 002 -
+// ======================================
+// ======================================
+// 003 -
+// ======================================
+// ======================================
+// 004 -
+// ======================================
+// ======================================
+// 005 -
+// ======================================
+// ======================================
+// 006 -
+// ======================================
+// ======================================
+// 007 -
+// ======================================
+// ======================================
+// 008 -
+// ======================================
+// ======================================
+// 009 -
+// ======================================
+
+////////////////////////////////
+// 010 - Apply Functions to Collections of Data
 ////////////////////////////////
 
 // ======================================
@@ -2165,73 +2438,9 @@
 // ======================================
 // 010 -
 // ======================================
-
-////////////////////////////////
-// 09 -
-////////////////////////////////
-
 // ======================================
-// 001 -
+// 011 -
 // ======================================
 // ======================================
-// 002 -
-// ======================================
-// ======================================
-// 003 -
-// ======================================
-// ======================================
-// 004 -
-// ======================================
-// ======================================
-// 005 -
-// ======================================
-// ======================================
-// 006 -
-// ======================================
-// ======================================
-// 007 -
-// ======================================
-// ======================================
-// 008 -
-// ======================================
-// ======================================
-// 009 -
-// ======================================
-// ======================================
-// 010 -
-// ======================================
-
-////////////////////////////////
-// 010 -
-////////////////////////////////
-
-// ======================================
-// 001 -
-// ======================================
-// ======================================
-// 002 -
-// ======================================
-// ======================================
-// 003 -
-// ======================================
-// ======================================
-// 004 -
-// ======================================
-// ======================================
-// 005 -
-// ======================================
-// ======================================
-// 006 -
-// ======================================
-// ======================================
-// 007 -
-// ======================================
-// ======================================
-// 008 -
-// ======================================
-// ======================================
-// 009 -
-// ======================================
-// ======================================
-// 010 -
+// 012 -
 // ======================================
