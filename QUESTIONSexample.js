@@ -2642,21 +2642,148 @@
 // }
 // console.log(total);
 
+// 5)
+// const examScores = [22, 98, 77, 84, 76, 65, 89, 91, 57, 66];
+// FORWORD LOOPING
+// FORWARD LOOPING WITH INDEX NUMBERED
+// BACKWARD LOOPING
+// BACKWARD LOOPING WITH INDEX NUMBERED
+// AVG OF examScores
+
+// 6)
+// const myStudents = [
+//   {
+//     firstName: "Zeus",
+//     grade: 86,
+//   },
+//   {
+//     firstName: "Artemis",
+//     grade: 97,
+//   },
+//   {
+//     firstName: "Hera",
+//     grade: 72,
+//   },
+//   {
+//     firstName: "Apollo",
+//     grade: 90,
+//   },
+//   {
+//     firstName: "bharu",
+//     grade: 80,
+//   },
+//   {
+//     firstName: "dhanush",
+//     grade: 99,
+//   },
+// ];
+// FORWARD LOOPING WITH INDEX NUMBERED
+// WITHOUT STORING IN A VARIABLE
+// WITH STORING IN A VARIABLE
+// AVG GRADE
+
+// 7)
+// const str = "RavikantiBhargav";
+// FORWARD LOOPING WITH INDEX NUMBERED
+// Loop backwards over the string
+
 // ======================================
 // 005 - Nested for Loops
 // ======================================
+
+// 1) write outer loop 1 to 10 and inner loop 1 to 3
+// for (let i = 1; i <= 5; i++) {
+//   console.log("OUTER LOOP", i);
+//   for (let j = 1; j <= 3; j++) {
+//     console.log("           inner loop", j);
+//   }
+// }
+
+// 2) Sum all elements in our 2048 board
+// const gameBoard = [
+//   [4, 32, 8, 4],
+//   [64, 8, 32, 2],
+//   [8, 32, 16, 4],
+//   [2, 8, 4, 2],
+// ];
+
+// approach 1
+// let total = 0;
+// for (let i = 0; i < gameBoard.length; i++) {
+//   for (let j = 0; j < gameBoard.length; j++) {
+//     total += gameBoard[i][j];
+//   }
+// }
+// console.log(total);
+
+// approach 2
+// let totalScore = 0;
+// //outer loop iterates through the rows
+// for (let i = 0; i < gameBoard.length; i++) {
+//   let row = gameBoard[i];
+//   //inner loop iterates over each cell in a given row
+//   for (let j = 0; j < row.length; j++) {
+//     totalScore += row[j];
+//   }
+// }
+// console.log(totalScore);
+
 // ======================================
 // 006 - Intro to While Loop
 // ======================================
+// 1) print 1 to 5 using for loop
+// for (let i = 1; i <= 5; i++) {
+//   console.log(i);
+// }
+
+// 2) print 1 to 5 using for while loop
+// let i = 1;
+// while (i <= 5) {
+//   console.log(i);
+//   i++;
+// }
+
 // ======================================
 // 007 - More While Loops
 // ======================================
+// 1) create a variable target and store random number & create a variable playerscore and store random number write a program which shows player score and target score if those two scores got equal show congrats player.
+// let target = Math.floor(Math.random() * 10);
+// let playerScore = Math.floor(Math.random() * 10);
+// while (playerScore !== target) {
+//   console.log(`player : ${playerScore} target : ${target}`);
+//   playerScore = Math.floor(Math.random() * 10);
+// }
+// console.log(`PLAYER : ${playerScore} TARGET : ${target}`);
+// console.log("congrats player");
+
 // ======================================
 // 008 - Break Keyword
 // ======================================
 // ======================================
 // 009 - For...Of Intro
 // ======================================
+// 1)
+// let subreddits = ["soccer", "popheads", "cringe", "books"];
+// (1) iterate using for loop
+// for (let i = 0; i < subreddits.length; i++) {
+//   console.log(i, subreddits[i]);
+// }
+// (2) using for of
+// for (let sub of subreddits) {
+//   console.log(sub);
+// }
+
+// 2)
+// const word = "strong";
+// for (let char of word) {
+//   console.log(char);
+// }
+
+// 3)
+// for (let char of "strongest") {
+//   console.log(char);
+// }
+
 // ======================================
 // 010 - Comparing For and For...Of
 // ======================================

@@ -1116,21 +1116,96 @@
 
 // 4) sum of first 10 numbers
 
+// 5)
+// const examScores = [22, 98, 77, 84, 76, 65, 89, 91, 57, 66];
+// FORWORD LOOPING
+// FORWARD LOOPING WITH INDEX NUMBERED
+// BACKWARD LOOPING
+// BACKWARD LOOPING WITH INDEX NUMBERED
+// AVG OF examScores
+
+// 6)
+// const myStudents = [
+//   {
+//     firstName: "Zeus",
+//     grade: 86,
+//   },
+//   {
+//     firstName: "Artemis",
+//     grade: 97,
+//   },
+//   {
+//     firstName: "Hera",
+//     grade: 72,
+//   },
+//   {
+//     firstName: "Apollo",
+//     grade: 90,
+//   },
+//   {
+//     firstName: "bharu",
+//     grade: 80,
+//   },
+//   {
+//     firstName: "dhanush",
+//     grade: 99,
+//   },
+// ];
+// FORWARD LOOPING WITH INDEX NUMBERED
+// WITHOUT STORING IN A VARIABLE
+// WITH STORING IN A VARIABLE
+// AVG GRADE
+
+// 7)
+// const str = "RavikantiBhargav";
+// FORWARD LOOPING WITH INDEX NUMBERED
+// Loop backwards over the string
+
 // ======================================
 // 005 - Nested for Loops
 // ======================================
+// 1) write outer loop 1 to 10 and inner loop 1 to 3
+
+// 2) Sum all elements in our 2048 board
+// const gameBoard = [
+//   [4, 32, 8, 4],
+//   [64, 8, 32, 2],
+//   [8, 32, 16, 4],
+//   [2, 8, 4, 2],
+// ];
+// approach 1
+// approach 2
+
 // ======================================
 // 006 - Intro to While Loop
 // ======================================
+// 1) print 1 to 5 using for loop
+// 2) print 1 to 5 using for while loop
+
 // ======================================
 // 007 - More While Loops
 // ======================================
+// 1) create a variable target and store random number & create a variable playerscore and store random number write a program which shows player score and target score if those two scores got equal show congrats player.
+
 // ======================================
 // 008 - Break Keyword
 // ======================================
 // ======================================
 // 009 - For...Of Intro
 // ======================================
+// 1)
+// let subreddits = ["soccer", "popheads", "cringe", "books"];
+// (1) iterate using for loop
+// (2) using for of
+
+// 2)
+// const word = "strong";
+// iterate over word
+
+// 3)
+// const word = "strongest";
+// iterate over word
+
 // ======================================
 // 010 - Comparing For and For...Of
 // ======================================
