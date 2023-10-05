@@ -2553,7 +2553,7 @@
 // 004 - For Loops & Arrays
 // ======================================
 // 1)
-// Printing each element in an array using two approaches.
+// (1) Printing each element in an array using two approaches.
 // const examScores = [98, 77, 84, 91, 57, 66];
 // approach 1
 // for (let i = 0; i <= examScores.length - 1; i++) {
@@ -2563,6 +2563,84 @@
 // for (let i = 0; i < examScores.length; i++) {
 //   console.log(i, examScores[i]);
 // }
+
+// (2) Printing each element in an array using two approaches in reverse order.
+
+// approach 1
+// for (let i = examScores.length - 1; i >= 0; i--) {
+//   console.log(i, examScores[i]);
+// }
+
+// // approach 2
+// for (let i = examScores.length - 1; i > 0; i--) {
+//   console.log(i, examScores[i]);
+// }
+
+// 2)
+// firstname scored 86 ....like this loop over
+// const myStudents = [
+//   {
+//     firstName: "Zeus",
+//     grade: 86,
+//   },
+//   {
+//     firstName: "Artemis",
+//     grade: 97,
+//   },
+//   {
+//     firstName: "Hera",
+//     grade: 72,
+//   },
+//   {
+//     firstName: "Apollo",
+//     grade: 90,
+//   },
+// ];
+
+// (1) traditional way or long way
+// for (let i = 0; i <= myStudents.length - 1; i++) {
+//   console.log(`${myStudents[i].firstName} scored ${myStudents[i].grade}`);
+// }
+
+// (2) smart way
+// for (let i = 0; i <= myStudents.length - 1; i++) {
+//   let students = myStudents[i];
+//   console.log(`${students.firstName} scored ${students.grade}`);
+// }
+
+// (3) Averaging all grades in myStudents array traditional way or long way
+// let total = 0;
+// for (let i = 0; i <= myStudents.length - 1; i++) {
+//   total += myStudents[i].grade;
+// }
+// console.log(total / myStudents.length);
+
+// (4) Averaging all grades in myStudents array smart way
+// let total = 0;
+// for (let i = 0; i < myStudents.length; i++) {
+//   let students = myStudents[i];
+//   total += students.grade;
+// }
+// console.log(total);
+// console.log(total / myStudents.length);
+// console.log((86 + 97 + 72 + 90) / 4); // for cross check sum of all grade / no of elements in an array
+
+// 3) Reversing a string
+// const word = "stressed";
+// let str = "";
+// for (let i = word.length - 1; i >= 0; i--) {
+//   // console.log(i, word[i]);
+//   str += word[i];
+// }
+// console.log(str);
+
+// 4) sum of first 10 numbers
+// let total = 0;
+// for (let i = 1; i <= 10; i++) {
+//   // console.log(i);
+//   total += i;
+// }
+// console.log(total);
 
 // ======================================
 // 005 - Nested for Loops

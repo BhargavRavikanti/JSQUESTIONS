@@ -1083,7 +1083,38 @@
 // 004 - For Loops & Arrays
 // ======================================
 // 1)
-// Printing each element in an array using two approaches.
+// (1) Printing each element in an array using two approaches.
+// (2) Printing each element in an array using two approaches in reverse order.
+// const examScores = [98, 77, 84, 91, 57, 66];
+// 2)
+// firstname scored 86 ....like this loop over
+// const myStudents = [
+//   {
+//     firstName: "Zeus",
+//     grade: 86,
+//   },
+//   {
+//     firstName: "Artemis",
+//     grade: 97,
+//   },
+//   {
+//     firstName: "Hera",
+//     grade: 72,
+//   },
+//   {
+//     firstName: "Apollo",
+//     grade: 90,
+//   },
+// ];
+// (1) traditional way or long way
+// (2) smart way
+// (3) Averaging all grades in myStudents array traditional way or long way
+// (4) Averaging all grades in myStudents array smart way
+
+// 3) Reversing a string
+// const word = "stressed";
+
+// 4) sum of first 10 numbers
 
 // ======================================
 // 005 - Nested for Loops
