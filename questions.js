@@ -1067,13 +1067,24 @@
 // 11) write 1 to 20 perfect cubes in reverse order
 // 12) print hello world every every multiples of 3 to 30
 // 13) write 10 table up to 100
+// 14) write 7 table up to 70
+// 15) let name = "strong"; iterate or loop each character in each line over name.
+// 16) let name = "strong"; iterate or loop each character in each line over string in reverse order.
+// 17) let name = "strong"; iterate or loop over string in reverse order.
 
 // ======================================
 // 003 - Infinite Loops
 // ======================================
+// To avoid infinite loops remember below points
+// for(i=some num;then i should have <=;if i needs increment){}
+// for(i=some num;then i should have >=;if i needs decrement){}
+
 // ======================================
 // 004 - For Loops & Arrays
 // ======================================
+// 1)
+// Printing each element in an array using two approaches.
+
 // ======================================
 // 005 - Nested for Loops
 // ======================================
