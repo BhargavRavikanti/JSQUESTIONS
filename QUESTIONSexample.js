@@ -2787,9 +2787,64 @@
 // ======================================
 // 010 - Comparing For and For...Of
 // ======================================
+// 1)
+// const magicSquare = [
+//   [2, 7, 6],
+//   [9, 5, 1],
+//   [4, 3, 8],
+// ];
+
+// (1) using for loop to iterate
+// for (let i = 0; i < magicSquare.length; i++) {
+//   let sum = 0;
+//   for (let j = 0; j < magicSquare.length; j++) {
+//     sum += magicSquare[i][j];
+//   }
+//   console.log(`${magicSquare[i]} summed to ${sum}`);
+// }
+
+// (2) using for of
+// for (let row of magicSquare) {
+//   let sum = 0;
+//   for (let num of row) {
+//     sum += num;
+//   }
+//   console.log(`${row} summed to ${sum}`);
+// }
+
+// 2)
+// const words1 = ["mail", "milk", "bath", "black"];
+// const words2 = ["box", "shake", "tub", "berry"];
+// for (let i = 0; i < words1.length; i++) {
+//   console.log(i, `${words1[i]} and ${words2[i]}`);
+// }
+
 // ======================================
 // 011 - For...Of with Objects
 // ======================================
+// 1) what are the three methods that converts objects into an array.
+// Object.keys() - converts property names into array
+// Object.values() - converts property values into array
+// Object.entries() - converts both
+
+// 2)
+const movieReviews = {
+  Arrival: 9.5,
+  Alien: 9,
+  Amelie: 8,
+  "In Bruges": 9,
+  Amadeus: 10,
+  "Kill Bill": 8,
+  "Little Miss Sunshine": 8.5,
+  Coraline: 7.5,
+};
+
+// (1) iterate keys of movieReviews
+for (movie of Object.keys(movieReviews)) {
+  // console.log(movie);
+  console.log(`You rated ${movie} - ${movieReviews[movie]}`);
+}
+
 // ======================================
 // 012 - For...In Loops
 // ======================================

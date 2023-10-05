@@ -1209,9 +1209,25 @@
 // ======================================
 // 010 - Comparing For and For...Of
 // ======================================
+// 1)
+// const magicSquare = [
+//   [2, 7, 6],
+//   [9, 5, 1],
+//   [4, 3, 8],
+// ];
+// (1) using for loop to add
+// (2) using for of to add
+
+// 2)
+// const words1 = ["mail", "milk", "bath", "black"];
+// const words2 = ["box", "shake", "tub", "berry"];
+// loop over two arrays with indices
+
 // ======================================
 // 011 - For...Of with Objects
 // ======================================
+// 1) what are the three methods that converts objects into an array.
+
 // ======================================
 // 012 - For...In Loops
 // ======================================
@@ -1363,7 +1379,7 @@
 // ======================================
 
 ////////////////////////////////
-// 012 - A few Miscellaneous JS Features
+// 012 -
 ////////////////////////////////
 
 // ======================================
