@@ -3134,12 +3134,78 @@
 // getRemainder(9, 5);
 // getRemainder(6, 5);
 
+// 2) write a function which can greet three persons
+// function greet(name1, name2, name3) {
+//   console.log(`Hello ${name1}, ${name2} and ${name3}`);
+// }
+// greet("bharu", "sai", "shiva");
+
 // ======================================
 // 005 - The Return statement
 // ======================================
+// 1) what is return?
+// Built-in methods RETURN values when we call them.We can store these values:
+// With RETURN
+// Now we can capture or store a return value in variable!
+// RETURN
+// The return statement ends function execution AND specifies the value to be returned by that function
+
+// 2) with out return?
+// NO RETURN
+// Our functions print values out, but cannot store or capture in variables
+
+// 3) write a function without return which adds two numbers.
+// function add(x, y) {
+//   console.log(x + y);
+// }
+// add(5, 6); // 11 without return we cannot store this value in a variable  only can print in console
+
+// 4) write a function with return which adds two numbers.
+// function sum(x, y) {
+//   return x + y;
+// }
+// // Now we can capture or store a return value in variable!
+// const addition = sum(2, 4);
+// console.log(addition);
+// let addition2 = sum(5, 10);
+// console.log(addition2);
+
 // ======================================
 // 006 - More on Return Values
 // ======================================
+// 1) write a function isPurple parameter color to check purple or not if purple true if not purple false using return and make color to lowercase.
+// (1) using general if else
+// function isPurple(color) {
+//   if (color.toLowerCase() === "purple") {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+// // let checkColor = isPurple("purple");
+// let checkColor = isPurple("purpleeee");
+// console.log(checkColor);
+
+// (2) We don't need the else!
+// function isPurple(color) {
+//   if (color.toLowerCase() === "purple") {
+//     return true;
+//   }
+//   return false;
+// }
+// let checkColor = isPurple("purple");
+// let checkColor = isPurple("purpleeee");
+// console.log(checkColor);
+
+// (3) only using function with return shorter way
+// function isPurple(color) {
+//   return color.toLowerCase() === "purple";
+// }
+// // let checkColor = isPurple("purple");
+// let checkColor = isPurple("purpleeee");
+// console.log(checkColor);
+
 // ======================================
 // 007 - Function Challenge 1 password Validator
 // ======================================

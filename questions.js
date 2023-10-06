@@ -1329,13 +1329,24 @@
 // 004 - Functions With Multiple Arguments
 // ======================================
 // 1) create functions addition of two numbers,subtraction of two numbers,multiplication of two numbers,division of two numbers,remainder and set parameters x & y.
+// 2) write a function which can greet three persons
 
 // ======================================
 // 005 - The Return statement
 // ======================================
+// 1) what is return?
+// 2) with out return?
+// 3) write a function without return which adds two numbers.
+// 4) write a function with return which adds two numbers.
+
 // ======================================
 // 006 - More on Return Values
 // ======================================
+// 1) write a function isPurple parameter color to check purple or not if purple true if not purple false using return and make color to lowercase.
+// (1) using general if else
+// (2) We don't need the else!
+// (3) only using function with return shorter way
+
 // ======================================
 // 007 - Function Challenge 1 password Validator
 // ======================================
