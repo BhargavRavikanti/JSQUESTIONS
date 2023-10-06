@@ -1264,40 +1264,89 @@
 // ======================================
 // 012 - For...In Loops
 // ======================================
+// 1) why is used for in loops.
+
+// 2)
+// const jeopardyWinnings = {
+//   regularPLay: 2522700,
+//   watsonChallenge: 300000,
+//   tournamentOfChampions: 500000,
+//   battleOfTheDecades: 100000,
+// };
+// (1) iterate keys and values and keys values using for in loop
+// (2) calculate total
+// (3) see what gives
+// console.log(jeopardyWinnings["regularPLay"]);
+// console.log(jeopardyWinnings);
+
+// 3)
+// for (let k in [88, 99, 77, 66]) {
+//   // console.log(k); // array indices we can consider as keys so array values consider as values
+//   console.log(k, [88, 99, 77, 66][k]);
+// }
+
+// ======================================
+// 00 - Todo List Project
+// ======================================
+// ======================================
+// 00 - Guessing Game
+// ======================================
+
+// ======================================
+// 0 - All 34 String Methods in Javascript in ONE VIDEO
+// ======================================
 
 ////////////////////////////////
 // 08 - Writing Resusable Code with Functions
 ////////////////////////////////
 
 // ======================================
-// 001 -
+// 001 -  Our First Function
+// ======================================
+// 1) important points on functions?
+// 2) what is function?
+// 3) create a function grumps() which can console iam bharu,iam fine,iam better when we call the function.
+// 4) write a loop which can repeat grumps() three times.
+
+// ======================================
+// 002 - Dice Roll Function
+// ======================================
+// 1) write a function rollDie() create a variable roll and store which can result random number 1-6
+// 2) write a loop which can throw dice 6 times
+// 3) write a function throwDice() we can roll rollDie 6 times per call.
+
+// ======================================
+// 003 - Introducing Arguments
+// ======================================
+// 1) what are parameters, arguments in functions.
+// 2) create a function greet() set paramater name which can greet Hello which name you input as argument EX:hello bharu
+// 3) create a function greet() set paramater name1,name2 which can greet Hello which name you input as arguments EX:hello bharu and dhanush
+// 4) write a function rollDie() and create variable roll which can hold code of random numbers 1-6 and create another function throwDice set parameter numRolls which can specify how many dice to roll
+// 5) create a function square of a number set parameter num
+// 6) create a function cube of a number set
+
+// ======================================
+// 004 - Functions With Multiple Arguments
+// ======================================
+// 1) create functions addition of two numbers,subtraction of two numbers,multiplication of two numbers,division of two numbers,remainder and set parameters x & y.
+
+// ======================================
+// 005 - The Return statement
 // ======================================
 // ======================================
-// 002 -
+// 006 - More on Return Values
 // ======================================
 // ======================================
-// 003 -
+// 007 - Function Challenge 1 password Validator
 // ======================================
 // ======================================
-// 004 -
+// 008 - Function Challenge 2 Average
 // ======================================
 // ======================================
-// 005 -
+// 009 - Function Challenge 3 Pangrams
 // ======================================
 // ======================================
-// 006 -
-// ======================================
-// ======================================
-// 007 -
-// ======================================
-// ======================================
-// 008 -
-// ======================================
-// ======================================
-// 009 -
-// ======================================
-// ======================================
-// 010 -
+// 010 - Function Challenge 4 Get Playing Card
 // ======================================
 
 ////////////////////////////////

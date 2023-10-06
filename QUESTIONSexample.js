@@ -2941,40 +2941,216 @@
 // ======================================
 // 012 - For...In Loops
 // ======================================
+// 1) why is used for in loops.
+// To iterate objects directly without using Object.keys() for keys or Object.values() for values of an object or Object.entries() for both Instead use for...in loop
+
+// 2)
+// const jeopardyWinnings = {
+//   regularPLay: 2522700,
+//   watsonChallenge: 300000,
+//   tournamentOfChampions: 500000,
+//   battleOfTheDecades: 100000,
+// };
+// (1) iterate keys and values and keys values using for in loop
+// for (let prop in jeopardyWinnings) {
+//   // console.log(prop);
+//   // console.log(prop, jeopardyWinnings[prop]);
+//   console.log(jeopardyWinnings[prop]);
+// }
+
+// (2) calculate total
+// let total = 0;
+// for (let prop in jeopardyWinnings) {
+//   total += jeopardyWinnings[prop];
+// }
+// console.log(total);
+
+// (3) see what gives
+// console.log(jeopardyWinnings["regularPLay"]);
+// console.log(jeopardyWinnings);
+
+// 3)
+// for (let k in [88, 99, 77, 66]) {
+//   // console.log(k); // array indices we can consider as keys so array values consider as values
+//   console.log(k, [88, 99, 77, 66][k]);
+// }
+
+// ======================================
+// 00 - Todo List Project
+// ======================================
+// ======================================
+// 00 - Guessing Game
+// ======================================
+
+// ======================================
+// 0 - All 34 String Methods in Javascript in ONE VIDEO
+// ======================================
 
 ////////////////////////////////
 // 08 - Writing Resusable Code with Functions
 ////////////////////////////////
 
 // ======================================
-// 001 -
+// 001 -  Our First Function
+// ======================================
+// 1) important points on functions?
+// step 1 define the function
+// step 2 call the function
+
+// 2) what is function?
+// A function is a group of reusable code which can be called anywhere in your program. This eliminates the need of writing the same code again and again.
+
+// 3) create a function grumps() which can console iam bharu,iam fine,iam better when we call the function.
+// STEP 1: Define the function:
+// function grumps() {
+//   console.log("iam bharu");
+//   console.log("iam fine");
+//   console.log("iam better");
+// }
+
+// // STEP 2: Call the function:
+// grumps();
+
+// 4) write a loop which can repeat grumps() three times.
+// for (let i = 0; i <= 3; i++) {
+//   grumps();
+// }
+
+// ======================================
+// 002 - Dice Roll Function
+// ======================================
+// 1) write a function rollDie() create a variable roll and store which can result random number 1-6
+// function rollDie() {
+//   let roll = Math.floor(Math.random() * 6) + 1;
+//   console.log(`Rolled: ${roll}`);
+// }
+// rollDie();
+// rollDie();
+// rollDie();
+// rollDie();
+// rollDie();
+// rollDie();
+
+// 2) write a loop which can throw dice 6 times
+// for (let i = 1; i <= 6; i++) {
+//   rollDie();
+// }
+
+// 3) write a function throwDice() we can roll rollDie 6 times per call.
+// function throwDice() {
+//   rollDie();
+//   rollDie();
+//   rollDie();
+//   rollDie();
+//   rollDie();
+//   rollDie();
+// }
+// throwDice();
+
+// ======================================
+// 003 - Introducing Arguments
+// ======================================
+// 1) what are parameters, arguments in functions.
+// PARAMETERS : Parameters act as variables inside the function.
+// ARGUMENTS : A function's argument is the value we supply when calling a function. Real arguments are provided whenever we call the function in the program.
+
+// 2) create a function greet() set paramater name which can greet Hello which name you input as argument EX:hello bharu
+// function greet(name) {
+//   console.log("Hello", name);
+// }
+// // greet();
+// // greet("bharu");
+// greet("ram");
+
+// 3) create a function greet() set paramater name1,name2 which can greet Hello which name you input as arguments EX:hello bharu and dhanush
+// function greet(name1, name2) {
+//   console.log(`Hello ${name1} and ${name2}`);
+// }
+// greet("bharu", "dhanchu");
+// greet("sai", "ram");
+
+// 4) write a function rollDie() and create variable roll which can hold code of random numbers 1-6 and create another function throwDice set parameter numRolls which can specify how many dice to roll
+// function rollDie() {
+//   let roll = Math.floor(Math.random() * 6) + 1;
+//   console.log(`Rolled : ${roll}`);
+// }
+
+// function throwDice(numRolls) {
+//   for (let i = 1; i <= numRolls; i++) {
+//     rollDie();
+//   }
+// }
+
+// throwDice(5);
+// throwDice(6);
+// throwDice(10);
+
+// 5) create a function square of a number set parameter num
+// function square(num) {
+//   console.log(num * num);
+// }
+// square(6);
+// square(10);
+
+// 6) create a function cube of a number set parameter num
+// function cube(num) {
+//   console.log(num * num * num);
+// }
+// cube(3);
+// cube(5);
+
+// ======================================
+// 004 - Functions With Multiple Arguments
+// ======================================
+// 1) create functions addition of two numbers,subtraction of two numbers,multiplication of two numbers,division of two numbers,remainder and set parameters x & y.
+
+// function addition(x, y) {
+//   console.log(x + y);
+// }
+// addition(2, 3);
+// addition(10, 2);
+
+// function subtraction(x, y) {
+//   console.log(x - y);
+// }
+// subtraction(5, 2);
+// subtraction(10, 2);
+
+// function multiplication(x, y) {
+//   console.log(x * y);
+// }
+// multiplication(5, 6);
+// multiplication(10, 6);
+
+// function division(x, y) {
+//   console.log(x / y);
+// }
+// division(10, 5);
+// division(9, 5);
+
+// function getRemainder(x, y) {
+//   console.log(x % y);
+// }
+// getRemainder(9, 5);
+// getRemainder(6, 5);
+
+// ======================================
+// 005 - The Return statement
 // ======================================
 // ======================================
-// 002 -
+// 006 - More on Return Values
 // ======================================
 // ======================================
-// 003 -
+// 007 - Function Challenge 1 password Validator
 // ======================================
 // ======================================
-// 004 -
+// 008 - Function Challenge 2 Average
 // ======================================
 // ======================================
-// 005 -
+// 009 - Function Challenge 3 Pangrams
 // ======================================
 // ======================================
-// 006 -
-// ======================================
-// ======================================
-// 007 -
-// ======================================
-// ======================================
-// 008 -
-// ======================================
-// ======================================
-// 009 -
-// ======================================
-// ======================================
-// 010 -
+// 010 - Function Challenge 4 Get Playing Card
 // ======================================
 
 ////////////////////////////////
