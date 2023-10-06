@@ -2828,22 +2828,115 @@
 // Object.entries() - converts both
 
 // 2)
-const movieReviews = {
-  Arrival: 9.5,
-  Alien: 9,
-  Amelie: 8,
-  "In Bruges": 9,
-  Amadeus: 10,
-  "Kill Bill": 8,
-  "Little Miss Sunshine": 8.5,
-  Coraline: 7.5,
-};
+// const movieReviews = {
+//   Arrival: 9.5,
+//   Alien: 9,
+//   Amelie: 8,
+//   "In Bruges": 9,
+//   Amadeus: 10,
+//   "Kill Bill": 8,
+//   "Little Miss Sunshine": 8.5,
+//   Coraline: 7.5,
+// };
 
-// (1) iterate keys of movieReviews
-for (movie of Object.keys(movieReviews)) {
-  // console.log(movie);
-  console.log(`You rated ${movie} - ${movieReviews[movie]}`);
-}
+// (1) iterate keys,values,both
+// for (let keys of Object.keys(movieReviews)) {
+//   console.log(keys);
+// }
+// for (let values of Object.values(movieReviews)) {
+//   console.log(values);
+// }
+// for (let entries of Object.entries(movieReviews)) {
+//   console.log(entries);
+// }
+
+// (2) iterate all movies and its ratings
+// for (movie of Object.keys(movieReviews)) {
+//   // console.log(movie);
+//   console.log(`You rated ${movie} - ${movieReviews[movie]}`);
+// }
+
+// (3) check what gives
+// console.log(Object.keys(movieReviews));
+// console.log(Object.values(movieReviews));
+// console.log(Object.entries(movieReviews));
+
+// (4) find avg of values
+// approach 1
+// let total = 0;
+// for (let avg of Object.values(movieReviews)) {
+//   // console.log(avg);
+//   total += avg;
+// }
+// console.log(total);
+// let avg = total / Object.values(movieReviews).length;
+// console.log(avg);
+// approach 2
+// let ratings = Object.values(movieReviews);
+// let total = 0;
+// for (let val of ratings) {
+//   // console.log(val);
+//   total += val;
+// }
+// // console.log(total);
+// let avg = total / ratings.length;
+// console.log(avg);
+
+// (5) access all keys,1,2,3 elements from keys
+// console.log(Object.keys(movieReviews));
+// console.log(Object.keys(movieReviews)[0]);
+// console.log(Object.keys(movieReviews)[1]);
+// console.log(Object.keys(movieReviews)[2]);
+
+// (6) access all values,1,2,3 elements from values
+// console.log(Object.values(movieReviews));
+// console.log(Object.values(movieReviews)[0]);
+// console.log(Object.values(movieReviews)[1]);
+// console.log(Object.values(movieReviews)[2]);
+
+// (7) access both keys and values,1,2,4 elements from both
+// console.log(Object.entries(movieReviews));
+// console.log(Object.entries(movieReviews)[0]);
+// console.log(Object.entries(movieReviews)[1]);
+// console.log(Object.entries(movieReviews)[3]);
+
+// (8) my rating to movies and movies should be uppercase
+// for (let movie of Object.keys(movieReviews)) {
+//   // console.log(movie, movieReviews[movie]);
+//   let score = movieReviews[movie];
+//   console.log(`I rated ${movie.toUpperCase()} ${score}/10`);
+// }
+
+// 3)
+// const person = {
+//   name: "john",
+//   age: 25,
+//   status: "student",
+// };
+
+// (1) access all keys, access elements 1,2,3,type of element 3
+// console.log(Object.keys(person));
+// console.log(Object.keys(person)[0]);
+// console.log(Object.keys(person)[1]);
+// console.log(Object.keys(person)[2]);
+// console.log(Object.keys(person)[2], typeof Object.keys(person)[2]);
+// console.log(Object.keys(person)[3]);
+
+// (2) access all values, access elements 1,2,3, type of element 3
+// console.log(Object.values(person));
+// console.log(Object.values(person)[0]);
+// console.log(Object.values(person)[1]);
+// console.log(Object.values(person)[2]);
+// console.log(Object.values(person)[2], typeof Object.values(person)[2]);
+// console.log(Object.values(person)[3]);
+
+// (3) access all keys and values, access elements 1,2,3, type of element 3
+// console.log(Object.entries(person));
+// console.log(Object.entries(person)[0]);
+// console.log(Object.entries(person)[1]);
+// console.log(Object.entries(person)[2]);
+// console.log(Object.entries(person)[2], typeof Object.entries(person)[2]);
+// console.log(Object.entries(person)[3]);
 
 // ======================================
 // 012 - For...In Loops

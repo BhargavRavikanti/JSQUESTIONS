@@ -1228,6 +1228,39 @@
 // ======================================
 // 1) what are the three methods that converts objects into an array.
 
+// 2)
+// const movieReviews = {
+//   Arrival: 9.5,
+//   Alien: 9,
+//   Amelie: 8,
+//   "In Bruges": 9,
+//   Amadeus: 10,
+//   "Kill Bill": 8,
+//   "Little Miss Sunshine": 8.5,
+//   Coraline: 7.5,
+// };
+// (1) iterate keys,values,both
+// (2) iterate all movies and its ratings
+// (3) check what gives
+// console.log(Object.keys(movieReviews));
+// console.log(Object.values(movieReviews));
+// console.log(Object.entries(movieReviews));
+// (4) find avg of values using two approaches
+// (5) access all keys,1,2,3 elements from keys
+// (6) access all values,1,2,3 elements from values
+// (7) access both keys and values,1,2,4 elements from both
+// (8) my rating to movies and movies should be uppercase
+
+// 3)
+// const person = {
+//   name: "john",
+//   age: 25,
+//   status: "student",
+// };
+// (1) access all keys, access elements 1,2,3,type of element 3
+// (2) access all values, access elements 1,2,3, type of element 3
+// (3) access all keys and values, access elements 1,2,3, type of element 3
+
 // ======================================
 // 012 - For...In Loops
 // ======================================
