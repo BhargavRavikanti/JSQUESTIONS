@@ -1395,11 +1395,19 @@
 // 005 - High Order Functions
 // ======================================
 // 1) what are first class functions? give examples.
+
 // 2) write function add,subtract,multiply and divide declarations
 // (1) store them in operations array
+// console.log(operations[0]);
+// console.log(operations[1]);
+// console.log(add);
+// console.log(operations[1]());
+// console.log(operations[1](100, 4));
+// console.log(operations[0](94, 6));
 // (2) Loop over all the functions in operations
-// (3) store function multiply in thing object
-// 2) what are higher order functions?give examples.
+// (3) store function multiply.add.subtract,divide in thing object
+
+// 3) what are higher order functions?give examples.
 
 // ======================================
 // 006 - Functions as Arguments

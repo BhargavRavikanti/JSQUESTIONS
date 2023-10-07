@@ -3558,6 +3558,7 @@
 // 001 - Function Scope
 // ======================================
 // first class function
+
 // (1) Assigning a function to a variable
 // const foo = () => {
 //   console.log("foobar");
@@ -3577,13 +3578,13 @@
 // // Hello, JavaScript!
 
 // (3) Returning a function
-function sayHello() {
-  return () => {
-    console.log("Hello!");
-  };
-}
-let x = sayHello();
-console.log(x);
+// function sayHello() {
+//   return () => {
+//     console.log("Hello!");
+//   };
+// }
+// let x = sayHello();
+// console.log(x);
 
 // ======================================
 // 002 - Block Scope
@@ -3594,9 +3595,132 @@ console.log(x);
 // ======================================
 // 004 - Function Expressions
 // ======================================
+/*
+// 1) what is Function Expression? write function expressions for addition,subtraction,multiplication and division.
+// 2) write 5 ways of functions
+// (1) function declaration square
+// (2) function expression(anonymous) square
+// (3) function expression(named multiply) product
+// (4) arrow function expression square
+// (5) concise arrow function expression
+*/
+
+// 1) what is Function Expression? write function expressions for addition,subtraction,multiplication and division.
+// const addition = function (x, y) {
+//   return x + y;
+// };
+// console.log(addition(7, 3));
+
+// const subtraction = function (x, y) {
+//   return x - y;
+// };
+// console.log(subtraction(10, 5));
+
+// const multiplication = function (x, y) {
+//   console.log(x * y);
+// };
+// multiplication(2, 5);
+
+// const division = function (x, y) {
+//   console.log(x / y);
+// };
+// division(10, 5);
+
+// 2) write 5 ways of functions
+
+// (1) function declaration square
+// function square(x) {
+//   console.log(x * x);
+// }
+// square(2);
+
+// (2) function expression(anonymous) square
+// const square = function (x) {
+//   console.log(x * x);
+// };
+// square(5);
+
+// (3) function expression(named multiply) product
+// const product = function multiply(x, y) {
+//   console.log(x * y);
+// };
+// product(5, 6);
+
+// (4) arrow function expression square
+// const square = (x) => {
+//   return x * x;
+// };
+// console.log(square(5));
+
+// (5) concise arrow function expression
+// const square = (x) => x * x;
+// console.log(square(6));
+
 // ======================================
 // 005 - High Order Functions
 // ======================================
+/*
+// 1) what are first class functions? give examples.
+// 2) write function add,subtract,multiply and divide declarations
+// (1) store them in operations array
+// console.log(operations[0]);
+// console.log(operations[1]);
+// console.log(add);
+// console.log(operations[1]());
+// console.log(operations[1](100, 4));
+// console.log(operations[0](94, 6));
+// (2) Loop over all the functions in operations
+// (3) store function multiply in thing object
+// 2) what are higher order functions?give examples.
+*/
+
+// 1) what are first class functions? give examples.
+
+// 2) write function add,subtract,multiply and divide declarations
+function add(x, y) {
+  return x + y;
+}
+function subtract(x, y) {
+  return x - y;
+}
+function multiply(x, y) {
+  return x * y;
+}
+function divide(x, y) {
+  return x / y;
+}
+
+// (1) store them in operations array
+const operations = [add, subtract, multiply, divide];
+// console.log(operations);
+// console.log(operations[0]);
+// console.log(operations[1]);
+// console.log(add);
+// console.log(operations[1]());
+// console.log(operations[1](100, 4));
+// console.log(operations[0](94, 6));
+
+// (2) Loop over all the functions in operations
+// for (let func of operations) {
+//   let result = func(30, 5);
+//   console.log(result);
+// }
+
+// (3) store function multiply.add.subtract,divide in thing object
+// const thing = {
+//   doSomething: multiply,
+//   add: add,
+//   subtract: subtract,
+//   divide: divide,
+// };
+// console.log(thing);
+// console.log(thing.doSomething(4, 5));
+// console.log(add(5, 5));
+// console.log(subtract(5, 5));
+// console.log(divide(5, 5));
+
+// 3) what are higher order functions?give examples.
+
 // ======================================
 // 006 - Functions as Arguments
 // ======================================
