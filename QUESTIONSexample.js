@@ -3206,6 +3206,24 @@
 // let checkColor = isPurple("purpleeee");
 // console.log(checkColor);
 
+// 2) create a function containsPurple set parameter array check color is purple or color is magenta.
+// function containsPurple(arr) {
+//   for (let color of arr) {
+//     if (color === "purple" || color === "magenta") {
+//       return true;
+//     }
+//   }
+//   return false;
+// }
+// let checkColor = containsPurple(["red", "magenta"]);
+// let checkColor2 = containsPurple(["purple", "mag"]);
+// let checkColor3 = containsPurple(["purple", "magenta"]);
+// let checkColor4 = containsPurple(["pu", "mag"]);
+// console.log(checkColor);
+// console.log(checkColor2);
+// console.log(checkColor3);
+// console.log(checkColor4);
+
 // ======================================
 // 007 - Function Challenge 1 password Validator
 // ======================================
@@ -3224,31 +3242,328 @@
 ////////////////////////////////
 
 // ======================================
-// 001 -
+// 000 - Scope
+// ======================================
+// What Is Scope?
+// Scope refers to the part of a program where we can access a variable.
+
+// Scope Levels
+// The four different scope levels are:
+
+// (1) Global Scope
+// (2) Module Scope // don't pay attention now
+// (3) Block Scope
+// (4) Function Scope
+// (5) local scope
+// (6) lexical scope
+// (7) hoisting
+// (8) variable lookup
+
+// (1) Global Scope
+// Variables declared Globally (outside any functions, if statements, for loops, etc. ) have Global Scope.
+
+// Global variables can be accessed from anywhere in a JavaScript program.
+
+// Variables declared with var, let and const are quite similar when declared outside a block.
+
+// They all have Global Scope:
+
+// const a = 1;
+// let b = "boat";
+// var c = "car";
+// d = "dog";
+
+// console.log(a);
+// console.log(b);
+// console.log(c);
+// console.log(d);
+
+// function greet() {
+//   // console.log(a);
+//   // console.log(b);
+//   // console.log(c);
+//   // console.log(d);
+// }
+// greet();
+
+// if (6 < 7) {
+//   // console.log(a);
+//   // console.log(b);
+//   // console.log(c);
+//   // console.log(d);
+// }
+
+// for (let i = 1; i <= 1; i++) {
+//   // console.log(a);
+//   // console.log(b);
+//   // console.log(c);
+//   // console.log(d);
+// }
+
+// console.log(a);
+// console.log(b);
+// console.log(c);
+// console.log(d);
+
+// Automatically Global
+// If you assign a value to a variable that has not been declared, it will automatically become a GLOBAL variable.
+
+// This code example will declare a global variable carName, even if the value is assigned inside a function.
+
+// call();
+// function call() {
+//   const carName1 = "Volvo";
+//   let carName2 = "swift";
+//   var carName3 = "alto";
+//   carName4 = "nano";
+//   console.log(carName1);
+//   console.log(carName2);
+//   console.log(carName3);
+//   console.log(carName4);
+// }
+// console.log("**************");
+// call();
+
+// (3) Block Scope
+// Before ES6 (2015), JavaScript had only Global Scope and Function Scope.
+
+// ES6 introduced two important new JavaScript keywords: let and const.
+
+// These two keywords provide Block Scope in JavaScript.
+
+// Variables declared inside a { } block cannot be accessed from outside the block:
+
+// {
+//   const animal1 = "lion";
+//   let animal2 = "tiger";
+//   var animal3 = "elephant";
+//   animal4 = "crocodile";
+//   // console.log(animal1);
+//   // console.log(animal2);
+//   // console.log(animal3);
+//   // console.log(animal4);
+// }
+
+// // console.log(animal1); // cannot be accessed
+// // console.log(animal2); // cannot be accessed
+// // console.log(animal3); // can be accessed
+// // console.log("*************");
+// // console.log(animal4); // can be accessed
+
+// Variables declared with the var keyword can NOT have block scope.
+
+// {
+//   var x = 2;
+// }
+// // x can NOT be used here
+// console.log(x); // can be accessed
+
+// Variables declared inside a { } block can be accessed from outside the block.
+
+// Local Scope
+// Variables declared within a JavaScript function, become LOCAL to the function.
+
+// animals();
+// console.log("*********");
+// function animals() {
+// const animal1 = "lion";
+// let animal2 = "tiger";
+// var animal3 = "elephant";
+// animal4 = "crocodile"; // don,t pay attention
+// console.log(animal1);
+// console.log(animal2);
+// console.log(animal3);
+// console.log(animal4);
+// }
+// animals();
+
+// console.log(animal1); // cannot be accessed
+// console.log(animal2); // cannot be accessed
+// console.log(animal3); cannot be accessed
+// console.log("*************");
+// console.log(animal4); // can be accessed // weird case // don,t pay attention
+
+// (4) Function Scope
+// JavaScript has function scope: Each function creates a new scope.
+
+// Variables defined inside a function are not accessible (visible) from outside the function.
+
+// Variables declared with var, let and const are quite similar when declared inside a function.
+
+// animals();
+// console.log("*********");
+// function animals() {
+//   const animal1 = "lion";
+//   let animal2 = "tiger";
+//   var animal3 = "elephant";
+
+//   // console.log(animal1);
+//   // console.log(animal2);
+//   // console.log(animal3);
+// }
+// animals();
+
+// console.log(animal1); // cannot be accessed
+// console.log(animal2); // cannot be accessed
+// console.log(animal3); // cannot be accessed
+
+// (6) lexical scope
+// Lexical scope is the ability for a function scope to access variables from the parent scope. We call the child function to be lexically bound by that of the parent function.
+
+// The nested scope allows functions to access variables defined in parent functions, and block scope allows variables to have limited accessibility within a block of code.
+
+// function outer() {
+//   let movie = "darling";
+//   function inner() {
+//     console.log(movie.toUpperCase());
+//   }
+//   inner();
+// }
+// outer();
+
+// function outer() {
+//   let movie = "darling";
+//   function inner() {
+//     function innerMost() {
+//       console.log(movie.toUpperCase());
+//     }
+//     innerMost();
+//   }
+//   inner();
+// }
+// outer();
+
+// check this out
+// function outer() {
+//   let movie = "darling";
+//   function inner() {
+//     let movie = "Mr.Perfect";
+//     console.log(movie.toUpperCase());
+//   }
+//   inner();
+// }
+// outer();
+
+// check this out
+// function outer() {
+//   let movie = "darling";
+//   function inner() {
+//     let movie = "Mr.Perfect";
+//     function innerMost() {
+//       let movie = "Chakram";
+//       console.log(movie.toUpperCase());
+//     }
+//     innerMost();
+//   }
+//   inner();
+// }
+// outer();
+
+// (7) hoisting
+// In JavaScript, hoisting allows you to use functions and variables before they're declared. In this post, we'll learn what hoisting is and how it works.
+
+// Variable hoisting with var
+// When the interpreter hoists a variable declared with var, it initializes its value to undefined. The first line of code below will output undefined:
+
+// console.log(foo); // undefined
+
+// var foo = "bar";
+
+// console.log(foo); // "bar"
+
+// As we defined earlier, hoisting comes from the interpreter splitting variable declaration and assignment. We can achieve this same behavior manually by splitting the declaration and assignment into two steps:
+
+// var foo;
+
+// console.log(foo); // undefined
+
+// foo = "foo";
+
+// console.log(foo); // "foo"
+
+// Remember that the first console.log(foo) outputs undefined because foo is hoisted and given a default value (not because the variable is never declared). Using an undeclared variable will throw a ReferenceError instead:
+
+// console.log(foo); // Uncaught ReferenceError: foo is not defined
+
+// Thankfully the let and const variables, introduced in ECMAScript 2015, behave differently.
+
+// Variable hoisting with let and const
+// Variables declared with let and const are hoisted but not initialized with a default value. Accessing a let or const variable before it's declared will result in a ReferenceError:
+
+// console.log(foo); // Uncaught ReferenceError: Cannot access 'foo' before initialization
+
+// let foo = 'bar';  // Same behavior for variables declared with const
+
+// ********************
+// simplyfying hoisting
+// ********************
+// In JavaScript, hoisting allows you to use functions and variables before they're declared. In this post, we'll learn what hoisting is and how it works.
+// var is hoisting
+// let and const not hoisting
+
+// (1) using var
+// console.log(animal); // undefined
+// var animal = "Tapir";
+// console.log(animal); // Tapir
+
+// (2) using let
+// console.log(bird); // QUESTIONSexample.js:3506 Uncaught ReferenceError: Cannot access 'bird' before initialization
+// at QUESTIONSexample.js:3506:13
+// let bird = "peacock";
+// console.log(bird); // peacock
+
+// (3) using const
+// console.log(alphabets); // QUESTIONSexample.js:3510 Uncaught ReferenceError: Cannot access 'alphabets' before initialization
+// const alphabets = "abcdef";
+// console.log(alphabets); // abcdef
+
+// Functions
+
+// function declarations are hoisting
+// greet(); // hello
+
+// function greet() {
+//   console.log("hello");
+// }
+// greet(); // hello
+
+// // functions expressions are not hoisted
+// greet(); // QUESTIONSexample.js:3532 Uncaught ReferenceError: Cannot access 'greet' before initialization
+
+// let greet = function () {
+//   console.log("hello");
+// };
+// greet(); // hello
+
+// (8) variable lookup
+
+// ======================================
+// 001 - Function Scope
+// ======================================
+
+// ======================================
+// 002 - Block Scope
 // ======================================
 // ======================================
-// 002 -
+// 003 - Lexical Scope
 // ======================================
 // ======================================
-// 003 -
+// 004 - Function Expressions
 // ======================================
 // ======================================
-// 004 -
+// 005 - High Order Functions
 // ======================================
 // ======================================
-// 005 -
+// 006 - Functions as Arguments
 // ======================================
 // ======================================
-// 006 -
+// 007 - Functions as Return Values
 // ======================================
 // ======================================
-// 007 -
+// 008 - Callbacks
 // ======================================
 // ======================================
-// 008 -
-// ======================================
-// ======================================
-// 009 -
+// 009 - Hoisting
 // ======================================
 
 ////////////////////////////////
