@@ -1383,9 +1383,24 @@
 // ======================================
 // 004 - Function Expressions
 // ======================================
+// 1) what is Function Expression? write function expressions for addition,subtraction,multiplication and division.
+// 2) write 5 ways of functions
+// (1) function declaration square
+// (2) function expression(anonymous) square
+// (3) function expression(named multiply) product
+// (4) arrow function expression square
+// (5) concise arrow function expression
+
 // ======================================
 // 005 - High Order Functions
 // ======================================
+// 1) what are first class functions? give examples.
+// 2) write function add,subtract,multiply and divide declarations
+// (1) store them in operations array
+// (2) Loop over all the functions in operations
+// (3) store function multiply in thing object
+// 2) what are higher order functions?give examples.
+
 // ======================================
 // 006 - Functions as Arguments
 // ======================================
@@ -1404,40 +1419,40 @@
 ////////////////////////////////
 
 // ======================================
-// 001 -
+// 001 - Intro to Array Callback Methods
 // ======================================
 // ======================================
-// 002 -
+// 002 - forEach
 // ======================================
 // ======================================
-// 003 -
+// 003 - Map
 // ======================================
 // ======================================
-// 004 -
+// 004 - Arrow Functions Intro
 // ======================================
 // ======================================
-// 005 -
+// 005 - Arrow Function Implicit Returns
 // ======================================
 // ======================================
-// 006 -
+// 006 - Array.find
 // ======================================
 // ======================================
-// 007 -
+// 007 - Filter
 // ======================================
 // ======================================
-// 008 -
+// 008 - Some & Every
 // ======================================
 // ======================================
-// 009 -
+// 009 - Revisiting Sort Part - 2
 // ======================================
 // ======================================
-// 010 -
+// 010 - Reduce Intro part - 1
 // ======================================
 // ======================================
-// 011 -
+// 011 - Reduce pt.2
 // ======================================
 // ======================================
-// 012 -
+// 012 - Even More Reduce part-3
 // ======================================
 
 ////////////////////////////////

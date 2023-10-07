@@ -3536,10 +3536,54 @@
 // greet(); // hello
 
 // (8) variable lookup
+// variable Lookup
+// {} - code block
+
+// const globalNumber = 5; // third preference
+
+// function add(num1, num2) {
+//   const globalNumber = 20; // second preference
+//   const result = num1 + num2 + globalNumber;
+//   function multiply() {
+//     const globalNumber = 100; // first preference
+//     const multiplyResult = result * globalNumber;
+//     console.log(multiplyResult);
+//   }
+//   multiply();
+//   return result;
+// }
+// console.log(add(3, 4));
 
 // ======================================
 // 001 - Function Scope
 // ======================================
+// first class function
+// (1) Assigning a function to a variable
+// const foo = () => {
+//   console.log("foobar");
+// };
+// foo(); // Invoke it using the variable
+// // foobar
+
+// (2) Passing a function as an argument
+// function sayHello() {
+//   return "Hello, ";
+// }
+// function greeting(helloMessage, name) {
+//   console.log(helloMessage() + name);
+// }
+// // Pass `sayHello` as an argument to `greeting` function
+// greeting(sayHello, "JavaScript!");
+// // Hello, JavaScript!
+
+// (3) Returning a function
+function sayHello() {
+  return () => {
+    console.log("Hello!");
+  };
+}
+let x = sayHello();
+console.log(x);
 
 // ======================================
 // 002 - Block Scope
@@ -3568,6 +3612,47 @@
 
 ////////////////////////////////
 // 010 - Apply Functions to Collections of Data
+////////////////////////////////
+
+// ======================================
+// 001 - Intro to Array Callback Methods
+// ======================================
+// ======================================
+// 002 - forEach
+// ======================================
+// ======================================
+// 003 - Map
+// ======================================
+// ======================================
+// 004 - Arrow Functions Intro
+// ======================================
+// ======================================
+// 005 - Arrow Function Implicit Returns
+// ======================================
+// ======================================
+// 006 - Array.find
+// ======================================
+// ======================================
+// 007 - Filter
+// ======================================
+// ======================================
+// 008 - Some & Every
+// ======================================
+// ======================================
+// 009 - Revisiting Sort Part - 2
+// ======================================
+// ======================================
+// 010 - Reduce Intro part - 1
+// ======================================
+// ======================================
+// 011 - Reduce pt.2
+// ======================================
+// ======================================
+// 012 - Even More Reduce part-3
+// ======================================
+
+////////////////////////////////
+// 011 - A few Miscellaneous JS Features
 ////////////////////////////////
 
 // ======================================
@@ -3602,7 +3687,4 @@
 // ======================================
 // ======================================
 // 011 -
-// ======================================
-// ======================================
-// 012 -
 // ======================================
