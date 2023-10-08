@@ -3818,7 +3818,7 @@
 // ======================================
 // 007 - Functions as Return Values
 // ======================================
-// 1) write an higher order function multiplyBy parameter num which returns another function paramter x which can do x multiply num and create a variable double store multiplyBy(num) num= any you can set
+// 1) write an higher order function multiplyBy parameter num which returns another function paramter x which can do x multiply num and create a variable double store multiplyBy(2) and create a variable trple store multiplyBy(3) and create a variable halve store multiplyBy(0.5)
 function multiplyBy(num) {
   return function (x) {
     return x * num;
@@ -3834,6 +3834,44 @@ function multiplyBy(num) {
 // const triple = multiplyBy(3);
 // console.log(triple(5));
 // console.log(triple(10));
+
+// const halve = multiplyBy(0.5);
+// console.log(halve(5));
+// console.log(halve(10));
+// console.log(halve());
+
+// 2) make a function which tells true or false what you entered number is greater than or equal to x and less than or equal to y.create a variable  isChild ,isNineties,isNiceWeather
+// function makeBetweenFunc(x, y) {
+//   return function (num) {
+//     return num >= x && num <= y;
+//   };
+// }
+
+// const isChild = makeBetweenFunc(0, 18);
+// console.log(isChild(10));
+// console.log(isChild(2));
+// console.log(isChild(10));
+// console.log(isChild(19));
+// console.log(isChild(30));
+// console.log(isChild(15));
+// console.log(isChild(45));
+
+// const isInNineties = makeBetweenFunc(1990, 1999);
+// console.log(isInNineties);
+// console.log(isInNineties(1989));
+// console.log(isInNineties(1992));
+// console.log(isInNineties(1992));
+// console.log(isInNineties(1993));
+// console.log(isInNineties(2000));
+// console.log(isInNineties(2002));
+
+// const isNiceWeather = makeBetweenFunc(60, 79);
+// console.log(isNiceWeather);
+// console.log(isNiceWeather(45));
+// console.log(isNiceWeather(76));
+// console.log(isNiceWeather(98));
+// console.log(isNiceWeather(30));
+// console.log(isNiceWeather(81));
 
 // ======================================
 // 008 - Callbacks
