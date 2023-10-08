@@ -3818,6 +3818,23 @@
 // ======================================
 // 007 - Functions as Return Values
 // ======================================
+// 1) write an higher order function multiplyBy parameter num which returns another function paramter x which can do x multiply num and create a variable double store multiplyBy(num) num= any you can set
+function multiplyBy(num) {
+  return function (x) {
+    return x * num;
+  };
+}
+
+// const double = multiplyBy(2);
+// console.log(double(3));
+// console.log(double(10));
+// console.log(multiplyBy(5)(4));
+// console.log(multiplyBy(5)(5));
+
+// const triple = multiplyBy(3);
+// console.log(triple(5));
+// console.log(triple(10));
+
 // ======================================
 // 008 - Callbacks
 // ======================================
