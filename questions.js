@@ -1423,9 +1423,15 @@
 // ======================================
 // 007 - Functions as Return Values
 // ======================================
+// 1) write an higher order function multiplyBy parameter num which returns another function paramter x which can do x multiply num and create a variable double store multiplyBy(2) and create a variable trple store multiplyBy(3) and create a variable halve store multiplyBy(0.5)
+
+// 2) make a function which tells true or false what you entered number is greater than or equal to x and less than or equal to y.create a variable  isChild ,isNineties,isNiceWeather.
+
 // ======================================
 // 008 - Callbacks
 // ======================================
+// 1) what are callback functions?
+
 // ======================================
 // 009 - Hoisting
 // ======================================

@@ -3819,11 +3819,11 @@
 // 007 - Functions as Return Values
 // ======================================
 // 1) write an higher order function multiplyBy parameter num which returns another function paramter x which can do x multiply num and create a variable double store multiplyBy(2) and create a variable trple store multiplyBy(3) and create a variable halve store multiplyBy(0.5)
-function multiplyBy(num) {
-  return function (x) {
-    return x * num;
-  };
-}
+// function multiplyBy(num) {
+//   return function (x) {
+//     return x * num;
+//   };
+// }
 
 // const double = multiplyBy(2);
 // console.log(double(3));
@@ -3876,6 +3876,8 @@ function multiplyBy(num) {
 // ======================================
 // 008 - Callbacks
 // ======================================
+// 1) what are callback functions?
+
 // ======================================
 // 009 - Hoisting
 // ======================================
