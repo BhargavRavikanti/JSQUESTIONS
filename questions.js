@@ -1412,6 +1412,14 @@
 // ======================================
 // 006 - Functions as Arguments
 // ======================================
+// 1) create a higher order function callTwice() parameter func which can show two times of what passing function has  and create a function laugh which contains hahaha and pass laugh function as an argument to callTwice and make another function cry which contains iam sad and  pass cry function as an argument to callTwice.
+
+// 2) create a higher order function callThrice() parameter func which can show two times of what passing function has  and create three functions cry,rage,work which contains iam sad,i hate everthing,i have work pass those three functions as an arguments to callThrice.
+
+// 3) create a higher order function which has the ability to enter a number so that passing function value prints what number you have enter times.
+
+// 4) create a higher order function pickOne parameters f1,f2 which has the ability to pickOne f1 or f2 by using random number method.pass any two functions to get one function return.
+
 // ======================================
 // 007 - Functions as Return Values
 // ======================================

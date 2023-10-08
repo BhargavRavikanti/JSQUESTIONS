@@ -3677,21 +3677,21 @@
 // 1) what are first class functions? give examples.
 
 // 2) write function add,subtract,multiply and divide declarations
-function add(x, y) {
-  return x + y;
-}
-function subtract(x, y) {
-  return x - y;
-}
-function multiply(x, y) {
-  return x * y;
-}
-function divide(x, y) {
-  return x / y;
-}
+// function add(x, y) {
+//   return x + y;
+// }
+// function subtract(x, y) {
+//   return x - y;
+// }
+// function multiply(x, y) {
+//   return x * y;
+// }
+// function divide(x, y) {
+//   return x / y;
+// }
 
 // (1) store them in operations array
-const operations = [add, subtract, multiply, divide];
+// const operations = [add, subtract, multiply, divide];
 // console.log(operations);
 // console.log(operations[0]);
 // console.log(operations[1]);
@@ -3720,10 +3720,101 @@ const operations = [add, subtract, multiply, divide];
 // console.log(divide(5, 5));
 
 // 3) what are higher order functions?give examples.
+// HIGHER ORDER FUNCTIONS
+// can accept other functions as arguments
+// can return a function
 
 // ======================================
 // 006 - Functions as Arguments
 // ======================================
+// 1) create a higher order function callTwice() parameter func which can show two times of what passing function has  and create a function laugh which contains hahaha and pass laugh function as an argument to callTwice and make another function cry which contains iam sad and  pass cry function as an argument to callTwice.
+
+// function callTwice(func) {
+//   func();
+//   func();
+// }
+
+// function laugh() {
+//   console.log("hahaha");
+// }
+
+// callTwice(laugh);
+
+// function cry() {
+//   console.log("iam sad");
+// }
+
+// callTwice(cry);
+
+// 2) create a higher order function callThrice() parameter func which can show two times of what passing function has  and create three functions cry,rage,work which contains iam sad,i hate everthing,i have work pass those three functions as an arguments to callThrice.
+// function callThrice(f) {
+//   f();
+//   f();
+//   f();
+// }
+
+// function cry() {
+//   console.log("iam sad");
+// }
+// function rage() {
+//   console.log("i hate everthing");
+// }
+// function work() {
+//   console.log("i have work");
+// }
+
+// callThrice(cry);
+// callThrice(rage);
+// callThrice(work);
+
+// 3) create a higher order function which has the ability to enter a number so that passing function value prints what number you have enter times.
+
+// function repeatNTimes(func, num) {
+//   for (let i = 1; i <= num; i++) {
+//     func();
+//   }
+// }
+
+// function cry() {
+//   console.log("iam sad");
+// }
+// function rage() {
+//   console.log("i hate everthing");
+// }
+// function work() {
+//   console.log("i have work");
+// }
+
+// repeatNTimes(cry, 5);
+// repeatNTimes(rage, 5);
+// repeatNTimes(work, 5);
+
+// 4) create a higher order function pickOne parameters f1,f2 which has the ability to pickOne f1 or f2 by using random number method.pass any two functions to get one function return.
+
+// function pickOne(f1, f2) {
+//   let rand = Math.random();
+//   console.log(rand);
+//   if (rand < 0.5) {
+//     f1();
+//   } else {
+//     f2();
+//   }
+// }
+
+// function cry() {
+//   console.log("iam sad");
+// }
+// function rage() {
+//   console.log("i hate everthing");
+// }
+// function work() {
+//   console.log("i have work");
+// }
+
+// pickOne(cry, rage);
+// pickOne(work, rage);
+// pickOne(cry, work);
+
 // ======================================
 // 007 - Functions as Return Values
 // ======================================
