@@ -3819,9 +3819,10 @@
 // 007 - Functions as Return Values
 // ======================================
 // 1) write an higher order function multiplyBy parameter num which returns another function paramter x which can do x multiply num and create a variable double store multiplyBy(2) and create a variable trple store multiplyBy(3) and create a variable halve store multiplyBy(0.5)
+
 // function multiplyBy(num) {
 //   return function (x) {
-//     return x * num;
+//     return num * x;
 //   };
 // }
 
@@ -3876,11 +3877,91 @@
 // ======================================
 // 008 - Callbacks
 // ======================================
+/*
 // 1) what are callback functions?
+// 2)
+// (1) create higher function greet paramters name,cb contains name and invoke cb
+// (2) create callback function goodMorning contains Good Morning
+// (3) pass goodMorning function as an argument to higher order function greet
+// (4) invoke higher order function greet pass arguments bharu,callback function goodMorning.
+*/
+
+// 1) what are callback functions?
+// function passed to another function(higher order function) as an agument and executed/invoked inside that function(higher order function).
+
+//  Callbacks make sure that a function is not going to run before a task is completed but will run right after the task has completed.
+
+/*
+// PRACTICE
+
+// greet is higher order function
+// function greet(name, cb) {
+//   cb();
+//   console.log(name);
+// }
+
+// create function goodMorning contains good morning
+// function goodMorning() {
+//   console.log("good morning"); // goodMorning is callback function
+// }
+
+// create function goodEvening contains Good evening
+// function goodEvening() {
+//   console.log("good evening"); // goodEvening is callback function
+// }
+
+// greet("Jonas", goodMorning);
+// greet("Peter", goodEvening);
+
+// method 1
+// function greeting() {
+//   console.log("good morning bharu");
+// }
+// setTimeout(greeting, 5000);
+
+// callback functions we use mostly for one time use as an anonymous functions passed as an argument of higher order functions.
+
+// method 2 generally used method
+// generally we use callback functions like this
+// setTimeout(function () {
+//   console.log("good morning bharu");
+// }, 3000);
+
+// seTimeOut function is higher order function which is built in function.
+*/
+
+// 2)
+// (1) create higher function greet paramters name,cb contains name and invoke cb
+// function greet(name, cb) {
+//   console.log(name);
+//   cb();
+// }
+
+// (2) create callback function goodMorning contains Good Morning
+// function goodMorning() {
+//   console.log("Good Morning");
+// }
+
+// (3) invoke higher order function greet pass arguments bharu,goodMorning.
+// pass goodMorning function as an argument to higher order function greet
+// greet("bharu", goodMorning);
+
+// 3)
+// (1) create callBack function goodEvening contains Good Evening bharu
+// function goodEvening() {
+//   console.log("Good Evening bharu");
+// }
+// (2) pass goodEvening to higher order function setTimeOut built in functions
+// setTimeout(goodEvening);
+
+// (3) set parameter 2 5000 milli seconds to execute after 5 seconds
+// setInterval(goodEvening, 5000);
 
 // ======================================
 // 009 - Hoisting
 // ======================================
+// 1) what is Hoisting?
+// Housting allows you to use functions and variables before they are declared
 
 ////////////////////////////////
 // 010 - Apply Functions to Collections of Data
@@ -3889,15 +3970,330 @@
 // ======================================
 // 001 - Intro to Array Callback Methods
 // ======================================
+// ARRAY CALLBACK METHODS
+// Arrays come with many built-in methods that accept call functions
+// Now that we have covered callbacks, we can learn these methods!
+// SUPER USEFUL!
+
+// GOALS
+//Understand and use these methods:
+// 1) forEach
+// 2) map
+// 3) filter
+// 4) find
+// 5) reduce
+// 6) some
+// 7) every
+
+// 1) what are array callback methods?
+//f f f s e r m
+
 // ======================================
 // 002 - forEach
 // ======================================
+// 1) what is foreach method?
+// Accepts a callback function.
+// Calls the function once per element in the array.
+// The forEach() method calls a function and iterates over the elements of an array.The forEach() method can also be used on MAPS and  SETS.
+
+// 2)
+// (1) create numbers array which contains 20,21,22,23,24,25,26,27
+// const numbers = [20, 21, 22, 23, 24, 25, 26, 27];
+
+// // (2) using anonymous function make numbers array elements double like 20*2,21*2....
+// numbers.forEach(function (numbersElements) {
+//   console.log(numbersElements * 2);
+// });
+
+// console.log("*******************************");
+// (3) create function printTriple which can make numbers array elements into triple value like 20*3,21*3,.....
+// function triple(numElements) {
+//   console.log(numElements * 3);
+// }
+// // // Using a pre-defined function:
+// numbers.forEach(triple);
+// console.log("*******************************");
+
+// // (4) iterate numbers array with index
+// numbers.forEach(function (idxNo, numbersElements) {
+//   console.log(numbersElements, idxNo);
+// });
+// console.log("*******************************");
+
+// numbers.forEach(function (idxNo, numbersElements) {
+//   console.log(idxNo, numbersElements);
+// });
+// console.log("*******************************");
+
+// 3) create randomArray contains 10,20,bharu,ten,singer,false and iterate randomArray along with index numbers
+// const randomArray = [10, 20, "bharu", "ten", "singer", false];
+// randomArray.forEach(function (idx, elements) {
+//   console.log(elements, idx);
+// });
+// randomArray.forEach(function (idx, elements) {
+//   console.log(idx, elements);
+// });
+
+// 4)
+// const books = [
+//   {
+//     title: "Good Omens",
+//     authors: ["Terry Pratchett", "Neil Gaiman"],
+//     rating: 4.25,
+//   },
+//   {
+//     title: "Bone: The Complete Edition",
+//     authors: ["Jeff Smith"],
+//     rating: 4.42,
+//   },
+//   {
+//     title: "American Gods",
+//     authors: ["Neil Gaiman"],
+//     rating: 4.11,
+//   },
+//   {
+//     title: "A Gentleman in Moscow",
+//     authors: ["Amor Towles"],
+//     rating: 4.36,
+//   },
+// ];
+
+// // (1) Printing all book titles using forEach:
+// books.forEach(function (elements) {
+//   console.log(elements.title);
+// });
+// console.log("*******************************");
+
+// // (2) Printing all book titles using forEach: and makes titles capital letters
+// books.forEach(function (elements) {
+//   console.log(elements.title.toUpperCase());
+// });
+// console.log("*******************************");
+
+// // (3) Printing all book titles using for...of:
+// for (let elements of books) {
+//   console.log(elements.title);
+// }
+// console.log("*******************************");
+
+// // (4) Printing all book titles using for...of: and make titles capital letters
+// for (let elements of books) {
+//   console.log(elements.title.toUpperCase());
+// }
+// console.log("*******************************");
+
+// // (5) Printing all book titles using for loop: and make titles capital letters
+// for (let i = 0; i < books.length; i++) {
+//   console.log(books[i].title.toUpperCase());
+// }
+
+// 5)
+// // (1) print all elements iterate like 9*9,8*8,....
+// const nums = [9, 8, 7, 6, 5, 4, 3, 2, 1];
+// nums.forEach(function (elements) {
+//   console.log(elements * elements);
+// });
+// console.log("********************************");
+
+// // (2) write a program which print elements gives remainder 0 only when divided by 2
+// nums.forEach(function (elements) {
+//   if (elements % 2 === 0) {
+//     console.log(elements);
+//   }
+// });
+
 // ======================================
 // 003 - Map
 // ======================================
+// 1) what is map() method?why we need it?when to use?
+// The Array.map() method allows you to iterate over an array and modify its elements using a callback function. The callback function will then be executed on each of the array's elements.
+
+// Sometimes you may need to take an array and apply some procedure to its elements so that you get a new array with modified elements.
+
+// Instead of manually iterating over the array using a loop, you can simply use the built-in Array.map() method.
+
+// The Array.map() method is commonly used to apply some changes to the elements, whether multiplying by a specific number as in the code above, or doing any other operations that you might require for your application.
+
+// 2)
+// const numbers = [20, 21, 22, 23, 24, 25, 26, 27];
+// (1) iterate numbers using map with result of doubles like 20*2,21*2...
+// const doubles = numbers.map(function (element) {
+//   return element * 2;
+// });
+// console.log(doubles);
+// console.log(numbers);
+
+// (2) iterate numbers using map with result of squares like 20*20,21*21...
+// const squares = numbers.map(function (elements) {
+//   return elements * elements;
+// });
+// console.log(squares);
+
+// (3) iterate numbers using map with result of triples like 20*3,21*3...
+// const triples = numbers.map(function (elements) {
+//   return elements * 3;
+// });
+// console.log(triples);
+
+// (4) check numbers elements which are even using map() return object which are true which are false
+// const checkEven = numbers.map(function (elements) {
+//   return {
+//     value: elements,
+//     isEven: elements % 2 === 0,
+//   };
+// });
+// console.log(checkEven);
+
+// (5) check numbers elements which are odd using map() return object which are true which are false
+// const checkOdd = numbers.map(function (elements) {
+//   return {
+//     value: elements,
+//     isOdd: elements % 2 === 1,
+//   };
+// });
+// console.log(checkOdd);
+
+// (6) using for of looping doubling an array elements
+// const doubles2 = [];
+// for (let num of numbers) {
+//   doubles2.push(num * 2);
+// }
+// console.log(doubles2);
+
+// 3)
+// const words = ["asap", "byob", "rsvp", "diy"];
+// // output should be // //["A.S.A.P", "B.Y.O.B", "R.S.V.P", "D.I.Y"]
+// const abbrevs = words.map(function (word) {
+//   return word.toUpperCase().split("").join(".");
+// });
+// console.log(abbrevs);
+
+// 4)
+// const books = [
+//   {
+//     title: "Good Omens",
+//     authors: ["Terry Pratchett", "Neil Gaiman"],
+//     rating: 4.25,
+//   },
+//   {
+//     title: "Bone: The Complete Edition",
+//     authors: ["Jeff Smith"],
+//     rating: 4.42,
+//   },
+//   {
+//     title: "American Gods",
+//     authors: ["Neil Gaiman"],
+//     rating: 4.11,
+//   },
+//   {
+//     title: "A Gentleman in Moscow",
+//     authors: ["Amor Towles"],
+//     rating: 4.36,
+//   },
+// ];
+
+// (1) return all title in an array
+// const titles = books.map(function (elements) {
+//   return elements.title;
+// });
+// console.log(titles);
+
+// (2) return authors in an array
+// const authors = books.map(function (elements) {
+//   return elements.authors;
+// });
+// console.log(authors);
+
+// (3) return all 0 index authors in an array
+// const authors2 = books.map(function (elements) {
+//   return elements.authors[0];
+// });
+// console.log(authors2);
+
+// (4) return titles and rating in an array
+// const ratings = books.map(function (elements) {
+//   return {
+//     titles: elements.title,
+//     ratings: elements.rating,
+//   };
+// });
+// console.log(ratings);
+
+// 5)
+// const texts = ["rofl", "lol", "omg", "ttyl"];
+// (1) make texts elements capital letters return an array
+// const copy = texts.map(function (elements) {
+//   return elements.toUpperCase();
+// });
+// console.log(copy);
+// (2) make texts elements capital letters and split return an array
+// const copy2 = texts.map(function (elements) {
+//   return elements.toUpperCase().split();
+// });
+// console.log(copy2);
+
+// (3) make texts elements capital letters and split return an array
+// const copy3 = texts.map(function (elements) {
+//   return elements.toUpperCase().split("");
+// });
+// console.log(copy3);
+
+// (4) make texts elements capital letters and split and join return an array output (4) ['R-O-F-L', 'L-O-L', 'O-M-G', 'T-T-Y-L']
+// const copy4 = texts.map(function (elements) {
+//   return elements.toUpperCase().split("").join("-");
+// });
+// console.log(copy4);
+
 // ======================================
 // 004 - Arrow Functions Intro
 // ======================================
+// 1) what is arrow function?
+// syntactically compact alternative to a regular function expression
+
+// 2) write function expression for square of a number
+// const square = function (x) {
+//   return x * x;
+// };
+// console.log(square(5));
+
+// 3) write arrow function to get square of any number.
+// const square = (num) => {
+//   return num * num;
+// };
+// console.log(square(5));
+
+// 4) write arrow function to check a number is even or not if it is even true otherwise false.
+// const isEven = (num) => {
+//   return num % 2 === 0;
+// };
+// console.log(isEven(5));
+// console.log(isEven(6));
+
+// 5) write arrow function to get multiplication of two numbers.
+// const multiplication = (x, y) => {
+//   return x * y;
+// };
+// console.log(multiplication(5, 10));
+// console.log(multiplication(5, 20));
+
+// // 6) write arrow function which console hi.
+// const greet = () => {
+//   return "Hi";
+// };
+// console.log(greet());
+// // or
+// const greet1 = () => {
+//   console.log("hi");
+// };
+// greet1();
+
+// // 7) write arrow function to greet a person hello like Hello Bharu...
+// const greeting = (name) => {
+//   return `Hello ${name}`;
+// };
+// console.log(greeting("Bharu"));
+// console.log(greeting("Dhanush"));
+
 // ======================================
 // 005 - Arrow Function Implicit Returns
 // ======================================

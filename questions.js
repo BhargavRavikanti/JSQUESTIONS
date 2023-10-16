@@ -1431,10 +1431,20 @@
 // 008 - Callbacks
 // ======================================
 // 1) what are callback functions?
+// 2)
+// (1) create higher function greet paramters name,cb contains name and invoke cb
+// (2) create callback function goodMorning contains Good Morning
+// (3) invoke higher order function greet pass arguments bharu,goodMorning.
+// pass goodMorning function as an argument to higher order function greet
+// 3)
+// (1) create callBack function goodEvening contains Good Evening bharu
+// (2) pass goodEvening to higher order function setTimeOut built in functions
+// (3) set parameter 2 5000 milli seconds to execute after 5 seconds
 
 // ======================================
 // 009 - Hoisting
 // ======================================
+// 1) what is Hoisting?
 
 ////////////////////////////////
 // 010 - Apply Functions to Collections of Data
@@ -1443,15 +1453,153 @@
 // ======================================
 // 001 - Intro to Array Callback Methods
 // ======================================
+// ARRAY CALLBACK METHODS
+// Arrays come with many built-in methods that accept call functions
+// Now that we have covered callbacks, we can learn these methods!
+// SUPER USEFUL!
+
+// GOALS
+//Understand and use these methods:
+// 1) forEach
+// 2) map
+// 3) filter
+// 4) find
+// 5) reduce
+// 6) some
+// 7) every
+
+// 1) what are array callback methods?
+
 // ======================================
 // 002 - forEach
 // ======================================
+// 1) what is foreach method?
+
+// 2)
+// (1) create numbers array which contains 20,21,22,23,24,25,26,27
+// (2) using anonymous function make numbers array elements double like 20*2,21*2....
+// (3) create function printTriple which can make numbers array elements into triple value like 20*3,21*3,.....
+// (4) iterate numbers array with index
+
+// 3) create randomArray contains 10,20,bharu,ten,singer,false and iterate randomArray along with index numbers
+
+// 4)
+// const books = [
+//   {
+//     title: "Good Omens",
+//     authors: ["Terry Pratchett", "Neil Gaiman"],
+//     rating: 4.25,
+//   },
+//   {
+//     title: "Bone: The Complete Edition",
+//     authors: ["Jeff Smith"],
+//     rating: 4.42,
+//   },
+//   {
+//     title: "American Gods",
+//     authors: ["Neil Gaiman"],
+//     rating: 4.11,
+//   },
+//   {
+//     title: "A Gentleman in Moscow",
+//     authors: ["Amor Towles"],
+//     rating: 4.36,
+//   },
+// ];
+
+// (1) Printing all book titles using forEach:
+
+// (2) Printing all book titles using forEach: and makes titles capital letters
+
+// (3) Printing all book titles using for...of:
+
+// (4) Printing all book titles using for...of: and make titles capital letters
+
+// (5) Printing all book titles using for loop: and make titles capital letters
+
+// 5)
+// (1) print all elements iterate like 9*9,8*8,....
+// (2) write a program which print elements gives remainder 0 only when divided by 2
+
 // ======================================
 // 003 - Map
 // ======================================
+// 1) what is map() method?why we need it?when to use?
+
+// 2)
+// const numbers = [20, 21, 22, 23, 24, 25, 26, 27];
+// (1) iterate numbers using map with result of doubles like 20*2,21*2...
+
+// (2) iterate numbers using map with result of squares like 20*20,21*21...
+
+// (3) iterate numbers using map with result of triples like 20*3,21*3...
+
+// (4) check numbers elements which are even using map() return object which are true which are false
+
+// (5) check numbers elements which are odd using map() return object which are true which are false
+
+// (6) using for of looping doubling an array elements
+
+// 3)
+// const words = ["asap", "byob", "rsvp", "diy"];
+// // output should be // //["A.S.A.P", "B.Y.O.B", "R.S.V.P", "D.I.Y"]
+
+// 4)
+// const books = [
+//   {
+//     title: "Good Omens",
+//     authors: ["Terry Pratchett", "Neil Gaiman"],
+//     rating: 4.25,
+//   },
+//   {
+//     title: "Bone: The Complete Edition",
+//     authors: ["Jeff Smith"],
+//     rating: 4.42,
+//   },
+//   {
+//     title: "American Gods",
+//     authors: ["Neil Gaiman"],
+//     rating: 4.11,
+//   },
+//   {
+//     title: "A Gentleman in Moscow",
+//     authors: ["Amor Towles"],
+//     rating: 4.36,
+//   },
+// ];
+
+// (1) return all title in an array
+// (2) return authors in an array
+// (3) return all 0 index authors in an array
+// (4) return titles and rating in an array
+
+// 5)
+// const texts = ["rofl", "lol", "omg", "ttyl"];
+// (1) make texts elements capital letters return an array
+
+// (2) make texts elements capital letters and split return an array
+
+// (3) make texts elements capital letters and split return an array
+
+// (4) make texts elements capital letters and split and join return an array output (4) ['R-O-F-L', 'L-O-L', 'O-M-G', 'T-T-Y-L']
+
 // ======================================
 // 004 - Arrow Functions Intro
 // ======================================
+// 1) what is arrow function?
+
+// 2) write function expression for square of a number
+
+// 3) write arrow function to get square of any number.
+
+// 4) write arrow function to check a number is even or not if it is even true otherwise false.
+
+// 5) write arrow function to get multiplication of two numbers.
+
+// 6) write arrow function which console hi and returns Hi.
+
+// 7) write arrow function to greet a person hello like Hello Bharu...
+
 // ======================================
 // 005 - Arrow Function Implicit Returns
 // ======================================
