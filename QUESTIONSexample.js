@@ -4378,6 +4378,76 @@
 // ======================================
 // 006 - Array.find
 // ======================================
+// 1) what is find method?
+// FIND returns the value of the FIRST ELEMENT in the array that satisfies the provived testing function.
+
+// 2)
+// let movies = [
+//   "The Fantastic Mr. Fox",
+//   "Mr. and Mrs. Smith",
+//   "Mrs. Doubtfire",
+//   "Mr. Deeds",
+// ];
+
+// (1) Find first movie that includes 'Mrs' in its title:
+// const movie = movies.find((movie) => {
+//   return movie.includes("Mrs");
+// });
+// console.log(movie);
+
+// // (2) Find first movie that begins with 'Mrs':
+// const movie2 = movies.find((movie) => {
+//   return movie.indexOf("Mrs") === 0;
+// });
+// console.log(movie2);
+
+// // (3) Find first movie that includes 'Mr' in its title:
+// const movie3 = movies.find((movie) => {
+//   return movie.includes("Mr");
+// });
+// console.log(movie3);
+
+// // (4) Find first movie that begins with 'Mr':
+// const movie4 = movies.find((movie) => {
+//   return movie.indexOf("Mr") === 0;
+// });
+// console.log(movie4);
+
+const books = [
+  {
+    title: "Good Omens",
+    authors: ["Terry Pratchett", "Neil Gaiman"],
+    rating: 4.25,
+  },
+  {
+    title: "Bone: The Complete Edition",
+    authors: ["Jeff Smith"],
+    rating: 4.42,
+  },
+  {
+    title: "American Gods",
+    authors: ["Neil Gaiman"],
+    rating: 4.11,
+  },
+  {
+    title: "A Gentleman in Moscow",
+    authors: ["Amor Towles"],
+    rating: 4.36,
+  },
+];
+
+// (1) Find first book w/ rating over 4.3
+const goodBook = books.find((book) => book.rating >= 4.3);
+console.log(goodBook);
+
+// (2) Find first book with Neil Gaiman as an author:
+const neilBook = books.find((b) => b.authors.includes("Neil Gaiman"));
+console.log(neilBook);
+
+// (3) find a book which rating less than 4.25
+const rating = books.find((r) => r.rating < 4.25);
+console.log(rating);
+
 // ======================================
 // 007 - Filter
 // ======================================
