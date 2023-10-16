@@ -1603,6 +1603,32 @@
 // ======================================
 // 005 - Arrow Function Implicit Returns
 // ======================================
+// 1) what is implicit means?
+
+// 2) create a function expression to check a number is even or not if even true otherwise false.
+
+// 3) create a arrow with return or regular arrow function to check a number is even or not if even true otherwise false.
+
+// 4) create a arrow function oneliner to check a number is even or not if even true otherwise false.
+
+// 5) write arrow function to get square of a number.
+
+// 6) write one liner arrow function to get square of a number.
+
+// 7)
+// const nums = [1, 2, 3, 4, 5, 6, 7, 8];
+// (1) make nums array double using anonymous function and return as an array
+
+// (2) make nums array double using regular arrow function and return as an array
+
+// (3) make nums array double using one liner arrow function and return as an array
+
+// (4) craete an anonymous function to check which elements of nums is even if even return even if odd return odd return as an array.
+
+// (5) craete an one liner arrow function to check which elements of nums is even if even return even if odd return odd return as an array.
+
+// 8) write one liner arrow functions for square, addition,subtraction,multiplication
+
 // ======================================
 // 006 - Array.find
 // ======================================

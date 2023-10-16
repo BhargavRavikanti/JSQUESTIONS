@@ -4297,6 +4297,84 @@
 // ======================================
 // 005 - Arrow Function Implicit Returns
 // ======================================
+// 1) what is implicit means?
+// suggested though not directly expressed.
+
+// 2) create a function expression to check a number is even or not if even true otherwise false.
+// const isEven = function (num) {
+//   return num % 2 === 0;
+// };
+// console.log(isEven(5));
+// console.log(isEven(6));
+
+// 3) create a arrow with return or regular arrow function to check a number is even or not if even true otherwise false.
+// const isEven = (num) => {
+//   return num % 2 === 0;
+// };
+// console.log(isEven(5));
+// console.log(isEven(6));
+
+// 4) create a arrow function oneliner to check a number is even or not if even true otherwise false.
+// const isEven = (num) => num % 2 === 0;
+// console.log(isEven(5));
+// console.log(isEven(6));
+
+// 5) write arrow function to get square of a number.
+// const square = (num) => {
+//   return num * num;
+// };
+// console.log(square(5));
+// console.log(square(6));
+
+// 6) write one liner arrow function to get square of a number.
+// const square1 = (num) => num * num;
+// console.log(square1(5));
+// console.log(square1(6));
+
+// 7)
+// const nums = [1, 2, 3, 4, 5, 6, 7, 8];
+// (1) make nums array double using anonymous function and return as an array
+// const doubles1 = nums.map(function (elements) {
+//   return elements * 2;
+// });
+// console.log(doubles1);
+
+// (2) make nums array double using regular arrow function and return as an array
+// const doubles2 = nums.map((elements) => {
+//   return elements * 2;
+// });
+// console.log(doubles2);
+
+// (3) make nums array double using one liner arrow function and return as an array
+// const doubles3 = nums.map((elements) => elements * 2);
+// console.log(doubles3);
+
+// (4) craete an anonymous function to check which elements of nums is even if even return even if odd return odd return as an array.
+// const list1 = nums.map(function (elements) {
+//   if (elements % 2 === 0) return "even";
+//   return "odd";
+// });
+// console.log(list1);
+
+// (5) craete an one liner arrow function to check which elements of nums is even if even return even if odd return odd return as an array.
+// const list2 = nums.map((elements) => (elements % 2 === 0 ? "even" : "odd"));
+// console.log(list2);
+
+// 8) write one liner arrow functions for square, addition,subtraction,multiplication
+// const square = (num) => num * num;
+// console.log(square(5));
+// console.log(square(6));
+
+// const addition = (x, y) => x + y;
+// console.log(addition(5, 5));
+// console.log(addition(5, 6));
+
+// const subtraction = (x, y) => x - y;
+// console.log(subtraction(10, 5));
+
+// const multiplication = (x, y) => x * y;
+// console.log(multiplication(10, 8));
+
 // ======================================
 // 006 - Array.find
 // ======================================
@@ -4355,4 +4433,5 @@
 // ======================================
 // ======================================
 // 011 -
+// ======================================
 // ======================================
