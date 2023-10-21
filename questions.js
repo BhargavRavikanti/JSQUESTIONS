@@ -1745,10 +1745,106 @@
 //     genres: ["fiction"],
 //   },
 // ];
+// (1) return all books which are rated over 4.3
+// (2) return all books with fantasy as a genre
+// (3) return all books that are either short stories or essays:
+// (4) build a search functionality to get books
+// get books which contains the
+// (5) build a search functionality to get books dynamically like if we enter the which contains the books will return
+// (6) build dynamically search functionality for getting genres
 
 // ======================================
 // 008 - Some & Every
 // ======================================
+// 1) what is some method?
+// 2) what is Every method?
+
+// 3)
+// const words = ["dog", "dig", "log", "bag", "wag"];
+// (1) is every word 3 characters long?
+// (2) is every word 2 characters long?
+// (3) Do all words end in 'g'?
+// (4) Does at least 1 book start with 'd'?
+// (5) Do all words start with 'd'?
+
+// 4)
+// const animals = ["tiger", "lion", "elephant", "horse", "tiger", "lion"];
+// (1) is every word 4 or greater than 4 characters long?
+// (2) Does at least 1 element start with 't'?
+// (3) Does at least 1 element index 2 starts with 'o'?
+
+// 5)
+// const books = [
+//   {
+//     title: "Good Omens",
+//     authors: ["Terry Pratchett", "Neil Gaiman"],
+//     rating: 4.25,
+//     genres: ["fiction", "fantasy"],
+//   },
+//   {
+//     title: "Changing My Mind",
+//     authors: ["Zadie Smith"],
+//     rating: 3.83,
+//     genres: ["nonfiction", "essays"],
+//   },
+//   {
+//     title: "Bone: The Complete Edition",
+//     authors: ["Jeff Smith"],
+//     rating: 4.42,
+//     genres: ["fiction", "graphic novel", "fantasy"],
+//   },
+//   {
+//     title: "American Gods",
+//     authors: ["Neil Gaiman"],
+//     rating: 4.11,
+//     genres: ["fiction", "fantasy"],
+//   },
+//   {
+//     title: "A Gentleman in Moscow",
+//     authors: ["Amor Towles"],
+//     rating: 4.36,
+//     genres: ["fiction", "historical fiction"],
+//   },
+//   {
+//     title: "The Name of the Wind",
+//     authors: ["Patrick Rothfuss"],
+//     rating: 4.54,
+//     genres: ["fiction", "fantasy"],
+//   },
+//   {
+//     title: "The Overstory",
+//     authors: ["Richard Powers"],
+//     rating: 4.19,
+//     genres: ["fiction", "short stories"],
+//   },
+//   {
+//     title: "The Way of Kings",
+//     authors: ["Brandon Sanderson"],
+//     rating: 4.65,
+//     genres: ["fantasy", "epic"],
+//   },
+//   {
+//     title: "Lord of the flies",
+//     authors: ["William Golding"],
+//     rating: 3.67,
+//     genres: ["fiction"],
+//   },
+// ];
+// (1) Are all books rated 3.5 or higher?
+// (2) Do any books have 2 authors?
+// (3) Do any books have 3 authors?
+// (4) Do any books have 3 genres?
+// (5) Do any books have 4 genres?
+// (6) Are all books rated 3.5 or lower?
+
+// 6)
+// const words = ["dog", "jello", "log", "cupcake", "bag", "wag"];
+// (1) Are there any words longer than 4 characters?
+// (2) Are all words longer than 4 characters?
+// (3) Are all words 3 or longer than 3 characters?
+// (4) Do any words start with "Z" and check with "j?
+// (5) Do any words contain "cake"?
+
 // ======================================
 // 009 - Revisiting Sort Part - 2
 // ======================================
@@ -1767,37 +1863,37 @@
 ////////////////////////////////
 
 // ======================================
-// 001 -
+// 001 - New Js Features Intro
 // ======================================
 // ======================================
-// 002 -
+// 002 - Default Parameters
 // ======================================
 // ======================================
-// 003 -
+// 003 - Spread for Function Calls
 // ======================================
 // ======================================
-// 004 -
+// 004 - Spread in Array Literals
 // ======================================
 // ======================================
-// 005 -
+// 005 - Spread in Object Literals
 // ======================================
 // ======================================
-// 006 -
+// 006 - The Arguments Object(not new)
 // ======================================
 // ======================================
-// 007 -
+// 007 - Rest Paramters(new)
 // ======================================
 // ======================================
-// 008 -
+// 008 - Destructuring Arrays
 // ======================================
 // ======================================
-// 009 -
+// 009 - Destructuring Objects
 // ======================================
 // ======================================
-// 010 -
+// 010 - Nested Destructuring
 // ======================================
 // ======================================
-// 011 -
+// 011 - Destructuring Paramters
 // ======================================
 
 ////////////////////////////////

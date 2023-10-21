@@ -4483,62 +4483,62 @@
 // console.log(less45Nums);
 
 // 3)
-const books = [
-  {
-    title: "Good Omens",
-    authors: ["Terry Pratchett", "Neil Gaiman"],
-    rating: 4.25,
-    genres: ["fiction", "fantasy"],
-  },
-  {
-    title: "Changing My Mind",
-    authors: ["Zadie Smith"],
-    rating: 3.83,
-    genres: ["nonfiction", "essays"],
-  },
-  {
-    title: "Bone: The Complete Edition",
-    authors: ["Jeff Smith"],
-    rating: 4.42,
-    genres: ["fiction", "graphic novel", "fantasy"],
-  },
-  {
-    title: "American Gods",
-    authors: ["Neil Gaiman"],
-    rating: 4.11,
-    genres: ["fiction", "fantasy"],
-  },
-  {
-    title: "A Gentleman in Moscow",
-    authors: ["Amor Towles"],
-    rating: 4.36,
-    genres: ["fiction", "historical fiction"],
-  },
-  {
-    title: "The Name of the Wind",
-    authors: ["Patrick Rothfuss"],
-    rating: 4.54,
-    genres: ["fiction", "fantasy"],
-  },
-  {
-    title: "The Overstory",
-    authors: ["Richard Powers"],
-    rating: 4.19,
-    genres: ["fiction", "short stories"],
-  },
-  {
-    title: "The Way of Kings",
-    authors: ["Brandon Sanderson"],
-    rating: 4.65,
-    genres: ["fantasy", "epic"],
-  },
-  {
-    title: "Lord of the flies",
-    authors: ["William Golding"],
-    rating: 3.67,
-    genres: ["fiction"],
-  },
-];
+// const books = [
+//   {
+//     title: "Good Omens",
+//     authors: ["Terry Pratchett", "Neil Gaiman"],
+//     rating: 4.25,
+//     genres: ["fiction", "fantasy"],
+//   },
+//   {
+//     title: "Changing My Mind",
+//     authors: ["Zadie Smith"],
+//     rating: 3.83,
+//     genres: ["nonfiction", "essays"],
+//   },
+//   {
+//     title: "Bone: The Complete Edition",
+//     authors: ["Jeff Smith"],
+//     rating: 4.42,
+//     genres: ["fiction", "graphic novel", "fantasy"],
+//   },
+//   {
+//     title: "American Gods",
+//     authors: ["Neil Gaiman"],
+//     rating: 4.11,
+//     genres: ["fiction", "fantasy"],
+//   },
+//   {
+//     title: "A Gentleman in Moscow",
+//     authors: ["Amor Towles"],
+//     rating: 4.36,
+//     genres: ["fiction", "historical fiction"],
+//   },
+//   {
+//     title: "The Name of the Wind",
+//     authors: ["Patrick Rothfuss"],
+//     rating: 4.54,
+//     genres: ["fiction", "fantasy"],
+//   },
+//   {
+//     title: "The Overstory",
+//     authors: ["Richard Powers"],
+//     rating: 4.19,
+//     genres: ["fiction", "short stories"],
+//   },
+//   {
+//     title: "The Way of Kings",
+//     authors: ["Brandon Sanderson"],
+//     rating: 4.65,
+//     genres: ["fantasy", "epic"],
+//   },
+//   {
+//     title: "Lord of the flies",
+//     authors: ["William Golding"],
+//     rating: 3.67,
+//     genres: ["fiction"],
+//   },
+// ];
 
 // (1) return all books which are rated over 4.3
 // const goodBooks = books.filter((book) => book.rating > 4.3);
@@ -4572,9 +4572,189 @@ const books = [
 // });
 // console.log(results1);
 
+// (6) build dynamically search functionality for getting genres
+// const dynamicQuery = prompt();
+// const results1 = books.filter((book) => {
+//   const genre = book.genres;
+//   return genre.includes(dynamicQuery.toLowerCase());
+// });
+// console.log(results1);
+
 // ======================================
 // 008 - Some & Every
 // ======================================
+// 1) what is some method?
+// returns true if ANY of the array elements pass the test function.
+
+// 2) what is Every method?
+// returns true if all the array elements pass the test function.
+
+// 3)
+// const words = ["dog", "dig", "log", "bag", "wag"];
+
+// (1) is every word 3 characters long?
+// const all3Letters = words.every((word) => word.length === 3);
+// console.log(all3Letters);
+
+// (2) is every word 2 characters long?
+// const all2Letters = words.every((word) => word.length === 2);
+// console.log(all2Letters);
+
+// (3) Do all words end in 'g'?
+// const allEndG = words.every((word) => {
+//   return word[word.length - 1] === "g";
+// });
+// console.log(allEndG);
+
+// (4) Does at least 1 book start with 'd'?
+// const atleastStartd = words.some((word) => {
+//   return word[0] === "d";
+// });
+// console.log(atleastStartd);
+
+// (5) Do all words start with 'd'?
+// const allStartd = words.every((word) => {
+//   return word[0] === "d";
+// });
+// console.log(allStartd);
+
+// 4)
+// const animals = ["tiger", "lion", "elephant", "horse", "tiger", "lion"];
+
+// (1) is every word 4 or greater than 4 characters long?
+// const every4 = animals.every((animal) => {
+//   return animal.length >= 4;
+// });
+// console.log(every4);
+
+// (2) Does at least 1 animal start with 't'?
+// const animal1 = animals.some((animal) => {
+//   return animal[0] === "t";
+// });
+// console.log(animal1);
+
+// (3) Does at least 1 animal index 2 starts with 'o'?
+// const animal2 = animals.some((animal) => {
+//   return animal[2] === "o";
+// });
+// console.log(animal2);
+
+// // 5)
+// const books = [
+//   {
+//     title: "Good Omens",
+//     authors: ["Terry Pratchett", "Neil Gaiman"],
+//     rating: 4.25,
+//     genres: ["fiction", "fantasy"],
+//   },
+//   {
+//     title: "Changing My Mind",
+//     authors: ["Zadie Smith"],
+//     rating: 3.83,
+//     genres: ["nonfiction", "essays"],
+//   },
+//   {
+//     title: "Bone: The Complete Edition",
+//     authors: ["Jeff Smith"],
+//     rating: 4.42,
+//     genres: ["fiction", "graphic novel", "fantasy"],
+//   },
+//   {
+//     title: "American Gods",
+//     authors: ["Neil Gaiman"],
+//     rating: 4.11,
+//     genres: ["fiction", "fantasy"],
+//   },
+//   {
+//     title: "A Gentleman in Moscow",
+//     authors: ["Amor Towles"],
+//     rating: 4.36,
+//     genres: ["fiction", "historical fiction"],
+//   },
+//   {
+//     title: "The Name of the Wind",
+//     authors: ["Patrick Rothfuss"],
+//     rating: 4.54,
+//     genres: ["fiction", "fantasy"],
+//   },
+//   {
+//     title: "The Overstory",
+//     authors: ["Richard Powers"],
+//     rating: 4.19,
+//     genres: ["fiction", "short stories"],
+//   },
+//   {
+//     title: "The Way of Kings",
+//     authors: ["Brandon Sanderson"],
+//     rating: 4.65,
+//     genres: ["fantasy", "epic"],
+//   },
+//   {
+//     title: "Lord of the flies",
+//     authors: ["William Golding"],
+//     rating: 3.67,
+//     genres: ["fiction"],
+//   },
+// ];
+
+// // (1) Are all books rated 3.5 or higher?
+// const rated = books.every((book) => book.rating >= 3.5);
+// console.log(rated);
+
+// // (2) Do any books have 2 authors?
+// const author = books.some((book) => book.authors.length === 2);
+// console.log(author);
+
+// // (3) Do any books have 3 authors?
+// const author1 = books.some((book) => book.authors.length === 3);
+// console.log(author1);
+
+// // (4) Do any books have 3 genres?
+// const genre1 = books.some((book) => book.genres.length === 3);
+// console.log(genre1);
+
+// // (5) Do any books have 4 genres?
+// const genre2 = books.some((book) => book.genres.length === 4);
+// console.log(genre2);
+
+// // (6) Are all books rated 3.5 or lower?
+// const rated1 = books.every((book) => book.rating <= 3.5);
+// console.log(rated1);
+
+// 6)
+// const words = ["dog", "jello", "log", "cupcake", "bag", "wag"];
+
+// (1) Are there any words longer than 4 characters?
+// const longerThan4C = words.some((word) => {
+//   return word.length > 4;
+// });
+// console.log(longerThan4C);
+
+// (2) Are all words longer than 4 characters?
+// const AlllongerThan4C = words.every((word) => {
+//   return word.length > 4;
+// });
+// console.log(AlllongerThan4C);
+
+// (3) Are all words 3 or longer than 3 characters?
+// const AlllongerThan3C = words.every((word) => {
+//   return word.length >= 3;
+// });
+// console.log(AlllongerThan3C);
+
+// (4) Do any words start with "Z" and check with "j?
+// const anyStartZ = words.some((word) => {
+//   // return word[0] === "Z";
+//   return word[0] === "j";
+// });
+// console.log(anyStartZ);
+
+// (5) Do any words contain "cake"?
+// const containCake = words.some((word) => {
+//   return word.includes("cake");
+// });
+// console.log(containCake);
+
 // ======================================
 // 009 - Revisiting Sort Part - 2
 // ======================================
@@ -4593,36 +4773,35 @@ const books = [
 ////////////////////////////////
 
 // ======================================
-// 001 -
+// 001 - New Js Features Intro
 // ======================================
 // ======================================
-// 002 -
+// 002 - Default Parameters
 // ======================================
 // ======================================
-// 003 -
+// 003 - Spread for Function Calls
 // ======================================
 // ======================================
-// 004 -
+// 004 - Spread in Array Literals
 // ======================================
 // ======================================
-// 005 -
+// 005 - Spread in Object Literals
 // ======================================
 // ======================================
-// 006 -
+// 006 - The Arguments Object(not new)
 // ======================================
 // ======================================
-// 007 -
+// 007 - Rest Paramters(new)
 // ======================================
 // ======================================
-// 008 -
+// 008 - Destructuring Arrays
 // ======================================
 // ======================================
-// 009 -
+// 009 - Destructuring Objects
 // ======================================
 // ======================================
-// 010 -
+// 010 - Nested Destructuring
 // ======================================
 // ======================================
-// 011 -
-// ======================================
+// 011 - Destructuring Paramters
 // ======================================
