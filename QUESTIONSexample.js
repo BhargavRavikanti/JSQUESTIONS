@@ -4761,6 +4761,26 @@
 // ======================================
 // 010 - Reduce Intro part - 1
 // ======================================
+// 1) what is reduce method?
+// The array reduce is a method used to reduce an array to a single value by passing a callback function on each element of the array.
+
+// 2) does reduce method mutates the original array?
+// yes
+
+// 3)
+// const nums = [3, 4, 5, 6, 7];
+// // // (1) To multiply all values in nums:
+// const product = nums.reduce((total, currentVal) => total * currentVal);
+// console.log(product);
+
+// // // (2) To add all values in nums
+// const addition = nums.reduce((total, currentVal) => total + currentVal);
+// console.log(addition);
+
+// // // (3) to subtract all values in nums
+// const subtraction = nums.reduce((total, currentVal) => total - currentVal);
+// console.log(subtraction);
+
 // ======================================
 // 011 - Reduce pt.2
 // ======================================
@@ -4775,9 +4795,53 @@
 // ======================================
 // 001 - New Js Features Intro
 // ======================================
+// Arrow Functions
+// String Template Literals
+// Let & Const
+// For...of
+// For...in
+// Exponent Operator
+// String.includes()
+// Array.includes ()
+// Object.values ()
+// Rest & spread -> now
+// Destructuring -> now
+// Default Function Parameters -> now
+// Object Enhancements -> soon
+// Classes -> soon
+// Async Functions -> soon
+
+// GOALS
+// Work with rest & spread
+// Add default function parameters
+// Understanding destructuring
+
 // ======================================
 // 002 - Default Parameters
 // ======================================
+// 1) what are default paramters?
+//  If a function in JavaScript is called with missing arguments (less than declared), the missing values are set to undefined
+
+// Sometimes this is acceptable, but sometimes it is better to assign a default value to the parameter:
+
+// 2) create function multiply paramaters x,y make parameter y default value as y=1
+// (1) pass arguments 3,4
+// (2) pass argument 3 only
+// function multiply(x, y = 1) {
+//   return x * y;
+// }
+// console.log(multiply(3, 4));
+// console.log(multiply(3));
+
+// 3) create function addition paramaters x,y make parameter y default value as y=5
+// (1) pass arguments 3,4
+// (2) pass argument 3 only
+// function addition(x, y = 5) {
+//   return x + y;
+// }
+// console.log(addition(3, 4));
+// console.log(addition(3));
+
 // ======================================
 // 003 - Spread for Function Calls
 // ======================================

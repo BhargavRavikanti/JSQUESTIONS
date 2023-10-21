@@ -1851,6 +1851,14 @@
 // ======================================
 // 010 - Reduce Intro part - 1
 // ======================================
+// 1) what is reduce method?
+// 2) does reduce method mutates the original array?
+// 3)
+// const nums = [3, 4, 5, 6, 7];
+// // (1) To multiply all values in nums:
+// // (2) To add all values in nums
+// // (3) to subtract all values in nums
+
 // ======================================
 // 011 - Reduce pt.2
 // ======================================
@@ -1865,9 +1873,40 @@
 // ======================================
 // 001 - New Js Features Intro
 // ======================================
+// Arrow Functions
+// String Template Literals
+// Let & Const
+// For...of
+// For...in
+// Exponent Operator
+// String.includes()
+// Array.includes ()
+// Object.values ()
+// Rest & spread -> now
+// Destructuring -> now
+// Default Function Parameters -> now
+// Object Enhancements -> soon
+// Classes -> soon
+// Async Functions -> soon
+
+// GOALS
+// Work with rest & spread
+// Add default function parameters
+// Understanding destructuring
+
 // ======================================
 // 002 - Default Parameters
 // ======================================
+// 1) what are default paramters?
+
+// 2) create function multiply paramaters x,y make parameter y default value as y=1
+// (1) pass arguments 3,4
+// (2) pass argument 3 only
+
+// 3) create function addition paramaters x,y make parameter y default value as y=5
+// (1) pass arguments 3,4
+// (2) pass argument 3 only
+
 // ======================================
 // 003 - Spread for Function Calls
 // ======================================
