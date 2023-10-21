@@ -4540,6 +4540,38 @@ const books = [
   },
 ];
 
+// (1) return all books which are rated over 4.3
+// const goodBooks = books.filter((book) => book.rating > 4.3);
+// console.log(goodBooks);
+
+// (2) return all books with fantasy as a genre
+// const goodBooks1 = books.filter((book) => book.genres.includes("fantasy"));
+// console.log(goodBooks1);
+
+// (3) return all books that are either short stories or essays:
+// const goodBooks2 = books.filter(
+//   (book) =>
+//     book.genres.includes("short stories") || book.genres.includes("essays")
+// );
+// console.log(goodBooks2);
+
+// (4) build a search functionality to get books
+// get books which contains the
+// const query = "bone";
+// const results = books.filter((book) => {
+//   const title = book.title.toLowerCase();
+//   return title.includes(query.toLowerCase());
+// });
+// console.log(results);
+
+// (5) build a search functionality to get books dynamically like if we enter the which contains the books will return
+// const dynamicQuery = prompt();
+// const results1 = books.filter((book) => {
+//   const title = book.title.toLowerCase();
+//   return title.includes(dynamicQuery.toLowerCase());
+// });
+// console.log(results1);
+
 // ======================================
 // 008 - Some & Every
 // ======================================
