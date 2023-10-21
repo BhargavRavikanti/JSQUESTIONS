@@ -4379,7 +4379,7 @@
 // 006 - Array.find
 // ======================================
 // 1) what is find method?
-// FIND returns the value of the FIRST ELEMENT in the array that satisfies the provived testing function.
+// FIND merthod returns the value of the FIRST ELEMENT in the array that satisfies the provived testing function.
 
 // 2)
 // let movies = [
@@ -4413,44 +4413,133 @@
 // });
 // console.log(movie4);
 
+// 3)
+// const books = [
+//   {
+//     title: "Good Omens",
+//     authors: ["Terry Pratchett", "Neil Gaiman"],
+//     rating: 4.25,
+//   },
+//   {
+//     title: "Bone: The Complete Edition",
+//     authors: ["Jeff Smith"],
+//     rating: 4.42,
+//   },
+//   {
+//     title: "American Gods",
+//     authors: ["Neil Gaiman"],
+//     rating: 4.11,
+//   },
+//   {
+//     title: "A Gentleman in Moscow",
+//     authors: ["Amor Towles"],
+//     rating: 4.36,
+//   },
+// ];
+
+// (1) Find book rating over 4.3
+// const goodBook = books.find((book) => book.rating >= 4.3);
+// console.log(goodBook);
+
+// (2) Find book with Neil Gaiman as an author:
+// const neilBook = books.find((b) => b.authors.includes("Neil Gaiman"));
+// console.log(neilBook);
+
+// (3) find a book which rating less than 4.25
+// const rating = books.find((r) => r.rating < 4.25);
+// console.log(rating);
+
+// 4) find book with Amor Towels as an author:
+// const amorBook = books.find((book) => book.authors.includes("Amor Towles"));
+// console.log(amorBook);
+
+// ======================================
+// 007 - Filter
+// ======================================
+// 1) what is filter()?
+// FILTER creates a new array with all elements that pass the test implemented by the provided function.
+// Javascript Array filter(). The filter() method returns a new array with all elements that pass the test defined by the given function.
+
+// // 2)
+// const nums = [34, 35, 67, 54, 109, 102, 32, 9];
+// // (1) get all odds from nums in a new array
+// const odds = nums.filter((num) => num % 2 === 1);
+// console.log(odds);
+
+// // (2) get all evens from nums in a new array
+// const evens = nums.filter((num) => num % 2 === 0);
+// console.log(evens);
+
+// // (3) get numbers greater than 50 from nums
+// const bigNums = nums.filter((num) => num > 50);
+// console.log(bigNums);
+
+// // (4) get numbers greater less than 5 from nums
+// const less5Nums = nums.filter((num) => num < 5);
+// console.log(less5Nums);
+
+// // (5) get numbers greater less than 45 from nums
+// const less45Nums = nums.filter((num) => num < 45);
+// console.log(less45Nums);
+
+// 3)
 const books = [
   {
     title: "Good Omens",
     authors: ["Terry Pratchett", "Neil Gaiman"],
     rating: 4.25,
+    genres: ["fiction", "fantasy"],
+  },
+  {
+    title: "Changing My Mind",
+    authors: ["Zadie Smith"],
+    rating: 3.83,
+    genres: ["nonfiction", "essays"],
   },
   {
     title: "Bone: The Complete Edition",
     authors: ["Jeff Smith"],
     rating: 4.42,
+    genres: ["fiction", "graphic novel", "fantasy"],
   },
   {
     title: "American Gods",
     authors: ["Neil Gaiman"],
     rating: 4.11,
+    genres: ["fiction", "fantasy"],
   },
   {
     title: "A Gentleman in Moscow",
     authors: ["Amor Towles"],
     rating: 4.36,
+    genres: ["fiction", "historical fiction"],
+  },
+  {
+    title: "The Name of the Wind",
+    authors: ["Patrick Rothfuss"],
+    rating: 4.54,
+    genres: ["fiction", "fantasy"],
+  },
+  {
+    title: "The Overstory",
+    authors: ["Richard Powers"],
+    rating: 4.19,
+    genres: ["fiction", "short stories"],
+  },
+  {
+    title: "The Way of Kings",
+    authors: ["Brandon Sanderson"],
+    rating: 4.65,
+    genres: ["fantasy", "epic"],
+  },
+  {
+    title: "Lord of the flies",
+    authors: ["William Golding"],
+    rating: 3.67,
+    genres: ["fiction"],
   },
 ];
 
-// (1) Find first book w/ rating over 4.3
-const goodBook = books.find((book) => book.rating >= 4.3);
-console.log(goodBook);
-
-// (2) Find first book with Neil Gaiman as an author:
-const neilBook = books.find((b) => b.authors.includes("Neil Gaiman"));
-console.log(neilBook);
-
-// (3) find a book which rating less than 4.25
-const rating = books.find((r) => r.rating < 4.25);
-console.log(rating);
-
-// ======================================
-// 007 - Filter
-// ======================================
 // ======================================
 // 008 - Some & Every
 // ======================================
