@@ -4941,18 +4941,154 @@ function giveMeFour(a, b, c, d) {
 // const copyAnimals2 = [...animals2];
 // console.log(copyAnimals2);
 
+// 3)
+// const nums1 = [1, 2, 3];
+// const nums2 = [4, 5, 6];
+// // (1) nums1 & nums2 into a new array using spread operator and check to console.
+// const nums = [...nums1, ...nums2];
+// console.log(nums);
+// // (2) nums2 & nums1 & add values 7,8,9 into a new array using spread operator and check to console.
+// const reverseNums = [...nums2, ...nums1, 7, 8, 9];
+// console.log(reverseNums);
+
 // ======================================
 // 005 - Spread in Object Literals
 // ======================================
+// 1) what is spread in object literals?
+// Copies properties from one object into another object literal.
+
+// 2)
+// const feline = {
+//   legs: 4,
+//   family: "Felidae",
+// };
+
+// const canine = {
+//   family: "Caninae",
+//   furry: true,
+//   legs: 4,
+// };
+
+// (1) create dog and spread canine and add property isPet set value true and add property adorable set value true and console dog
+// const dog = {
+//   ...canine,
+//   isPet: true,
+//   adorable: true,
+// };
+// console.log(dog);
+
+// (2) create houseCat and spread feline and add property isGrumpy set value true and add property personality set value unpredictable and console houseCat
+// const houseCat = {
+//   ...feline,
+//   isGrumpy: true,
+//   personality: "unpredictable",
+// };
+// console.log(houseCat);
+
+// (3) create catDog and spread canine,feline and console catDog
+// const catDog = {
+//   ...canine,
+//   ...feline,
+// };
+// console.log(catDog);
+
+// (4) create tripod and spread canine and create property legs set value 3 and console tripod.
+// const tripod = {
+//   ...canine,
+//   legs: 3,
+// };
+// console.log(tripod);
+
+// (5) create catDogClone and spread catDog
+// const catDogClone = {
+//   ...catDog,
+// };
+// console.log(catDogClone);
+
+// (6) create random array contains ..."hello", and create object and spread catDog and console random.
+// const random = [
+//   ..."hello",
+//   {
+//     ...catDog,
+//   },
+// ];
+// console.log(random);
+
 // ======================================
 // 006 - The Arguments Object(not new)
 // ======================================
 // ======================================
 // 007 - Rest Paramters(new)
 // ======================================
+// 1) what are Rest Paramters?
+// REST PARAMETERS collects all remaining arguments into an actual array
+
+// 2) write a function which can add all the values which are passed as an arguments results into single number.
+// function add(...nums) {
+//   return nums.reduce((total, currentVal) => {
+//     return total + currentVal;
+//   });
+// }
+// console.log(add(2, 3, 4));
+// console.log(add(2, 3, 4, 10, 20));
+
+// 3) write a function with parameters name1,name2 and use rest paramters to store rest of the names are in an array first pass arguments bharu danchu second pass arguments bharu,danchu,danush,bhargav,sadhana
+// function names(name1, name2, ...names) {
+//   console.log(name1);
+//   console.log(name2);
+//   console.log(names);
+// }
+// names("bharu", "danchu");
+// names("bharu", "danchu", "dhanush", "bhargav", "sadhana");
+
+// 4) create arrow function expression multiply parameters rest parameters nums which can pass n number of arguments results into single number
+// const multiply = (...nums) =>
+//   nums.reduce((total, currentval) => total * currentval);
+// console.log(multiply(1, 2, 3));
+// console.log(multiply(1, 2, 3, 4));
+// console.log(multiply(1, 2, 3, 4, 5));
+
 // ======================================
 // 008 - Destructuring Arrays
 // ======================================
+// 1) what is destructuring?
+// DESTRUCTURING A short, clean syntax to "unpack":
+// -> Values from arrays
+// -> Properties from objects
+// Into distinct variables
+// Destructuring is To extract individual values into variables from arrays,objects,nested,parameters
+
+// 2)
+// const raceResults = [
+//   "Eliud Kipchoge",
+//   "Feyisa Lelisa",
+//   "Galen Rupp",
+//   "Ghirmay Ghebreslassie",
+//   "Alphonce Simbu",
+//   "Jared Ward",
+// ];
+
+// (1) extract elements 0,1,3 & last from raceResults and store in variables in old way and console.
+// const word1 = raceResults[0];
+// console.log(word1);
+// const word2 = raceResults[1];
+// console.log(word2);
+// const word4 = raceResults[3];
+// console.log(word4);
+// const wordLast = raceResults[raceResults.length - 1];
+// console.log(wordLast);
+
+// (2) extract elements 1,2,4 from raceResults using destructuring and console.
+// const [e1, e2, , e4] = raceResults;
+// console.log(e1);
+// console.log(e2);
+// console.log(e4);
+
+// (3) extract element 1 & use spread operator to extract remaining elements  assign to array and console
+// const [first, ...others] = raceResults;
+// console.log(first);
+// console.log(others);
+
 // ======================================
 // 009 - Destructuring Objects
 // ======================================
