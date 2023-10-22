@@ -4842,12 +4842,105 @@
 // console.log(addition(3, 4));
 // console.log(addition(3));
 
+// 4) create function greet parameters person,greeting set default paramter greeting value hi and greet contains greeting,person print to console.
+// function greet(person, greeting = "hi") {
+//   return `${greeting}, ${person}`;
+// }
+// console.log(greet("bharu"));
+// console.log(greet("Satish", "Hello"));
+
+// 5)
+// Default value of an array:
+// const blah = (x, y = [1, 2, 3]) => {
+//   console.log(x, y);
+// };
+// blah(1);
+// blah(2, 3);
+// blah(2, [234]);
+// blah(2, [234, 3, 4, 5, 6]);
+
+// 6)
+// Multiple default values are possible, but rare
+// const greet1 = (person, greeting = "hi", punctuation = "!") => {
+//   console.log(`${greeting}, ${person} ${punctuation}`);
+// };
+// greet1("anya");
+// greet1("bharu");
+// greet1("dhanush");
+
 // ======================================
 // 003 - Spread for Function Calls
 // ======================================
+// 1) what is spread?
+// SPREAD
+// Spread syntax allows an iterable such as an array to be EXPANDED in places where zero or more arguments (for function calls)
+// or
+// elements (for array literals) are expected,
+// or
+// an object expression to be EXPANDED in places where zero or more key-value pairs (for object literals) are expected.
+
+// There are only three use cases
+// spread in function calls
+// spread in array literals
+// spread in object literals
+
+// 2) create a function giveMeFour with parameters a,b,c,d and contains console.log(a),console.log(b),console.log(c),console.log(d).
+function giveMeFour(a, b, c, d) {
+  console.log(a);
+  console.log(b);
+  console.log(c);
+  console.log(d);
+}
+// (1) create an array colors which contains red,orange,yellow,green.first pass colors as an argument to giveMeFour second pass colors as an argument to giveMeFour using spread operator.
+// const colors = ["red", "orange", "yellow", "green"];
+// giveMeFour(colors);
+// giveMeFour(...colors);
+
+// (2) pass string GOAT as an argument to giveMeFour uisng spread operator
+// giveMeFour("GOAT");
+// giveMeFour(..."GOAT");
+
+// (3) pass string bharu as an argument to giveMeFour uisng spread operator
+// giveMeFour(..."bharu");
+
+// 3) find max value of nums
+// const nums = [9, 3, 2, 8];
+// console.log(Math.max(nums));
+// console.log(Math.max(...nums));
+
 // ======================================
 // 004 - Spread in Array Literals
 // ======================================
+// 1) what is spread in array literals?
+// Creates a new array using an existing array. Spreads the elements from one array into new array.
+// original arrays will not change only makes copy
+// we can use spread to combine arrays and we can also add elements in an arrays
+
+// // 2)
+// const animals1 = ["lion", "tiger", "cat"];
+// const animals2 = ["elephant", "dog", "crocodile"];
+// const birds = ["peacock", "parrot"];
+
+// // (1) merge animals1 & animals2 into a new array using spread operator and check to console.
+// const animals = [...animals1, ...animals2];
+// console.log(animals);
+
+// // (2) merge animals2 & animals1 into a new array using spread operator and check to console.
+// const Animals = [...animals2, ...animals1];
+// console.log(Animals);
+
+// // (3) create a copy array of birds using spread operator
+// const flyings = [...birds];
+// console.log(flyings);
+
+// // (4) merge animals2 & birds into a new array using spread operator and check to console.
+// const merging = [...animals2, ...birds];
+// console.log(merging);
+
+// // (5) create a copy array of animals2 using spread operator
+// const copyAnimals2 = [...animals2];
+// console.log(copyAnimals2);
+
 // ======================================
 // 005 - Spread in Object Literals
 // ======================================
