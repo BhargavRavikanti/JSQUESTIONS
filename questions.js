@@ -1736,12 +1736,54 @@
 // ======================================
 // 009 - Destructuring Objects
 // ======================================
+// 1)
+// const runner = {
+//   first: "Eliud",
+//   last: "Kipchoge",
+//   country: "Kenya",
+//   title: "Elder of the Order of the Golden Heart of Kenya",
+// };
+// (1) extract first,last, spread operator other from runner using destructuring
+// (2) extract country, title from runner using destructuring set country to nation & title to honorific and console.
+
 // ======================================
 // 010 - Nested Destructuring
 // ======================================
+// 1)
+// const results = [
+//   {
+//     first: "Eliud",
+//     last: "Kipchoge",
+//     country: "Kenya",
+//   },
+//   {
+//     first: "Feyisa",
+//     last: "Lilesa",
+//     country: "Ethiopia",
+//   },
+//   {
+//     first: "Galen",
+//     last: "Rupp",
+//     country: "United States",
+//   },
+// ];
+// (1) extract Eliud,kipchoge,Ethiopia and united states value from results using destructuring
+
 // ======================================
 // 011 - Destructuring Paramters
 // ======================================
+// 1)
+// const runner = {
+//   first: "Eliud",
+//   last: "Kipchoge",
+//   country: "Kenya",
+//   title: "Elder of the Order of the Golden Heart of Kenya",
+// };
+// (1) extract first,last,title values
+
+// 2) extract element 2 from response and console it
+// const response = ["HTTP/1.1", "200 OK", "application/json"];
+
 ////////////////////////////////
 // 012 - Object Methods and the 'This' Keyword
 ////////////////////////////////

@@ -5092,9 +5092,108 @@ function giveMeFour(a, b, c, d) {
 // ======================================
 // 009 - Destructuring Objects
 // ======================================
+// 1)
+// const runner = {
+//   first: "Eliud",
+//   last: "Kipchoge",
+//   country: "Kenya",
+//   title: "Elder of the Order of the Golden Heart of Kenya",
+// };
+
+// (1) extract first,last, spread operator other from runner using destructuring
+// const { first, last, ...other } = runner;
+// console.log(first);
+// console.log(last);
+// console.log(other);
+
+// (2) extract country, title from runner using destructuring set country to nation & title to honorific and console.
+// const { country: nation, title: honorific } = runner;
+// console.log(nation);
+// console.log(honorific);
+
 // ======================================
 // 010 - Nested Destructuring
 // ======================================
+// 1)
+// const results = [
+//   {
+//     first: "Eliud",
+//     last: "Kipchoge",
+//     country: "Kenya",
+//   },
+//   {
+//     first: "Feyisa",
+//     last: "Lilesa",
+//     country: "Ethiopia",
+//   },
+//   {
+//     first: "Galen",
+//     last: "Rupp",
+//     country: "United States",
+//   },
+// ];
+
+// (1) extract Eliud,kipchoge,Ethiopia and united states value from results using destructuring
+// const [{ first, last }, { country }, { country: nation }] = results;
+// console.log(first);
+// console.log(last);
+// console.log(country);
+// console.log(nation);
+
 // ======================================
 // 011 - Destructuring Paramters
+// ======================================
+// 1)
+// const runner = {
+//   first: "Eliud",
+//   last: "Kipchoge",
+//   country: "Kenya",
+//   title: "Elder of the Order of the Golden Heart of Kenya",
+// };
+
+// (1) extract first,last,title values
+// function print({ first, last, title }) {
+//   console.log(`${first},${last} & ${title}`);
+// }
+// print(runner);
+
+// 2) extract element 2 from response and console it
+// const response = ["HTTP/1.1", "200 OK", "application/json"];
+// function parseResponse([protocol, statuscode, contentType]) {
+//   console.log(`status: ${statuscode}`);
+// }
+// parseResponse(response);
+
+////////////////////////////////
+// 012 - Object Methods and the 'This' Keyword
+////////////////////////////////
+// ======================================
+// 001 - Shorthand Object Properties
+// ======================================
+// ======================================
+// 002 - Computed Properties
+// ======================================
+// ======================================
+// 003 - Adding Methods to Objects
+// ======================================
+// ======================================
+// 004 - Method Shorthand Syntax
+// ======================================
+// ======================================
+// 005 - Intro to Keyword THIS
+// ======================================
+// ======================================
+// 006 - Using THIS in Methods
+// ======================================
+// ======================================
+// 007 - THIS invocation Context
+// ======================================
+// ======================================
+// 008 - Annoyomatic Demo
+// ======================================
+// ======================================
+// 009 - Putting it All Together Deck of Cards
+// ======================================
+// ======================================
+// 010 - Creating A Deck Factory
 // ======================================
