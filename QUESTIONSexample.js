@@ -5170,9 +5170,145 @@ function giveMeFour(a, b, c, d) {
 // ======================================
 // 001 - Shorthand Object Properties
 // ======================================
+// 1)
+// const getStats = (arr) => {
+//   const max = Math.max(...arr);
+//   const min = Math.min(...arr);
+//   const sum = arr.reduce((sum, r) => sum + r);
+//   const avg = sum / arr.length;
+//   // The "old" way:
+//   return {
+//     max: max,
+//     min: min,
+//     sum: sum,
+//     avg: avg,
+//   };
+// };
+// console.log(getStats([2]));
+// console.log(getStats([2]));
+// console.log(getStats([2, 3, 5]));
+
+// (1) write above function Using the new shorthand property syntax:
+
+// const getStats = (arr) => {
+//   const max = Math.max(...arr);
+//   const min = Math.min(...arr);
+//   const sum = arr.reduce((sum, r) => sum + r);
+//   const avg = sum / arr.length;
+//   // Using the new shorthand property syntax:
+//   return {
+//     max,
+//     min,
+//     sum,
+//     avg,
+//   };
+// };
+// console.log(getStats([2]));
+// console.log(getStats([2]));
+// console.log(getStats([2, 3, 5]));
+
+// (2) get min,max,sum and avg of reviews array
+// const reviews = [4.5, 5.0, 3.44, 2.8, 3.5, 4.0, 3.5];
+// const stats = getStats(reviews);
+// console.log(stats);
+
+// 2) pick random element from passed array and display it
+// function pick(arr) {
+//   //return random element from arr
+//   const idx = Math.floor(Math.random() * arr.length);
+//   return arr[idx];
+// }
+// console.log(pick([1, 2, 3, 4, 5, 100, 140]));
+// console.log(
+//   pick([
+//     1,
+//     2,
+//     3,
+//     4,
+//     5,
+//     100,
+//     140,
+//     "bharu",
+//     true,
+//     "tiger",
+//     { name: "bharu", age: 28 },
+//   ])
+// );
+// console.log(pick([1, 2, 3, true, false, "bharu"]));
+
+// (1) write a function to pick values from an array values and names from an array suits and display as an object to console like {value:k,suit:"clubs"}
+// function getCard() {
+//   const values = [
+//     "1",
+//     "2",
+//     "3",
+//     "4",
+//     "5",
+//     "6",
+//     "7",
+//     "8",
+//     "9",
+//     "10",
+//     "J",
+//     "Q",
+//     "K",
+//     "A",
+//   ];
+//   const suits = ["clubs", "spades", "hearts", "diamonds"];
+//   const value = pick(values);
+//   const suit = pick(suits);
+//   return {
+//     value,
+//     suit,
+//   };
+// }
+// console.log(getCard());
+
 // ======================================
 // 002 - Computed Properties
 // ======================================
+// 1)
+// const role = "host";
+// const person = "jools Holland";
+// const role2 = "director";
+// const person2 = "James Cameron";
+
+// // The old way
+// // Make the object
+// const team = {};
+// team[role] = person;
+// team[role2] = person2;
+// console.log(team);
+
+// 2)
+// COMPUTED PROPERTIES
+// We can use a variable as a key name in an object literal property!
+// const userName = "Jools";
+// const userRole = {
+//   [userName]: "Admin",
+// };
+// console.log(userRole);
+// (1) create a variable userName1 store Thomas and create an object userRole1 contains username1 as a key and value Admin and print to console that object
+// const userName1 = "Thomas";
+// const userRole1 = {
+//   [userName1]: "Admin2",
+// };
+// console.log(userRole1);
+
+// 3)
+// USING COMPUTED PROPERTIES!
+// const role = "host";
+// const person = "jools Holland";
+// const role2 = "director";
+// const person2 = "James Cameron";
+// // (1) create team object store role,role2,1+6+9 as keys and set values person,person2,sixteen display like { host : "jools Holland" }
+// const team = {
+//   [role]: person,
+//   [role2]: person2,
+//   [1 + 6 + 9]: "sixteen",
+// };
+// console.log(team);
+
 // ======================================
 // 003 - Adding Methods to Objects
 // ======================================
@@ -5197,3 +5333,388 @@ function giveMeFour(a, b, c, d) {
 // ======================================
 // 010 - Creating A Deck Factory
 // ======================================
+
+////////////////////////////////
+// 013 -
+////////////////////////////////
+
+////////////////////////////////
+// 014 -
+////////////////////////////////
+
+////////////////////////////////
+// 015 -
+////////////////////////////////
+
+////////////////////////////////
+// 016 - Asynchronous Code,Callbacks & Promises
+////////////////////////////////
+// ======================================
+// 001 - The Call Stack
+// ======================================
+// ======================================
+// 002 - Call Stack Debugging Dev Tools
+// ======================================
+// ======================================
+// 003 - JS is Single Threaded
+// ======================================
+// 1) JS is single threaded WHAT DOES THAT MEAN?
+// Javascript is a single-threaded language, meaning that just one line of code may be run at once.
+
+// (1) Write an example
+// console.log("I HAPPEN FIRST!");
+// alert("Hi there!"); //This holds everything up!
+// console.log("I HAPPEN SECOND!");
+
+// JS does one thing at a time console.log("i happen first"); happens first next alert("hi there"); this works after that only this works console.log("i happen second");.but alert("hi there"); stops next line code which is  console.log("i happen second"); this.
+
+// we can avoid this problem using Asynchronous js
+// console.log("one");
+// setTimeout(function () {
+//   alert("three");
+// }, 4000);
+// console.log("two");
+
+// we can avoid this problem using Asynchronous js
+// console.log("I HAPPEN FIRST!");
+// setTimeout(function () {
+//   //This does NOT hold everything up, because...
+//   //JS relies on THE BROWSER itself to keep track of the timer
+//   console.log("I HAPPEN THIRD!");
+// }, 3000);
+// console.log("I HAPPEN SECOND!");
+
+// ======================================
+// 004 - How Asynchronous Callbacks Actually
+// ======================================
+// 1)
+// console.log("i happen first");
+// alert("hi there");
+// console.log("i happen second");
+
+// JS does one thing at a time console.log("i happen first"); happens first next alert("hi there"); this works after that only this works console.log("i happen second");.but alert("hi there"); stops next line code which is  console.log("i happen second"); this.
+
+// 2) what is asynchronous in js?
+//  Asynchronicity means that if JavaScript has to wait for an operation to complete, it will execute the rest of the code while waiting
+// Asynchronous programming is a way for a computer program to handle multiple tasks simultaneously rather than executing them one after the other.
+
+// console.log("i happen first");
+// setTimeout(function () {
+//   console.log("i happen third");
+// }, 3000);
+// console.log("i happen second");
+
+// but here setTimeout works after 3 secs. first  console.log("i happen first"); runs second console.log("i happen second"); runs next // setTimeout(function () {
+//   console.log("i happen third");
+// }, 3000); runs WHY ?
+// HOW DOES IT WORK ?
+// ACTUALLY THE BROWSER DOES THE WORK!
+
+// OK BUT HOW ?
+// Browsers come with WEB APIs that are able to handle certain tasks in the background (like making requests or setTimeout )
+
+// The JS call stack recognizes these WEB API functions and pass them off to the browser to take care of
+
+// Once the browser finishes those tasks, they return and are pushed onto the stack as a callback.
+
+// ======================================
+// 005 - Welcome to Callback Hell
+// ======================================
+// 1) what is callback hell?
+// Callback Hell: Callback Hell is essentially nested callbacks stacked below one another forming a pyramid structure. Every callback depends/waits for the previous callback, thereby making a pyramid structure that affects the readability and maintainability of the code.
+
+// ======================================
+// 006 - Introducing Promises
+// ======================================
+// 1) what are promises in js?
+// A Promise is an object representing the eventual completion or failure of an asynchronous operation
+// A promise is a returned object to which you attach callbacks, instead of passing callbacks into a function
+// RESOLVE REJECT
+
+// PROMISES A pattern for writing async code.
+
+// 2) write syntax of promise from w3schools
+// let myPromise = new Promise(function (myResolve, myReject) {
+//   // "Producing Code" (May take some time)
+
+//   myResolve(); // when successful
+//   myReject(); // when error
+// });
+
+// // "Consuming Code" (Must wait for a fulfilled Promise)
+// myPromise.then(
+//   function (value) {
+//     /* code if successful */
+//   },
+//   function (error) {
+//     /* code if some error */
+//   }
+// );
+
+// 3) colt example write an example of an promise write a promise using random number if random number satisfies condition console we got dog if fails console nooo dog
+// const willGetYouADog = new Promise((resolve, reject) => {
+//   const rand = Math.random();
+//   if (rand < 0.5) {
+//     resolve();
+//   } else {
+//     reject();
+//   }
+// });
+// willGetYouADog.then(() => {
+//   console.log("yay we got a dog");
+// });
+// willGetYouADog.then(() => {
+//   console.log("iam rockzz");
+// });
+// willGetYouADog.catch(() => {
+//   console.log("nooooooooo dog");
+// });
+// willGetYouADog.catch(() => {
+//   console.log("noooooooooo rockzz");
+// });
+
+// 4) write an example of an promise write a promise using random number if random number satisfies condition console we got dog if fails console nooo dog
+// const dog = new Promise((resolve, reject) => {
+//   const rand = Math.random();
+//   if (rand < 0.5) {
+//     resolve();
+//   } else {
+//     reject();
+//   }
+// });
+// dog.then(() => {
+//   console.log("we got dog");
+// });
+// dog.catch(() => {
+//   console.log("nooooo dog");
+// });
+
+// ======================================
+// 007 - Returning Promises From Functions
+// ======================================
+// 1) we wanted to know the dog is available or not only after 5 seconds
+// const willGetYouADog = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     const rand = Math.random();
+//     if (rand < 0.5) {
+//       resolve();
+//     } else {
+//       reject();
+//     }
+//   }, 5000);
+// });
+
+// willGetYouADog.then(() => {
+//   console.log("yay we got a dog");
+// });
+// willGetYouADog.catch(() => {
+//   console.log("nooooooooo dog");
+// });
+
+// (2) return promise from a function
+
+// const makeDogPromise = () => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       const rand = Math.random();
+//       if (rand < 0.5) {
+//         resolve();
+//       } else {
+//         reject();
+//       }
+//     }, 5000);
+//   });
+// };
+// makeDogPromise()
+//   .then(() => {
+//     console.log("YAY WE GOT A DOG!!!!");
+//   })
+//   .catch(() => {
+//     console.log(":( NO DOG");
+//   });
+
+// ======================================
+// 008 - Resolving Rejecting Values
+// ======================================
+// 1)
+// const fakerequest = (url) => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       const pages = {
+//         "/users": [
+//           { id: 1, username: "Bilbo" },
+//           { id: 5, username: "Esmeralda" },
+//         ],
+//         "/about": "This is the about page!",
+//       };
+//       const data = pages[url];
+//       if (data) {
+//         resolve({ status: 200, data });
+//       } else {
+//         reject({ status: 404 });
+//       }
+//     }, 1000);
+//   });
+// };
+// fakerequest("/users")
+//   .then((res) => {
+//     console.log("Status Code", res.status);
+//     console.log("Data", res.data);
+//     console.log("REQUEST WORKED!");
+//   })
+//   .catch((res) => {
+//     console.log(res.status);
+//     console.log("Request failed");
+//   });
+
+// fakerequest("/dogs")
+//   .then((res) => {
+//     console.log("Status Code", res.status);
+//     console.log("Data", res.data);
+//     console.log("REQUEST WORKED!");
+//   })
+//   .catch((res) => {
+//     console.log(res.status);
+//     console.log("Request failed");
+//   });
+
+// ======================================
+// 009 - The Delights of Promse Chaining
+// ======================================
+//This is a FAKE Http Request Function
+//It takes 1 second to resolve or reject the promise, depending on the url that is passed in
+const fakeRequest = (url) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const pages = {
+        "/users": [
+          { id: 1, username: "Bilbo" },
+          { id: 5, username: "Esmerelda" },
+        ],
+        "/users/1": {
+          id: 1,
+          username: "Bilbo",
+          upvotes: 360,
+          city: "Lisbon",
+          topPostId: 454321,
+        },
+        "/users/5": {
+          id: 5,
+          username: "Esmerelda",
+          upvotes: 571,
+          city: "Honolulu",
+        },
+        "/posts/454321": {
+          id: 454321,
+          title: "Ladies & Gentlemen, may I introduce my pet pig, Hamlet",
+        },
+        "/about": "This is the about page!",
+      };
+      const data = pages[url];
+      if (data) {
+        resolve({ status: 200, data }); //resolve with a value!
+      } else {
+        reject({ status: 404 }); //reject with a value!
+      }
+    }, 1000);
+  });
+};
+
+// getting resolve
+// fakeRequest("/users")
+//   .then((res) => {
+//     console.log(res);
+//     const id = res.data[0].id;
+//     return fakeRequest(`/users/${id}`);
+//   })
+//   .then((res) => {
+//     console.log(res);
+//     const postId = res.data.topPostId;
+//     return fakeRequest(`/posts/${postId}`);
+//   })
+//   .then((res) => {
+//     console.log(res);
+//   })
+//   .catch((err) => {
+//     console.log("OH NO!", err);
+//   });
+
+// getting reject
+// fakeRequest("/userssssssss") // url that doesnt exist
+//   .then((res) => {
+//     console.log(res);
+//     const id = res.data[0].id;
+//     return fakeRequest(`/users/${id}`);
+//   })
+//   .then((res) => {
+//     console.log(res);
+//     const postId = res.data.topPostId;
+//     return fakeRequest(`/posts/${postId}`);
+//   })
+//   .then((res) => {
+//     console.log(res);
+//   })
+//   .catch((err) => {
+//     console.log("OH NO!", err);
+//   });
+
+// getting reject
+// fakeRequest("/users")
+//   .then((res) => {
+//     console.log(res);
+//     const id = res.data[0].id;
+//     return fakeRequest(`/users/${id}`);
+//   })
+//   .then((res) => {
+//     console.log(res);
+//     const postId = res.data.topPostId;
+//     return fakeRequest(`/postsddddddd/${postId}`);
+//   })
+//   .then((res) => {
+//     console.log(res);
+//   })
+//   .catch((err) => {
+//     console.log("OH NO!", err);
+//   });
+
+// ======================================
+// 010 - Refactoring Promises
+// ======================================
+
+const moveX = (element, amount, delay) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const bodyBoundary = document.body.clientWidth;
+      const elRight = element.getBoundingClientRect().right;
+      const currLeft = element.getBoundingClientRect().left;
+      if (elRight + amount > bodyBoundary) {
+        reject({ bodyBoundary, elRight, amount });
+      } else {
+        element.style.transform = `translateX(${currLeft + amount}px)`;
+        resolve();
+      }
+    }, delay);
+  });
+};
+
+const btn = document.querySelector("button");
+moveX(btn, 100, 1000)
+  .then(() => moveX(btn, 100, 1000))
+  .then(() => moveX(btn, 100, 1000))
+  .then(() => moveX(btn, 100, 1000))
+  .then(() => moveX(btn, 100, 1000))
+  .then(() => moveX(btn, 100, 1000))
+  .then(() => moveX(btn, 100, 1000))
+  .then(() => moveX(btn, 100, 1000))
+  .then(() => moveX(btn, 100, 1000))
+  .then(() => moveX(btn, 100, 1000))
+  .then(() => moveX(btn, 100, 1000))
+  .then(() => moveX(btn, 100, 1000))
+  .then(() => moveX(btn, 100, 1000))
+  .then(() => moveX(btn, 100, 1000))
+  .then(() => moveX(btn, 100, 1000))
+  .then(() => moveX(btn, 100, 1000))
+  .catch(({ bodyBoundary, amount, elRight }) => {
+    console.log(`Cannot Move! Body is ${bodyBoundary}px wide`);
+    console.log(`Element is at ${elRight}px, ${amount}px is too large!`);
+  });

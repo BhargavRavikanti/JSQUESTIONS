@@ -1790,9 +1790,115 @@
 // ======================================
 // 001 - Shorthand Object Properties
 // ======================================
+// 1)
+// const getStats = (arr) => {
+//   const max = Math.max(...arr);
+//   const min = Math.min(...arr);
+//   const sum = arr.reduce((sum, r) => sum + r);
+//   const avg = sum / arr.length;
+//   // The "old" way:
+//   return {
+//     max: max,
+//     min: min,
+//     sum: sum,
+//     avg: avg,
+//   };
+// };
+// (1) write above function Using the new shorthand property syntax:
+// test below code
+// console.log(getStats([2]));
+// console.log(getStats([2]));
+// console.log(getStats([2, 3, 5]));
+
+// (2) get min,max,sum and avg of reviews array
+// const reviews = [4.5, 5.0, 3.44, 2.8, 3.5, 4.0, 3.5];
+
+// 2) pick random element from passed array and display it
+// function pick(arr) {
+//   //return random element from arr
+//   const idx = Math.floor(Math.random() * arr.length);
+//   return arr[idx];
+// }
+// test below code
+// console.log(pick([1, 2, 3, 4, 5, 100, 140]));
+// console.log(
+//   pick([
+//     1,
+//     2,
+//     3,
+//     4,
+//     5,
+//     100,
+//     140,
+//     "bharu",
+//     true,
+//     "tiger",
+//     { name: "bharu", age: 28 },
+//   ])
+// );
+// console.log(pick([1, 2, 3, true, false, "bharu"]));
+
+// (1) write a function to pick values from an array values and names from an array suits and display as an object to console like {value:k,suit:"clubs"}
+// function getCard() {
+//   const values = [
+//     "1",
+//     "2",
+//     "3",
+//     "4",
+//     "5",
+//     "6",
+//     "7",
+//     "8",
+//     "9",
+//     "10",
+//     "J",
+//     "Q",
+//     "K",
+//     "A",
+//   ];
+//   const suits = ["clubs", "spades", "hearts", "diamonds"];
+//   const value = pick(values);
+//   const suit = pick(suits);
+//   return {
+//     value,
+//     suit,
+//   };
+// }
+
 // ======================================
 // 002 - Computed Properties
 // ======================================
+// 1)
+// const role = "host";
+// const person = "jools Holland";
+// const role2 = "director";
+// const person2 = "James Cameron";
+
+// // The old way
+// // Make the object
+// const team = {};
+// team[role] = person;
+// team[role2] = person2;
+// console.log(team);
+
+// 2)
+// COMPUTED PROPERTIES
+// We can use a variable as a key name in an object literal property!
+// const userName = "Jools";
+// const userRole = {
+//   [userName]: "Admin",
+// };
+// console.log(userRole);
+// (1) create a variable userName1 store Thomas and create an object userRole1 contains username1 as a key and value Admin and print to console that object
+
+// 3)
+// USING COMPUTED PROPERTIES!
+// const role = "host";
+// const person = "jools Holland";
+// const role2 = "director";
+// const person2 = "James Cameron";
+// (1) create team object store role,role2,1+6+9 as keys and set values person,person2,sixteen display like { host : "jools Holland" }
+
 // ======================================
 // 003 - Adding Methods to Objects
 // ======================================
@@ -1926,37 +2032,59 @@
 // 010 -
 // ======================================
 ////////////////////////////////
-// 016 -
+// 016 - Asynchronous Code,Callbacks & Promises
 ////////////////////////////////
 // ======================================
-// 001 -
+// 001 - The Call Stack
 // ======================================
 // ======================================
-// 002 -
+// 002 - Call Stack Debugging Dev Tools
 // ======================================
 // ======================================
-// 003 -
+// 003 - JS is Single Threaded
+// ======================================
+// 1) JS is single threaded WHAT DOES THAT MEAN?
+// (1) Write an example
+// console.log("I HAPPEN FIRST!");
+// alert("Hi there!"); //This holds everything up!
+// console.log("I HAPPEN SECOND!");
+
+// ======================================
+// 004 - How Asynchronous Callbacks Actually
+// ======================================
+// 1)
+// console.log("i happen first");
+// alert("hi there");
+// console.log("i happen second");
+// 2) what is asynchronous in js?
+
+// ======================================
+// 005 - Welcome to Callback Hell
+// ======================================
+// 1) what is callback hell?
+
+// ======================================
+// 006 - Introducing Promises
+// ======================================
+// 1) what are promises in js?
+// 2) write syntax of promise from w3schools
+// 3) colt example write an example of an promise write a promise using random number if random number satisfies condition console we got dog if fails console nooo dog
+// 4)
+// (1) write an example of an promise write a promise using random number if random number satisfies condition console we got dog if fails console nooo dog
+
+// ======================================
+// 007 - Returning Promises From Functions
+// ======================================
+// 1) we wanted to know the dog is available or not only after 5 seconds
+// 2)  return promise from a function
+// ======================================
+// 008 - Resolving Rejecting Values
 // ======================================
 // ======================================
-// 004 -
+// 009 - The Delights of Promse Chaining
 // ======================================
 // ======================================
-// 005 -
-// ======================================
-// ======================================
-// 006 -
-// ======================================
-// ======================================
-// 007 -
-// ======================================
-// ======================================
-// 008 -
-// ======================================
-// ======================================
-// 009 -
-// ======================================
-// ======================================
-// 010 -
+// 010 - Refactoring Promises
 // ======================================
 ////////////////////////////////
 // 017 -
