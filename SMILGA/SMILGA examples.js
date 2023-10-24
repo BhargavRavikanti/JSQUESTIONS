@@ -232,6 +232,9 @@
 // ======================================
 // 007 - Promises
 // ======================================
+// 1) what are promises?
+// In JavaScript, a promise is a good way to handle asynchronous operations. It is used to find out if the asynchronous operation is successfully completed or not.
+
 // ======================================
 // 009 - Reject Example
 // ======================================

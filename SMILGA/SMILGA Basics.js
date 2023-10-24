@@ -272,33 +272,167 @@
 // ======================================
 // Callback Hell: Callback Hell is essentially nested callbacks stacked below one another forming a pyramid structure. Every callback depends/waits for the previous callback, thereby making a pyramid structure that affects the readability and maintainability of the code.
 
-boilWater();
-console.log(`chop carrot`);
+// boilWater();
+// console.log(`chop carrot`);
 
-function boilWater() {
-  console.log("boiling...");
-  setTimeout(() => {
-    console.log("done.");
-    console.log("add carrots.");
-    setTimeout(() => {
-      console.log("carrots done");
-      setTimeout(() => {
-        console.log("onion done");
-      }, 5000);
-    }, 5000);
-    console.log(`chop onion`);
-  }, 10000);
-}
+// function boilWater() {
+//   console.log("boiling...");
+//   setTimeout(() => {
+//     console.log("done.");
+//     console.log("add carrots.");
+//     setTimeout(() => {
+//       console.log("carrots done");
+//       setTimeout(() => {
+//         console.log("onion done");
+//       }, 5000);
+//     }, 5000);
+//     console.log(`chop onion`);
+//   }, 10000);
+// }
 
 // ======================================
 // 006 - Callback Hell - DOM Example
 // ======================================
+// callbacks, promises, async/await
+
+/*
+const heading1 = document.querySelector(".one");
+const heading2 = document.querySelector(".two");
+const heading3 = document.querySelector(".three");
+
+const btn = document.querySelector(".btn");
+btn.addEventListener("click", () => {
+  // what we need is clicking button
+  // after one second h1 should red
+  // then after two seconds h2 should green and
+  // then after one second h3 should blue
+  // TOTAL 4 SECONDS FOR WHOLE PROCESS 1+2+1
+  // EXAMPLE 1
+  // METHOD 1
+  // setTimeout(() => {
+  //   heading1.style.color = "red";
+  //   setTimeout(() => {
+  //     heading2.style.color = "green";
+  //     setTimeout(() => {
+  //       heading3.style.color = "blue";
+  //     }, 1000);
+  //   }, 2000);
+  // }, 1000);
+  // METHOD 2
+  // setTimeout(() => {
+  //   heading1.style.color = "red";
+  // }, 1000);
+  // setTimeout(() => {
+  //   heading2.style.color = "green";
+  // }, 3000);
+  // setTimeout(() => {
+  //   heading3.style.color = "blue";
+  // }, 4000);
+
+  // EXAMPLE 2
+  // METHOD 1
+  setTimeout(() => {
+    console.log("1 second");
+    setTimeout(() => {
+      console.log("2 second");
+      setTimeout(() => {
+        console.log("1 second");
+      }, 1000);
+    }, 2000);
+  }, 1000);
+
+  // METHOD 2
+  setTimeout(() => {
+    console.log("1 second");
+  }, 1000);
+  setTimeout(() => {
+    console.log("2 second");
+  }, 3000);
+  setTimeout(() => {
+    console.log("1 second");
+  }, 4000);
+});
+*/
+
 // ======================================
 // 007 - Promises
 // ======================================
+// callbacks, promises, async/await
+// PROMISES - Pending, Resolved, Rejected
+// then catch - pass another callback
+
+// In JavaScript, a promise is a good way to handle asynchronous operations. It is used to find out if the asynchronous operation is successfully completed or not.
+
+/*
+What is a Promise in JavaScript?
+A Promise is a special JavaScript object. It produces a value after an asynchronous (aka, async) operation completes successfully, or an error if it does not complete successfully due to time out, network error, and so on.
+
+Successful call completions are indicated by the resolve function call, and errors are indicated by the reject function call.
+
+You can create a promise using the promise constructor like this:
+
+let promise = new Promise(function(resolve, reject) {    
+    // Make an asynchronous call and either resolve or reject
+});
+In most cases, a promise may be used for an asynchronous operation. However, technically, you can resolve/reject on both synchronous and asynchronous operations.
+*/
+
+// const heading1 = document.querySelector(".one");
+// const heading2 = document.querySelector(".two");
+// const heading3 = document.querySelector(".three");
+
+// const btn = document.querySelector(".btn");
+
+// btn.addEventListener("click", () => {});
+
+// const promise = new Promise((resolve, reject) => {
+//   // let value = true;
+//   let value = false;
+//   if (value) {
+//     resolve([1, 2, 4]);
+//   } else {
+//     reject(`there was a error, value is false`);
+//   }
+// });
+// promise
+//   .then((taco) => {
+//     console.log(taco);
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
+
 // ======================================
 // 009 - Reject Example
 // ======================================
+// callbacks, promises, async/await
+
+// const heading1 = document.querySelector(".one");
+// const heading2 = document.querySelector(".two");
+// const heading3 = document.querySelector(".three");
+// const btn = document.querySelector(".btn");
+// const container = document.querySelector(".img-container");
+// const url = "https://source.unsplash.com/random";
+
+// btn.addEventListener("click", () => {
+//   loadImage(url)
+//     .then((taco) => container.appendChild(taco))
+//     .catch((error) => console.log(error));
+// });
+
+// function loadImage(url) {
+//   return (promise = new Promise((resolve, reject) => {
+//     let img = new Image();
+//     img.addEventListener("load", () => {
+//       resolve(img);
+//     });
+//     img.addEventListener("error", () => {
+//       reject(new Error(`Failed to load image from the source: ${url}`));
+//     });
+//     img.src = url;
+//   }));
+// }
+
 // ======================================
 // 010 - Promises - DOM Example
 // ======================================
