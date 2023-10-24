@@ -328,31 +328,61 @@ btn.addEventListener("click", () => {
   // setTimeout(() => {
   //   heading3.style.color = "blue";
   // }, 4000);
-
+  // METHOD 3 USING PROMISES
+  // addColor(1000, heading1, "red")
+  //   .then(() => addColor(2000, heading2, "green"))
+  //   .then(() => addColor(1000, heading3, "blue"))
+  //   .catch((err) => console.log(err));
   // EXAMPLE 2
-  // METHOD 1
-  setTimeout(() => {
-    console.log("1 second");
-    setTimeout(() => {
-      console.log("2 second");
-      setTimeout(() => {
-        console.log("1 second");
-      }, 1000);
-    }, 2000);
-  }, 1000);
-
-  // METHOD 2
-  setTimeout(() => {
-    console.log("1 second");
-  }, 1000);
-  setTimeout(() => {
-    console.log("2 second");
-  }, 3000);
-  setTimeout(() => {
-    console.log("1 second");
-  }, 4000);
+  // // METHOD 1
+  // setTimeout(() => {
+  //   console.log("1 second");
+  //   setTimeout(() => {
+  //     console.log("2 second");
+  //     setTimeout(() => {
+  //       console.log("1 second");
+  //     }, 1000);
+  //   }, 2000);
+  // }, 1000);
+  // // METHOD 2
+  // setTimeout(() => {
+  //   console.log("1 second");
+  // }, 1000);
+  // setTimeout(() => {
+  //   console.log("2 second");
+  // }, 3000);
+  // setTimeout(() => {
+  //   console.log("1 second");
+  // }, 4000);
+  // // METHOD 3 USING PROMISES
+  // addSecond(1000, "1 second")
+  //   .then(() => addSecond(2000, "2 second"))
+  //   .then(() => addSecond(1000, "1 second"));
 });
+
 */
+
+// function addColor(time, element, color) {
+//   return new Promise((resolve, reject) => {
+//     if (element) {
+//       setTimeout(() => {
+//         element.style.color = color;
+//         resolve();
+//       }, time);
+//     } else {
+//       reject(new Error(`There is no such element ${element}`));
+//     }
+//   });
+// }
+
+// function addSecond(time, step) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log(`${step}`);
+//       resolve();
+//     }, time);
+//   });
+// }
 
 // ======================================
 // 007 - Promises
@@ -436,9 +466,46 @@ In most cases, a promise may be used for an asynchronous operation. However, tec
 // ======================================
 // 010 - Promises - DOM Example
 // ======================================
+// callbacks, promises, async/await
+// what if no resolve, one is rejected
+// const heading1 = document.querySelector(".one");
+// const heading2 = document.querySelector(".two");
+// const heading3 = document.querySelector(".three");
+// const btn = document.querySelector(".btn");
+// btn.addEventListener("click", () => {
+//   addColor(1000, heading1, "red")
+//     .then(() => addColor(2000, heading2, "green"))
+//     .then(() => addColor(1000, heading3, "blue"))
+//     .catch((err) => console.log(err));
+// });
+
+// function addColor(time, element, color) {
+//   return new Promise((resolve, reject) => {
+//     if (element) {
+//       setTimeout(() => {
+//         element.style.color = color;
+//         resolve();
+//       }, time);
+//     } else {
+//       reject(new Error(`There is no such element ${element}`));
+//     }
+//   });
+// }
+
 // ======================================
 // 011 - Async Await
 // ======================================
+// callbacks, promises, async/await
+// must have async
+// await waits till promise is settled
+// error handling - try/catch
+
+// async function someFunction (){
+//   await
+// }
+// const otherFunction = async() =>{
+//   await
+// }
 
 ////////////////////////////////
 // 015 - AJAX
