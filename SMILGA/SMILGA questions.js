@@ -51,7 +51,7 @@
 // ======================================
 // 004 - Clousure
 // ======================================
-// 1) what is clousure?
+// 1) what is clousure & example?
 
 // ======================================
 // 005 - Clousure - Basic Example
@@ -80,6 +80,63 @@
 ////////////////////////////////
 // 014 - Async Javascript
 ////////////////////////////////
+// ======================================
+// 001 - Intro
+// ======================================
+// Synchronous
+// Asynchronous
+// Callbacks
+// Promises
+// Async/Await
+
+// ======================================
+// 002 - Synchronous
+// ======================================
+// 1) what is synchronous javascript?
+
+// ======================================
+// 003 - Recipe example
+// ======================================
+// 1) write example for synchnorous javascript
+// Make Soup
+// boil water 10 min
+// chop carrots
+// add carrots boil for 5 min
+// chop onion
+// add onion boil for 5 min
+// ======================================
+// 004 - Asynchronous
+// ======================================
+// 1) what is Asynchronous javascript?
+// 2) write example for Asynchnorous javascript
+// Make Soup
+// boil water 10 min
+// chop carrots
+// add carrots boil for 5 min
+// chop onion
+// add onion boil for 5 min
+
+// ======================================
+// 005 - Callback Hell
+// ======================================
+// 1) what is callback hell?
+
+// ======================================
+// 006 - Callback Hell - DOM Example
+// ======================================
+// ======================================
+// 007 - Promises
+// ======================================
+// ======================================
+// 009 - Reject Example
+// ======================================
+// ======================================
+// 010 - Promises - DOM Example
+// ======================================
+// ======================================
+// 011 - Async Await
+// ======================================
+
 ////////////////////////////////
 // 015 - AJAX
 ////////////////////////////////
