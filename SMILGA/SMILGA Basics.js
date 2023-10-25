@@ -333,6 +333,7 @@ btn.addEventListener("click", () => {
   //   .then(() => addColor(2000, heading2, "green"))
   //   .then(() => addColor(1000, heading3, "blue"))
   //   .catch((err) => console.log(err));
+
   // EXAMPLE 2
   // // METHOD 1
   // setTimeout(() => {
@@ -510,6 +511,264 @@ In most cases, a promise may be used for an asynchronous operation. However, tec
 ////////////////////////////////
 // 015 - AJAX
 ////////////////////////////////
+
+// ======================================
+// 001 - Intro
+// ======================================
+// AJAX - Asynchronous Javascript and XML
+// HTTP Requests - Communication between Client and Server
+// API - Application Programming Interface
+
+// ======================================
+// 002 - AJAX,HTTP,API
+// ======================================
+// AJAX - Asynchronous Javascript and XML
+// HTTP Requests - Communication between Client and Server
+// API - Application Programming Interface
+
+// w3 schools
+/*
+// AJAX - Asynchronous Javascript and XML
+
+// What is AJAX?
+// AJAX = Asynchronous JavaScript And XML.
+
+// AJAX is not a programming language.
+
+// AJAX just uses a combination of:
+
+// A browser built-in XMLHttpRequest object (to request data from a web server)
+// JavaScript and HTML DOM (to display or use the data)
+// AJAX is a misleading name. AJAX applications might use XML to transport data, but it is equally common to transport data as plain text or JSON text.
+
+// AJAX allows web pages to be updated asynchronously by exchanging data with a web server behind the scenes. This means that it is possible to update parts of a web page, without reloading the whole page.
+
+*/
+
+// kinsta.com
+/*
+
+// HTTP Requests - Communication between Client and Server
+
+Each section will introduce a new method for sending HTTP requests. We’ll start from the built-in methods like the fetch API and the XMLHttpRequest object before looking at some open-source HTTP request libraries like Axios and SuperAgent.
+
+Let’s get started!
+
+What Is a JavaScript HTTP Request?
+HTTP requests in JavaScript are a set of predefined methods used for interacting with data stored on servers.
+
+Every request sent to a server includes an endpoint and the type of request being sent. You can see an endpoint as a gateway between two programsː the client and the server.
+
+The client is the program that sends a request while the server is the one that receives the request. The server sends back a response depending on the validity of the request. If the request is successful, the server sends back data in either XML or JSON format (JSON in most cases), and if the request fails, the server sends back an error message.
+
+Responses sent back by the server are usually associated with status codes. These codes help us understand what the server is trying to say when it receives a request. Here are some of them and what they mean:
+
+100–199 denotes an informational response.
+200–299 denotes a successful request.
+300–399 denotes redirection.
+400–499 denotes client error.
+500–599 denotes server error.
+We’ll talk more about some of these in the sections that follow.
+
+In the next section, you’ll see the different ways that you can make HTTP requests in JavaScript.
+
+How To Make an HTTP Request in JavaScript
+This section will be divided into sub-sections, each section teaching you different methods you can use to make HTTP requests in JavaScript.
+
+Each method discussed will have an example showing how to send POST, GET, PUT/PATCH, and DELETE requests to servers.
+
+JSON Placeholder will serve as the remote server/endpoint where all our requests will be sent.
+
+Let’s dive in!
+
+1. How To Make an HTTP Request in JavaScript Using XMLHttpRequest (AJAX)
+2. How To Make an HTTP Request in JavaScript Using jQuery
+3. How To Make Asynchronous Requests in jQuery Using the $.ajax() Method
+4. How To Make an HTTP Request in JavaScript Using the Fetch API
+5. How To Make an HTTP Request in JavaScript Using Axios
+6. How To Make an HTTP Request in JavaScript Using SuperAgent
+7. How To Make an HTTP Request in JavaScript Using Qwest
+
+Summary
+Our ability to interact with servers using JavaScript has evolved over the years. With a growing and active community of JavaScript developers, constant changes are still being made and new tools introduced to make the process simpler and easier.
+
+The methods discussed in this tutorial don’t only apply to remote servers — they can also be used to interact with your own servers when building full stack web applications. They work with numerous JavaScript libraries and frameworks, too.
+
+Everything you ever wanted to know about JavaScript HTTP requests- including how to perform CRUD operations in JavaScript.
+
+*/
+
+// w3 schools
+// mdn
+
+/*
+
+// W3 SCHOOLS
+// API - Application Programming Interface
+
+A Web API is a developer's dream.
+
+It can extend the functionality of the browser
+It can greatly simplify complex functions
+It can provide easy syntax to complex code
+
+What is Web API?
+API stands for Application Programming Interface.
+
+A Web API is an application programming interface for the Web.
+
+A Browser API can extend the functionality of a web browser.
+
+A Server API can extend the functionality of a web server.
+
+1) Browser APIs
+All browsers have a set of built-in Web APIs to support complex operations, and to help accessing data.
+
+For example, the Geolocation API can return the coordinates of where the browser is located.
+
+2) Third Party APIs
+Third party APIs are not built into your browser.
+
+To use these APIs, you will have to download the code from the Web.
+
+Examples:
+
+YouTube API - Allows you to display videos on a web site.
+Twitter API - Allows you to display Tweets on a web site.
+Facebook API - Allows you to display Facebook info on a web site.
+
+******************************************
+
+// MDN
+// API - Application Programming Interface
+
+What are APIs?
+Application Programming Interfaces (APIs) are constructs made available in programming languages to allow developers to create complex functionality more easily. They abstract more complex code away from you, providing some easier syntax to use in its place.
+
+APIs in client-side JavaScript
+Client-side JavaScript, in particular, has many APIs available to it — these are not part of the JavaScript language itself, rather they are built on top of the core JavaScript language, providing you with extra superpowers to use in your JavaScript code. They generally fall into two categories:
+
+1) Browser APIs are built into your web browser and are able to expose data from the browser and surrounding computer environment and do useful complex things with it. For example, the Web Audio API provides JavaScript constructs for manipulating audio in the browser — taking an audio track, altering its volume, applying effects to it, etc. In the background, the browser is actually using some complex lower-level code (e.g. C++ or Rust) to do the actual audio processing. But again, this complexity is abstracted away from you by the API.
+
+2) Third-party APIs are not built into the browser by default, and you generally have to retrieve their code and information from somewhere on the Web. For example, the Twitter API allows you to do things like displaying your latest tweets on your website. It provides a special set of constructs you can use to query the Twitter service and return specific information.
+
+*/
+
+// ======================================
+// 003 - Simple Text
+// ======================================
+// const xhr = new XMLHttpRequest();
+
+// xhr.open("GET", "./SMILGA/api/sample.txt");
+// xhr.onreadystatechange = function () {
+//   // console.log(xhr);
+//   if (xhr.readyState === 4 && xhr.status === 200) {
+//     const text = document.createElement("p");
+//     text.textContent = xhr.responseText;
+//     document.body.appendChild(text);
+//   } else {
+//     console.log({
+//       status: xhr.status,
+//       text: xhr.statusText,
+//       state: xhr.readyState,
+//     });
+//   }
+// };
+// xhr.send();
+
+// console.log("Hello World");
+
+// ======================================
+// 004 - Add Button
+// ======================================
+
+// const btn = document.querySelector(".btn");
+// btn.addEventListener("click", () => {
+//   getData();
+// });
+// function getData() {
+//   const xhr = new XMLHttpRequest();
+//   // console.log(xhr);
+
+//   xhr.open("GET", "./SMILGA/api/sample.txt");
+//   xhr.onreadystatechange = function () {
+//     // console.log(xhr);
+//     if (xhr.readyState === 4 && xhr.status === 200) {
+//       const text = document.createElement("p");
+//       text.textContent = xhr.responseText;
+//       document.body.appendChild(text);
+//     } else {
+//       console.log({
+//         status: xhr.status,
+//         text: xhr.statusText,
+//         state: xhr.readyState,
+//       });
+//     }
+//   };
+//   // xhr.send();
+// }
+
+// ======================================
+// 005 - JSON
+// ======================================
+// JSON - Javascript Object Notation
+
+// const btn = document.querySelector(".btn");
+// const url = "./SMILGA/api/people.json";
+// btn.addEventListener("click", () => {
+//   getData(url);
+// });
+// function getData(url) {
+//   const xhr = new XMLHttpRequest();
+//   console.log(xhr);
+
+//   xhr.open("GET", url);
+//   xhr.onreadystatechange = function () {
+//     // console.log(xhr);
+//     if (xhr.readyState === 4 && xhr.status === 200) {
+//       // parse
+//       //stringyfy
+//       const data = JSON.parse(xhr.responseText);
+//       // console.log(typeof data);
+//       // console.log(data);
+//       const displayData = data
+//         .map((item) => {
+//           return `<p>${item.name}</p>`;
+//         })
+//         .join("");
+//       const element = document.createElement("div");
+//       element.innerHTML = displayData;
+//       document.body.appendChild(element);
+//     } else {
+//       console.log({
+//         status: xhr.status,
+//         text: xhr.statusText,
+//         state: xhr.readyState,
+//       });
+//     }
+//   };
+//   xhr.send();
+// }
+
+// ======================================
+// 006 - Fetch
+// ======================================
+// ======================================
+// 007 - Fetch - Errors gotcha
+// ======================================
+// ======================================
+// 008 - Fetch - Big Picture
+// ======================================
+// ======================================
+// 009 - Fetch with Functions
+// ======================================
+// ======================================
+// 010 - Fetch - with async/await
+// ======================================
+// ======================================
+// 011 - Try Catch
+// ======================================
+
 ////////////////////////////////
 // 016 - Projects
 ////////////////////////////////
