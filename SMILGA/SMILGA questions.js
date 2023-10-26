@@ -111,14 +111,93 @@
 // ======================================
 // 004 - 'this' - Keyword Basics
 // ======================================
+// 1)
+// const john = {
+//   firstName: "john",
+//   lastName: "anderson",
+//   fullName: function () {
+//     console.log(this);
+//     console.log(`My full name is ${this.firstName} ${this.lastName}`);
+//   },
+// };
+// (1) console fullName
+
+// 2) copy paste john object 3 times and change object names peter,parker,nilson and change firstName peter,parker,nilson and lastName watson,tungston,hardstone and invoke fullName of 3 objects
+
+// 3)
+// const data = {
+//   firstName: "harish",
+//   lastName: "anderson",
+//   fullName: function () {
+//     // (1) access firstName and lastname using this key word and console to browser
+//   },
+// };
+
+// 4)
+// const details = {
+//   firstName: "harish",
+//   lastName: "anderson",
+//   age: 40,
+//   // why this fullDetails function?
+//   // to access firstname,lastName,age in one go
+//   // why using this keyword?
+//   // to access firstname,lastName,age in one go
+//   // without this keyword we cannot access firstname,lastName,age using function fullDetails in one go
+//   fullDetails: function () {
+//     console.log(`${this.firstName}, ${this.lastName}, ${this.age}`);
+//   },
+// };
+// details.fullDetails();
+
+// (1) change firstName value sharuk
+// (2) change lastName value watson
+// (3) change age value to 50
+// (4) access fulldetails
 
 // ======================================
 // 005 - this - Keyword Advanced
 // ======================================
+// 1) guess output
+// console.log(this);
+
+// 2)
+// function showThis() {
+//   console.log(this);
+// }
+
+// const john = {
+//   name: "john",
+//   showThis: showThis,
+// };
+// const bob = {
+//   name: "bob",
+//   showThis: showThis,
+// };
+
+// (1) guess output
+// john.showThis();
+// (2) guess output
+// bob.showThis();
+// (3) guess output
+// showThis(); // refer to window object
+
+// 3)
+// const btn1 = document.querySelector(".btn-1");
+// const btn2 = document.querySelector(".btn-2");
+
+// (1) guess output
+// btn1.addEventListener("click", showThis);
+// (2) guess output
+// btn2.addEventListener("click", showThis);
+// (3) guess output
+// btn2.addEventListener("click", function () {
+//   showThis();
+// });
 
 // ======================================
 // 006 - Factory Functions
 // ======================================
+// what is factory function?
 
 // ======================================
 // 007 - Constructor Functions

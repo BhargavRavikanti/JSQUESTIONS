@@ -122,22 +122,222 @@ Property values can be strings, numbers, booleans, arrays and functions however 
 // ======================================
 // 004 - 'this' - Keyword Basics
 // ======================================
+// this
+// points to the left of the dot
+
+// const john = {
+//   firstName: "john",
+//   lastName: "anderson",
+//   fullName: function () {
+//     console.log(this);
+//     console.log(`My full name is ${this.firstName} ${this.lastName}`);
+//   },
+// };
+// const bob = {
+//   firstName: "peter",
+//   lastName: "sanders",
+//   fullName: function () {
+//     console.log(this);
+//     console.log(`My full name is ${this.firstName} ${this.lastName}`);
+//   },
+// };
+
+// john.fullName();
+// bob.fullName();
 
 // ======================================
 // 005 - this - Keyword Advanced
 // ======================================
+/* In Reg Functions (not arrow) "this"
+determined by "HOW"!!! a function is invoked (left of .)
+
+defaults to global - window
+arrow functions - pump the breaks
+*/
+
+// console.log(this);
+
+// function showThis() {
+//   console.log(this);
+// }
+
+// const john = {
+//   name: "john",
+//   showThis: showThis,
+// };
+// const bob = {
+//   name: "bob",
+//   showThis: showThis,
+// };
+
+// john.showThis(); // refer to john object
+// bob.showThis(); // refer to bob object
+
+// showThis(); // refer to window object
+
+// const btn1 = document.querySelector(".btn-1");
+// const btn2 = document.querySelector(".btn-2");
+
+// btn1.addEventListener("click", showThis);
+// btn2.addEventListener("click", showThis);
+// btn2.addEventListener("click", function () {
+//   showThis();
+// });
 
 // ======================================
 // 006 - Factory Functions
 // ======================================
+// Blue Print
+// Factory Functions and Constructor Functions
+// Factory Functions
+
+// Factory function is a function that can return a new object
+// If we need to produce several objects that contain the same logic, we may write the logic in a function and utilise it as a factory. It's like an actual factory making items.
+
+// Any function is a Factory function that can return a new object
+
+// In JavaScript, any function can return a new object. When it’s not a constructor function or class, it’s called a factory function.
+
+/*
+// A factory function is a function that creates an object and returns it. 
+// It is similar to constructor functions/class functions. 
+// The factory function is a very useful tool in JavaScript since it returns the object of any class directly.
+*/
+
+// const john = {
+//   firstName: "john",
+//   lastName: "anderson",
+//   fullName: function () {
+//     console.log(
+//       `My full name is ${this.firstName} ${this.lastName} and I love JS`
+//     );
+//   },
+// };
+// const bob = {
+//   firstName: "peter",
+//   lastName: "sanders",
+//   fullName: function () {
+//     console.log(`My full name is ${this.firstName} ${this.lastName}`);
+//   },
+// };
+
+// Factory function
+// function createPerson(firstName, lastName) {
+//   return {
+//     firstName: firstName,
+//     lastName: lastName,
+//     fullName: function () {
+//       console.log(
+//         `My full name is ${this.firstName} ${this.lastName} and I love JS`
+//       );
+//     },
+//   };
+// }
+
+// console.log(createPerson);
+// console.log(createPerson());
+// const john = createPerson("john", "anderson");
+// john.fullName();
+// const bob = createPerson("bob", "apple");
+// bob.fullName();
+// const susy = createPerson("susy", "jordon");
+// susy.fullName();
 
 // ======================================
 // 007 - Constructor Functions
 // ======================================
+// Blue Print
+// Factory Functions and Constructor Functions
+// Constructor Functions
+// new - creates new object, points to it, omit return
+
+// FACTORY FUNCTION
+// function createPerson(firstName, lastName) {
+//   return {
+//     firstName: firstName,
+//     lastName: lastName,
+//     fullName: function () {
+//       console.log(
+//         `My full name is ${this.firstName} ${this.lastName} and I love JS`
+//       );
+//     },
+//   };
+// }
+
+/*
+// JavaScript CONSTRUCTOR FUNCTION
+// In JavaScript, a constructor function is a function used to create objects.
+
+// In the below example, function Person() is an object constructor function.
+
+// To create an object from a constructor function, we use the new keyword.
+
+// Note: It is considered a good practice to capitalize the first letter of your constructor function.
+*/
+
+// CONSTRUCTOR FUNCTION
+// In JavaScript, a constructor function is a function used to create objects.
+// function Person(firstName, lastName) {
+//   this.firstName = firstName;
+//   this.lastName = lastName;
+//   this.fullName = function () {
+//     console.log(
+//       `My full name is ${this.firstName} ${this.lastName} and I love React`
+//     );
+//   };
+//   console.log(this);
+// }
+// In the above example, function Person() is an object constructor function.
+
+// To create an object from a constructor function, we use the new keyword.
+
+// Note: It is considered a good practice to capitalize the first letter of your constructor function.
+
+// // create objects
+// const john = new Person("john", "anderson");
+// const bob = new Person("bob", "apple");
+// const susy = new Person("susy", "jordan");
+// // access properties
+// john.fullName();
+// bob.fullName();
+// susy.fullName();
+// Create Multiple Objects with Constructor Function
+
+// In JavaScript, you can create multiple objects from a constructor function.
+
+// In the above program, three objects are created using the same constructor function.
 
 // ======================================
 // 008 - Constructor Property
 // ======================================
+// All Objects in Javascript have access to constructor property that returns a constructor function that created it.
+// built in constructor functions
+// arrays and functions are objects in javascript
+
+// function Person(firstName, lastName) {
+//   this.firstName = firstName;
+//   this.lastName = lastName;
+//   this.fullName = function () {
+//     console.log(
+//       `My full name is ${this.firstName} ${this.lastName} and I love React`
+//     );
+//   };
+// }
+
+// const john = new Person("john", "sanders");
+// console.log(john.constructor); // constructor property is telling john object is created from Person constructor function.
+// const peter = new Person("peter", "parker");
+// console.log(peter.constructor); // constructor property is telling peter object is created from Person constructor function.
+
+// const bob = {};
+// console.log(bob.constructor);
+// const list = [];
+// console.log(list.constructor);
+// const sayHi = function () {};
+// console.log(sayHi.constructor);
+
+// const susy = new john.constructor("susy", "carpenter");
+// susy.fullName();
 
 // ======================================
 // 009 - Prototype Property

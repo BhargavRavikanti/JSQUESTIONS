@@ -147,10 +147,120 @@
 // ======================================
 // 004 - 'this' - Keyword Basics
 // ======================================
+// 1)
+// const john = {
+//   firstName: "john",
+//   lastName: "anderson",
+//   fullName: function () {
+//     console.log(this);
+//     console.log(`My full name is ${this.firstName} ${this.lastName}`);
+//   },
+// };
+// // (1) invoke fullname
+// john.fullName();
+
+// 2) copy paste john object 3 times and change object names peter,parker,nilson and change firstName peter,parker,nilson and lastName watson,tungston,hardstone and invoke fullName of 3 objects
+// const peter = {
+//   firstName: "peter",
+//   lastName: "watson",
+//   fullName: function () {
+//     console.log(`My full name is ${this.firstName} ${this.lastName}`);
+//   },
+// };
+// const parker = {
+//   firstName: "parker",
+//   lastName: "tungston",
+//   fullName: function () {
+//     console.log(`My full name is ${this.firstName} ${this.lastName}`);
+//   },
+// };
+// const nilson = {
+//   firstName: "nilson",
+//   lastName: "hardstone",
+//   fullName: function () {
+//     console.log(`My full name is ${this.firstName} ${this.lastName}`);
+//   },
+// };
+
+// peter.fullName();
+// parker.fullName();
+// nilson.fullName();
+
+// 3)
+// const data = {
+//   firstName: "harish",
+//   lastName: "anderson",
+//   fullName: function () {
+//     // (1) access firstName and lastname using this key word and console to browser
+//     console.log(`${this.firstName}, ${this.lastName}`);
+//   },
+// };
+// data.fullName();
+
+// 4)
+// const details = {
+//   firstName: "harish",
+//   lastName: "anderson",
+//   age: 40,
+//   // why this fullDetails function?
+//   // to access firstname,lastName,age in one go
+//   // why using this keyword?
+//   // to access firstname,lastName,age in one go
+//   // without this keyword we cannot access firstname,lastName,age using function fullDetails in one go
+//   fullDetails: function () {
+//     console.log(`${this.firstName}, ${this.lastName}, ${this.age}`);
+//   },
+// };
+// details.fullDetails();
+
+// // (1) change firstName value sharuk
+// details.firstName = "sharuk";
+// // (2) change lastName value watson
+// details.lastName = "watson";
+// // (3) change age value to 50
+// details.age = "50";
+// // (4) access fulldetails
+// details.fullDetails();
 
 // ======================================
 // 005 - this - Keyword Advanced
 // ======================================
+// 1) guess output
+// console.log(this);
+
+// 2)
+// function showThis() {
+//   console.log(this);
+// }
+
+// const john = {
+//   name: "john",
+//   showThis: showThis,
+// };
+// const bob = {
+//   name: "bob",
+//   showThis: showThis,
+// };
+
+// (1) guess output
+// john.showThis();
+// (2) guess output
+// bob.showThis();
+// (3) guess output
+// showThis(); // refer to window object
+
+// 3)
+// const btn1 = document.querySelector(".btn-1");
+// const btn2 = document.querySelector(".btn-2");
+
+// (1) guess output
+// btn1.addEventListener("click", showThis);
+// (2) guess output
+// btn2.addEventListener("click", showThis);
+// (3) guess output
+// btn2.addEventListener("click", function () {
+//   showThis();
+// });
 
 // ======================================
 // 006 - Factory Functions
