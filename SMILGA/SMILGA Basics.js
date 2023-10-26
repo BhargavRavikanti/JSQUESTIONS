@@ -24,6 +24,149 @@
 ////////////////////////////////
 // 008 - Objects
 ////////////////////////////////
+
+// ======================================
+// 001 - Intro
+// ======================================
+// Object Basics
+// "this"
+// Factory Functions
+// Constructor Functions
+// Prototypal Inheritence
+// ES6 Class Syntax
+
+// ======================================
+// 002 - Object Basics
+// ======================================
+// Objects Basics
+
+/*
+Objects are collections of key (property) value pairs
+Property values can be strings, numbers, booleans, arrays and functions however if the property value is a function it's called a method
+*/
+
+// object literal syntax,{}
+// dot notation
+
+// const person = {
+//   name: "john",
+//   age: 25,
+//   married: true,
+//   siblings: ["anna", "peter"],
+//   greet: function (name) {
+//     console.log(`Hello, my name is ${name}`);
+//   },
+//   sayHello(name) {
+//     console.log(`hello, my name is ${name}`);
+//   },
+// };
+
+// console.log(person);
+// console.log(person.name);
+
+// const name = person.name;
+// console.log(name);
+// person.age = 60;
+// person.city = "chicago";
+
+// console.log(person);
+// // delete property
+// // delete person.siblings;
+// // or another method to understand properly
+// const siblings = delete person.siblings;
+// // console.log(siblings);
+// // console.log(person.siblings);
+
+// console.log(person);
+
+// ======================================
+// 003 - Nested Object,Bracket Notation
+// ======================================
+// nested objects
+// set variable as property value
+// dot notation vs bracket notation
+
+// const age = 40;
+// let random = "random-value";
+// random = "age";
+// const person = {
+//   name: "john",
+//   age: age,
+//   married: true,
+//   siblings: ["anna", "peter"],
+//   greet: function (name) {
+//     console.log(`Hello, my name is ${name}`);
+//   },
+//   sayHello(name) {
+//     console.log(`Hello, my name is ${name}`);
+//   },
+//   job: {
+//     title: "developer",
+//     company: {
+//       name: "coding addict",
+//       address: "123 main street",
+//     },
+//   },
+//   "random-value": "random",
+//   "random value1": "random1",
+// };
+
+// console.log(person.job.company.name);
+// console.log(person.job.title);
+// console.log(person.job.company.address);
+// console.log(person["random-value"]);
+// console.log(person[random]);
+
+// console.log(person["random value1"]);
+
+// ======================================
+// 004 - 'this' - Keyword Basics
+// ======================================
+
+// ======================================
+// 005 - this - Keyword Advanced
+// ======================================
+
+// ======================================
+// 006 - Factory Functions
+// ======================================
+
+// ======================================
+// 007 - Constructor Functions
+// ======================================
+
+// ======================================
+// 008 - Constructor Property
+// ======================================
+
+// ======================================
+// 009 - Prototype Property
+// ======================================
+
+// ======================================
+// 010 - Property Lookup
+// ======================================
+
+// ======================================
+// 011 - ES6 Class Syntax
+// ======================================
+
+// ======================================
+// 012 - Call
+// ======================================
+
+// ======================================
+// 013 - Apply,Arguments
+// ======================================
+
+// ======================================
+// 014 - Bind
+// ======================================
+
+// ======================================
+// 015 - Button Example
+// ======================================
+
 ////////////////////////////////
 // 009 - OOP Projects
 ////////////////////////////////
@@ -753,6 +896,15 @@ Client-side JavaScript, in particular, has many APIs available to it — these a
 // ======================================
 // 006 - Fetch
 // ======================================
+// Fetch built-in
+// promised based
+// XHR is not wrong, you can complete all our upcoming examples and projects using XHR. Fetch is just alternative approach that has simpler and cleaner syntax. The end result is the same.Still get dynamically, behind the scenes.
+
+// const url = "./SMILGA/api/people.json";
+
+// const response = fetch(url);
+// console.log(response);
+
 // ======================================
 // 007 - Fetch - Errors gotcha
 // ======================================

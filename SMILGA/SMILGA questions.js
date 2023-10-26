@@ -24,6 +24,138 @@
 ////////////////////////////////
 // 008 - Objects
 ////////////////////////////////
+
+// ======================================
+// 001 - Intro
+// ======================================
+// Object Basics
+// "this"
+// Factory Functions
+// Constructor Functions
+// Prototypal Inheritence
+// ES6 Class Syntax
+
+// ======================================
+// 002 - Object Basics
+// ======================================
+// 1)
+// const person = {
+//   name: "john",
+//   age: 25,
+//   married: true,
+//   siblings: ["anna", "peter"],
+//   greet: function (name) {
+//     console.log(`Hello, my name is ${name}`);
+//   },
+//   sayHello(name) {
+//     console.log(`hello, my name is ${name}`);
+//   },
+// };
+// (1) console person
+// (2) access name from person object.
+// (3) access age from person object.
+// (4) create property city and set value chicago
+// (5) pass argument bharu to greet method
+// (6) pass argument dhanush to sayHello method
+// (7) delete siblings property and check is it deleted or not
+
+// ======================================
+// 003 - Nested Object,Bracket Notation
+// ======================================
+// 1)
+// const age = 40;
+// let random = "random-value";
+// random = "age";
+// const person = {
+//   name: "john",
+//   age: age,
+//   married: true,
+//   siblings: ["anna", "peter"],
+//   greet: function (name) {
+//     console.log(`Hello, my name is ${name}`);
+//   },
+//   sayHello(name) {
+//     console.log(`Hello, my name is ${name}`);
+//   },
+//   job: {
+//     title: "developer",
+//     company: {
+//       name: "coding addict",
+//       address: "123 main street",
+//     },
+//   },
+//   "random-value": "random",
+// };
+
+// (1) access name from company from person object
+// (2) access title value from person object
+// (3) access address value from person object
+// (4) access random-value value from person object
+// (5) access age value using random variable from person object
+// (6) access random value1 value from person object
+
+// 2) create variable myAge 29 create object age and store myAge variable,"random-value" set value 10,"random age" set value "18 years" in that object
+// const myAge = 29;
+// const age = {
+//   myAge: myAge,
+//   "random-value": 10,
+//   "random age": "18 years",
+// };
+// (1) access myAge from age object
+// (2) access random-value from age
+// (3) access random age from age
+
+// 3) when to use square bracket notation in objects to access properties values?
+// when objects has property like "random-value" this or "random age"
+
+// ======================================
+// 004 - 'this' - Keyword Basics
+// ======================================
+
+// ======================================
+// 005 - this - Keyword Advanced
+// ======================================
+
+// ======================================
+// 006 - Factory Functions
+// ======================================
+
+// ======================================
+// 007 - Constructor Functions
+// ======================================
+
+// ======================================
+// 008 - Constructor Property
+// ======================================
+
+// ======================================
+// 009 - Prototype Property
+// ======================================
+
+// ======================================
+// 010 - Property Lookup
+// ======================================
+
+// ======================================
+// 011 - ES6 Class Syntax
+// ======================================
+
+// ======================================
+// 012 - Call
+// ======================================
+
+// ======================================
+// 013 - Apply,Arguments
+// ======================================
+
+// ======================================
+// 014 - Bind
+// ======================================
+
+// ======================================
+// 015 - Button Example
+// ======================================
+
 ////////////////////////////////
 // 009 - OOP Projects
 ////////////////////////////////
