@@ -154,3 +154,146 @@
 // EVENT LISTENERS - addEventListener()
 // EVENTS - keydown, keyup
 // EVENT OBJECT - event.key, event.target, event.type
+
+////////////////////////////////////
+// MORE MODERN JS CONCEPTS
+////////////////////////////////////
+
+// ======================================
+// 001 - More Modern JS Concepts Part-1
+// ======================================
+// spread operator - Arrays,objects & function calls
+// rest parameters - destructuring arrays & objects
+// functions - default parameters
+// template literals
+
+// ======================================
+// 002 - More Modern JS Concepts Part-2
+// ======================================
+// operators - ternary operator
+// conditional statements - switch statement
+// functions - arrow functions
+
+// ======================================
+// 003 - Factory and Constrctor Functions
+// ======================================
+// creating multiple objects - factory function,constructor function
+// constructor function - new operator
+// object properties - constructor
+// built in constructor functions - Date
+
+// Methods to creating objects
+// creating multiple objects
+// we have multiple methods to create objects
+// (1) Using Object Literals
+// (2) Using Factory function
+// (3) Using Constructor function
+// (4) Using JS Classes
+
+// (1) Using Object Literals
+
+// const car1 = {
+//   Color: "blue",
+//   Brand: "Audi",
+//   Start: function () {
+//     console.log("started");
+//   },
+// };
+// const car2 = {
+//   Color: "red",
+//   Brand: "Tata",
+//   Start: function () {
+//     console.log("started");
+//   },
+// };
+// const car3 = {
+//   Color: "green",
+//   Brand: "BMW",
+//   Start: function () {
+//     console.log("started");
+//   },
+// };
+
+// console.log(car1);
+// console.log(car2);
+// console.log(car3);
+
+// (2) Using Factory function
+// A Factory function is any function that returns a new object for every function call
+// Function name should follow camelCase naming convention
+
+// function createCar(color, brand) {
+//   return {
+//     color: color,
+//     brand: brand,
+//     Start: function () {
+//       console.log("started");
+//     },
+//   };
+// }
+
+// let car1 = createCar("blue", "Audi");
+// let car2 = createCar("red", "Tata");
+// let car3 = createCar("green", "BMW");
+// console.log(car1);
+// console.log(car2);
+// console.log(car3);
+
+// simplified version of above example
+// object property value
+// shorthand notations
+
+// function createCar(color, brand) {
+//   return {
+//     color,
+//     brand,
+//     Start() {
+//       console.log("started");
+//     },
+//   };
+// }
+
+// let car1 = createCar("blue", "Audi");
+// let car2 = createCar("red", "Tata");
+// let car3 = createCar("green", "BMW");
+// console.log(car1);
+// console.log(car2);
+// console.log(car3);
+
+// (3) Using Constructor function
+// A regular function that returns a new object on calling with the new operator.
+// The created new object is called an instance.
+// Note: Function name should follow PascalCase naming convention (means first letter also should be capital letter).
+
+// The new Operator
+// when a function is called with new,it does the following steps
+// (1) creates an empty object and assigns to this
+// this = { }; (implicitly)
+// (2) Return this
+// Return this (implicitly)
+
+function CreateCar(color, brand) {
+  this.color = color;
+  this.brand = brand;
+  this.start = function () {
+    console.log("started");
+  };
+}
+
+let car1 = new CreateCar("blue", "Audi");
+let car2 = new CreateCar("red", "Tata");
+let car3 = new CreateCar("green", "BMW");
+console.log(car1);
+console.log(car2);
+console.log(car3);
+
+// Differnces between Factory functions and Constructor functions
+// Factory functions
+// (1) Follows camelCase notation
+// (2) No need of new Operator for function calling
+// (3) Explicitly need to return the Object
+
+// Constructor functions
+// Allows PascalCase notation
+// Need new Operator for function calling
+// create object returns implicitly

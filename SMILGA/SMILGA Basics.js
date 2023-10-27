@@ -191,6 +191,8 @@ arrow functions - pump the breaks
 // Factory Functions and Constructor Functions
 // Factory Functions
 
+// A Factory function is any function that returns a new object for every function call
+
 // Factory function is a function that can return a new object
 // If we need to produce several objects that contain the same logic, we may write the logic in a function and utilise it as a factory. It's like an actual factory making items.
 
@@ -314,6 +316,8 @@ arrow functions - pump the breaks
 // built in constructor functions
 // arrays and functions are objects in javascript
 
+// constructor property returns the function which created the instance object.
+
 // function Person(firstName, lastName) {
 //   this.firstName = firstName;
 //   this.lastName = lastName;
@@ -342,6 +346,29 @@ arrow functions - pump the breaks
 // ======================================
 // 009 - Prototype Property
 // ======================================
+/*
+Prototypal Inheritance Model
+Javascript uses prototypal inheritance model. That means that every constructor function/class has a prototype property that is shared by every instance of the constructor/class. So any properties and methods or prototype can be acessed by every instance. prototype property returns a object
+*/
+
+// function Account(name, initialBalance) {
+//   this.name = name;
+//   this.balance = initialBalance;
+// }
+
+// const john = new Account("john", 200);
+// const bob = new Account("bob", 0);
+
+// Account.prototype.bank = "CHASE";
+// Account.prototype.deposit = function (amount) {
+//   this.balance += amount;
+//   console.log(`Hello ${this.name}, your balance is ${this.balance}`);
+// };
+// console.log(john.bank);
+// console.log(bob);
+
+// john.deposit(300);
+// bob.deposit(1000);
 
 // ======================================
 // 010 - Property Lookup
