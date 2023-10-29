@@ -381,10 +381,111 @@ Javascript uses prototypal inheritance model. That means that every constructor 
 // ======================================
 // 012 - Call
 // ======================================
+// call,apply,bind are function methods (built in function methods)
+// call - runs instantly, arguments - list of items
+
+// const john = {
+//   name: "john",
+//   age: 24,
+//   greet: function () {
+//     console.log(this);
+//     console.log(`Hello, I'm ${this.name} and I'm ${this.age} years old`);
+//   },
+// };
+// const susan = {
+//   name: "susan",
+//   age: 21,
+// };
+
+// john.greet();
+
+// this will fail
+
+// susan.greet(); // bcoz greet method is in john object so we call for susan
+// greet(); // ReferenceError: greet is not defined
+// const secondGreet = john.greet;
+// secondGreet();
+
+// function greet() {
+//   console.log(this); // this = window
+//   console.log(`Hello, I'm ${this.name} and I'm ${this.age} years old`);
+// }
+// this will fail to
+
+// susan.greet(); // TypeError: susan.greet is not a function
+// greet();
+// const secondGreet = john.greet;
+// secondGreet();
+
+// greet.call(john);
+// greet.call(susan);
+// greet.call({ name: "peter", age: 30 });
+
+// john.greet.call(susan);
+
+// MY PRACTICE
+
+// const bharu = {
+//   name: "Bharu",
+//   age: 29,
+//   details: function () {
+//     console.log(`${this.name}, ${this.age}`);
+//   },
+// };
+// const dhanush = {
+//   name: "dhanush",
+//   age: 18,
+// };
+
+// function data() {
+//   console.log(this);
+//   console.log(`${this.name}, ${this.age}`);
+// }
+
+// data.call(dhanush);
+// data.call(bharu);
+
+// bharu.details.call(dhanush);
+// bharu.details.call({ name: "Peter", age: 35 });
+// bharu.details.call({ name: "Shark", age: 50 });
+
+// data.call({ name: "Zofan", age: 20 });
+// data.call({ name: "Superman", age: 50 });
 
 // ======================================
 // 013 - Apply,Arguments
 // ======================================
+// call,apply,bind are function methods (built in function methods)
+// call - runs instantly, arguments - list of items
+// apply - runs instantly, arguments - array of items
+// bind - assign, use later, arguments - list of items
+
+// const john = {
+//   name: "john",
+//   age: 24,
+// };
+// const susan = {
+//   name: "susan",
+//   age: 21,
+// };
+
+// function greet(city, country) {
+//   console.log(this);
+//   console.log(
+//     `Hello, I'm ${this.name} and I'm ${this.age} years old and I live in ${city}, ${country}`
+//   );
+// }
+
+// greet.apply(john); // works like call
+// greet.apply(susan); // works like call
+// greet.apply({ name: "peter", age: 30 }); // works like call
+
+// now it's going to make sense
+// when using apply make sure to pass as array of elements like this ["Hyd","India"]
+
+// greet.apply(john, ["Hyd", "India"]);
+// greet.apply(susan, ["warangal", "India"]);
+// greet.apply({ name: "peter", age: 30 }, ["washington", "USA"]);
 
 // ======================================
 // 014 - Bind

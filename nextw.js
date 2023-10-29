@@ -420,7 +420,8 @@
 // (4) Regular Functions
 // (5) Object Methods
 
-// 2) JS Values
+// 2)
+// JS Values
 // (1) Mutable
 // (2) Immutable
 
@@ -428,16 +429,237 @@
 // (1) let vs const
 
 // 1) this
-// this is determined in three ways
-// In Objects methods, this refers to the OBJECT that executing the current function.
-// In Regular function, this refers to the GLOBAL object(window object).
-// In Arrow functions, this refers to the Context in which the code is defined
-
 // (1) constructor Functions
 // (2) Arrow Functions
 // (3) Callbacks
 // (4) Regular Functions
 // (5) Object Methods
+
+// THIS IS A SPECIAL VARIABLE
+// 1) this
+// this is determined in three ways
+// In Objects methods, this refers to the OBJECT that executing the current function.
+// In Regular function, this refers to the GLOBAL object(window object).
+// In Arrow functions, this refers to the Context in which the code is defined
+
+// THIS IN OBJECT METHODS
+// let car = {
+//   color: "blue",
+//   brand: "Audi",
+//   start: function () {
+//     console.log(this);
+//   },
+// };
+// car.start();
+// this = car object
+// this refers to the object that executing the current function
+
+// THIS IN REGULAR FUNCTIONS
+// function start() {
+//   console.log(this);
+// }
+// start();
+// this = window object(global object)
+// In Regular function,this refers to the window object.
+
+// THIS IN ARROW FUNCTIONS
+// In Arrow functions,this depends on two aspects:
+// -> when the code is defined
+// -> context
+
+// -> when the code is defined
+// when is callback function defined?
+// let car = {
+//   color: "blue",
+//   brand: "Audi",
+//   start: function () {
+//     setTimout(function () {
+//       console.log(this);
+//     }, 1000);
+//   },
+// };
+// // car.start();
+
+// -> context
+// EXAMPLE 1
+// console.log(this);
+// this = window object (global object)
+// context means
+// console.log(this); is in window context
+
+// -> context
+// EXAMPLE 2
+// let car = {
+//   color: "blue",
+//   brand: "Audi",
+//   start: function () {
+//     console.log(this);
+//   },
+// };
+// car.start();
+// this = car
+// console.log(this); anedhi car ane object yokka context lo undhi
+
+// this in Arrow functions
+// object method
+// let car = {
+//   color: "blue",
+//   brand: "Audi",
+//   start: () => {
+//     console.log(this);
+//   },
+// };
+// car.start();
+// this = window
+// Arrow function inherits this from the context in which the code is defined
+
+// this in callbacks
+//Arrow functions with Callbacks
+// let car = {
+//   color: "blue",
+//   brand: "Audi",
+//   start: function () {
+//     setTimeout(() => {
+//       console.log(this);
+//     }, 1000);
+//   },
+// };
+// car.start();
+// // this = car
+
+// this in callbacks
+//Arrow functions with Callbacks
+// let cars = ["Audi", "BMW", "Mercedes"];
+// let car = {
+//   color: "blue",
+//   brand: "Audi",
+//   start: function () {
+//     let audiIndex = cars.findIndex((car) => console.log(this));
+//   },
+// };
+// car.start();
+// this = car
+
+// THIS IN CONSTRUCTOR FUNCTIONS
+
+// when a function is called with new, it does the following steps:
+// -> creates an empty object and assign to this // this = {}; (implicitly)
+// -> return this // return this (implicitly)
+
+// function Car(color, brand) {
+//   this.color = color;
+//   this.brand = brand;
+//   this.start = function () {
+//     console.log(this);
+//   };
+// }
+// let car1 = new Car("blue", "Audi");
+// car1.start();
+// // this = car1
+// let car2 = new Car("red", "Tata");
+// car2.start();
+// // this = car2
+// let car3 = new Car("red", "Tata");
+// car3.start();
+// // this = car3
+// // In Constructor function,this refers to the instance object
+
+// this in Constructor functions
+//Arrow function as method
+
+// function Car(color, brand) {
+//   this.color = color;
+//   this.brand = brand;
+//   this.start = () => {
+//     console.log(this);
+//   };
+// }
+// let car1 = new Car("blue", "Audi");
+// console.log(car1);
+// car1.start();
+// // this = car1
+// let car2 = new Car("red", "Tata");
+// car2.start();
+// // this = car2
+// let car3 = new Car("red", "Tata");
+// car3.start();
+// // this = car3
+// Arrow function inherits this from the context in which the code is defined
+
+// 2) JS Values
+// (1) Mutable
+// (2) Immutable
+// values
+// PRIMITIVES & OBJECTS
+// All the primitive type values are immutable (it remains constant value which means we cannot change the value or we cannot modify the value)
+// All the objects are mutable ( which means we can change the value or we can modify the value)
+
+// PRIMITIVES (immutable)
+// (1) Number
+// (2) String
+// (3) Boolean
+// (4) Symbol
+// (5) Undefined
+// .... many more....
+// OBJECTS (mutable)
+// (1) Object
+// (2) Array
+// (3) Function
+
+// Primitives are immutable
+// let x = 5;
+// let y = x;
+// y = 10;
+// console.log(x);
+// console.log(y);
+
+// Objects are mutable
+// let x = { value: 5 };
+// let y = x;
+// let z = { value: 20 };
+// y.value = 10;
+// console.log(x);
+// console.log(y);
+// y = z;
+// console.log(x);
+// console.log(y);
+
+// 3) Declaring Variables
+// (1) let vs const
+
+// In Javascript a variable can declared in 3 ways
+// (1) Using let
+// (2) Using const
+// (3) Using var
+
+// Using let
+// Initialization is not mandatory
+// variables can be re-assigned
+
+// let x;
+// x = 10;
+// console.log(x);
+// x = 15;
+// console.log(x);
+
+// Using const
+// Initialization is  mandatory
+// Once a value is initialized then it can't be re-assigned
+// const x = 7;
+// x = 9;
+// console.log(x); // nextw.js:649 Uncaught TypeError: Assignment to constant variable.
+
+// using const
+// Mutating Object properties
+// const car = {
+//   color: "blue",
+//   brand: "Audi",
+// };
+// console.log(car);
+// car.color = "red";
+// console.log(car);
+// console.log(car.color);
+// car = {}; // nextw.js:662 Uncaught TypeError: Assignment to constant variable.
 
 ////////////////////////////////////
 // Prototypes and Classes

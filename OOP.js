@@ -647,10 +647,11 @@
 // (2) Using Factory function
 // (3)
 // -> Using Constructor function,
-// -> // Differnces between Factory functions and Constructor functions,
+// -> // Differences between Factory functions and Constructor functions,
 // -> Default Function properties and Methods,
 // -> constructor property (IMP),
-// -> Built in constructor functions
+// -> Built in constructor functions,
+// -> Prototype, Prototype property, Prototypal Inheritence
 // (4) Using JS Classes
 
 // ======================================
