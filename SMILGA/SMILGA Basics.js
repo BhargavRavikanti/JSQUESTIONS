@@ -384,6 +384,14 @@ Javascript uses prototypal inheritance model. That means that every constructor 
 // call,apply,bind are function methods (built in function methods)
 // call - runs instantly, arguments - list of items
 
+/*
+Call is a function that helps you change the context of the invoking function. In layperson's terms, it helps you replace the value of this inside a function with whatever value you want.
+*/
+
+/*
+// With the call() method, you can write a method that can be used on different objects.
+*/
+
 // const john = {
 //   name: "john",
 //   age: 24,
@@ -452,6 +460,35 @@ Javascript uses prototypal inheritance model. That means that every constructor 
 // data.call({ name: "Zofan", age: 20 });
 // data.call({ name: "Superman", age: 50 });
 
+// if you want pass arguments make sure to pass arguments as list of items like this "bharu","dhanush"
+
+// const bharu = {
+//   name: "Bharu",
+//   age: 29,
+//   details: function (anime, food) {
+//     console.log(`${this.name}, ${this.age}, ${anime}, ${food}`);
+//   },
+// };
+// const dhanush = {
+//   name: "dhanush",
+//   age: 18,
+// };
+
+// function data(manga, favFood) {
+//   console.log(this);
+//   console.log(`${this.name}, ${this.age}, ${manga}, ${favFood}`);
+// }
+
+// data.call(dhanush, "magic emperor", "manchuria");
+// data.call(bharu, "demon master", "faloda");
+
+// bharu.details.call(dhanush, "God of Arts", "pizza");
+// bharu.details.call({ name: "Peter", age: 35 }, "Demon God", "chips");
+// bharu.details.call({ name: "Shark", age: 50 });
+
+// data.call({ name: "Zofan", age: 20 }, "Invincible God", "sweets");
+// data.call({ name: "Superman", age: 50 });
+
 // ======================================
 // 013 - Apply,Arguments
 // ======================================
@@ -459,6 +496,14 @@ Javascript uses prototypal inheritance model. That means that every constructor 
 // call - runs instantly, arguments - list of items
 // apply - runs instantly, arguments - array of items
 // bind - assign, use later, arguments - list of items
+
+/*
+Apply is very similar to the call function. The only difference is that in apply you can pass an array as an argument list.
+*/
+
+/*
+With the apply() method, you can write a method that can be used on different objects.
+*/
 
 // const john = {
 //   name: "john",
@@ -481,7 +526,7 @@ Javascript uses prototypal inheritance model. That means that every constructor 
 // greet.apply({ name: "peter", age: 30 }); // works like call
 
 // now it's going to make sense
-// when using apply make sure to pass as array of elements like this ["Hyd","India"]
+// when using apply if you want to pass arguments make sure to pass arguments as array of elements like this ["Hyd","India"]
 
 // greet.apply(john, ["Hyd", "India"]);
 // greet.apply(susan, ["warangal", "India"]);
@@ -490,10 +535,76 @@ Javascript uses prototypal inheritance model. That means that every constructor 
 // ======================================
 // 014 - Bind
 // ======================================
+// call - runs instantly, arguments - list of items
+// apply - runs instantly, arguments - array of items
+// bind - assign, use later, arguments - list of items
+
+/*
+The bind function creates a copy of a function with a new value to the this present inside the calling function.
+*/
+
+/*
+but we can call it whenever we want, Example if you want to call/invoke after ten 10 seconds you can. if you want to call it after 1 hour you can.
+*/
+
+// const john = {
+//   name: "john",
+//   age: 24,
+// };
+// const susan = {
+//   name: "susan",
+//   age: 21,
+// };
+
+// function greet(city, country) {
+//   // console.log(this);
+//   console.log(
+//     `Hello, I'm ${this.name} and I'm ${this.age} years old and I live in ${city}, ${country}`
+//   );
+// }
+
+// assign, call it later
+// const susanGreat = greet.bind(susan, "toronto", "ca"); // asiigned // this = pointing to susan
+// // whenever you want to invoke, invoke it
+// susanGreat(); // invoked
+// const johnGreat = greet.bind(john, "HYD", "India"); // asiigned // this = pointing to john
+// // whenever you want to invoke, invoke it
+// johnGreat(); // invoked
+
+// // assigning, but we call it whenever we want
+// const johnData = greet.bind(john, "HYD", "India");
+// const susanData = greet.bind(susan, "Warangal", "India");
+
+// // Now I want call or invoke it
+// johnData();
+// susanData();
 
 // ======================================
 // 015 - Button Example
 // ======================================
+// call,apply,bind Real Example
+
+// const counter = {
+//   count: 0,
+//   increment() {
+//     console.log(this);
+//     this.count++;
+//     console.log(this.count);
+//   },
+// };
+
+// const btn = document.querySelector(".increment");
+
+// fail
+// btn.addEventListener("click", counter.increment); // this = pointing to button
+
+// some edge cases
+// btn.addEventListener("click", counter.increment.bind(counter)); // this = pointing to counter object
+// or
+// const increment = counter.increment.bind(counter);
+// btn.addEventListener("click", increment);
+// if you don,t want that eventlistener or that increment functionality anymore you can remove it using below method
+// btn.removeEventListener("click", increment);
 
 ////////////////////////////////
 // 009 - OOP Projects
