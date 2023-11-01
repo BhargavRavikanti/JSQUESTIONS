@@ -455,12 +455,13 @@ GOOD LUCK 😀
 // class Declaration
 class PersonCl {
   // constructor is the method of class so it must called constructor only
-  constructor(firstName, birthYear) {
-    this.firstName = firstName;
+  constructor(fullName, birthYear) {
+    this.fullName = fullName;
     this.birthYear = birthYear;
   }
 
-  // Methods will be added to .prototype property
+  // instance methods
+  // Methods will be added to .prototype property so that all the instances can have access to them
   // But even if you create prototype outside of the class it will also works same
   calcAge() {
     console.log(2037 - this.birthYear);
@@ -473,9 +474,26 @@ class PersonCl {
   get age() {
     return 2037 - this.birthYear;
   }
+
+  // Set a property that already exists
+  set fullName(name) {
+    console.log(name);
+    if (name.includes(" ")) this._fullName = name;
+    else alert(`${name} is not a full name!`);
+  }
+
+  get fullName() {
+    return this._fullName;
+  }
+
+  // static method
+  static hey() {
+    console.log("Hey there");
+    console.log(this);
+  }
 }
 
-const jessica = new PersonCl("Jessica", 1996);
+const jessica = new PersonCl("Jessica Davis", 1996); // instance
 console.log(jessica);
 jessica.calcAge();
 console.log(jessica.age);
@@ -528,16 +546,24 @@ jessica.greet();
 // It can secure better data quality
 // It is useful for doing things behind-the-scenes
 
+// * setters and getters will be very useful ib data validation
+
 /*
+const walter = new PersonCl("Walter White", 1965);
+console.log(walter);
+console.log(walter.fullName);
+
 const account = {
   owner: "jonas",
   movements: [200, 530, 120, 300],
 
   get latest() {
+    // wanted last one
     return this.movements.slice(-1).pop();
   },
 
   set latest(mov) {
+    // adding element at last
     this.movements.push(mov);
   },
 };
@@ -547,12 +573,23 @@ console.log(account.latest);
 console.log(account.movements);
 account.latest = 50;
 console.log(account.movements);
+account.latest = 100;
+console.log(account.movements);
 */
 
 // ======================================
 // 012 - Static Methods
 // ======================================
-console.log(Array.from(document.querySelectorAll("h1")));
+/*
+// What is a Static Method in JavaScript?
+// A static method is a method that is defined in a class using the static keyword. Such a method turns out to be slightly different than a usual JavaScript method. The way the static method is different is that it cannot be accessed by any of the instantiated objects of the class. Rather, the static method can only be accessed using the class name because it directly belongs to the class.
+
+// we used static keyword for the only purpose of class can have access hey method
+// instances will not have access to hey method means instances cannot inherit
+
+PersonCl.hey(); // class can have access to hey()
+// walter.hey(); // instances cannot inherit or access hey() when we used static keyword
+*/
 
 // ======================================
 // 013 - Object.create
@@ -619,6 +656,29 @@ console.log(employee.name); // "EmployeeOne"
 // ======================================
 // 015 - Inheritance between Classes: Constructor Functions
 // ======================================
+const Person = function (firstName, birthYear) {
+  this.firstName = firstName;
+  this.birthYear = birthYear;
+};
+
+Person.prototype.calcAge = function () {
+  console.log(2037 - this.birthYear);
+};
+
+const Student = function (firstName, birthYear, course) {
+  this.firstName = firstName;
+  this.birthYear = birthYear;
+  this.course = course;
+};
+
+Student.prototype.introduce = function () {
+  console.log(`My name is ${this.firstName} and I study ${this.course}`);
+};
+
+const mike = new Student("Mike", 2020, "Computer Science");
+// console.log(mike);
+mike.introduce();
+
 // ======================================
 // 016 - Coding Challenge 3
 // ======================================
