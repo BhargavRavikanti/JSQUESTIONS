@@ -211,6 +211,7 @@ Encapsulation in JavaScript: In JavaScript, encapsulation can be achieved using 
 // ======================================
 // Prototypes
 
+/*
 const Person = function (firstName, birthYear) {
   // console.log(this);
   // Instance properties
@@ -264,33 +265,354 @@ console.log(jonas.species, matilda.species, jack.species);
 // species property is not declared in the Person constructor function. so species is not own property of Person.
 // It is created outside of that constructor function.
 
-// WE CAN CHECK THE PROPERTY OR METHOD IS OWN OF THAT OBJECT(CONTRUCTOR FUNCTION) OR NOT
+// WE CAN CHECK THE PROPERTY OR METHOD, IS OWN OF THAT OBJECT(instance) OR NOT
 console.log(jonas.hasOwnProperty("firstName")); // true
 console.log(jonas.hasOwnProperty("species")); // false
+*/
 
 // ======================================
 // 007 -Prototypal Inheritance and The Prototype Chain
 // ======================================
 
+/*
+// Prototypal Inheritance
+// Example
+const Person = function (firstName, birthYear, favFood) {
+  this.firstName = firstName;
+  this.birthYear = birthYear;
+  // this.favFood = this.favFood;
+};
+
+// if objects are created from constructor function then those objects are called instances(or instance objects).
+
+// creating instances
+const john = new Person("John", 1997);
+const matilda = new Person("Matilda", 2017);
+const jack = new Person("Jack", 1987);
+
+// creating prototype which means creating a method or property outside of the constructor function
+Person.prototype.calcAge = function () {
+  console.log(2037 - this.birthYear);
+};
+
+// All the instances created from the constructor function can use prototype(property or method) is called prototypal inheritance.
+// so All 3 instances john,matilda,jack can use calcAge is called prototypal inheritance.
+// john.calcAge();
+// matilda.calcAge();
+// jack.calcAge();
+
+// creating prototype which means creating a method or property
+Person.prototype.species = "Homo Sapiens";
+// console.log(john.species);
+// console.log(matilda.species);
+// console.log(jack.species);
+// End of Prototypal Inheritance Example
+
+// imp points
+// // WE CAN CHECK THE PROPERTY OR METHOD, IS OWN OF THAT OBJECT(instance) OR NOT
+console.log(john.hasOwnProperty("firstName"));
+console.log(john.hasOwnProperty("species"));
+console.log(john.hasOwnProperty("calcAge"));
+
+console.log(john); // calcAge and species will show in instances(john,matilda,jack) prototype by clicking [[Prototype]] : Object only bcoz that are created outside of constructor function
+
+// we can check constructor function(Person) prototype and instances(john,matilda,jack) prototype are same or not
+console.log(Person.prototype === john.__proto__);
+console.log(Person.prototype === matilda.__proto__);
+console.log(Person.prototype === jack.__proto__);
+
+// checking what prototypes are created in Person
+console.log(Person.prototype); // species and calcAge
+console.log(john.__proto__); // species and calcAge
+console.log(matilda.__proto__); // species and calcAge
+console.log(jack.__proto__); // species and calcAge
+
+// checking Person prototypes and instances(john,matilda,jack) prototypes are same or not
+console.log(Person.prototype === john.__proto__); // same prototype
+console.log(Person.prototype === matilda.__proto__); // same prototype
+console.log(Person.prototype === jack.__proto__); // same prototype
+
+// IMP ********** if we use word prototype means we are creating property or method outside the constructor function
+// calcAge method is prototype
+// species property is prototype
+
+// ******** WHAT IS PROTOTYPE CHANGE?
+// john is connected to prototype
+// The ability of looking up methods and properties in a prototype is what we called prototype chain.
+// so the john object and it,s prototype basically form a prototype chain.
+
+// PROTOTYPE CHAIN : Series of links between objects,linked through prototypes (similar to the scope chain)
+// object.prototype is usually the top of the chain which means that it,s prototype is null
+*/
+
 // ======================================
 // 008 - Prototypal Inheritance on Built in Objects
 // ======================================
 
+/*
+console.log(jonas.__proto__); // points to Person prototype
+console.log(jonas.__proto__.__proto__); // this is Object.prototype (top of the prototype chain) // points to built in built in objects prototype
+console.log(Object.prototype); // same as above one
+
+console.log(jonas.__proto__.__proto__.__proto__); // there is no prototype // so null
+
+console.log(jonas.hasOwnProperty("firstName")); // true
+console.log(jonas.hasOwnProperty("species")); // false
+
+// hasOwnProperty is a property or method from built in object
+
+// ********************
+// Example
+// prototype chain
+// jonas checking where is hasOwnProperty 
+// jonas looking first hasOwnProperty in Person but not found so looking hasOwnProperty in built in object then found hasOwnProperty in built in object.
+// this lookup is called prototype chain.
+// ********************
+
+
+console.log(Person); // click that result then that will take you to where that constructor function code written on jonas Basics or on that page
+console.log(Person.prototype);
+console.log(Person.prototype.constructor); // click that result then that will take you to where that constructor function code written on jonas Basics or on that page
+
+console.dir(Person.prototype.constructor); // ƒ Person(firstName, birthYear)
+
+const arr = [3, 6, 6, 5, 6, 9, 9];
+console.log(arr.__proto__); // [constructor: ƒ, at: ƒ, concat: ƒ, copyWithin: ƒ, fill: ƒ, …] //
+console.log(arr.__proto__ === Array.prototype); // new Array === []
+
+console.log(arr.__proto__.__proto__);
+console.log(arr);
+
+// Never do this it is only for educational knowledge purpose only
+// we added a new method to the prototype property of the array constructor and so therefore, all arrays will inherit this method
+// we can use this created method for any array
+// Array.prototype.unique = function () {
+//   return [...new Set(this)]; // new Set() gives unique elements
+// };
+// console.log(arr.unique());
+
+// const arr1 = [1, 1, 2, 3, 4, 5, 4, 3, 2, 1];
+// console.log(new Set(arr1));
+// console.log(new Set([1, 1, 2, 3, 4, 5, 4, 3, 2, 1]));
+
+const h1 = document.querySelector("h1");
+// console.log(h1);
+console.dir(h1); // see prototype
+console.dir((x) => x + 1); // see prototype
+*/
+
 // ======================================
 // 009 - Coding Challenge 1
 // ======================================
+/* 
+1. Use a constructor function to implement a Car. A car has a make and a speed property. The speed property is the current speed of the car in km/h;
+2. Implement an 'accelerate' method that will increase the car's speed by 10, and log the new speed to the console;
+3. Implement a 'brake' method that will decrease the car's speed by 5, and log the new speed to the console;
+4. Create 2 car objects and experiment with calling 'accelerate' and 'brake' multiple times on each of them.
+
+DATA CAR 1: 'BMW' going at 120 km/h
+DATA CAR 2: 'Mercedes' going at 95 km/h
+
+GOOD LUCK 😀
+*/
+// solution
+// const Car = function (make, speed) {
+//   this.make = make;
+//   this.speed = speed;
+// };
+
+// const bmw = new Car("BMW", 120);
+// const mercedes = new Car("Mercedes", 95);
+
+// Car.prototype.accelerate = function () {
+//   this.speed += 10;
+//   console.log(`when accelerated ${this.make} is going at ${this.speed} km/h`);
+// };
+// Car.prototype.brake = function () {
+//   this.speed -= 5;
+//   console.log(
+//     `when applying brake ${this.make} is going at ${this.speed} km/h`
+//   );
+// };
+// bmw.accelerate(); // 130
+// bmw.accelerate(); // 140
+// bmw.brake(); // 135
+// bmw.accelerate(); // 145
+// bmw.brake(); // 140
+// mercedes.accelerate(); // 105
+// mercedes.accelerate(); // 115
+// mercedes.brake(); // 110
+// mercedes.accelerate(); // 120
+// mercedes.brake(); // 115
+
 // ======================================
 // 010 - ES6 Classes
 // ======================================
+// class Expression
+// const PersonCl = class{}
+
+/*
+// class Declaration
+class PersonCl {
+  // constructor is the method of class so it must called constructor only
+  constructor(firstName, birthYear) {
+    this.firstName = firstName;
+    this.birthYear = birthYear;
+  }
+
+  // Methods will be added to .prototype property
+  // But even if you create prototype outside of the class it will also works same
+  calcAge() {
+    console.log(2037 - this.birthYear);
+  }
+
+  greet() {
+    console.log(`Hey ${this.firstName}`);
+  }
+
+  get age() {
+    return 2037 - this.birthYear;
+  }
+}
+
+const jessica = new PersonCl("Jessica", 1996);
+console.log(jessica);
+jessica.calcAge();
+console.log(jessica.age);
+
+// get prototype of PersonCl
+console.log(PersonCl.prototype);
+console.log(jessica.__proto__);
+// // or using below method we can get prototype of jessica
+// console.log(Object.getPrototypeOf(jessica));
+
+// checking prototype of PersonCl and jessica are same or not
+// why we to need to check
+// Because make sure we are applying correct prototype(method or property) to jessica so that we can get desired result or output
+console.log(PersonCl.prototype === jessica.__proto__);
+// or
+console.log(PersonCl.prototype === Object.getPrototypeOf(jessica));
+
+// BEST PRACTICE creating prototypes after constructor method
+// But creating prototype ouside of the class also works same but use this whenever it is necessary only
+// PersonCl.prototype.greet = function () {
+//   console.log(`Hey ${this.firstName}`);
+// };
+jessica.greet();
+
+// imp points
+// 1. Classes are NOT hoisted, function declarations are hoisted which means we can use them before they are declared in the code but with Classes that doesn't work.
+// 2. Classes are first-class citizens, which means we can pass them into functions as arguments and also return them from functions that is because class are really just a special kind of function behind the scenes.
+// 3. Classes are executed in strict mode
+
+// 4. At last the question is which one to use constructor functions or Classes -> personal preference
+// -> if you want to use Classes make to understand 100% of constructor functions,prototype,prototypal inheritance,prototype chain
+*/
+
 // ======================================
 // 011 - Setters and Getters
 // ======================================
+// JavaScript Object Accessors
+// JavaScript Accessors (Getters and Setters)
+// Getters and setters allow you to define Object Accessors (Computed Properties).
+
+// JavaScript Getter (The get Keyword)
+// JavaScript Setter (The set Keyword)
+
+// Data Quality
+// JavaScript can secure better data quality when using getters and setters.
+
+// Why Using Getters and Setters?
+// It gives simpler syntax
+// It allows equal syntax for properties and methods
+// It can secure better data quality
+// It is useful for doing things behind-the-scenes
+
+/*
+const account = {
+  owner: "jonas",
+  movements: [200, 530, 120, 300],
+
+  get latest() {
+    return this.movements.slice(-1).pop();
+  },
+
+  set latest(mov) {
+    this.movements.push(mov);
+  },
+};
+
+console.log(account.latest);
+
+console.log(account.movements);
+account.latest = 50;
+console.log(account.movements);
+*/
+
 // ======================================
 // 012 - Static Methods
 // ======================================
+console.log(Array.from(document.querySelectorAll("h1")));
+
 // ======================================
 // 013 - Object.create
 // ======================================
+// The Object.create() method creates a new object, using an existing object as the prototype of the newly created object.
+
+// up until now we have used methods like constructor functions,classes to create/produce/make objects(or instances).
+
+// Now we use another method Object.create
+
+// no prototype property,no constructor functions and no new operator
+// so instead we can use Object.create to manually set the prototype of an object to any other object that we want
+
+/*
+// general object making syntax
+const PersonProto = {
+  calcAge() {
+    console.log(2037 - this.birthYear);
+  },
+
+  init(firstName, birthYear) {
+    this.firstName = firstName;
+    this.birthYear = birthYear;
+  },
+};
+
+const steven = Object.create(PersonProto);
+// steven linked to PersonProto object
+console.log(steven);
+steven.name = "Steven";
+steven.birthYear = 2002;
+steven.calcAge();
+
+console.log(steven.__proto__);
+console.log(steven.__proto__ === PersonProto);
+// or either way works
+console.log(Object.getPrototypeOf(steven) === PersonProto);
+
+const sarah = Object.create(PersonProto); // Object.create(PersonProto); so that sarah can use PersonProto  stored methods and properties
+sarah.init("Sarah", 1979); // creating sarah object or instance
+sarah.calcAge();
+*/
+
+/*
+The Object.create() method creates a new object, using an existing object as the prototype of the newly created object.
+To understand the Object.create method, just remember that it takes two parameters. The first parameter is a mandatory object that serves as the prototype of the new object to be created. The second parameter is an optional object which contains the properties to be added to the new object.
+
+We will not deep dive into prototypes and inheritance chains now to keep our focus on the topic. But as a quick point, you can think of prototypes as objects from which other objects can borrow properties/methods they need.
+
+Imagine you have an organization represented by orgObject
+
+const orgObject = { company: 'ABC Corp' };
+And you want to create employees for this organization. Clearly, you want all the employee objects.
+
+const employee = Object.create(orgObject, { name: { value: 'EmployeeOne' } });
+
+console.log(employee); // { company: "ABC Corp" }
+console.log(employee.name); // "EmployeeOne"
+*/
+
 // ======================================
 // 014 - Coding Challenge 2
 // ======================================

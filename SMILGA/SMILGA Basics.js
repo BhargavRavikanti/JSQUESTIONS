@@ -373,10 +373,87 @@ Javascript uses prototypal inheritance model. That means that every constructor 
 // ======================================
 // 010 - Property Lookup
 // ======================================
+/*
+Property Lookup
+If child does not have ask parent
+Everything in JS is an Object
+*/
+
+// function Account(name, initialBalance) {
+//   this.name = name;
+//   this.balance = initialBalance;
+//   // this.bank = "Bank Of America";
+//   // john checks bank(method) first in instance or not, then checks in prototype if it is not in prototype also then checks in parent(built in object prototype) then it gives undefined
+// }
+
+// const john = new Account("john", 200);
+// const bob = new Account("bob", 0);
+
+// Account.prototype.bank = "CHASE";
+// Account.prototype.deposit = function (amount) {
+//   this.balance += amount;
+//   console.log(`Hello ${this.name}, your balance is ${this.balance}`);
+// };
+// // console.log(john.bank);
+// console.log(bob);
+// console.log({}); // we can use/we can access all the methods and properties(like hasOwnproperty,isPrototypeOf,toString,...) which are stored in prototype [[Prototype]] : Object which are already made for us to use(built in properties or methods) to all the arrays we created.
+
+// console.log([]); // we can use/we can access all the methods and properties(like filter,reduce,map,...) which are in prototype [[Prototype]] : Array(0) which are already made for us to use(built in properties or methods) to all the arrays we created.
 
 // ======================================
 // 011 - ES6 Class Syntax
 // ======================================
+/*
+ES6 Classes - Syntactic Sugar
+Prototypal Inheritance
+
+*/
+
+/*
+// using contructor function to produce objects/instances
+function Account(name, initialBalance) {
+  this.name = name;
+  this.balance = initialBalance;
+  // this.bank = 'Bank Of America';
+}
+
+const john = new Account("john", 200);
+const bob = new Account("bob", 0);
+
+Account.prototype.bank = "CHASE";
+Account.prototype.deposit = function (amount) {
+  this.balance += amount;
+  console.log(`Hello ${this.name}, your balance is ${this.balance}`);
+};
+console.log(john.bank);
+console.log(bob);
+*/
+
+// using Class to produce objects/instances
+// Classes are a bit easier to read code
+// class Account {
+//   constructor(name, initialBalance) {
+//     this.name = name;
+//     this.balance = initialBalance;
+//   }
+//   bank = "Chase";
+//   deposit(amount) {
+//     this.balance += amount;
+//     console.log(`Hello ${this.name}, your balance is ${this.balance}`);
+//   }
+// }
+
+// const john = new Account("john", 0);
+// console.log(john);
+// console.log(john.name);
+// john.deposit(500);
+// console.log(john.bank);
+
+// const bob = new Account("bob", 700);
+// console.log(bob);
+// console.log(bob.name);
+// bob.deposit(1000);
+// console.log(bob.bank);
 
 // ======================================
 // 012 - Call
@@ -605,6 +682,58 @@ but we can call it whenever we want, Example if you want to call/invoke after te
 // btn.addEventListener("click", increment);
 // if you don,t want that eventlistener or that increment functionality anymore you can remove it using below method
 // btn.removeEventListener("click", increment);
+
+// ======================================
+// 000 - JavaScript Accessors(Getters and Setters)
+// ======================================
+// JavaScript Object Accessors
+// JavaScript Accessors (Getters and Setters)
+// Getters and setters allow you to define Object Accessors (Computed Properties).
+
+// JavaScript Getter (The get Keyword)
+// JavaScript Setter (The set Keyword)
+
+// Data Quality
+// JavaScript can secure better data quality when using getters and setters.
+
+// Why Using Getters and Setters?
+// It gives simpler syntax
+// It allows equal syntax for properties and methods
+// It can secure better data quality
+// It is useful for doing things behind-the-scenes
+
+// get is treated as property
+// set is also treated as property
+
+/*
+const person = {
+  name: "vishwajeet",
+  age: 25,
+
+  // getName: function () {
+  //   return this.name.toUpperCase();
+  // },
+
+  // using get
+  // get getName() {
+  //   return this.name.toUpperCase();
+  // },
+
+  // using set
+  set setName(n) {
+    return (this.name = n.toUpperCase());
+  },
+};
+// console.log(person.getName);
+// // console.log(person.name.toUpperCase());
+
+// person.name = "ajit";
+// console.log(person.getName);
+
+// using set
+person.setName = "ajit";
+console.log(person);
+*/
 
 ////////////////////////////////
 // 009 - OOP Projects
