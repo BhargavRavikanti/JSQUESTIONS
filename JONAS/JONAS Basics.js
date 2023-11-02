@@ -893,8 +893,14 @@ console.log(martha.__proto__);
 // ======================================
 // 018 - Inheritance between Classes: Object.create
 // ======================================
-// The Object.create() method creates a new object, using an existing object as the prototype of the newly created object.
+/*
+// Using “Object.create” is the most basic way to create an inheritance model in JavaScript. Object.create can be used to create a new object using the existing object as a prototype. The existing object is made available as a prototype making all the properties of the existing object available to the new object.
 
+
+// The Object.create() method creates a new object, using an existing object as the prototype of the newly created object.
+*/
+
+/*
 // general object making syntax
 const PersonProto = {
   calcAge() {
@@ -907,18 +913,172 @@ const PersonProto = {
   },
 };
 
-// The Object.create() method creates a new object, using an existing object as the prototype of the newly created object.
 const steven = Object.create(PersonProto);
+console.log(steven);
+
+const StudentProto = Object.create(PersonProto);
+console.log(StudentProto);
+
+StudentProto.init = function (firstName, birthYear, course) {
+  PersonProto.init.call(this, firstName, birthYear);
+  this.course = course;
+};
+
+StudentProto.introduce = function () {
+  console.log(`My name is ${this.firstName} and I study ${this.course}`);
+};
+
+const jay = Object.create(StudentProto);
+jay.init("Jay", 2010, "Computer Science");
+// console.log(jay);
+
+jay.introduce();
+*/
 
 // ======================================
 // 019 - Another Class Example
 // ======================================
+
+/*
+class Account {
+  constructor(owner, currency, pin) {
+    this.owner = owner;
+    this.currency = currency;
+    this._pin = pin;
+    this._movements = []; // protected
+    this.locale = navigator.language;
+
+    console.log(`Thanks for opening an account, ${owner}`);
+  }
+
+  // Public interface
+  getMovements() {
+    return this._movements;
+  }
+
+  deposit(val) {
+    this._movements.push(val);
+  }
+
+  withdraw(val) {
+    this.deposit(-val);
+  }
+
+  _approveLoan(val) {
+    return true;
+  }
+
+  requestLoan(val) {
+    if (this._approveLoan(val)) {
+      this.deposit(val);
+      console.log("Loan Approved");
+    }
+  }
+}
+
+const acc1 = new Account("Jonas", "EUR", 1111);
+// console.log(acc1);
+
+// acc1.movements.push(250);
+// acc1.movements.push(-140);
+
+acc1.deposit(250);
+acc1.withdraw(140);
+acc1.requestLoan(1000);
+// acc1.approveLoan(1000);
+console.log(acc1.getMovements());
+
+console.log(acc1);
+console.log(acc1.pin); // we are able to access pin outside of the class Account but it should not be accessible outside of the class
+*/
+
 // ======================================
 // 020 - Encapsulation Protected Properties and Methods
 // ======================================
+// (2) Encapsulation
+// Encapsulation : Keeping properties and methods private inside the class,so they are not accessible from outside the class. some methods can be exposed as a public interface(API)
+
+/*
+// (API -> Application Programming Interface means a software intermediary that allows two applications to talk to each other. APIs are an accessible way to extract and share data within and across organizations.
+
+APIs are all around us. Every time you use a rideshare app, send a mobile payment, or change the thermostat temperature from your phone, you’re using an API.When you use one of the above apps, they connect to the Internet and send data to a server. The server then retrieves that data, interprets it, performs the necessary actions, and sends it back to your phone. The application then interprets that data and presents you with the information you wanted in a readable way. )
+*/
+
+/*
+// Encapsulation
+Encapsulation is a fundamental concept in object-oriented programming that refers to the practice of hiding the internal details of an object and exposing only the necessary information to the outside world. Encapsulation helps in maintaining the integrity of data and ensures that it is not accessed or modified inappropriately.
+
+Encapsulation in JavaScript: In JavaScript, encapsulation can be achieved using two techniques: using closures and using classes
+*/
+
 // ======================================
 // 021 - Encapsulation Private Class Fields and Methods
 // ======================================
+
+// 1) Public fields
+// 2) Private fields
+// 3) Public methods
+// 4) Private methods
+
+class Account {
+  // 1) Public fields (instances) which means there are all not on the prototype
+  locale = navigator.language;
+
+  // 2) Private fields
+  #movements = [];
+
+  constructor(owner, currency, pin) {
+    this.owner = owner;
+    this.currency = currency;
+    this._pin = pin;
+    // this._movements = []; // protected
+    // this.locale = navigator.language;
+
+    console.log(`Thanks for opening an account, ${owner}`);
+  }
+
+  // Public interface
+  getMovements() {
+    return this.#movements;
+  }
+
+  deposit(val) {
+    this.#movements.push(val);
+  }
+
+  withdraw(val) {
+    this.deposit(-val);
+  }
+
+  _approveLoan(val) {
+    return true;
+  }
+
+  requestLoan(val) {
+    if (this._approveLoan(val)) {
+      this.deposit(val);
+      console.log("Loan Approved");
+    }
+  }
+}
+
+const acc1 = new Account("Jonas", "EUR", 1111);
+// console.log(acc1);
+
+// acc1.movements.push(250);
+// acc1.movements.push(-140);
+
+acc1.deposit(250);
+acc1.withdraw(140);
+acc1.requestLoan(1000);
+// acc1.approveLoan(1000);
+console.log(acc1.getMovements());
+
+console.log(acc1);
+// console.log(acc1.pin);
+
+// console.log(acc1.#movements); // Property '#movements' is not accessible outside class 'Account' because it has a private identifier.ts(18013)
+
 // ======================================
 // 022 - Chaining Methods
 // ======================================
