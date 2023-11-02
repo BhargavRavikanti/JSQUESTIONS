@@ -434,6 +434,7 @@ GOOD LUCK 😀
 //     `when applying brake ${this.make} is going at ${this.speed} km/h`
 //   );
 // };
+
 // bmw.accelerate(); // 130
 // bmw.accelerate(); // 140
 // bmw.brake(); // 135
@@ -450,6 +451,21 @@ GOOD LUCK 😀
 // ======================================
 // class Expression
 // const PersonCl = class{}
+
+/*
+// classes
+// The new version of JavaScript (ES6) introduced the use of classes instead of functions. Prior to ES6, there were only classes and, functions which are callable objects. A class in javascript is basically a blueprint or template of the object. New objects can be created from a class.
+
+// Classes are similar to functions. Here, a class keyword is used instead of a function keyword. Unlike functions classes in JavaScript are not hoisted. The constructor method is used to initialize. The class name is user-defined.
+
+// Syntax:
+
+// class classname {
+//   constructor(parameter) {
+//     this.classname = parameter;
+//   }
+// }
+*/
 
 /*
 // class Declaration
@@ -594,6 +610,7 @@ PersonCl.hey(); // class can have access to hey()
 // ======================================
 // 013 - Object.create
 // ======================================
+/*
 // The Object.create() method creates a new object, using an existing object as the prototype of the newly created object.
 
 // up until now we have used methods like constructor functions,classes to create/produce/make objects(or instances).
@@ -602,6 +619,7 @@ PersonCl.hey(); // class can have access to hey()
 
 // no prototype property,no constructor functions and no new operator
 // so instead we can use Object.create to manually set the prototype of an object to any other object that we want
+*/
 
 /*
 // general object making syntax
@@ -656,6 +674,8 @@ console.log(employee.name); // "EmployeeOne"
 // ======================================
 // 015 - Inheritance between Classes: Constructor Functions
 // ======================================
+
+/*
 const Person = function (firstName, birthYear) {
   this.firstName = firstName;
   this.birthYear = birthYear;
@@ -666,10 +686,15 @@ Person.prototype.calcAge = function () {
 };
 
 const Student = function (firstName, birthYear, course) {
-  this.firstName = firstName;
-  this.birthYear = birthYear;
+  Person.call(this, firstName, birthYear);
   this.course = course;
 };
+
+// linking protypes
+Student.prototype = Object.create(Person.prototype);
+
+// linked prototypes together so mike is instanceof Student and also Person and also Object
+// we manually manipulated prototype chain because we linked Person and Student 
 
 Student.prototype.introduce = function () {
   console.log(`My name is ${this.firstName} and I study ${this.course}`);
@@ -678,16 +703,213 @@ Student.prototype.introduce = function () {
 const mike = new Student("Mike", 2020, "Computer Science");
 // console.log(mike);
 mike.introduce();
+mike.calcAge();
+
+console.log(mike.__proto__);
+console.log(mike.__proto__.__proto__);
+console.log(mike.__proto__.__proto__.__proto__);
+console.log(mike.__proto__.__proto__.__proto__.__proto__);
+
+console.log(mike instanceof Student);
+console.log(mike instanceof Person);
+console.log(mike instanceof Object);
+
+// linked prototypes together so mike is instanceof Student and also Person and also Object
+// we manually manipulated prototype chain because we linked Person and Student 
+
+Student.prototype.constructor = Student;
+console.dir(Student.prototype.constructor);
+*/
 
 // ======================================
 // 016 - Coding Challenge 3
 // ======================================
+/* 
+1. Use a constructor function to implement an Electric Car (called EV) as a CHILD "class" of Car. Besides a make and current speed, the EV also has the current battery charge in % ('charge' property);
+2. Implement a 'chargeBattery' method which takes an argument 'chargeTo' and sets the battery charge to 'chargeTo';
+3. Implement an 'accelerate' method that will increase the car's speed by 20, and decrease the charge by 1%. Then log a message like this: 'Tesla going at 140 km/h, with a charge of 22%';
+4. Create an electric car object and experiment with calling 'accelerate', 'brake' and 'chargeBattery' (charge to 90%). Notice what happens when you 'accelerate'! HINT: Review the definiton of polymorphism 😉
+
+DATA CAR 1: 'Tesla' going at 120 km/h, with a charge of 23%
+
+GOOD LUCK 😀
+*/
+
+/*
+const Car = function (make, speed) {
+  this.make = make;
+  this.speed = speed;
+};
+
+Car.prototype.accelerate = function () {
+  this.speed += 10;
+  console.log(`when accelerated ${this.make} is going at ${this.speed} km/h`);
+};
+
+Car.prototype.brake = function () {
+  this.speed -= 5;
+  console.log(
+    `when applying brake ${this.make} is going at ${this.speed} km/h`
+  );
+};
+
+const EV = function (make, speed, charge) {
+  Car.call(this, make, speed);
+  this.charge = charge;
+};
+
+// linking the prototypes
+EV.prototype = Object.create(Car.prototype);
+
+EV.prototype.chargeBattery = function (chargeTo) {
+  this.charge = chargeTo;
+};
+
+// a child class can over write a method that it inherited from the parent class, if we didn't create below accelerate method then it will use parent accelerate method means then the tesla simply would inherit the accelerate method from the Car (this lookup is called prototype chain )
+// how prototype chain or property lookup works?
+// first telsa would look for accelerate method on EV.prototype.accelerate if not find out then tesla looks for Car.accelerate.prototype if not find out then tesla looks for Object.prototype.accelerate if not find out then we gets (error) (because Object.prototype is top of the prototype chain. if tesla not found in Object prototype then results error)
+// tesla looks in child then in parent then in object if not found in any one then results error bcoz it does not exist
+
+// see result by commenting EV.prototype.accelerate and Car.prototype.accelerate
+
+EV.prototype.accelerate = function () {
+  this.speed += 20;
+  this.charge--;
+  console.log(
+    `${this.make} is going at ${this.speed} km/h, with a charge of ${this.charge}`
+  );
+};
+
+const tesla = new EV("Tesla", 120, 23);
+// console.log(tesla);
+tesla.chargeBattery(90);
+console.log(tesla);
+tesla.brake();
+tesla.accelerate();
+*/
+
 // ======================================
 // 017 - Inheritance between Classes: ES6 Classes
 // ======================================
+/*
+Inheritance in javascript aids a new class to have all the functionality of another class while having its own functionality as well. *The inheritance in javascript primarily involves two segments:
+
+Child class: The class which inherits the properties of another class is known as the child class.
+
+Parent class: The class whose property is being inherited is known as the parent class.
+
+Class Inheritance
+To create a class inheritance, use the extends keyword.
+
+A class created with a class inheritance inherits all the methods from another class:
+
+The super() method refers to the parent class.
+
+By calling the super() method in the constructor method, we call the parent's constructor method and gets access to the parent's properties and methods.
+
+Inheritance is useful for code reusability: reuse properties and methods of an existing class when you create a new class.
+
+*/
+
+/*
+// class Declaration
+// (parent class PersonCl)
+class PersonCl {
+  // constructor is the method of class so it must called constructor only
+  constructor(fullName, birthYear) {
+    this.fullName = fullName;
+    this.birthYear = birthYear;
+  }
+
+  // instance methods
+  // Methods will be added to .prototype property so that all the instances can have access to them
+  // But even if you create prototype outside of the class it will also works same in classes like constructor function
+  calcAge() {
+    console.log(2037 - this.birthYear);
+  }
+
+  greet() {
+    console.log(`Hey ${this.firstName}`);
+  }
+
+  get age() {
+    return 2037 - this.birthYear;
+  }
+
+  // Set a property that already exists
+  set fullName(name) {
+    // console.log(name);
+    if (name.includes(" ")) this._fullName = name;
+    else alert(`${name} is not a full name!`);
+  }
+
+  get fullName() {
+    return this._fullName;
+  }
+
+  // static method
+  static hey() {
+    console.log("Hey there");
+    console.log(this);
+  }
+}
+
+// to implement inheritance between ES6 classes we only need two ingredients extends keyword and super function.
+
+// (child class StudentCl)
+// (class StudentCl extends PersonCl {} means child can inherit parent methods and properties means child can use parent methods and properties)
+
+class StudentCl extends PersonCl {
+  constructor(fullName, birthYear, course) {
+    // Always needs to happen first!
+    super(fullName, birthYear);
+    this.course = course;
+  }
+
+  introduce() {
+    console.log(`My name is ${this.fullName} and I study ${this.course}`);
+  }
+
+  // indeed this calaAge method over wrote the previous one from the parent class
+  calcAge() {
+    console.log(
+      `I,m ${
+        2037 - this.birthYear
+      } years old, but as a student I feel more like ${
+        2037 - this.birthYear + 10
+      }`
+    );
+  }
+}
+
+const martha = new StudentCl("Martha Jones", 2012, "Computer Science");
+martha.introduce(); // accessing method from child class
+martha.calcAge(); // accessing method from parent class
+console.log(martha);
+
+console.log(martha.__proto__);
+*/
+
 // ======================================
 // 018 - Inheritance between Classes: Object.create
 // ======================================
+// The Object.create() method creates a new object, using an existing object as the prototype of the newly created object.
+
+// general object making syntax
+const PersonProto = {
+  calcAge() {
+    console.log(2037 - this.birthYear);
+  },
+
+  init(firstName, birthYear) {
+    this.firstName = firstName;
+    this.birthYear = birthYear;
+  },
+};
+
+// The Object.create() method creates a new object, using an existing object as the prototype of the newly created object.
+const steven = Object.create(PersonProto);
+
 // ======================================
 // 019 - Another Class Example
 // ======================================
