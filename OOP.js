@@ -651,7 +651,7 @@
 // -> Default Function properties and Methods,
 // -> constructor property (IMP),
 // -> Built in constructor functions,
-// -> Prototype, Prototype property, Prototypal Inheritence
+// -> Prototype, Prototype property, Prototypal Inheritence,Prototype Chain
 // (4) Using JS Classes
 
 // ======================================
@@ -967,3 +967,524 @@
 // ======================================
 //
 // ======================================
+
+////////////////////////////////
+// OBJECT ORIENTED PROGRAMMING
+// youtube Venkatesh Mogili
+////////////////////////////////
+
+// Contents(IMP Topics)
+// 1) OOPS Introduction
+// 2) Objects
+// 3) Classes
+// How many methods we have to create objects?
+// 4) Encapsulation
+// 5) Abstraction
+// 6) Inheritance
+// 7) Polymorphism
+
+// ======================================
+// 1) OOPS Introduction
+// ======================================
+// ======================================
+// 2) Objects
+// ======================================
+// Objects have attributes/properties and actions/behavious
+// Attributes
+// Black color
+// Apple Mobile
+
+// Actions
+// Calling
+// Playing games
+// Taking pictures
+
+// Example
+let mobile = {
+  // Attributes / Properties
+  color: "black",
+  name: "apple",
+
+  // Actions / behaviours / methods
+  calling: function () {
+    console.log("Call to chinni");
+  },
+
+  playPUBG: function () {
+    console.log("Intro music -> Shoot enemy -> close and sleep");
+  },
+
+  takePicture: function () {
+    console.log("Smile please -> Nice, kepp smiling like this");
+  },
+};
+
+// ======================================
+// 3) Classes
+// ======================================
+// Class is a blueprint for creating objects.
+// We can create any number of objects with the same properties and actions by using Classes.
+
+/*
+// Example
+// Blue Print
+class Mobile {
+  constructor(color, name) {
+    this.color = color;
+    this.name = name;
+  }
+
+  calling() {
+    console.log("Call to chinni");
+  }
+
+  playPUBG() {
+    console.log("Intro music -> Shoot enemy -> close and sleep");
+  }
+
+  takePicture() {
+    console.log("Smile please -> Nice, kepp smiling like this");
+  }
+}
+
+// Creating multiple objects/intances from class(blue print)
+let apple = new Mobile("black", "apple");
+let redmi = new Mobile("silver", "redmi");
+
+console.log("Apple mobile is ready", apple);
+console.log("Redmi mobile is ready", redmi);
+
+// Getting/Setting Attributes
+
+// Properties/Attributes
+console.log(`What is the color of apple mobile?, ${apple.color}`);
+
+// Actions/Functions/Methods
+apple.calling();
+apple.playPUBG();
+apple.takePicture();
+*/
+
+// ======================================
+// How many methods we have to create objects?
+// ======================================
+// #1) Object Literal
+// #2) Object.create()
+// #3) Functions are objects in javascript
+// #4) Using Classes (*IMP)
+
+// #1) Object Literal
+// =======================================
+
+/*
+let mobile1 = {
+  // Attributes / Properties
+  color: "black",
+  name: "apple",
+
+  // Actions / behaviours / methods
+  calling: function () {
+    console.log("Call to chinni");
+  },
+
+  playPUBG: function () {
+    console.log("Intro music -> Shoot enemy -> close and sleep");
+  },
+
+  takePicture: function () {
+    console.log("Smile please -> Nice, kepp smiling like this");
+  },
+};
+
+console.log(mobile1);
+console.log(typeof mobile1);
+*/
+
+// #2) Object.create()
+// =======================================
+
+/*
+let mobile2 = Object.create({});
+// Attributes / Properties
+mobile2.color = "black";
+mobile2.apple = "apple";
+
+// Actions / behaviours / methods
+mobile2.calling = function () {
+  console.log("Call to chinni");
+};
+
+(mobile2.playPUBG = function () {
+  console.log("Intro music -> Shoot enemy -> close and sleep");
+}),
+  (mobile2.takePicture = function () {
+    console.log("Smile please -> Nice, kepp smiling like this");
+  }),
+  console.log(mobile2);
+console.log(typeof mobile2);
+*/
+
+// #3) Functions are objects in javascript
+// =======================================
+// we can create objects by using factory function or constructor function
+
+/*
+function Mobilee() {
+  return "mobile";
+}
+let mobile3 = new Mobilee();
+
+// Attributes / Properties
+mobile3.color = "black";
+// mobile3[color]= "black";
+mobile3.apple = "apple";
+// mobile3[apple] = "apple";
+
+// Actions / behaviours / methods
+mobile3.calling = function () {
+  console.log("Call to chinni");
+};
+
+(mobile3.playPUBG = function () {
+  console.log("Intro music -> Shoot enemy -> close and sleep");
+}),
+  (mobile3.takePicture = function () {
+    console.log("Smile please -> Nice, kepp smiling like this");
+  }),
+  console.log(mobile3);
+console.log(typeof mobile3);
+*/
+
+// #4) Using Classes (*IMP)
+// =======================================
+
+/*
+class Mobileee {}
+let mobile4 = new Mobileee();
+
+// Attributes / Properties
+mobile4.color = "black";
+mobile4.apple = "apple";
+
+// Actions / behaviours / methods
+mobile4.calling = function () {
+  console.log("Call to chinni");
+};
+
+(mobile4.playPUBG = function () {
+  console.log("Intro music -> Shoot enemy -> close and sleep");
+}),
+  (mobile4.takePicture = function () {
+    console.log("Smile please -> Nice, kepp smiling like this");
+  }),
+  console.log(mobile4);
+console.log(typeof mobile4);
+*/
+
+/*
+// Example
+// Blue Print
+// #1 Creating class
+class Mobile {
+  constructor(name, color) {
+    this.name = name;
+    this.color = color;
+  }
+
+  // get methods
+  calling() {
+    console.log("Call to chinni");
+  }
+
+  playGame() {
+    console.log("Playing games");
+  }
+
+  // set methods
+  setName(newName) {
+    this.name = newName;
+  }
+}
+
+// #2 Creating/Instantiating objects by using class
+let redmi = new Mobile("Redmi Note 7", "Black");
+let apple = new Mobile("Apple", "silver");
+
+// #3 Getting/Setting the properties and actions with created object(instance).
+console.log(redmi.color);
+console.log(redmi.name);
+redmi.calling();
+
+redmi.setName("Redmi Note 9 Pro");
+console.log(redmi.name);
+*/
+
+// ======================================
+// 4) Encapsulation/Data Hiding
+// ======================================
+// #1) Creating Encapsulated class
+// #2) Creating/Instantiating objects by using class
+// #3) Getting/Setting the properties and actions with created object.
+
+/*
+// #1) Creating Encapsulated class
+class Bank {
+  constructor(name, account_no, account_type) {
+    var name = name;
+    var account_no = account_no;
+    var account_type = account_type;
+
+    // get methods
+    this.getName = () => {
+      return name;
+    };
+    this.getAccountNum = () => {
+      return account_no;
+    };
+    this.getAccountType = () => {
+      return account_type;
+    };
+
+    // set methods
+    this.setName = (newName) => {
+      name = newName;
+    };
+    this.setAccountNumber = () => {
+      account_no = Math.floor(Math.random() * 9000000000);
+    };
+    this.setAccountType = (accountType) => {
+      account_type = accountType;
+    };
+  }
+}
+
+// #2) Creating/Instantiating objects by using class
+let venkatesh = new Bank("Venkatesh", null, "Savings");
+let chinni = new Bank("Chinni", null, "Current");
+
+// #3) Getting/Setting the properties and actions with created object.
+
+venkatesh.setAccountNumber();
+console.log(venkatesh.getAccountNum());
+venkatesh.account_no = 123;
+console.log(venkatesh.getAccountNum());
+// console.log(venkatesh.name);
+// venkatesh.setName("Vivek");
+// console.log(venkatesh.getName());
+// venkatesh.setAccountNumber();
+// console.log(venkatesh.getAccountNum());
+// console.log(chinni.getName());
+// chinni.setAccountNumber();
+// console.log(chinni.getAccountNum());
+*/
+
+// ======================================
+// 5) Abstraction
+// ======================================
+// #1) Creating Abstract class
+// #2) Creating/Instantiating objects by using class
+// #3) Getting/Setting the properties and actions with created object(instance).
+
+/*
+// #1) Creating Abstract class
+class Mobile {
+  constructor(name, color, initialCharging) {
+    this.name = name;
+    this.color = color;
+    this.initialCharging = initialCharging;
+    var currentCharging = 0;
+    var chargingDetails = (charge) => {
+      currentCharging = this.initialCharging + charge;
+      if (currentCharging > 100) {
+        throw Error("Mobile is fully charged");
+      }
+      console.log("Cureent Charging " + currentCharging);
+    };
+
+    this.plugInCharge = (charge) => {
+      chargingDetails(charge);
+    };
+  }
+
+  // get methods
+  calling() {
+    console.log("Call to chinni");
+  }
+
+  playGame() {
+    console.log("Playing games");
+  }
+
+  // set methods
+  setName(newName) {
+    this.name = newName;
+  }
+}
+
+// #2) Creating/Instantiating objects by using class
+let redmi = new Mobile("Redmi Note 7", "Black", 20);
+let apple = new Mobile("Apple", "silver", 20);
+
+// #3) Getting/Setting the properties and actions with created object(instance).
+// redmi.plugInCharge(30);
+// redmi.currentCharging = 200;
+console.log(redmi.name);
+console.log(redmi.color);
+// console.log(redmi.currentCharging);
+// console.log(redmi.chargingDetails());
+redmi.plugInCharge(70);
+// redmi.plugInCharge(100);
+*/
+
+// ======================================
+// 6) Inheritance
+// ======================================
+// #1) Creating Parent class
+// #2) Extending Parent class to child class
+// #3) Extending Parent class to One more child class
+// #4) Creating/Instantiating objects by using class
+// #5) Getting/Setting the properties and actions with created object(instance).
+
+/*
+// #1) Creating Parent class
+class Person {
+  constructor(name, designation) {
+    this.name = name;
+    this.designation = designation;
+  }
+  learn() {
+    console.log("Learning something");
+  }
+  eat() {
+    console.log("Eating");
+  }
+  sleep() {
+    "Sleeping";
+  }
+}
+
+// #2) Extending Parent class to child class
+class Developer extends Person {
+  constructor(name, designation, companyName) {
+    super(name, designation);
+    this.companyName = companyName;
+  }
+  coding() {
+    console.log("Javascript coding...");
+  }
+}
+
+// #3) Extending Parent class to One more child class
+class Dancer extends Person {
+  constructor(name, designation, schoolName) {
+    super(name, designation);
+    this.schoolName = schoolName;
+  }
+  dancing() {
+    console.log("Classical Dancing...");
+  }
+}
+
+// #4) Creating/Instantiating objects by using class
+// let person = new Person("Human", "Nothing");
+// console.log(person);
+
+// let venkatesh = new Developer(
+//   "Venkatesh",
+//   "Full Stack Developer",
+//   "Doodleblue"
+// );
+// console.log(venkatesh);
+
+let ramani = new Dancer("Ramani", "Classical Dancer", "Dancing School");
+console.log(ramani);
+
+// #5) Getting/Setting the properties and actions with created object(instance).
+// venkatesh.coding();
+// venkatesh.eat();
+// venkatesh.learn();
+
+ramani.dancing();
+ramani.eat();
+ramani.learn();
+*/
+
+// ======================================
+// 7) Polymorphism
+// ======================================
+// #1) Creating Parent class
+// #2) Extending Parent class to child class
+// #3) Extending Parent class to One more child class
+// #4) Creating/Instantiating objects by using class
+// #5) Getting/Setting the properties and actions with created object(instance).
+
+/*
+// #1) Creating Parent class
+class Person {
+  constructor(name, designation) {
+    this.name = name;
+    this.designation = designation;
+  }
+  learn() {
+    console.log("Learning something");
+  }
+  eat() {
+    console.log("Eating");
+  }
+  sleep() {
+    "Sleeping";
+  }
+}
+
+// #2) Extending Parent class to child class
+class Developer extends Person {
+  constructor(name, designation, companyName) {
+    super(name, designation);
+    this.companyName = companyName;
+  }
+  coding() {
+    console.log("Javascript coding...");
+  }
+  learn() {
+    console.log("Learning OOPS Concepts");
+  }
+}
+
+// #3) Extending Parent class to One more child class
+class Dancer extends Person {
+  constructor(name, designation, schoolName) {
+    super(name, designation);
+    this.schoolName = schoolName;
+  }
+  dancing() {
+    console.log("Classical Dancing...");
+  }
+  learn() {
+    console.log("Learning Bharatha Natyam");
+  }
+}
+
+// #4) Creating/Instantiating objects by using class
+let person = new Person("Human", "Nothing");
+console.log(person);
+
+let venkatesh = new Developer(
+  "Venkatesh",
+  "Full Stack Developer",
+  "Doodleblue"
+);
+console.log(venkatesh);
+
+let ramani = new Dancer("Ramani", "Classical Dancer", "Dancing School");
+console.log(ramani);
+
+// #5) Getting/Setting the properties and actions with created object(instance).
+// venkatesh.coding();
+// venkatesh.eat();
+venkatesh.learn();
+
+// ramani.dancing();
+// ramani.eat();
+ramani.learn();
+person.learn();
+*/
