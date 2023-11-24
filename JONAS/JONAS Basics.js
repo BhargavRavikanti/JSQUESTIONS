@@ -182,9 +182,10 @@ Encapsulation in JavaScript: In JavaScript, encapsulation can be achieved using 
 //   this.birthYear = birthYear;
 
 //   // (bad practice)Never create a method inside a contructor function
-//   this.calcAge = function(){
-//    console.log(2037-this.birthYear);
-//   }
+//   // instance method
+//   this.calcAge = function () {
+//     console.log(2037 - this.birthYear);
+//   };
 // };
 
 // const jonas = new Person("Jonas", "1991");
@@ -228,10 +229,12 @@ const jonas = new Person("Jonas", "1991");
 console.log(jonas);
 
 const matilda = new Person("Matilda", 2017);
-const jack = new Person("Matilda", 1975);
+const jack = new Person("Jack", 1975);
 console.log(matilda, jack);
 
 console.log(jonas instanceof Person);
+const jay = "Jay";
+console.log(jay instanceof Person);
 
 // Prototypes
 console.log(Person.prototype);
@@ -246,14 +249,17 @@ jack.calcAge(); // this = jack
 
 // Any object always has access to the methods and properties from its prototype and the prototype of jonas and matilda is Person.prototype
 
+console.log(Person.prototype);
 console.log(jonas.__proto__);
-console.log(jonas.__proto__ === Person.prototype);
 
-// IMP REMEMBER
+console.log(jonas.__proto__ === Person.prototype);
+console.log(matilda.__proto__ === Person.prototype);
+
+// // IMP REMEMBER
 console.log(Person.prototype.isPrototypeOf(jonas));
-console.log(Person.prototype.isPrototypeOf(matilda));
-console.log(Person.prototype.isPrototypeOf(jack));
-console.log(Person.prototype.isPrototypeOf(Person));
+// console.log(Person.prototype.isPrototypeOf(matilda));
+// console.log(Person.prototype.isPrototypeOf(jack));
+// console.log(Person.prototype.isPrototypeOf(Person));
 
 // we can think prototype property as prototypeOfLinkedObjects
 
@@ -261,9 +267,19 @@ Person.prototype.species = "Homo Sapiens"; // this property will show in jonas,m
 console.log(jonas, matilda, jack);
 console.log(jonas.species, matilda.species, jack.species);
 
+Person.prototype.iamHero = function () {
+  console.log(`${this.firstName} is a Hero`);
+};
+jonas.iamHero();
+console.log(jonas, matilda, jack);
+
 // own properties or own methods are only the ones that are declared directly in the object itself
 // species property is not declared in the Person constructor function. so species is not own property of Person.
 // It is created outside of that constructor function.
+// so it will show up in instances prototype [[prototype]] : Object
+console.log(jonas, matilda, jack);
+console.log(Person);
+console.log(Person.prototype);
 
 // WE CAN CHECK THE PROPERTY OR METHOD, IS OWN OF THAT OBJECT(instance) OR NOT
 console.log(jonas.hasOwnProperty("firstName")); // true
@@ -336,7 +352,7 @@ console.log(Person.prototype === jack.__proto__); // same prototype
 // calcAge method is prototype
 // species property is prototype
 
-// ******** WHAT IS PROTOTYPE CHANGE?
+// ******** WHAT IS PROTOTYPE CHAIN?
 // john is connected to prototype
 // The ability of looking up methods and properties in a prototype is what we called prototype chain.
 // so the john object and it,s prototype basically form a prototype chain.
@@ -364,36 +380,39 @@ console.log(jonas.hasOwnProperty("species")); // false
 // ********************
 // Example
 // prototype chain
-// jonas checking where is hasOwnProperty 
+// jonas checking where is hasOwnProperty
 // jonas looking first hasOwnProperty in Person but not found so looking hasOwnProperty in built in object then found hasOwnProperty in built in object.
 // this lookup is called prototype chain.
 // ********************
 
-
-console.log(Person); // click that result then that will take you to where that constructor function code written on jonas Basics or on that page
-console.log(Person.prototype);
+// if you want see the Person constructor function written code location
+// console.log(Person); // click that result then that will take you to where that constructor function code written on jonas Basics or on that page
+// console.log(Person.prototype);
 console.log(Person.prototype.constructor); // click that result then that will take you to where that constructor function code written on jonas Basics or on that page
 
 console.dir(Person.prototype.constructor); // ƒ Person(firstName, birthYear)
 
+console.log(Array.prototype);
 const arr = [3, 6, 6, 5, 6, 9, 9];
+console.log(arr);
 console.log(arr.__proto__); // [constructor: ƒ, at: ƒ, concat: ƒ, copyWithin: ƒ, fill: ƒ, …] //
 console.log(arr.__proto__ === Array.prototype); // new Array === []
 
 console.log(arr.__proto__.__proto__);
+console.log(arr.__proto__.__proto__.__proto__); // level 1 arrays methods level 2 object methods level 3 null
 console.log(arr);
 
 // Never do this it is only for educational knowledge purpose only
 // we added a new method to the prototype property of the array constructor and so therefore, all arrays will inherit this method
 // we can use this created method for any array
-// Array.prototype.unique = function () {
-//   return [...new Set(this)]; // new Set() gives unique elements
-// };
-// console.log(arr.unique());
+Array.prototype.unique = function () {
+  return [...new Set(this)]; // new Set() gives unique elements
+};
+console.log(arr.unique());
 
-// const arr1 = [1, 1, 2, 3, 4, 5, 4, 3, 2, 1];
-// console.log(new Set(arr1));
-// console.log(new Set([1, 1, 2, 3, 4, 5, 4, 3, 2, 1]));
+const arr1 = [1, 1, 2, 3, 4, 5, 4, 3, 2, 1];
+console.log(new Set(arr1));
+console.log(new Set([1, 1, 2, 3, 4, 5, 4, 3, 2, 1]));
 
 const h1 = document.querySelector("h1");
 // console.log(h1);

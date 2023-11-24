@@ -435,6 +435,21 @@
 // let sports = new Array("cricket", "Hockey", "Football");
 // console.log(Object.getPrototypeOf(sports));
 
+/* // MY DEFINITONS
+// prototype property/object is a property that it has all the methods and properties present which are defined on the constructor function.
+// this prototype property will we be shared across all instances of its constructor function
+// methods and properties which are available in the prototype property can be accessed or used for all the instances which are created from its constructor function.
+// This process is called prototypal inheritance.
+*/
+
+//  vvv imp
+// prototype // prototype property // object
+// [[prototype]] : Object
+// prototype is nothing but object
+// console.log(Object.prototype);
+// it has collection of methods and properties which are defined on the constructor function
+// those methods and properties can be accessed for all the instances(objects) is called prototypal inheritance.
+
 // Array
 // Prototypal Inheritence
 // on calling the new() operator, all the properties defined on the prototype will become accessible to the instance objects
@@ -999,25 +1014,25 @@
 // Playing games
 // Taking pictures
 
-// Example
-let mobile = {
-  // Attributes / Properties
-  color: "black",
-  name: "apple",
+// // Example
+// let mobile = {
+//   // Attributes / Properties
+//   color: "black",
+//   name: "apple",
 
-  // Actions / behaviours / methods
-  calling: function () {
-    console.log("Call to chinni");
-  },
+//   // Actions / behaviours / methods
+//   calling: function () {
+//     console.log("Call to chinni");
+//   },
 
-  playPUBG: function () {
-    console.log("Intro music -> Shoot enemy -> close and sleep");
-  },
+//   playPUBG: function () {
+//     console.log("Intro music -> Shoot enemy -> close and sleep");
+//   },
 
-  takePicture: function () {
-    console.log("Smile please -> Nice, kepp smiling like this");
-  },
-};
+//   takePicture: function () {
+//     console.log("Smile please -> Nice, kepp smiling like this");
+//   },
+// };
 
 // ======================================
 // 3) Classes
@@ -1488,3 +1503,77 @@ venkatesh.learn();
 ramani.learn();
 person.learn();
 */
+
+// // my practice
+// // constructor function // parent
+// function CreateCar(color, brand) {
+//   this.color = color;
+//   this.brand = brand;
+// }
+
+// console.log(CreateCar);
+// console.log(CreateCar.name);
+// console.log(CreateCar.length);
+// console.log(typeof CreateCar);
+
+// // creating instances or objects // child or children
+// let car1 = new CreateCar("blue", "Audi");
+// let car2 = new CreateCar("red", "Tata");
+// console.log(car1);
+// console.log(car2);
+
+// // acessing instance properties
+// console.log(car1.color);
+// console.log(car1.brand);
+// console.log(car2.color);
+// console.log(car2.brand);
+
+// console.log(car1.constructor);
+// console.log(car2.constructor);
+
+// console.log(car1 instanceof CreateCar);
+// const bike = "yamaha";
+// console.log(bike instanceof CreateCar);
+
+// console.log(CreateCar.prototype);
+
+// CreateCar.prototype.iamHero = function () {
+//   console.log(`${this.brand} is a hero`);
+// };
+// console.log(car1);
+// console.log(car2);
+
+// console.log(CreateCar);
+// console.log(CreateCar.prototype);
+// console.log(car1.__proto__);
+
+// console.log(CreateCar.prototype === car1.__proto__);
+// // or
+// console.log(CreateCar.prototype.isPrototypeOf(car1));
+
+// CreateCar.prototype.species = "Homo Sapiens";
+// console.log(car1);
+// console.log(car2);
+
+// console.log(car1.hasOwnProperty("color"));
+// console.log(car1.hasOwnProperty("brand"));
+// console.log(car1.hasOwnProperty("species"));
+// console.log(car1.hasOwnProperty("iamHero"));
+// console.log(car1.hasOwnProperty("rock"));
+
+///////////////////////////////////////////////
+/* // MY DEFINITONS
+// prototype property/object is a property that it has all the methods and properties present which are defined on the constructor function.
+// this prototype property will we be shared across all instances of its constructor function
+// methods and properties which are available in the prototype property can be accessed or used for all the instances which are created from its constructor function.
+// This process is called prototypal inheritance.
+*/
+
+//  vvv imp
+// prototype // prototype property // object
+// [[prototype]] : Object
+// prototype is nothing but object
+// console.log(Object.prototype);
+// it has collection of methods and properties which are defined on the constructor function
+// those methods and properties can be accessed for all the instances(objects) is called prototypal inheritance.
+///////////////////////////////////////////////
