@@ -882,6 +882,7 @@ console.log(Emp2);
 // before learning inheritance learn built in function methods call,apply,bind.
 //////////////
 
+/*
 // Person = parent constructor function
 const Person = function (firstName, birthYear) {
   this.firstName = firstName;
@@ -927,6 +928,7 @@ mike.calcAge();
 
 // Student.prototype.constructor = Student;
 // console.dir(Student.prototype.constructor);
+*/
 
 // ======================================
 // 016 - Coding Challenge 3
@@ -1043,22 +1045,22 @@ class PersonCl {
     return 2037 - this.birthYear;
   }
 
-  // Set a property that already exists
-  set fullName(name) {
-    // console.log(name);
-    if (name.includes(" ")) this._fullName = name;
-    else alert(`${name} is not a full name!`);
-  }
+  // // Set a property that already exists
+  // set fullName(name) {
+  //   // console.log(name);
+  //   if (name.includes(" ")) this._fullName = name;
+  //   else alert(`${name} is not a full name!`);
+  // }
 
-  get fullName() {
-    return this._fullName;
-  }
+  // get fullName() {
+  //   return this._fullName;
+  // }
 
-  // static method
-  static hey() {
-    console.log("Hey there");
-    console.log(this);
-  }
+  // // static method
+  // static hey() {
+  //   console.log("Hey there");
+  //   console.log(this);
+  // }
 }
 
 // to implement inheritance between ES6 classes we only need two ingredients extends keyword and super function.
@@ -1109,6 +1111,7 @@ console.log(martha.__proto__);
 
 /*
 // general object making syntax
+// PersonProto = Parent
 const PersonProto = {
   calcAge() {
     console.log(2037 - this.birthYear);
@@ -1120,10 +1123,12 @@ const PersonProto = {
   },
 };
 
+// steven = child
 const steven = Object.create(PersonProto);
 console.log(steven);
 
-const StudentProto = Object.create(PersonProto);
+// StudentProto = child
+const StudentProto = Object.create(PersonProto); // empty object // now we can use this StudentProto to create new students
 console.log(StudentProto);
 
 StudentProto.init = function (firstName, birthYear, course) {
@@ -1135,11 +1140,19 @@ StudentProto.introduce = function () {
   console.log(`My name is ${this.firstName} and I study ${this.course}`);
 };
 
+// jay = child = student1(can inherit(can use) methods from PersonProto and StudentProto)
 const jay = Object.create(StudentProto);
 jay.init("Jay", 2010, "Computer Science");
-// console.log(jay);
+console.log(jay);
 
 jay.introduce();
+
+// anos = child = student2(can inherit(can use) methods from PersonProto and StudentProto)
+const anos = Object.create(StudentProto);
+anos.init("Anos", 2008, "Computer Science");
+console.log(anos);
+
+anos.introduce();
 */
 
 // ======================================

@@ -843,6 +843,7 @@
 // console.log(typeof Person); // created class is function
 // console.log(typeof person1); // created instance from is class object remember
 
+/*
 // // INHERITENCE IN JS CLASSES // //
 
 // EXAMPLE
@@ -907,7 +908,9 @@ console.log(cat);
 console.log(cat.knead());
 console.log(cat.eat());
 console.log(cat.makeSound());
+*/
 
+///////////////////////////////////////////////
 // class Animal1 {
 //   constructor(name) {
 //     this.name = name;
@@ -925,9 +928,112 @@ console.log(cat.makeSound());
 // console.log(animal2.eat());
 // // In Class , this refers to the instance object means animal2
 // // this = animal2
+// console.log(animal2.makeSound());
 
 // let animal3 = new Animal1("dog");
 // console.log(animal3);
 // console.log(animal3.eat());
 // // In Class , this refers to the instance object means animal3
 // // this = animal3
+// console.log(animal3.makeSound());
+
+///////////////////////////////////////////
+// Another example of inheritance
+
+/*
+// imp keywords // JS Classes - class,constructor()
+// inheritence - super(),extends
+
+Inheritance in javascript aids a new class to have all the functionality of another class while having its own functionality as well. *The inheritance in javascript primarily involves two segments:
+
+Child class: The class which inherits the properties of another class is known as the child class.
+
+Parent class: The class whose property is being inherited is known as the parent class.
+
+Class Inheritance
+To create a class inheritance, use the extends keyword.
+
+A class created with a class inheritance inherits all the methods from another class:
+
+The super() method refers to the parent class.
+
+By calling the super() method in the constructor method, we call the parent's constructor method and gets access to the parent's properties and methods.
+
+Inheritance is useful for code reusability: reuse properties and methods of an existing class when you create a new class.
+*/
+
+/*
+// class Declaration
+// (parent class PersonCl)
+class PersonCl {
+  constructor(fullName, birthYear) {
+    this.fullName = fullName;
+    this.birthYear = birthYear;
+  }
+
+  calcAge() {
+    console.log(2037 - this.birthYear);
+  }
+
+  greet() {
+    console.log(`Hey ${this.fullName}`);
+  }
+
+  whoAreyou() {
+    return this;
+  }
+}
+
+// to implement inheritance between ES6 classes we only need two ingredients extends keyword and super function.
+
+// (child class StudentCl)
+// (class StudentCl extends PersonCl {} means child can inherit parent methods and properties means child can use parent methods and properties)
+
+// simply put child(StudentCl) extends parent means child can use all methods and properties of parent(PersonCl)
+
+class StudentCl extends PersonCl {
+  constructor(fullName, birthYear, course) {
+    // Always needs to happen first!
+    super(fullName, birthYear);
+    this.course = course;
+  }
+
+  introduce() {
+    console.log(`My name is ${this.fullName} and I study ${this.course}`);
+  }
+
+  // overwriting or modifying calcAge() method
+  // indeed this calaAge method over wrote the previous one from the parent class
+  calcAge() {
+    console.log(
+      `I,m ${
+        2037 - this.birthYear
+      } years old, but as a student I feel more like ${
+        2037 - this.birthYear + 10
+      }`
+    );
+  }
+}
+
+const martha = new StudentCl("Martha Jones", 2012, "Computer Science");
+martha.introduce(); // accessing method from child class
+martha.calcAge(); // accessing method from parent class
+martha.greet(); // accessing method from parent class
+console.log(martha);
+console.log(martha.whoAreyou());
+// In Class , this refers to the instance object means martha
+// this = martha object
+
+console.log(martha.__proto__);
+
+const ragav = new StudentCl("Ragav Williams", 2008, "Computer Science");
+ragav.introduce(); // accessing method from child class
+ragav.calcAge(); // accessing method from parent class
+ragav.greet(); // accessing method from parent class
+console.log(ragav);
+console.log(ragav.whoAreyou());
+// In Class , this refers to the instance object means ragav
+// this = ragav object
+
+console.log(ragav.__proto__);
+*/
