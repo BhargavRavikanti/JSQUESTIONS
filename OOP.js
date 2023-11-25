@@ -1085,7 +1085,7 @@ apple.takePicture();
 // ======================================
 // #1) Object Literal
 // #2) Object.create()
-// #3) Functions are objects in javascript
+// #3) Functions are objects in javascript(constructor functions(IMP) or factory functions)
 // #4) Using Classes (*IMP)
 
 // #1) Object Literal
@@ -1196,43 +1196,64 @@ mobile4.calling = function () {
 console.log(typeof mobile4);
 */
 
-/*
 // Example
 // Blue Print
 // #1 Creating class
-class Mobile {
-  constructor(name, color) {
-    this.name = name;
-    this.color = color;
-  }
+// class Mobile {
+//   constructor(name, color) {
+//     this.name = name;
+//     this.color = color;
+//   }
 
-  // get methods
-  calling() {
-    console.log("Call to chinni");
-  }
+//   // get methods
+//   calling() {
+//     console.log("Call to chinni");
+//   }
 
-  playGame() {
-    console.log("Playing games");
-  }
+//   playGame() {
+//     console.log("Playing games");
+//   }
 
-  // set methods
-  setName(newName) {
-    this.name = newName;
-  }
-}
+//   // set methods
+//   setName(newName) {
+//     this.name = newName;
+//   }
 
-// #2 Creating/Instantiating objects by using class
-let redmi = new Mobile("Redmi Note 7", "Black");
-let apple = new Mobile("Apple", "silver");
+//   setAge(age) {
+//     // property      = parameter // property name your wish but when calling exact use that name ,parameter name should be same
+//     this.instanceAge = age;
+//   }
+// }
 
-// #3 Getting/Setting the properties and actions with created object(instance).
-console.log(redmi.color);
-console.log(redmi.name);
-redmi.calling();
+// // // #2 Creating/Instantiating objects by using class
+// let redmi = new Mobile("Redmi Note 7", "Black");
+// let apple = new Mobile("Apple", "silver");
+// console.log(redmi);
+// console.log(apple);
 
-redmi.setName("Redmi Note 9 Pro");
-console.log(redmi.name);
-*/
+// // // #3 Getting/Setting the properties and actions/methods with created object(instance).
+// console.log(redmi.color);
+// console.log(redmi.name);
+// redmi.calling();
+
+// redmi.setName("Redmi Note 9 Pro");
+// console.log(redmi.name);
+
+// redmi.setAge(50);
+// console.log(redmi.instanceAge);
+// apple.setAge(40);
+// console.log(apple.instanceAge);
+
+// // #4 creating prototype
+// Mobile.prototype.iamMostSelling = function () {
+//   console.log(`${this.name} is most selling`);
+// };
+// console.log(redmi);
+// redmi.iamMostSelling();
+
+// Mobile.prototype.iamCool = `Iam  cool`;
+// console.log(redmi);
+// console.log(redmi.iamCool);
 
 // ======================================
 // 4) Encapsulation/Data Hiding

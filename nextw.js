@@ -843,60 +843,70 @@
 // console.log(typeof Person); // created class is function
 // console.log(typeof person1); // created instance from is class object remember
 
-// // INHERITENCE IN JS CLASSES
+// // INHERITENCE IN JS CLASSES // //
 
-// // EXAMPLE
-// // ANIMAL CLASS
-// class Animal {
-//   constructor(name) {
-//     this.name = name;
-//   }
-//   eat() {
-//     return `${this.name} is eating!`;
-//   }
-//   makeSound() {
-//     return `${this.name} is shouting`;
-//   }
-// }
+// EXAMPLE
+// ANIMAL CLASS = Parent
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+  eat() {
+    return `${this.name} is eating!`;
+  }
+  makeSound() {
+    return `${this.name} is shouting`;
+  }
+}
 
-// let animal1 = new Animal("gorilla");
-// console.log(animal1);
-// console.log(animal1.eat());
+let animal1 = new Animal("gorilla");
+console.log(animal1);
+console.log(animal1.eat());
+console.log(animal1.makeSound());
 
 // // class
 // // INHERITENCE
 // // Inheritence is a mechanism by which a class inherits methods and properties from another class
 // // Super Class -> Sub Class
 
-// class Dog extends Animal {
-//   constructor(name, breed) {
-//     super(name);
-//     this.breed = breed;
-//   }
-//   sniff() {
-//     return `${this.name} is sniffling`;
-//   }
-// }
-// let dog = new Dog("dog", "German Shepard");
-// console.log(dog);
-// console.log(dog.sniff());
-// console.log(dog.eat());
-// console.log(dog.makeSound());
+// using extends keyword means we can use all methods and properties of parent class(Animal)
+// Dog extends Animal means Dog(child) can use all methods and properties of Animal(parent)
 
-// class Cat extends Animal {
-//   constructor(name, breed) {
-//     super(name);
-//     this.breed = breed;
-//   }
-//   knead() {
-//     return `${this.name} is kneading`;
-//   }
-// }
-// let cat = new Cat("cat", "Persian Cat");
-// console.log(cat);
-// console.log(cat.knead());
-// console.log(cat.eat());
-// console.log(cat.makeSound());
+// simply put child(Dog) extends parent means child can use all methods and properties of parent(Animal)
+
+// DOG CLASS = child
+class Dog extends Animal {
+  constructor(name, breed) {
+    super(name);
+    this.breed = breed;
+  }
+  sniff() {
+    return `${this.name} is sniffling`;
+  }
+}
+
+let dog = new Dog("dog", "German Shepard");
+console.log(dog);
+console.log(dog.sniff());
+console.log(dog.eat());
+console.log(dog.makeSound());
+
+// CAT CLASS = child
+class Cat extends Animal {
+  constructor(name, breed) {
+    super(name);
+    this.breed = breed;
+  }
+  knead() {
+    return `${this.name} is kneading`;
+  }
+}
+
+let cat = new Cat("cat", "Persian Cat");
+console.log(cat);
+console.log(cat.knead());
+console.log(cat.eat());
+console.log(cat.makeSound());
 
 // class Animal1 {
 //   constructor(name) {

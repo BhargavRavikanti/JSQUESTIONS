@@ -503,41 +503,42 @@ class PersonCl {
   }
 
   greet() {
-    console.log(`Hey ${this.firstName}`);
+    console.log(`sir/ madam ${this.fullName}`);
   }
 
-  get age() {
-    return 2037 - this.birthYear;
-  }
+  // get age() {
+  //   return 2037 - this.birthYear;
+  // }
 
   // Set a property that already exists
-  set fullName(name) {
-    console.log(name);
-    if (name.includes(" ")) this._fullName = name;
-    else alert(`${name} is not a full name!`);
-  }
+  // set fullName(name) {
+  //   console.log(name);
+  //   if (name.includes(" ")) this._fullName = name;
+  //   else alert(`${name} is not a full name!`);
+  // }
 
-  get fullName() {
-    return this._fullName;
-  }
+  // get fullName() {
+  //   return this._fullName;
+  // }
 
   // static method
-  static hey() {
-    console.log("Hey there");
-    console.log(this);
-  }
+  // static hey() {
+  //   console.log("Hey there");
+  //   console.log(this);
+  // }
 }
 
 const jessica = new PersonCl("Jessica Davis", 1996); // instance
 console.log(jessica);
 jessica.calcAge();
 console.log(jessica.age);
+jessica.greet();
 
 // get prototype of PersonCl
 console.log(PersonCl.prototype);
 console.log(jessica.__proto__);
-// // or using below method we can get prototype of jessica
-// console.log(Object.getPrototypeOf(jessica));
+// or using below method we can get prototype of jessica
+console.log(Object.getPrototypeOf(jessica));
 
 // checking prototype of PersonCl and jessica are same or not
 // why we to need to check
@@ -548,10 +549,18 @@ console.log(PersonCl.prototype === Object.getPrototypeOf(jessica));
 
 // BEST PRACTICE creating prototypes after constructor method
 // But creating prototype ouside of the class also works same but use this whenever it is necessary only
-// PersonCl.prototype.greet = function () {
-//   console.log(`Hey ${this.firstName}`);
-// };
+PersonCl.prototype.greet = function () {
+  console.log(`Hey ${this.fullName}`);
+};
 jessica.greet();
+PersonCl.prototype.iamHero = function () {
+  console.log(`${this.fullName} is a hero`);
+};
+console.log(jessica);
+jessica.iamHero();
+PersonCl.prototype.species = "Homo sapiens";
+console.log(jessica);
+console.log(jessica.species);
 
 // imp points
 // 1. Classes are NOT hoisted, function declarations are hoisted which means we can use them before they are declared in the code but with Classes that doesn't work.
@@ -583,11 +592,11 @@ jessica.greet();
 
 // * setters and getters will be very useful ib data validation
 
-/*
-const walter = new PersonCl("Walter White", 1965);
-console.log(walter);
-console.log(walter.fullName);
+// const walter = new PersonCl("Walter White", 1965);
+// console.log(walter);
+// console.log(walter.fullName);
 
+/*
 const account = {
   owner: "jonas",
   movements: [200, 530, 120, 300],
@@ -606,10 +615,93 @@ const account = {
 console.log(account.latest);
 
 console.log(account.movements);
+
 account.latest = 50;
 console.log(account.movements);
 account.latest = 100;
 console.log(account.movements);
+*/
+
+// MY PRACTICE
+// GETTERS / SETTERS
+
+/*
+class Mobile {
+  constructor(name, color) {
+    this.name = name;
+    this.color = color;
+  }
+
+  // normal get methods
+  calling() {
+    console.log("call to chinni");
+  }
+
+  playGame() {
+    console.log("playing games");
+  }
+
+  // normal set methods
+  setName(newName) {
+    this.name = newName;
+  }
+
+  setAge(age) {
+    this.instaceAge = age;
+  }
+
+  // special get method
+  get getCalling() {
+    console.log("CALL TO CHINNI");
+  }
+
+  get getPlayingGame() {
+    console.log("PLAYING GAMES");
+  }
+
+  // special set method
+  set setNewName(anyName) {
+    this.name = anyName;
+  }
+
+  set setNewAge(anyAge) {
+    this.Age = anyAge;
+  }
+}
+
+// creating objects/instances from Mobile class
+let redmi = new Mobile("redmi", "Black");
+let apple = new Mobile("apple", "Silver");
+console.log(redmi.name);
+console.log(apple.name);
+// calling get methods
+redmi.calling();
+apple.calling();
+// calling set methods
+redmi.setName("Redmi Note 9 Pro");
+console.log(redmi.name);
+apple.setName("Apple 10 Pro");
+console.log(apple.name);
+
+// calling SPECIAL get methods
+// redmi.getCalling(); // error // this style is for normal get method
+redmi.getCalling; // calling like normal property like redmi.name
+redmi.getPlayingGame;
+apple.getCalling;
+apple.getPlayingGame;
+
+// calling SPECIAL set methods
+// redmi.setNewName("REDMI ROCKZZ"); // error // this is wrong // this style is for normal set method
+redmi.setNewName = "REDMI ROCKZZ"; // special set method style
+console.log(redmi.name);
+apple.setNewName = "APPLE KING";
+console.log(apple.name);
+
+// redmi.setNewAge(100); // error // this is wrong // this style is for normal set method
+redmi.setNewAge = 150; // special set method style
+console.log(redmi.Age);
+apple.setNewAge = 200;
+console.log(apple.Age);
 */
 
 // ======================================
@@ -624,6 +716,42 @@ console.log(account.movements);
 
 PersonCl.hey(); // class can have access to hey()
 // walter.hey(); // instances cannot inherit or access hey() when we used static keyword
+*/
+
+// MY PRACTICE
+// STATIC METHOD
+
+/*
+class PersonCl {
+  constructor(fullName, birthYear) {
+    this.fullName = fullName;
+    this.birthYear = birthYear;
+  }
+
+  calcAge() {
+    console.log(2037 - this.birthYear);
+  }
+
+  greet() {
+    console.log(`sir/ madam ${this.fullName}`);
+  }
+
+  // static method;
+  static hey() {
+    console.log("Hey there");
+    // console.log(this);
+  }
+}
+
+const jessica = new PersonCl("Jessica Davis", 1996); // instance
+const walter = new PersonCl("Walter White", 1965);
+console.log(PersonCl); // returns that class or constructor function
+console.log(PersonCl.prototype);
+PersonCl.hey(); // class can have access to hey()
+// walter.hey(); // instances cannot inherit or access hey() when we used static keyword
+// jessica.hey();
+jessica.calcAge();
+jessica.greet();
 */
 
 // ======================================
@@ -652,9 +780,14 @@ const PersonProto = {
     this.birthYear = birthYear;
   },
 };
+console.log(PersonProto);
+// we can call above object as prototype
+// using that prototype we will create new objects
 
+// creating new objects
 const steven = Object.create(PersonProto);
 // steven linked to PersonProto object
+console.log(PersonProto);
 console.log(steven);
 steven.name = "Steven";
 steven.birthYear = 2002;
@@ -662,29 +795,80 @@ steven.calcAge();
 
 console.log(steven.__proto__);
 console.log(steven.__proto__ === PersonProto);
-// or either way works
+// // or either way works
 console.log(Object.getPrototypeOf(steven) === PersonProto);
 
 const sarah = Object.create(PersonProto); // Object.create(PersonProto); so that sarah can use PersonProto  stored methods and properties
+console.log(sarah);
 sarah.init("Sarah", 1979); // creating sarah object or instance
+console.log(sarah);
 sarah.calcAge();
+
+// creating a method for sarah only
+sarah.calculateAge = function () {
+  console.log(2000 - this.birthYear);
+};
+sarah.calculateAge();
+// steven.calculateAge(); // error // this method is only for sarah // steven will not inherit
+console.log(PersonProto);
+console.log(steven);
+console.log(sarah);
 */
 
 /*
-The Object.create() method creates a new object, using an existing object as the prototype of the newly created object.
-To understand the Object.create method, just remember that it takes two parameters. The first parameter is a mandatory object that serves as the prototype of the new object to be created. The second parameter is an optional object which contains the properties to be added to the new object.
+// The Object.create() method creates a new object, using an existing object as the prototype of the newly created object.
+// To understand the Object.create method, just remember that it takes two parameters. The first parameter is a mandatory object that serves as the prototype of the new object to be created. The second parameter is an optional object which contains the properties to be added to the new object.
 
-We will not deep dive into prototypes and inheritance chains now to keep our focus on the topic. But as a quick point, you can think of prototypes as objects from which other objects can borrow properties/methods they need.
+// We will not deep dive into prototypes and inheritance chains now to keep our focus on the topic. But as a quick point, you can think of prototypes as objects from which other objects can borrow properties/methods they need.
 
-Imagine you have an organization represented by orgObject
+// Imagine you have an organization represented by orgObject
 
-const orgObject = { company: 'ABC Corp' };
-And you want to create employees for this organization. Clearly, you want all the employee objects.
+const orgObject = { company: "ABC Corp" };
+console.log(orgObject);
+// And you want to create employees for this organization. Clearly, you want all the employee objects.
 
-const employee = Object.create(orgObject, { name: { value: 'EmployeeOne' } });
+const employee1 = Object.create(orgObject, {
+  name: { value: "Bharath Vallapa" },
+});
+const employee2 = Object.create(orgObject, {
+  name: { value: "Ravi Teja" },
+  age: { value: 20 },
+  school: { value: "ssvm" },
+});
 
-console.log(employee); // { company: "ABC Corp" }
-console.log(employee.name); // "EmployeeOne"
+console.log(employee1); // { company: "ABC Corp" } in prototype
+console.log(employee1.name);
+console.log(employee2);
+console.log(employee2.name);
+
+// above object another method i believe this is easy and clean
+const orgObject2 = { company: "RRB Tunder" };
+console.log(orgObject2);
+
+const EmployeeOne = Object.create(orgObject2);
+EmployeeOne.name = "Raizel Noblesse";
+const EmployeeTwo = Object.create(orgObject2);
+EmployeeTwo.name = "Anos Voldigod";
+console.log(EmployeeOne);
+console.log(EmployeeTwo);
+console.log(EmployeeOne.name);
+console.log(EmployeeTwo.name);
+
+// method 3 // but in this method we can see function is used for creating employees name // not good method if we need privacy
+const orgObject3 = {
+  company: "DEMON KING CORP",
+  name(name) {
+    this.name = name;
+  },
+};
+console.log(orgObject3);
+
+const Emp1 = Object.create(orgObject3);
+Emp1.name("Ravi Teja");
+console.log(Emp1);
+const Emp2 = Object.create(orgObject3);
+Emp2.name("Anos Voldigod");
+console.log(Emp2);
 */
 
 // ======================================
@@ -694,7 +878,11 @@ console.log(employee.name); // "EmployeeOne"
 // 015 - Inheritance between Classes: Constructor Functions
 // ======================================
 
-/*
+///////////////
+// before learning inheritance learn built in function methods call,apply,bind.
+//////////////
+
+// Person = parent constructor function
 const Person = function (firstName, birthYear) {
   this.firstName = firstName;
   this.birthYear = birthYear;
@@ -704,16 +892,17 @@ Person.prototype.calcAge = function () {
   console.log(2037 - this.birthYear);
 };
 
+// Student = child constructor function
 const Student = function (firstName, birthYear, course) {
-  Person.call(this, firstName, birthYear);
-  this.course = course;
+  Person.call(this, firstName, birthYear); // this refers to Person
+  this.course = course; // this refers to Student
 };
 
 // linking protypes
 Student.prototype = Object.create(Person.prototype);
 
 // linked prototypes together so mike is instanceof Student and also Person and also Object
-// we manually manipulated prototype chain because we linked Person and Student 
+// we manually manipulated prototype chain because we linked Person and Student
 
 Student.prototype.introduce = function () {
   console.log(`My name is ${this.firstName} and I study ${this.course}`);
@@ -724,21 +913,20 @@ const mike = new Student("Mike", 2020, "Computer Science");
 mike.introduce();
 mike.calcAge();
 
-console.log(mike.__proto__);
-console.log(mike.__proto__.__proto__);
-console.log(mike.__proto__.__proto__.__proto__);
-console.log(mike.__proto__.__proto__.__proto__.__proto__);
+// console.log(mike.__proto__);
+// console.log(mike.__proto__.__proto__);
+// console.log(mike.__proto__.__proto__.__proto__);
+// console.log(mike.__proto__.__proto__.__proto__.__proto__);
 
-console.log(mike instanceof Student);
-console.log(mike instanceof Person);
-console.log(mike instanceof Object);
+// console.log(mike instanceof Student);
+// console.log(mike instanceof Person);
+// console.log(mike instanceof Object);
 
 // linked prototypes together so mike is instanceof Student and also Person and also Object
-// we manually manipulated prototype chain because we linked Person and Student 
+// we manually manipulated prototype chain because we linked Person and Student
 
-Student.prototype.constructor = Student;
-console.dir(Student.prototype.constructor);
-*/
+// Student.prototype.constructor = Student;
+// console.dir(Student.prototype.constructor);
 
 // ======================================
 // 016 - Coding Challenge 3
