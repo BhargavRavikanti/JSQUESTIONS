@@ -843,6 +843,7 @@
 // console.log(typeof Person); // created class is function
 // console.log(typeof person1); // created instance from is class object remember
 
+// Notes
 /*
 // // INHERITENCE IN JS CLASSES // //
 

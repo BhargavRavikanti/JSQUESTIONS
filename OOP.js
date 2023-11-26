@@ -1196,6 +1196,7 @@ mobile4.calling = function () {
 console.log(typeof mobile4);
 */
 
+// normal get and set methods
 // Example
 // Blue Print
 // #1 Creating class

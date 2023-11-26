@@ -92,7 +92,7 @@
 // ======================================
 // 1) what is object oriented programming (oop) ?
 
-// THE FOUR FUNDAMENTAL OOP PRINCIPLES
+// THE 4 FUNDAMENTAL PRINCIPLES OF OOP
 // (1) Abstraction
 // (2) Encapsulation
 // (3) Inheritance
@@ -166,7 +166,66 @@ Encapsulation in JavaScript: In JavaScript, encapsulation can be achieved using 
 */
 
 // (3) Inheritance
-//
+// Javascript accepts single inheritance only
+// Inheritance is a mechanism that allows children to inherit features from parents.
+
+// defintion : Inheritance is a mechanism that allows objects to inherit peoperties and methods from parent objects.
+
+// Inheritance Understanding Purpose
+// Human name,Learn(),Eat(),Sleep
+// Dancer inherits these features name,Learn(),Eat(),Sleep from parents and his own Dancing()
+// Developer inherits these features name,Learn(),Eat(),Sleep from parents and his own Coding
+
+// Polymorphism : A child class can overwrite a method it inherited from a parent class [it's more complex than that,but enough for our purposes].
+
+// (4) polymorphism
+// Polymorphism Understanding Purpose
+
+/*
+// Parent class
+User{
+ user
+ password
+ email
+
+ login(password){
+  // Login logic
+ }
+ sendMessage(str){
+  // Sending logic
+ }
+}
+
+// child class inherits from Parent(User)
+Admin{
+ user
+ password
+ email
+
+ login(password,key){
+  // DIFFERENT LOGIN
+ }
+ deleteUser(user){
+  // Deleting logic
+ }
+}
+// Own login method,Overwriting login method inherited from User
+
+// child class inherits from Parent(User)
+Author{
+ user
+ password
+ email
+ 
+ login(password){
+  // MORE DIFFERENT
+ }
+ writePost(str){
+  // Writing logic
+ }
+}
+// Own login method,Overwriting login method inherited from User
+*/
 
 // ======================================
 // 004 - OOP in JavaScript
@@ -355,7 +414,7 @@ console.log(Person.prototype === jack.__proto__); // same prototype
 // ******** WHAT IS PROTOTYPE CHAIN?
 // john is connected to prototype
 // The ability of looking up methods and properties in a prototype is what we called prototype chain.
-// so the john object and it,s prototype basically form a prototype chain.
+// so the jonas object and it,s prototype basically form a prototype chain.
 
 // PROTOTYPE CHAIN : Series of links between objects,linked through prototypes (similar to the scope chain)
 // object.prototype is usually the top of the chain which means that it,s prototype is null
@@ -1017,7 +1076,6 @@ The super() method refers to the parent class.
 By calling the super() method in the constructor method, we call the parent's constructor method and gets access to the parent's properties and methods.
 
 Inheritance is useful for code reusability: reuse properties and methods of an existing class when you create a new class.
-
 */
 
 /*
@@ -1100,11 +1158,10 @@ console.log(martha.__proto__);
 */
 
 // ======================================
-// 018 - Inheritance between Classes: Object.create
+// 018 - Inheritance between Classes: Object.create()
 // ======================================
 /*
-// Using “Object.create” is the most basic way to create an inheritance model in JavaScript. Object.create can be used to create a new object using the existing object as a prototype. The existing object is made available as a prototype making all the properties of the existing object available to the new object.
-
+// Using “Object.create()” is the most basic way to create an inheritance model in JavaScript. Object.create() can be used to create a new object using the existing object as a prototype. The existing object is made available as a prototype making all the properties of the existing object available to the new object.
 
 // The Object.create() method creates a new object, using an existing object as the prototype of the newly created object.
 */
