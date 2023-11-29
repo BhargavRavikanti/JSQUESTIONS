@@ -847,6 +847,290 @@ console.log(person);
 ////////////////////////////////
 // 011 - ES6
 ////////////////////////////////
+// ======================================
+// 001 - ES6 Modile Intro
+// ======================================
+
+// ======================================
+// 002 - VAR,LET,CONST
+// ======================================
+// var, let , const
+// define, update, redifine
+// const cannot mutate primitive type
+
+/*
+// var can define,update,redefine
+var number = 100; // definie
+console.log(number);
+// update
+number = 200; // update
+console.log(number);
+var number = "orange"; // redefine
+console.log(number);
+
+// let define,update,cannot redefine
+// let amount = 100; // define
+// // console.log(amount);
+// amount = 200; // update
+// // console.log(amount);
+// // let amount = 'orange'; // cannot redefine
+
+// const define,cannot redefine
+// const total = 100; // define
+// // console.log(total);
+// // total = 200; // cannot update
+const person = { name: "bob" };
+console.log(person.name);
+person.name = "john";
+console.log(person.name);
+*/
+
+// ======================================
+// 003 - Function Scop and Block Scope
+// ======================================
+// var, let , const
+// let, const - blocked scoped {} - anything within {}
+// var - function scoped
+
+/*
+// global scope
+
+console.log(amount);
+let amount = 100;
+
+function greet() {
+  // local scope
+  var random = 'some random value';
+  console.log(`hello there ${amount} ${random}`);
+}
+// console.log(random);
+
+// // greet();
+
+// let total = 1000;
+// let test = true;
+
+// if (test) {
+//   // local scope
+//   let total = 'oranges and onions';
+//   let value = 'some random value';
+//   console.log('hello there');
+// }
+
+// // console.log(value);
+// {
+//   let total = 100;
+//   console.log(total);
+// }
+// {
+//   let total = 100;
+//   console.log(total);
+// }
+
+// console.log(total);
+*/
+
+// ======================================
+// 004 - Template Strings
+// ======================================
+// Template Strings/Literals - backticks ` `
+
+/*
+const name = "bob";
+const lastName = "sanders";
+const age = 25;
+
+// concat +
+const phrase =
+  "My full name is " +
+  name +
+  " " +
+  lastName.toUpperCase() +
+  " and I'm " +
+  age * 2 +
+  " years old.";
+console.log(phrase);
+
+// Template Strings/Literals
+const phrase2 = `My full name is ${name} ${lastName.toUpperCase()} and I'm ${
+  age * 2
+} years old`;
+console.log(phrase2);
+*/
+
+// ======================================
+// 005 - Template Strings-HTML
+// ======================================
+// Template Strings/Literals
+// `` backticks above tab key left of 1 key
+
+/*
+const person = {
+  name: "kyle",
+  job: "developer",
+  hobbies: ["surfing", "baking", "bowling"],
+};
+
+const result = document.getElementById("result");
+
+// using concat +
+// result.innerHTML = "<h2>" + person.name + "</h2>" + "<p>" + person.job + "</p>";
+
+// using Template Strings/Literals
+result.innerHTML = `
+<h2>${person.name}</h2>
+<p>${person.job}</p>
+<ul>
+${person.hobbies
+  .map((item) => {
+    return `<li>${item}</li>`;
+  })
+  .join("")}
+</ul>
+`;
+*/
+
+// ======================================
+// 006 - Tagged Template Literals
+// ======================================
+
+// ======================================
+// 007 - Arrow Functions-Basics
+// ======================================
+// ======================================
+// 008 -
+// ======================================
+// ======================================
+// 009 -
+// ======================================
+// ======================================
+// 010 -
+// ======================================
+// ======================================
+// 011 -
+// ======================================
+// ======================================
+// 012 - Swap Variables
+// ======================================
+// Destructuring
+// faster/easier way to access/unpack values from arrays
+// objects into variables
+// Arrays
+
+/*
+// we can only swap variables using let
+// swap variables general method
+let first = "bob";
+let second = "john";
+console.log(first, second);
+
+// let temp = second;
+// second = first;
+// first = temp;
+// console.log(first, second);
+
+// after knowing destructuring we can swap variables easily
+[second, first] = [first, second];
+console.log(first, second);
+console.log(typeof first, typeof second);
+*/
+
+// ======================================
+// 013 -
+// ======================================
+// ======================================
+// 014 -
+// ======================================
+// ======================================
+// 015 - New String Methods
+// ======================================
+// new string methods
+// startsWith(), endsWith(), includes(),repeat()
+
+/*
+const person = "Peter Smith";
+const employee = "23456-EMP-PETER-SMITH";
+const manager = "23456-MAN-JOHN-DOE";
+// starts with
+console.log(person.startsWith("Pet"));
+console.log(person.startsWith("Pe"));
+console.log(person.startsWith("P"));
+console.log(person.startsWith("e"));
+console.log(person.startsWith("peter")); // case sensitive
+
+console.log(employee.startsWith("EMP", 6));
+
+// // ends with
+// console.log(manager.endsWith("DOE"));
+// console.log(manager.endsWith("MAN", 9));
+// // includes
+// console.log(manager.includes("MAN"));
+// console.log(manager.includes("mAN"));
+
+// const multiplyPeople = (person, amount) => person.repeat(amount);
+
+// // repeat
+// const people = multiplyPeople(person, 10);
+// console.log(people);
+*/
+
+// ======================================
+// 016 -
+// ======================================
+// ======================================
+// 017 -
+// ======================================
+// ======================================
+// 018 -
+// ======================================
+// ======================================
+// 019 -
+// ======================================
+// ======================================
+// 020 -
+// ======================================
+// ======================================
+// 021 -
+// ======================================
+// ======================================
+// 022 -
+// ======================================
+// ======================================
+// 023 -
+// ======================================
+// ======================================
+// 024 -
+// ======================================
+// ======================================
+// 025 -
+// ======================================
+// ======================================
+// 026 -
+// ======================================
+// ======================================
+// 027 -
+// ======================================
+// ======================================
+// 028 -
+// ======================================
+// ======================================
+// 029 -
+// ======================================
+// ======================================
+// 030 -
+// ======================================
+// ======================================
+// 031 -
+// ======================================
+// ======================================
+// 032 -
+// ======================================
+// ======================================
+// 033 -
+// ======================================
+// ======================================
+// 034 -
+// ======================================
 
 ////////////////////////////////
 // 012 - Projects

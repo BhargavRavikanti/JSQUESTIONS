@@ -786,6 +786,16 @@ console.dir((x) => x + 1); // see prototype
 // we can say class is parent, created objects/instances from the class are children
 // class = Parent , instance = child, instances = children
 
+//classes : classes serve as blueprints for creating objects and their structure and behaviour.
+
+// Advantages of classes
+// (1) Object Creation
+// (2) Encapsulation
+// (3) Inheritance
+// (4) Code Reusability
+// (5) Polymorphism
+// (6) Abstraction
+
 // CLASS SYNTAX
 // class MyClass {
 //   constructor(property1, property2,..) {
