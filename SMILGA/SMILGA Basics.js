@@ -1266,6 +1266,9 @@ console.log(employee.startsWith("EMP", 6));
 // ======================================
 // 005 - Callback Hell
 // ======================================
+// what are callback functions?
+// functions that are passed as arguments to other functions.
+
 // Callback Hell: Callback Hell is essentially nested callbacks stacked below one another forming a pyramid structure. Every callback depends/waits for the previous callback, thereby making a pyramid structure that affects the readability and maintainability of the code.
 
 // boilWater();
@@ -1291,11 +1294,10 @@ console.log(employee.startsWith("EMP", 6));
 // ======================================
 // callbacks, promises, async/await
 
+// const heading1 = document.querySelector(".one");
+// const heading2 = document.querySelector(".two");
+// const heading3 = document.querySelector(".three");
 /*
-const heading1 = document.querySelector(".one");
-const heading2 = document.querySelector(".two");
-const heading3 = document.querySelector(".three");
-
 const btn = document.querySelector(".btn");
 btn.addEventListener("click", () => {
   // what we need is clicking button
@@ -1324,13 +1326,28 @@ btn.addEventListener("click", () => {
   // setTimeout(() => {
   //   heading3.style.color = "blue";
   // }, 4000);
-  // METHOD 3 USING PROMISES
+  //// METHOD 3 USING PROMISES
+  // even if addColor function defined on out will work
+  // function addColor(time, element, color) {
+  //   return new Promise((resolve, reject) => {
+  //     if (element) {
+  //       setTimeout(() => {
+  //         element.style.color = color;
+  //         resolve();
+  //       }, time);
+  //     } else {
+  //       reject(new Error(`There is no such element ${element}`));
+  //     }
+  //   });
+  // }
   // addColor(1000, heading1, "red")
   //   .then(() => addColor(2000, heading2, "green"))
   //   .then(() => addColor(1000, heading3, "blue"))
   //   .catch((err) => console.log(err));
-
+  /////////////////////////////
+  ////////////////////////////
   // EXAMPLE 2
+  // TOTAL 4 SECONDS FOR WHOLE PROCESS 1+2+1
   // // METHOD 1
   // setTimeout(() => {
   //   console.log("1 second");
@@ -1352,25 +1369,88 @@ btn.addEventListener("click", () => {
   //   console.log("1 second");
   // }, 4000);
   // // METHOD 3 USING PROMISES
+  // function addSecond(time, step) {
+  //   return new Promise((resolve, reject) => {
+  //     setTimeout(() => {
+  //       console.log(`${step}`);
+  //       resolve();
+  //     }, time);
+  //   });
+  // }
   // addSecond(1000, "1 second")
   //   .then(() => addSecond(2000, "2 second"))
   //   .then(() => addSecond(1000, "1 second"));
 });
-
 */
 
-// function addColor(time, element, color) {
+/*
+// EXAMPLE 2
+// TOTAL 4 SECONDS FOR WHOLE PROCESS 1+2+1
+// METHOD 1 (callback hell)
+// setTimeout(() => {
+//   console.log("1 second");
+//   setTimeout(() => {
+//     console.log("2 second");
+//     setTimeout(() => {
+//       console.log("1 second");
+//     }, 1000);
+//   }, 2000);
+// }, 1000);
+
+// METHOD 2
+// setTimeout(() => {
+//   console.log("1 second");
+// }, 1000);
+// setTimeout(() => {
+//   console.log("2 second");
+// }, 3000);
+// setTimeout(() => {
+//   console.log("1 second");
+// }, 4000);
+
+// // METHOD 3 USING PROMISES
+// TOTAL 4 SECONDS FOR WHOLE PROCESS 1+2+1
+// function addSecond(time, step) {
 //   return new Promise((resolve, reject) => {
-//     if (element) {
-//       setTimeout(() => {
-//         element.style.color = color;
-//         resolve();
-//       }, time);
-//     } else {
-//       reject(new Error(`There is no such element ${element}`));
-//     }
+//     setTimeout(() => {
+//       console.log(`${step}`);
+//       resolve();
+//     }, time);
 //   });
 // }
+
+// addSecond(1000, "1 second")
+//   .then(() => addSecond(2000, "2 second"))
+//   .then(() => addSecond(1000, "1 second"));
+*/
+
+//////////////////////
+/*
+// changing color using promises
+const heading1 = document.querySelector(".one");
+const heading2 = document.querySelector(".two");
+const heading3 = document.querySelector(".three");
+
+function addColor(time, element, color) {
+  return new Promise((resolve, reject) => {
+    if (element) {
+      setTimeout(() => {
+        element.style.color = color;
+        resolve();
+      }, time);
+    } else {
+      reject(new Error(`There is no such element ${element}`));
+    }
+  });
+}
+
+addColor(1000, heading1, "red")
+  .then(() => addColor(2000, heading2, "green"))
+  .then(() => addColor(1000, heading3, "blue"))
+  .catch((err) => console.log(err));
+  */
+
+//////////////////////////
 
 // function addSecond(time, step) {
 //   return new Promise((resolve, reject) => {
@@ -1381,12 +1461,16 @@ btn.addEventListener("click", () => {
 //   });
 // }
 
+// addSecond(1000, "1 second")
+//   .then(() => addSecond(2000, "2 second"))
+//   .then(() => addSecond(1000, "1 second"));
+
 // ======================================
 // 007 - Promises
 // ======================================
 // callbacks, promises, async/await
 // PROMISES - Pending, Resolved, Rejected
-// then catch - pass another callback
+// then, catch - pass another callback
 
 // In JavaScript, a promise is a good way to handle asynchronous operations. It is used to find out if the asynchronous operation is successfully completed or not.
 
@@ -1653,6 +1737,9 @@ Client-side JavaScript, in particular, has many APIs available to it — these a
 // ======================================
 // 003 - Simple Text
 // ======================================
+// old style method
+// important words
+
 // const xhr = new XMLHttpRequest();
 
 // xhr.open("GET", "./SMILGA/api/sample.txt");
@@ -1749,27 +1836,114 @@ Client-side JavaScript, in particular, has many APIs available to it — these a
 // ======================================
 // 006 - Fetch
 // ======================================
+// The fetch() method starts the process of fetching a resource from a server.
+// The fetch() method returns a Promise that resolves to a Response object.
+// 😀 No need for XMLHttpRequest anymore.
+// syntax
+// fetch(The name of a resource to fetch); like url
+
+// modern method to get data from api's
 // Fetch built-in
 // promised based
 // XHR is not wrong, you can complete all our upcoming examples and projects using XHR. Fetch is just alternative approach that has simpler and cleaner syntax. The end result is the same.Still get dynamically, behind the scenes.
 
-// const url = "./SMILGA/api/people.json";
+/*
+const url = "./SMILGA/api/people.json";
 
 // const response = fetch(url);
 // console.log(response);
 
+// fetch(url)
+//   .then((resp) => {
+//     // response object
+//     // useful properties and methods
+//     // console.log(resp);
+//     // convert response into JSON data
+//     // returns promise
+//     return resp.json();
+//   })
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .catch((err) => console.log(err));
+
+// using arrow functions
+fetch(url)
+  .then((response) => response.json())
+  .then((data) => console.log(data))
+  .catch((error) => console.log(error));
+  */
+
 // ======================================
 // 007 - Fetch - Errors gotcha
 // ======================================
+// const url = "./SMILGA/api/people.jsons";
+
+// fetch(url)
+//   .then((response) => console.log(response))
+//   .then((data) => console.log(data))
+//   .catch((error) => console.log(error));
+
 // ======================================
 // 008 - Fetch - Big Picture
 // ======================================
+
 // ======================================
 // 009 - Fetch with Functions
 // ======================================
+// const url = "./SMILGA/api/people.json";
+
+// const btn = document.querySelector(".btn");
+
+// btn.addEventListener("click", () => {
+//   fetch(url)
+//     .then((resp) => resp.json())
+//     .then((data) => {
+//       // console.log(data);
+//       displayItems(data);
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//     });
+// });
+
+// const displayItems = (items) => {
+//   const displayData = items
+//     .map((item) => {
+//       const { name } = item;
+//       return `<p>${name}</p>`;
+//     })
+//     .join("");
+//   const element = document.createElement("div");
+//   element.innerHTML = displayData;
+//   document.body.appendChild(element);
+// };
+
 // ======================================
 // 010 - Fetch - with async/await
 // ======================================
+// above example using async/await 
+
+const url = "./SMILGA/api/people.json";
+
+const btn = document.querySelector(".btn");
+
+btn.addEventListener("click", async () => {
+const 
+});
+
+const displayItems = (items) => {
+  const displayData = items
+    .map((item) => {
+      const { name } = item;
+      return `<p>${name}</p>`;
+    })
+    .join("");
+  const element = document.createElement("div");
+  element.innerHTML = displayData;
+  document.body.appendChild(element);
+};
+
 // ======================================
 // 011 - Try Catch
 // ======================================
