@@ -1161,9 +1161,13 @@ console.log(employee.startsWith("EMP", 6));
 // const btn = document.querySelector(".btn");
 
 // const showPeople = () => {
-//   const showPeople = people.map((person) => {
-//     console.log(person);
-//   });
+//   const newPeople = people
+//     .map((person) => {
+//       const { name, job } = person;
+//       return `<p>${name}<strong> ${job}</strong></p>`;
+//     })
+//     .join("");
+//   container.innerHTML = newPeople;
 // };
 
 // btn.addEventListener("click", () => {
@@ -1173,12 +1177,66 @@ console.log(employee.startsWith("EMP", 6));
 // ======================================
 // 003 - Named Export
 // ======================================
+// global name space / hard to navigate
+/*
+// Modules
+// There are two types of exports: Named Exports and Default Exports.
+
+// JavaScript modules help us:
+// 1) Organize Code: Modules let you group related code together in separate files, making your project more organized and manageable.
+// 2) Encapsulate Code: Each module acts as a self-contained unit, so you can hide certain parts of the code and only expose what you want others to use.
+// 3) Reusability: You can easily reuse modules in different parts of our project, reducing code duplication and promoting a more efficient development process.
+// 4) Dependency Management: Modules help you handle dependencies between different parts of the project, making it easier to keep track of how everything fits together.
+*/
+
+// import { random, people } from "./utils/data.js";
+
+// const container = document.querySelector(".container");
+// const btn = document.querySelector(".btn");
+
+// const showPeople = () => {
+//   const newPeople = people
+//     .map((person) => {
+//       const { name, job } = person;
+//       return `<p>${name}<strong> ${job}</strong></p>`;
+//     })
+//     .join("");
+//   container.innerHTML = newPeople;
+// };
+
+// btn.addEventListener("click", () => {
+//   showPeople();
+// });
+
 // ======================================
 // 004 - Default Export
 // ======================================
+
+// import { random, people } from "./utils/data.js";
+// import showPeople from "./utils/showPeople.js";
+
+// const container = document.querySelector(".container");
+// const btn = document.querySelector(".btn");
+
+// btn.addEventListener("click", () => {
+//   container.innerHTML = showPeople(people);
+// });
+
 // ======================================
 // 005 - Get Element
 // ======================================
+// import { random, people } from "./utils/data.js";
+// import showPeople from "./utils/showPeople.js";
+// import get from "./utils/getElement.js";
+
+// const container = get(".container");
+// const btn = get(".btn");
+// // const container1 = getElement(".container1");
+// // console.log(container1);
+
+// btn.addEventListener("click", () => {
+//   container.innerHTML = showPeople(people);
+// });
 
 ////////////////////////////////
 // 014 - Async Javascript
