@@ -213,6 +213,9 @@ start();
 // (6) Methods like call(), and apply() and bind() can refer this to any object
 
 // With the call() method, you can write a method that can be used on different objects.
+
+// CALL() ****************************
+
 // call()
 // object 1
 // wrote a method on bharu object to use that method on different objects
@@ -276,6 +279,9 @@ start();
 // console.log("************************************");
 
 // With the apply() method, you can write a method that can be used on different objects.
+
+// APPLY() ****************************
+
 // apply()
 
 // object 1
@@ -310,7 +316,8 @@ start();
 
 // console.log("************************************");
 
-// bind()
+// BIND() ****************************
+
 /*
 The bind function creates a copy of a function with a new value to the this present inside the calling function.
 */
@@ -318,6 +325,8 @@ The bind function creates a copy of a function with a new value to the this pres
 /*
 but we can call it whenever we want, Example if you want to call/invoke after ten 10 seconds you can. if you want to call it after 1 hour you can.
 */
+
+// bind()
 
 // object 1
 // const john = {
