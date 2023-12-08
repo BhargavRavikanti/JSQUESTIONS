@@ -509,46 +509,67 @@ Call is a function that helps you change the context of the invoking function. I
 // john.greet.call(susan);
 
 // MY PRACTICE
+/*
+const bharu = {
+  name: "Bharu",
+  age: 29,
+  details: function () {
+    console.log(this);
+    console.log(`${this.name}, ${this.age}`);
+  },
+};
+const dhanush = {
+  name: "dhanush",
+  age: 18,
+};
 
-// const bharu = {
-//   name: "Bharu",
-//   age: 29,
-//   details: function () {
-//     console.log(`${this.name}, ${this.age}`);
-//   },
-// };
-// const dhanush = {
-//   name: "dhanush",
-//   age: 18,
-// };
+function data() {
+  console.log(this);
+  console.log(`${this.name}, ${this.age}`);
+}
 
-// function data() {
-//   console.log(this);
-//   console.log(`${this.name}, ${this.age}`);
-// }
+data.call(dhanush); // this = dhanush
+data.call(bharu); // this = bharu
 
-// data.call(dhanush);
-// data.call(bharu);
+bharu.details.call(dhanush); // this = dhanush
+bharu.details.call({ name: "Peter", age: 35 }); // this = passed arguments object
+bharu.details.call({ name: "Shark", age: 50, power: "none" }); // this passed arguments object
 
-// bharu.details.call(dhanush);
-// bharu.details.call({ name: "Peter", age: 35 });
-// bharu.details.call({ name: "Shark", age: 50 });
-
-// data.call({ name: "Zofan", age: 20 });
-// data.call({ name: "Superman", age: 50 });
+data.call({ name: "Zofan", age: 20 });
+data.call({ name: "Superman", age: 50 });
+*/
 
 // if you want pass arguments make sure to pass arguments as list of items like this "bharu","dhanush"
 
+// // object 1
 // const bharu = {
 //   name: "Bharu",
 //   age: 29,
 //   details: function (anime, food) {
+//     console.log(this);
 //     console.log(`${this.name}, ${this.age}, ${anime}, ${food}`);
 //   },
 // };
+// bharu.details();
+// // object 2
 // const dhanush = {
 //   name: "dhanush",
 //   age: 18,
+// };
+// // object 3
+// const sadhana = {
+//   name: "sadhana",
+//   age: 21,
+// };
+// // object 4
+// const jayasri = {
+//   name: "jayasri",
+//   age: 20,
+// };
+// // object 5
+// const randomPerson = {
+//   name: "randomPerson",
+//   age: 35,
 // };
 
 // function data(manga, favFood) {
