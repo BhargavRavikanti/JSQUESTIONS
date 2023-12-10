@@ -837,9 +837,9 @@ console.log(person);
 
 // outer()();
 
-// const value = outer();
-// console.log(value);
-// value();
+// // const value = outer();
+// // console.log(value);
+// // value();
 
 // ======================================
 // 005 - Clousure - Basic Example

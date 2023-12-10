@@ -201,6 +201,7 @@
 
 // 3) what is Hoisting?
 // It allows you to use functions and variables before they are declared.
+
 // variables declared with var are hoisted
 // variables declared with let & const are not hoisted
 // function statements are hoisted
@@ -234,3 +235,181 @@
 // };
 
 // hoot();
+
+// 4) what is Closure?
+// A closure is a function(child) having access to the parent scope, even after the parent function has closed.
+
+// Jonas
+// // EXAMPLE 1
+// const secureBooking = function () {
+//   let passengerCount = 0;
+
+//   return function () {
+//     passengerCount++;
+//     console.log(`${passengerCount} passengers`);
+//   };
+// };
+// secureBooking()(); // parent function has closed // or invoked
+
+// const booker = secureBooking();
+
+// booker(); // child function having access to the parent scope
+// booker(); // child function having access to the parent scope
+// booker(); // child function having access to the parent scope
+
+// console.dir(booker);
+
+// // EXAMPLE 2
+// let f;
+
+// const g = function () {
+//   const a = 23;
+//   f = function () {
+//     console.log(a * 2);
+//   };
+// };
+
+// const h = function () {
+//   const b = 777;
+//   f = function () {
+//     console.log(b * 2);
+//   };
+// };
+
+// g();
+// f();
+// console.dir(f);
+
+// // Re-assigning f function
+// h();
+// f();
+// console.dir(f);
+
+// EXAMPLE 3
+
+// smilga
+// EXAMPLE 1
+// function outer() {
+//   let privateVar = "secret";
+//   function inner() {
+//     console.log(`hello there secret is : ${privateVar}`);
+//   }
+//   return inner;
+// }
+// // console.log(privateVar); // not defined
+
+// outer()();
+
+// // const value = outer();
+// // console.log(value);
+// // value();
+
+// EXAMPLE 2
+// function newAccount(name, initialBalance) {
+//   let balance = initialBalance;
+//   function showBalance() {
+//     console.log(`Hey ${name}, your balance is ${balance}`);
+//   }
+//   return showBalance;
+// }
+
+// newAccount("susan", 500)();
+
+// const john = newAccount("john", 300);
+// const bob = newAccount("bob", 1000);
+
+// john();
+// bob();
+
+// // EXAMPLE 3
+// function newAccount(name, initialBalance) {
+//   let balance = initialBalance;
+//   function showBalance() {
+//     console.log(`Hey ${name}, your balance is ${balance}`);
+//   }
+//   function deposit(amount) {
+//     balance += amount;
+//     showBalance();
+//   }
+//   function withdraw(amount) {
+//     if (amount > balance) {
+//       console.log(`Hey ${name}, sorry not enough funds`);
+//       return;
+//     }
+//     balance -= amount;
+//     showBalance();
+//   }
+//   return { showBalance: showBalance, deposit: deposit, withdraw: withdraw };
+// }
+
+// const john = newAccount("john", 1000);
+// const bob = newAccount("bob", 1000);
+
+// john.showBalance();
+// john.deposit(400);
+// john.deposit(1000);
+// john.withdraw(400);
+// john.withdraw(2001);
+// bob.showBalance();
+
+// youtube VenkateshMogili
+// Closures
+// A closure is a feature in Javascript where an inner function has access to the outer function's variables and parameters - a scope chain.
+// the inner function remembers the environment in which it was created.
+
+// The closure has three scope chains:
+// It has access to its own scope - variables defined between its curly brackets.
+// It has access to the outer function's variables
+// It has access to the global variables.
+
+// before clousures some basic questions
+// 1
+// function example1() {
+//   var a = 10;
+// }
+// console.log(a); // what is the output?
+// Is it 10?
+
+// 2
+// function example2() {
+//   var b = 20;
+//   function innerFunction() {
+//     return b;
+//   }
+//   return innerFunction;
+// }
+// let output = example2();
+// console.log(output); // what is the output?
+// // is it 20?
+
+// // Let's see
+
+// // Function Expressions?
+// let one = function () {
+//   // return 1;
+// };
+// What is function definiton?
+// console.log(one); // what we define in a function
+// What is function invoking
+// console.log(one());
+// What will be the output, if we don't return anything from a function?
+// console.log(one());
+
+// Nested Functions?
+// function parent() {
+//   function child1() {
+//     function child2() {}
+//   }
+// }
+
+// now let see closure
+var x = 100;
+function outer() {
+  var y = 50;
+  function inner() {
+    var z = 10;
+    console.log(y + z);
+  }
+  return inner;
+}
+console.log(outer());
