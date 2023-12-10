@@ -6,6 +6,7 @@
 // 2) what is Lexical scope?
 // 3) what is Hoisting?
 // 4) what is Closure?
+// 5) IIFE
 
 // 1) what is scope?
 // SCOPE
@@ -402,14 +403,70 @@
 //   }
 // }
 
-// now let see closure
-var x = 100;
-function outer() {
-  var y = 50;
-  function inner() {
-    var z = 10;
-    console.log(y + z);
-  }
-  return inner;
+// now let see what closure is
+// var x = 100;
+// function outer() {
+//   var y = 50;
+//   var n = 100;
+//   function inner() {
+//     var z = 10;
+//     console.log(y + z + x);
+//     y++;
+//     z++;
+//   }
+//   return inner;
+// }
+// let inner = outer();
+// // console.log(inner);
+// // console.dir(inner);
+// console.log(inner());
+// console.log(inner());
+// console.dir(inner);
+
+// // closure Real time Example
+// function Bank() {
+//   var name = "Venkatesh";
+//   function getName() {
+//     return name;
+//   }
+//   function setName(newName) {
+//     name = newName;
+//   }
+//   return { getName, setName };
+// }
+// let bank = Bank();
+// console.log(bank);
+// console.log(bank.getName());
+// bank.setName("vivek");
+// console.log(bank.getName());
+// bank.setName("chinni");
+// console.log(bank.getName());
+
+// IIFE
+// An IIFE(immediately Invoked Function Expression) is a javascript functon that runs as soon as it is defined.
+// They don't pollute the global object, and they are a simple way to isolate variables declarations.
+
+const runOnce = function () {
+  console.log("This will never run again");
+};
+runOnce();
+
+// IIFE
+(function () {
+  console.log("This will never run again");
+  const isPrivate = 23;
+})();
+
+// console.log(isPrivate);
+
+(() => console.log("This will Also never run again"))();
+
+{
+  const isPrivate = 23;
+  var notPrivate = 46;
 }
-console.log(outer());
+// console.log(isPrivate);
+console.log(notPrivate);
+
+// Scope Chain
+// The scope chain is how Javascript looks for variables. When looking for variables through the nested scope, the inner scope first looks at its own scope. If the variable is not assigned locally, which is inside the inner function or block scope, then JavaScript will look at the outer scope of said function or block to find the variable. If Javascript could not find the variable in any of the outer scopes on the chain, it will throw a reference error.
