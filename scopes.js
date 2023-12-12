@@ -446,27 +446,27 @@
 // An IIFE(immediately Invoked Function Expression) is a javascript functon that runs as soon as it is defined.
 // They don't pollute the global object, and they are a simple way to isolate variables declarations.
 
-const runOnce = function () {
-  console.log("This will never run again");
-};
-runOnce();
+// const runOnce = function () {
+//   console.log("This will never run again");
+// };
+// runOnce();
 
-// IIFE
-(function () {
-  console.log("This will never run again");
-  const isPrivate = 23;
-})();
+// // IIFE
+// (function () {
+//   console.log("This will never run again");
+//   const isPrivate = 23;
+// })();
 
-// console.log(isPrivate);
+// // console.log(isPrivate);
 
-(() => console.log("This will Also never run again"))();
+// (() => console.log("This will Also never run again"))();
 
-{
-  const isPrivate = 23;
-  var notPrivate = 46;
-}
-// console.log(isPrivate);
-console.log(notPrivate);
+// {
+//   const isPrivate = 23;
+//   var notPrivate = 46;
+// }
+// // console.log(isPrivate);
+// console.log(notPrivate);
 
 // Scope Chain
 // The scope chain is how Javascript looks for variables. When looking for variables through the nested scope, the inner scope first looks at its own scope. If the variable is not assigned locally, which is inside the inner function or block scope, then JavaScript will look at the outer scope of said function or block to find the variable. If Javascript could not find the variable in any of the outer scopes on the chain, it will throw a reference error.
